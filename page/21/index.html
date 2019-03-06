@@ -378,7 +378,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javacore/io/Java网络编程/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javastack/javalib/MVEL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -398,7 +398,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/blog/2019/03/06/programming/java/javacore/io/Java网络编程/" class="post-title-link" itemprop="url">Java 网络编程</a>
+                <a href="/blog/2019/03/06/programming/java/javastack/javalib/MVEL/" class="post-title-link" itemprop="url">MVEL</a>
               
             
           </h1>
@@ -456,7 +456,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">848</span>
+                <span title="本文字数">1.2k</span>
               
 
               
@@ -493,413 +493,31 @@
         
           
             <p>
-              Java 网络编程
-关键词：URL、InetAddress
+              MVEL
+MVEL 是一个功能强大的基于 Java 应用程序的表达式语言。
+关键词： 表达式, 规则引擎
 
-Java 中的网络支持：
 
-InetAddress：用于表示网络上的硬件资源，即 IP 地址；
-URL：统一资源定位符；
-Sockets：使用 TCP 协议实现网络通信；
-Datagram：使用 UDP 协议实现网络通信。
 
-InetAddress没有公有的构造函数，只能通过静态方法来创建实例。
-InetAddress.getByNam
+MVEL 特性
+Quickstart
+更多内容
+官网
+博文
+
+
+
+
+MVEL 特性目前最新的版本是 2.0，具有以下特性：
+
+动态 JIT 优化器。当负载超过一个确保代码产生的阈值时，选择性地产生字节代码,这大大减少了内存的使用量。新的静态类型检查和属性支持，允许集成类型安全表达。
+错误
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/blog/2019/03/06/programming/java/javacore/io/Java网络编程/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/frontend/qa/eslint/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Peng">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张鹏的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/blog/2019/03/06/frontend/qa/eslint/" class="post-title-link" itemprop="url">ESLint</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:45" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">29k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">26 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>
-              ESLintESLint 是一种用于识别和报告 ECMAScript / JavaScript 代码中的模式的工具。在许多方面，它类似于 JSLint 和 JSHint，但有一些例外：
-
-ESLint 使用 Espree 进行 JavaScript 解析。
-ESLint 使用 AST 来评估代码中的模式。
-ESLint 是完全可插拔的，每个规则都是一个插件，您可以在运行时添加更多。
-
-
-
-安装
-E
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/blog/2019/03/06/frontend/qa/eslint/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javacore/jvm/README/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Peng">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张鹏的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/blog/2019/03/06/programming/java/javacore/jvm/README/" class="post-title-link" itemprop="url">Java 虚拟机</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">99</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>
-              Java 虚拟机章节
-第一章 运行时数据区域
-第二章 垃圾收集
-第三章 类加载机制
-第四章 JVM调优
-
-资源
-深入理解Java虚拟机：JVM高级特性与最佳实践（第2版）
-从表到里学习JVM实现
-
-
-              
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/blog/2019/03/06/programming/java/javacore/jvm/README/#more" rel="contents">
+              <a class="btn" href="/blog/2019/03/06/programming/java/javastack/javalib/MVEL/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1159,7 +777,7 @@ ZXing 使用小结
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javastack/javalib/MVEL/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javastack/javatool/build/README/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -1179,7 +797,7 @@ ZXing 使用小结
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/blog/2019/03/06/programming/java/javastack/javalib/MVEL/" class="post-title-link" itemprop="url">MVEL</a>
+                <a href="/blog/2019/03/06/programming/java/javastack/javatool/build/README/" class="post-title-link" itemprop="url">构建工具</a>
               
             
           </h1>
@@ -1237,7 +855,7 @@ ZXing 使用小结
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.2k</span>
+                <span title="本文字数">138</span>
               
 
               
@@ -1274,31 +892,24 @@ ZXing 使用小结
         
           
             <p>
-              MVEL
-MVEL 是一个功能强大的基于 Java 应用程序的表达式语言。
-关键词： 表达式, 规则引擎
+              构建工具目录Maven
+Maven 快速指南
+Maven 之 pom.xml 详解
+Maven 之 settings.xml 详解
+Maven 常见问题和最佳实践
+发布项目到 Maven 中央仓库
+部署并使用 Nexus 作为 Maven 私服
+
+Ant
+Ant 简易教程
 
 
-
-MVEL 特性
-Quickstart
-更多内容
-官网
-博文
-
-
-
-
-MVEL 特性目前最新的版本是 2.0，具有以下特性：
-
-动态 JIT 优化器。当负载超过一个确保代码产生的阈值时，选择性地产生字节代码,这大大减少了内存的使用量。新的静态类型检查和属性支持，允许集成类型安全表达。
-错误
-              ...
+              
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/blog/2019/03/06/programming/java/javastack/javalib/MVEL/#more" rel="contents">
+              <a class="btn" href="/blog/2019/03/06/programming/java/javastack/javatool/build/README/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1362,7 +973,7 @@ MVEL 特性目前最新的版本是 2.0，具有以下特性：
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/spring-boot/web/sbe-web-ui-eazyui/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javastack/javalib/java-log/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -1382,7 +993,7 @@ MVEL 特性目前最新的版本是 2.0，具有以下特性：
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/blog/2019/03/06/programming/java/spring-boot/web/sbe-web-ui-eazyui/" class="post-title-link" itemprop="url">SpringBootTutorialWebUIEazyUI</a>
+                <a href="/blog/2019/03/06/programming/java/javastack/javalib/java-log/" class="post-title-link" itemprop="url">细说 Java 主流日志工具库</a>
               
             
           </h1>
@@ -1407,7 +1018,7 @@ MVEL 特性目前最新的版本是 2.0，具有以下特性：
                 
               
 
-              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:56:35" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
@@ -1440,7 +1051,7 @@ MVEL 特性目前最新的版本是 2.0，具有以下特性：
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">12k</span>
+                <span title="本文字数">21k</span>
               
 
               
@@ -1454,7 +1065,7 @@ MVEL 特性目前最新的版本是 2.0，具有以下特性：
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">11 分钟</span>
+                <span title="阅读时长">19 分钟</span>
               
             </div>
           
@@ -1477,17 +1088,37 @@ MVEL 特性目前最新的版本是 2.0，具有以下特性：
         
           
             <p>
-              SpringBootTutorialWebUIEazyUI
-EazyUI 是一个简单的用户界面组件的集合。由于 EazyUI 已经封装好大部分 UI 基本功能，能帮用户减少大量的 js 和 css 代码。所以，EazyUI 非常适合用于开发简单的系统或原型系统。
-本文示例使用技术点：
+              细说 Java 主流日志工具库
 
-Spring Boot：主要使用了 spring-boot-starter-web、spring-boot-st
+日志框架
+java.util.logging (JUL)
+Log4j
+Logback
+Log4j2
+Log4j vs Logback vs Log4j2
+
+
+日志门面
+common-logging
+slf4j
+common-logging vs slf4j
+总结
+
+
+实施日志解决方案
+引入 jar 包
+使用 API
+
+
+log4j2 配置
+logback 配置
+&
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/blog/2019/03/06/programming/java/spring-boot/web/sbe-web-ui-eazyui/#more" rel="contents">
+              <a class="btn" href="/blog/2019/03/06/programming/java/javastack/javalib/java-log/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1551,7 +1182,7 @@ Spring Boot：主要使用了 spring-boot-starter-web、spring-boot-st
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/spring-boot/web/sbe-web-json/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javastack/javatool/README/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -1571,7 +1202,7 @@ Spring Boot：主要使用了 spring-boot-starter-web、spring-boot-st
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/blog/2019/03/06/programming/java/spring-boot/web/sbe-web-json/" class="post-title-link" itemprop="url">SpringBootTutorialWebJson</a>
+                <a href="/blog/2019/03/06/programming/java/javastack/javatool/README/" class="post-title-link" itemprop="url">Java 工具</a>
               
             
           </h1>
@@ -1596,7 +1227,7 @@ Spring Boot：主要使用了 spring-boot-starter-web、spring-boot-st
                 
               
 
-              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:56:35" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
@@ -1629,7 +1260,7 @@ Spring Boot：主要使用了 spring-boot-starter-web、spring-boot-st
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">9.5k</span>
+                <span title="本文字数">311</span>
               
 
               
@@ -1643,7 +1274,7 @@ Spring Boot：主要使用了 spring-boot-starter-web、spring-boot-st
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">9 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -1666,32 +1297,27 @@ Spring Boot：主要使用了 spring-boot-starter-web、spring-boot-st
         
           
             <p>
-              SpringBootTutorialWebJson
+              Java 工具
+本部分内容主要是 Java 开发领域使用的一些 Java 工具，如构建工具、IDE、服务器、日志中心等等。
 
-简介
-Spring Boot 支持的 Json 库
-Spring Web 中的序列化、反序列化
-
-
-指定类的 Json 序列化、反序列化
-@JsonTest
-Spring Boot 中的 json 配置
-Jackson 配置
-GSON 配置
-
-
-Spring Boot 中使用 Fastjson
-示例源码
-更多内容
+目录
+构建工具
+Maven 快速指南
+Maven 之 pom.xml 详解
+Maven 之 settings.xml 详解
+Maven 常见问题和最佳实践
+发布项目到 Maven 中央仓库
+部署并使用 Nexus 作为 Maven 私服
+Ant 简易教程
 
 
-简介Spring Boot
+Elastic
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/blog/2019/03/06/programming/java/spring-boot/web/sbe-web-json/#more" rel="contents">
+              <a class="btn" href="/blog/2019/03/06/programming/java/javastack/javatool/README/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1755,7 +1381,7 @@ Spring Boot 中使用 Fastjson
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/spring-boot/lib/sbe-lib-log/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javastack/style/README/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -1775,7 +1401,7 @@ Spring Boot 中使用 Fastjson
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/blog/2019/03/06/programming/java/spring-boot/lib/sbe-lib-log/" class="post-title-link" itemprop="url">SpringBootTutorialLibLog</a>
+                <a href="/blog/2019/03/06/programming/java/javastack/style/README/" class="post-title-link" itemprop="url">Java 规范</a>
               
             
           </h1>
@@ -1800,7 +1426,7 @@ Spring Boot 中使用 Fastjson
                 
               
 
-              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:56:35" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
@@ -1833,7 +1459,7 @@ Spring Boot 中使用 Fastjson
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">5.7k</span>
+                <span title="本文字数">95</span>
               
 
               
@@ -1847,7 +1473,7 @@ Spring Boot 中使用 Fastjson
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">5 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -1870,31 +1496,23 @@ Spring Boot 中使用 Fastjson
         
           
             <p>
-              SpringBootTutorialLibLog
-Spring Boot 支持集成 Java 世界主流的日志库。
-如果对于 Java 日志库不熟悉，可以参考：细说 Java 主流日志工具库
-关键词： log4j, log4j2, logback, slf4j
+              Java 规范
+编程规范就是 Java 开发的最佳实践。帮助开发人员少走弯路。
+
+内容
+Effective Java 笔记
+
+资源
+Effective Java
+阿里巴巴Java开发手册
 
 
-
-日志格式
-控制台输出
-彩色打印
-
-
-文件输出
-日志级别
-日志组
-日志配置文件
-Logback 扩展
-profile 指定配置
-环境属性
-              ...
+              
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/blog/2019/03/06/programming/java/spring-boot/lib/sbe-lib-log/#more" rel="contents">
+              <a class="btn" href="/blog/2019/03/06/programming/java/javastack/style/README/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1958,7 +1576,7 @@ profile 指定配置
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/spring-boot/core/sbe-core-property/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javastack/style/编程规范/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -1978,7 +1596,7 @@ profile 指定配置
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/blog/2019/03/06/programming/java/spring-boot/core/sbe-core-property/" class="post-title-link" itemprop="url">SpringBootTutorialCoreProperty</a>
+                <a href="/blog/2019/03/06/programming/java/javastack/style/编程规范/" class="post-title-link" itemprop="url">编程规范</a>
               
             
           </h1>
@@ -2003,7 +1621,7 @@ profile 指定配置
                 
               
 
-              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:56:35" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
@@ -2036,7 +1654,7 @@ profile 指定配置
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">7.4k</span>
+                <span title="本文字数">644</span>
               
 
               
@@ -2050,7 +1668,7 @@ profile 指定配置
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">7 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -2073,39 +1691,213 @@ profile 指定配置
         
           
             <p>
-              SpringBootTutorialCoreProperty
+              编程规范
 
-加载 property 顺序
-随机属性
-命令行属性
-Application 属性文件
-Profile 特定属性
-属性中的占位符
-YAML 属性
-访问属性
-多 profile 配置
-YAML 的缺点
-
-
-属性前缀
-属性松散绑定规则
-属性转换
-时间单位转换
-数据大小转换
-
-
-校验属性
-源码
+Java 代码规范
+代码格式化
 更多内容
 
 
-加载 property 顺序Spr
+Java 代码规范
+Java 代码的编程规范采用《阿里巴巴 Java 开发手册 1.4.0》，开发过程中发现有不适合星环的规则，可以酌情调整。
+
+请参考：阿里巴巴 Java 开发手册
+使用方法安装 P3C 插件
+
+Intellij 安装 P3C 方法 - https://github.com/alibaba/p3c/tree/master/
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/blog/2019/03/06/programming/java/spring-boot/core/sbe-core-property/#more" rel="contents">
+              <a class="btn" href="/blog/2019/03/06/programming/java/javastack/style/编程规范/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javacore/advanced/Java注解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Peng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张鹏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/blog/2019/03/06/programming/java/javacore/advanced/Java注解/" class="post-title-link" itemprop="url">未命名</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">15k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">14 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              什么是注解（Annotation）Annotation（注解）就是 Java 提供了一种元程序中的元素关联任何信息和着任何元数据（metadata）的途径和方法。
+java.lang.annotation.Annotation 是一个接口，程序可以通过反射来获取指定程序元素的注解对象，然后通过注解对象来获取注解里面的元数据。
+注解是 Java 5 及以后版本引入的。它可以用于创建文档，跟踪代码中的
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/programming/java/javacore/advanced/Java注解/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2302,6 +2094,204 @@ YAML 的缺点
           
             <div class="post-button text-center">
               <a class="btn" href="/blog/2019/03/06/programming/java/javaweb/architecture/网站典型故障/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javaweb/architecture/网站的可扩展架构/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Peng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张鹏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/blog/2019/03/06/programming/java/javaweb/architecture/网站的可扩展架构/" class="post-title-link" itemprop="url">网站的可扩展架构</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              网站的可扩展架构
+
+1. 构建可扩展的网站架构
+2. 利用分布式消息队列降低系统耦合性
+2.1. 事件驱动架构
+2.2. 分布式消息队列
+
+
+3. 利用分布式服务打造可复用的业务平台
+4. 可扩展的数据结构
+5. 资料
+
+
+扩展性（Extensibility） - 指对现有系统影响最小的情况下，系统功能可持续扩展或提升的能力。表现在系统基础设施稳定不需要经常变更，应用之间较少依赖和耦合，对需求变更
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/programming/java/javaweb/architecture/网站的可扩展架构/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
