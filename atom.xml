@@ -5,9 +5,9 @@
   <subtitle>大道至简，知易行难</subtitle>
   <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://dunwu.github.io/"/>
   <updated>2019-03-06T08:43:45.844Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://dunwu.github.io/</id>
   
   <author>
     <name>Zhang Peng</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>React 快速入门</title>
-    <link href="http://yoursite.com/2019/03/06/frontend/mvc/react/react/"/>
-    <id>http://yoursite.com/2019/03/06/frontend/mvc/react/react/</id>
+    <link href="https://dunwu.github.io/2019/03/06/frontend/mvc/react/react/"/>
+    <id>https://dunwu.github.io/2019/03/06/frontend/mvc/react/react/</id>
     <published>2019-03-06T08:38:11.317Z</published>
     <updated>2019-03-06T08:43:45.844Z</updated>
     
@@ -41,8 +41,8 @@
   
   <entry>
     <title>Docker 安装 MySQL</title>
-    <link href="http://yoursite.com/2019/03/06/os/docker/practice/docker-install-mysql/"/>
-    <id>http://yoursite.com/2019/03/06/os/docker/practice/docker-install-mysql/</id>
+    <link href="https://dunwu.github.io/2019/03/06/os/docker/practice/docker-install-mysql/"/>
+    <id>https://dunwu.github.io/2019/03/06/os/docker/practice/docker-install-mysql/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:46.063Z</updated>
     
@@ -63,8 +63,8 @@
   
   <entry>
     <title>JavaMail 使用小结</title>
-    <link href="http://yoursite.com/2019/03/06/programming/java/javastack/javalib/javamail/"/>
-    <id>http://yoursite.com/2019/03/06/programming/java/javastack/javalib/javamail/</id>
+    <link href="https://dunwu.github.io/2019/03/06/programming/java/javastack/javalib/javamail/"/>
+    <id>https://dunwu.github.io/2019/03/06/programming/java/javastack/javalib/javamail/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:46.565Z</updated>
     
@@ -84,8 +84,8 @@
   
   <entry>
     <title>mockito 快速指南</title>
-    <link href="http://yoursite.com/2019/03/06/programming/java/javastack/javalib/mockito/"/>
-    <id>http://yoursite.com/2019/03/06/programming/java/javastack/javalib/mockito/</id>
+    <link href="https://dunwu.github.io/2019/03/06/programming/java/javastack/javalib/mockito/"/>
+    <id>https://dunwu.github.io/2019/03/06/programming/java/javastack/javalib/mockito/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:46.580Z</updated>
     
@@ -106,8 +106,8 @@
   
   <entry>
     <title>大型网站架构概述</title>
-    <link href="http://yoursite.com/2019/03/06/programming/java/javaweb/architecture/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E6%A6%82%E8%BF%B0/"/>
-    <id>http://yoursite.com/2019/03/06/programming/java/javaweb/architecture/大型网站架构概述/</id>
+    <link href="https://dunwu.github.io/2019/03/06/programming/java/javaweb/architecture/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E6%A6%82%E8%BF%B0/"/>
+    <id>https://dunwu.github.io/2019/03/06/programming/java/javaweb/architecture/大型网站架构概述/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:46.744Z</updated>
     
@@ -129,8 +129,8 @@
   
   <entry>
     <title>网站的伸缩性架构</title>
-    <link href="http://yoursite.com/2019/03/06/programming/java/javaweb/architecture/%E7%BD%91%E7%AB%99%E7%9A%84%E4%BC%B8%E7%BC%A9%E6%80%A7%E6%9E%B6%E6%9E%84/"/>
-    <id>http://yoursite.com/2019/03/06/programming/java/javaweb/architecture/网站的伸缩性架构/</id>
+    <link href="https://dunwu.github.io/2019/03/06/programming/java/javaweb/architecture/%E7%BD%91%E7%AB%99%E7%9A%84%E4%BC%B8%E7%BC%A9%E6%80%A7%E6%9E%B6%E6%9E%84/"/>
+    <id>https://dunwu.github.io/2019/03/06/programming/java/javaweb/architecture/网站的伸缩性架构/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:46.750Z</updated>
     
@@ -152,8 +152,8 @@
   
   <entry>
     <title>Elastic 技术栈</title>
-    <link href="http://yoursite.com/2019/03/06/os/linux/ops/service/elastic/README/"/>
-    <id>http://yoursite.com/2019/03/06/os/linux/ops/service/elastic/README/</id>
+    <link href="https://dunwu.github.io/2019/03/06/os/linux/ops/service/elastic/README/"/>
+    <id>https://dunwu.github.io/2019/03/06/os/linux/ops/service/elastic/README/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:46.176Z</updated>
     
@@ -174,8 +174,8 @@
   
   <entry>
     <title>数据库</title>
-    <link href="http://yoursite.com/2019/03/06/database/README/"/>
-    <id>http://yoursite.com/2019/03/06/database/README/</id>
+    <link href="https://dunwu.github.io/2019/03/06/database/README/"/>
+    <id>https://dunwu.github.io/2019/03/06/database/README/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:45.395Z</updated>
     
@@ -196,8 +196,8 @@
   
   <entry>
     <title>系统设计</title>
-    <link href="http://yoursite.com/2019/03/06/design/README/"/>
-    <id>http://yoursite.com/2019/03/06/design/README/</id>
+    <link href="https://dunwu.github.io/2019/03/06/design/README/"/>
+    <id>https://dunwu.github.io/2019/03/06/design/README/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:45.558Z</updated>
     
@@ -217,8 +217,8 @@
   
   <entry>
     <title>前端技术</title>
-    <link href="http://yoursite.com/2019/03/06/frontend/README/"/>
-    <id>http://yoursite.com/2019/03/06/frontend/README/</id>
+    <link href="https://dunwu.github.io/2019/03/06/frontend/README/"/>
+    <id>https://dunwu.github.io/2019/03/06/frontend/README/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:45.906Z</updated>
     
@@ -239,8 +239,8 @@
   
   <entry>
     <title>计算机网络</title>
-    <link href="http://yoursite.com/2019/03/06/network/README/"/>
-    <id>http://yoursite.com/2019/03/06/network/README/</id>
+    <link href="https://dunwu.github.io/2019/03/06/network/README/"/>
+    <id>https://dunwu.github.io/2019/03/06/network/README/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:45.985Z</updated>
     
@@ -261,8 +261,8 @@
   
   <entry>
     <title>计算机网络指南</title>
-    <link href="http://yoursite.com/2019/03/06/network/network-guide/"/>
-    <id>http://yoursite.com/2019/03/06/network/network-guide/</id>
+    <link href="https://dunwu.github.io/2019/03/06/network/network-guide/"/>
+    <id>https://dunwu.github.io/2019/03/06/network/network-guide/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:45.980Z</updated>
     
@@ -284,8 +284,8 @@
   
   <entry>
     <title>操作系统</title>
-    <link href="http://yoursite.com/2019/03/06/os/README/"/>
-    <id>http://yoursite.com/2019/03/06/os/README/</id>
+    <link href="https://dunwu.github.io/2019/03/06/os/README/"/>
+    <id>https://dunwu.github.io/2019/03/06/os/README/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:46.288Z</updated>
     
@@ -306,8 +306,8 @@
   
   <entry>
     <title></title>
-    <link href="http://yoursite.com/2019/03/06/programming/README/"/>
-    <id>http://yoursite.com/2019/03/06/programming/README/</id>
+    <link href="https://dunwu.github.io/2019/03/06/programming/README/"/>
+    <id>https://dunwu.github.io/2019/03/06/programming/README/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:47.188Z</updated>
     
@@ -329,8 +329,8 @@
   
   <entry>
     <title>目录规范</title>
-    <link href="http://yoursite.com/2019/03/06/style/dir-style/"/>
-    <id>http://yoursite.com/2019/03/06/style/dir-style/</id>
+    <link href="https://dunwu.github.io/2019/03/06/style/dir-style/"/>
+    <id>https://dunwu.github.io/2019/03/06/style/dir-style/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:47.248Z</updated>
     
@@ -352,8 +352,8 @@
   
   <entry>
     <title>命令行的艺术</title>
-    <link href="http://yoursite.com/2019/03/06/os/linux/cli/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E8%89%BA%E6%9C%AF/"/>
-    <id>http://yoursite.com/2019/03/06/os/linux/cli/命令行的艺术/</id>
+    <link href="https://dunwu.github.io/2019/03/06/os/linux/cli/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E8%89%BA%E6%9C%AF/"/>
+    <id>https://dunwu.github.io/2019/03/06/os/linux/cli/命令行的艺术/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:46.140Z</updated>
     
@@ -374,8 +374,8 @@
   
   <entry>
     <title>数据链路层</title>
-    <link href="http://yoursite.com/2019/03/06/network/data-link-layer/"/>
-    <id>http://yoursite.com/2019/03/06/network/data-link-layer/</id>
+    <link href="https://dunwu.github.io/2019/03/06/network/data-link-layer/"/>
+    <id>https://dunwu.github.io/2019/03/06/network/data-link-layer/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:45.968Z</updated>
     
@@ -396,8 +396,8 @@
   
   <entry>
     <title>软件工程</title>
-    <link href="http://yoursite.com/2019/03/06/software/README/"/>
-    <id>http://yoursite.com/2019/03/06/software/README/</id>
+    <link href="https://dunwu.github.io/2019/03/06/software/README/"/>
+    <id>https://dunwu.github.io/2019/03/06/software/README/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:47.236Z</updated>
     
@@ -418,8 +418,8 @@
   
   <entry>
     <title>项目规范</title>
-    <link href="http://yoursite.com/2019/03/06/style/project-style/"/>
-    <id>http://yoursite.com/2019/03/06/style/project-style/</id>
+    <link href="https://dunwu.github.io/2019/03/06/style/project-style/"/>
+    <id>https://dunwu.github.io/2019/03/06/style/project-style/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:47.419Z</updated>
     
@@ -442,8 +442,8 @@
   
   <entry>
     <title>Markdown 语法</title>
-    <link href="http://yoursite.com/2019/03/06/style/markdown/"/>
-    <id>http://yoursite.com/2019/03/06/style/markdown/</id>
+    <link href="https://dunwu.github.io/2019/03/06/style/markdown/"/>
+    <id>https://dunwu.github.io/2019/03/06/style/markdown/</id>
     <published>2019-03-05T16:00:00.000Z</published>
     <updated>2019-03-06T08:43:47.416Z</updated>
     
