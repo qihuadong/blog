@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="SpringBootTutorialWebJson  简介 Spring Boot 支持的 Json 库 Spring Web 中的序列化、反序列化   指定类的 Json 序列化、反序列化 @JsonTest Spring Boot 中的 json 配置 Jackson 配置 GSON 配置   Spring Boot 中使用 Fastjson 示例源码 更多内容   简介Spring Boot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBootTutorialWebJson">
+<meta property="og:url" content="http://yoursite.com/2019/03/06/programming/java/spring-boot/web/sbe-web-json/index.html">
+<meta property="og:site_name" content="张鹏的博客">
+<meta property="og:description" content="SpringBootTutorialWebJson  简介 Spring Boot 支持的 Json 库 Spring Web 中的序列化、反序列化   指定类的 Json 序列化、反序列化 @JsonTest Spring Boot 中的 json 配置 Jackson 配置 GSON 配置   Spring Boot 中使用 Fastjson 示例源码 更多内容   简介Spring Boot">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-06T08:56:35.624Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SpringBootTutorialWebJson">
+<meta name="twitter:description" content="SpringBootTutorialWebJson  简介 Spring Boot 支持的 Json 库 Spring Web 中的序列化、反序列化   指定类的 Json 序列化、反序列化 @JsonTest Spring Boot 中的 json 配置 Jackson 配置 GSON 配置   Spring Boot 中使用 Fastjson 示例源码 更多内容   简介Spring Boot">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/06/programming/java/spring-boot/web/sbe-web-json/">
+
+
+
+
+
+  <title>SpringBootTutorialWebJson | 张鹏的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">张鹏的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">大道至简，知易行难</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2019/03/06/programming/java/spring-boot/web/sbe-web-json/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Peng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张鹏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">SpringBootTutorialWebJson</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
+                2019-03-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="SpringBootTutorialWebJson"><a href="#SpringBootTutorialWebJson" class="headerlink" title="SpringBootTutorialWebJson"></a>SpringBootTutorialWebJson</h1><!-- TOC depthFrom:2 depthTo:3 -->
+<ul>
+<li><a href="#简介">简介</a><ul>
+<li><a href="#spring-boot-支持的-json-库">Spring Boot 支持的 Json 库</a></li>
+<li><a href="#spring-web-中的序列化反序列化">Spring Web 中的序列化、反序列化</a></li>
+</ul>
+</li>
+<li><a href="#指定类的-json-序列化反序列化">指定类的 Json 序列化、反序列化</a></li>
+<li><a href="#jsontest">@JsonTest</a></li>
+<li><a href="#spring-boot-中的-json-配置">Spring Boot 中的 json 配置</a><ul>
+<li><a href="#jackson-配置">Jackson 配置</a></li>
+<li><a href="#gson-配置">GSON 配置</a></li>
+</ul>
+</li>
+<li><a href="#spring-boot-中使用-fastjson">Spring Boot 中使用 Fastjson</a></li>
+<li><a href="#示例源码">示例源码</a></li>
+<li><a href="#更多内容">更多内容</a></li>
+</ul>
+<!-- /TOC -->
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="Spring-Boot-支持的-Json-库"><a href="#Spring-Boot-支持的-Json-库" class="headerlink" title="Spring Boot 支持的 Json 库"></a>Spring Boot 支持的 Json 库</h3><p>Spring Boot 支持三种 Json 库：</p>
+<ul>
+<li>Gson</li>
+<li>Jackson</li>
+<li>JSON-B</li>
+</ul>
+<p><strong>Jackson 是 Spring Boot 官方推荐的默认库。</strong></p>
+<p>Spring Boot 提供了 Jackson 的自动配置，Jackson 是 <code>spring-boot-starter-json</code> 的一部分。当 Jackson 在类路径上时，会自动配置 ObjectMapper bean。</p>
+<p>Spring Boot 提供了 Gson 的自动配置。当 Gson 在 classpath 上时，会自动配置 Gson bean。提供了几个 <code>spring.gson.*</code> 配置属性来自定义配置。为了获得更多控制，可以使用一个或多个 <code>GsonBuilderCustomizer</code> bean。</p>
+<p>Spring Boot 提供了 JSON-B 的自动配置。当 JSON-B API 在 classpath 上时，将自动配置 Jsonb bean。首选的 JSON-B 实现是 Apache Johnzon，它提供了依赖关系管理。</p>
+<h3 id="Spring-Web-中的序列化、反序列化"><a href="#Spring-Web-中的序列化、反序列化" class="headerlink" title="Spring Web 中的序列化、反序列化"></a>Spring Web 中的序列化、反序列化</h3><p>以下注解都是 <code>spring-web</code> 中提供的支持。</p>
+<h4 id="ResponseBody"><a href="#ResponseBody" class="headerlink" title="@ResponseBody"></a><code>@ResponseBody</code></h4><p><code>@Responsebody</code> 注解用于将 Controller 的方法返回的对象，通过适当的 <code>HttpMessageConverter</code> 转换为指定格式后，写入到 HTTP Response 对象的 body 数据区。一般在异步获取数据时使用。通常是在使用 <code>@RequestMapping</code> 后，返回值通常解析为跳转路径，加上 @Responsebody 后返回结果不会被解析为跳转路径，而是直接写入 HTTP 响应正文中。</p>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(name = <span class="string">"/getInfo"</span>, method = RequestMethod.GET)</span><br><span class="line"><span class="function"><span class="keyword">public</span> InfoDTO <span class="title">getInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> InfoDTO();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="RequestBody"><a href="#RequestBody" class="headerlink" title="@RequestBody"></a><code>@RequestBody</code></h4><p>@RequestBody 注解用于读取 HTTP Request 请求的 body 部分数据，使用系统默认配置的 <code>HttpMessageConverter</code> 进行解析，然后把相应的数据绑定到要返回的对象上；再把 <code>HttpMessageConverter</code> 返回的对象数据绑定到 controller 中方法的参数上。</p>
+<p>request 的 body 部分的数据编码格式由 header 部分的 <code>Content-Type</code> 指定。</p>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(name = <span class="string">"/postInfo"</span>, method = RequestMethod.POST)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postInfo</span><span class="params">(@RequestBody InfoDTO infoDTO)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="RestController"><a href="#RestController" class="headerlink" title="@RestController"></a><code>@RestController</code></h4><p>Spring 4 以前：</p>
+<p>如果需要返回到指定页面，则需要用 <code>@Controller</code> 配合视图解析器 <code>InternalResourceViewResolver</code> 。</p>
+<p>如果需要返回 JSON，XML 或自定义 mediaType 内容到页面，则需要在对应的方法上加上 <code>@ResponseBody</code> 注解。</p>
+<p>Spring 4 以后，新增了 <code>@RestController</code> 注解：</p>
+<p>它相当于 <code>@Controller</code> + <code>@RequestBody</code> 。</p>
+<p>如果使用 <code>@RestController</code> 注解 Controller，则 Controller 中的方法无法返回 jsp 页面，或者 html，配置的视图解析器 <code>InternalResourceViewResolver</code> 将不起作用，直接返回内容。</p>
+<h2 id="指定类的-Json-序列化、反序列化"><a href="#指定类的-Json-序列化、反序列化" class="headerlink" title="指定类的 Json 序列化、反序列化"></a>指定类的 Json 序列化、反序列化</h2><p>如果使用 Jackson 序列化和反序列化 JSON 数据，您可能需要编写自己的 <code>JsonSerializer</code> 和 <code>JsonDeserializer</code> 类。自定义序列化程序通常通过模块向 Jackson 注册，但 Spring Boot 提供了另一种 <code>@JsonComponent</code> 注释，可以更容易地直接注册 Spring Beans。</p>
+<p>您可以直接在 <code>JsonSerializer</code> 或 <code>JsonDeserializer</code> 实现上使用 <code>@JsonComponent</code> 注释。您还可以在包含序列化程序/反序列化程序作为内部类的类上使用它，如以下示例所示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.core.*;</span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.databind.*;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.jackson.*;</span><br><span class="line"></span><br><span class="line"><span class="meta">@JsonComponent</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Serializer</span> <span class="keyword">extends</span> <span class="title">JsonSerializer</span>&lt;<span class="title">SomeObject</span>&gt; </span>&#123;</span><br><span class="line">		<span class="comment">// ...</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Deserializer</span> <span class="keyword">extends</span> <span class="title">JsonDeserializer</span>&lt;<span class="title">SomeObject</span>&gt; </span>&#123;</span><br><span class="line">		<span class="comment">// ...</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>ApplicationContext</code> 中的所有 <code>@JsonComponent</code> bean 都会自动注册到 Jackson。因为 <code>@JsonComponent</code> 是使用 <code>@Component</code> 进行元注释的，所以通常的组件扫描规则适用。</p>
+<p>Spring Boot 还提供了 <a href="https://github.com/spring-projects/spring-boot/tree/v2.1.1.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/jackson/JsonObjectSerializer.java" target="_blank" rel="noopener"><code>JsonObjectSerializer</code></a> 和 <a href="https://github.com/spring-projects/spring-boot/tree/v2.1.1.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/jackson/JsonObjectDeserializer.java" target="_blank" rel="noopener"><code>JsonObjectDeserializer</code></a> 基类，它们在序列化对象时提供了标准 Jackson 版本的有用替代方法。有关详细信息，请参阅 Javadoc 中的 <a href="https://docs.spring.io/spring-boot/docs/2.1.1.RELEASE/api/org/springframework/boot/jackson/JsonObjectSerializer.html" target="_blank" rel="noopener"><code>JsonObjectSerializer</code></a> 和 <a href="https://docs.spring.io/spring-boot/docs/2.1.1.RELEASE/api/org/springframework/boot/jackson/JsonObjectDeserializer.html" target="_blank" rel="noopener"><code>JsonObjectDeserializer</code></a>。</p>
+<h2 id="JsonTest"><a href="#JsonTest" class="headerlink" title="@JsonTest"></a>@JsonTest</h2><p>使用 <code>@JsonTest</code> 可以很方便的在 Spring Boot 中测试序列化、反序列化。</p>
+<p>使用 <code>@JsonTest</code> 相当于使用以下自动配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration</span><br></pre></td></tr></table></figure>
+<p><code>@JsonTest</code> 使用示例：</p>
+<p>想试试完整示例，可以参考：<a href="https://github.com/dunwu/spring-boot-tutorial/tree/master/codes/web/sbe-web-json" target="_blank" rel="noopener">源码</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonTest</span></span><br><span class="line"><span class="meta">@RunWith</span>(SpringRunner.class)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SimpleJsonTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Logger log = LoggerFactory.getLogger(<span class="keyword">this</span>.getClass());</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> JacksonTester&lt;InfoDTO&gt; json;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testSerialize</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd HH:mm:ss"</span>);</span><br><span class="line">        InfoDTO infoDTO = <span class="keyword">new</span> InfoDTO(<span class="string">"JSON测试应用"</span>, <span class="string">"1.0.0"</span>, sdf.parse(<span class="string">"2019-01-01 12:00:00"</span>));</span><br><span class="line">        JsonContent&lt;InfoDTO&gt; jsonContent = json.write(infoDTO);</span><br><span class="line">        log.info(<span class="string">"json content: &#123;&#125;"</span>, jsonContent.getJson());</span><br><span class="line">        <span class="comment">// 或者使用基于JSON path的校验</span></span><br><span class="line">        assertThat(jsonContent).hasJsonPathStringValue(<span class="string">"@.appName"</span>);</span><br><span class="line">        assertThat(jsonContent).extractingJsonPathStringValue(<span class="string">"@.appName"</span>).isEqualTo(<span class="string">"JSON测试应用"</span>);</span><br><span class="line">        assertThat(jsonContent).hasJsonPathStringValue(<span class="string">"@.version"</span>);</span><br><span class="line">        assertThat(jsonContent).extractingJsonPathStringValue(<span class="string">"@.version"</span>).isEqualTo(<span class="string">"1.0.0"</span>);</span><br><span class="line">        assertThat(jsonContent).hasJsonPathStringValue(<span class="string">"@.date"</span>);</span><br><span class="line">        assertThat(jsonContent).extractingJsonPathStringValue(<span class="string">"@.date"</span>).isEqualTo(<span class="string">"2019-01-01 12:00:00"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testDeserialize</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        String content = <span class="string">"&#123;\"appName\":\"JSON测试应用\",\"version\":\"1.0.0\",\"date\":\"2019-01-01\"&#125;"</span>;</span><br><span class="line">        InfoDTO actual = json.parseObject(content);</span><br><span class="line">        assertThat(actual.getAppName()).isEqualTo(<span class="string">"JSON测试应用"</span>);</span><br><span class="line">        assertThat(actual.getVersion()).isEqualTo(<span class="string">"1.0.0"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Spring-Boot-中的-json-配置"><a href="#Spring-Boot-中的-json-配置" class="headerlink" title="Spring Boot 中的 json 配置"></a>Spring Boot 中的 json 配置</h2><h3 id="Jackson-配置"><a href="#Jackson-配置" class="headerlink" title="Jackson 配置"></a>Jackson 配置</h3><p>当 Spring Boot 的 json 库为 jackson 时，可以使用以下配置属性（对应 <a href="https://github.com/spring-projects/spring-boot/tree/v2.1.1.RELEASE/spring-boot-project/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/jackson/JacksonProperties.java" target="_blank" rel="noopener"><code>JacksonProperties</code></a> 类）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">spring.jackson.date-format= # Date format string or a fully-qualified date format class name. For instance, `yyyy-MM-dd HH:mm:ss`.</span><br><span class="line">spring.jackson.default-property-inclusion= # Controls the inclusion of properties during serialization. Configured with one of the values in Jackson&apos;s JsonInclude.Include enumeration.</span><br><span class="line">spring.jackson.deserialization.*= # Jackson on/off features that affect the way Java objects are deserialized.</span><br><span class="line">spring.jackson.generator.*= # Jackson on/off features for generators.</span><br><span class="line">spring.jackson.joda-date-time-format= # Joda date time format string. If not configured, &quot;date-format&quot; is used as a fallback if it is configured with a format string.</span><br><span class="line">spring.jackson.locale= # Locale used for formatting.</span><br><span class="line">spring.jackson.mapper.*= # Jackson general purpose on/off features.</span><br><span class="line">spring.jackson.parser.*= # Jackson on/off features for parsers.</span><br><span class="line">spring.jackson.property-naming-strategy= # One of the constants on Jackson&apos;s PropertyNamingStrategy. Can also be a fully-qualified class name of a PropertyNamingStrategy subclass.</span><br><span class="line">spring.jackson.serialization.*= # Jackson on/off features that affect the way Java objects are serialized.</span><br><span class="line">spring.jackson.time-zone= #  Time zone used when formatting dates. For instance, &quot;America/Los_Angeles&quot; or &quot;GMT+10&quot;.</span><br><span class="line">spring.jackson.visibility.*= # Jackson visibility thresholds that can be used to limit which methods (and fields) are auto-detected.</span><br></pre></td></tr></table></figure>
+<h3 id="GSON-配置"><a href="#GSON-配置" class="headerlink" title="GSON 配置"></a>GSON 配置</h3><p>当 Spring Boot 的 json 库为 gson 时，可以使用以下配置属性（对应 <a href="https://github.com/spring-projects/spring-boot/tree/v2.1.1.RELEASE/spring-boot-project/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/gson/GsonProperties.java" target="_blank" rel="noopener"><code>GsonProperties</code></a> 类）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">spring.gson.date-format= # Format to use when serializing Date objects.</span><br><span class="line">spring.gson.disable-html-escaping= # Whether to disable the escaping of HTML characters such as &apos;&lt;&apos;, &apos;&gt;&apos;, etc.</span><br><span class="line">spring.gson.disable-inner-class-serialization= # Whether to exclude inner classes during serialization.</span><br><span class="line">spring.gson.enable-complex-map-key-serialization= # Whether to enable serialization of complex map keys (i.e. non-primitives).</span><br><span class="line">spring.gson.exclude-fields-without-expose-annotation= # Whether to exclude all fields from consideration for serialization or deserialization that do not have the &quot;Expose&quot; annotation.</span><br><span class="line">spring.gson.field-naming-policy= # Naming policy that should be applied to an object&apos;s field during serialization and deserialization.</span><br><span class="line">spring.gson.generate-non-executable-json= # Whether to generate non executable JSON by prefixing the output with some special text.</span><br><span class="line">spring.gson.lenient= # Whether to be lenient about parsing JSON that doesn&apos;t conform to RFC 4627.</span><br><span class="line">spring.gson.long-serialization-policy= # Serialization policy for Long and long types.</span><br><span class="line">spring.gson.pretty-printing= # Whether to output serialized JSON that fits in a page for pretty printing.</span><br><span class="line">spring.gson.serialize-nulls= # Whether to serialize null fields.</span><br></pre></td></tr></table></figure>
+<h2 id="Spring-Boot-中使用-Fastjson"><a href="#Spring-Boot-中使用-Fastjson" class="headerlink" title="Spring Boot 中使用 Fastjson"></a>Spring Boot 中使用 Fastjson</h2><p>国内很多的 Java 程序员更喜欢使用阿里的 fastjson 作为 json lib。那么，如何在 Spring Boot 中将其替换默认的 jackson 库呢？</p>
+<p>你需要做如下处理：</p>
+<p>（1）引入 fastjson jar 包：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastjson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.54<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>（2）实现 WebMvcConfigurer 接口，自定义 <code>configureMessageConverters</code> 接口。如下所示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebMvcConfig</span> <span class="keyword">implements</span> <span class="title">WebMvcConfigurer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Logger log = LoggerFactory.getLogger(<span class="keyword">this</span>.getClass());</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 自定义消息转换器</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> converters</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">configureMessageConverters</span><span class="params">(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 清除默认 Json 转换器</span></span><br><span class="line">        converters.removeIf(converter -&gt; converter <span class="keyword">instanceof</span> MappingJackson2HttpMessageConverter);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 配置 FastJson</span></span><br><span class="line">        FastJsonConfig config = <span class="keyword">new</span> FastJsonConfig();</span><br><span class="line">        config.setSerializerFeatures(SerializerFeature.QuoteFieldNames, SerializerFeature.WriteEnumUsingToString,</span><br><span class="line">            SerializerFeature.WriteMapNullValue, SerializerFeature.WriteDateUseDateFormat,</span><br><span class="line">            SerializerFeature.DisableCircularReferenceDetect);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 添加 FastJsonHttpMessageConverter</span></span><br><span class="line">        FastJsonHttpMessageConverter fastJsonHttpMessageConverter = <span class="keyword">new</span> FastJsonHttpMessageConverter();</span><br><span class="line">        fastJsonHttpMessageConverter.setFastJsonConfig(config);</span><br><span class="line">        List&lt;MediaType&gt; fastMediaTypes = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        fastMediaTypes.add(MediaType.APPLICATION_JSON_UTF8);</span><br><span class="line">        fastJsonHttpMessageConverter.setSupportedMediaTypes(fastMediaTypes);</span><br><span class="line">        converters.add(fastJsonHttpMessageConverter);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 添加 StringHttpMessageConverter，解决中文乱码问题</span></span><br><span class="line">        StringHttpMessageConverter stringHttpMessageConverter = <span class="keyword">new</span> StringHttpMessageConverter(Charset.forName(<span class="string">"UTF-8"</span>));</span><br><span class="line">        converters.add(stringHttpMessageConverter);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="示例源码"><a href="#示例源码" class="headerlink" title="示例源码"></a>示例源码</h2><p>完整示例：<a href="https://github.com/dunwu/spring-boot-tutorial/tree/master/codes/web/sbe-web-json" target="_blank" rel="noopener">源码</a></p>
+<h2 id="更多内容"><a href="#更多内容" class="headerlink" title="更多内容"></a>更多内容</h2><p><strong>引申</strong></p>
+<ul>
+<li><a href="https://github.com/dunwu/spring-boot-tutorial" target="_blank" rel="noopener">Spring Boot 教程</a></li>
+</ul>
+<p><strong>引用</strong></p>
+<ul>
+<li><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-json" target="_blank" rel="noopener">Spring Boot 官方文档之 boot-features-json</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2019/03/06/database/nosql/redis/Redis缓存淘汰策略/" rel="next" title="Redis 缓存淘汰策略">
+                <i class="fa fa-chevron-left"></i> Redis 缓存淘汰策略
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2019/03/06/programming/java/javaweb/standalone/orm/mybatis/" rel="prev" title="MyBatis 指南">
+                MyBatis 指南 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/blog/images/avatar.gif" alt="Zhang Peng">
+            
+              <p class="site-author-name" itemprop="name">Zhang Peng</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives/">
+              
+                  <span class="site-state-item-count">381</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">76</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/blog/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/dunwu" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:forbreak@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SpringBootTutorialWebJson"><span class="nav-number">1.</span> <span class="nav-text">SpringBootTutorialWebJson</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Boot-支持的-Json-库"><span class="nav-number">1.1.1.</span> <span class="nav-text">Spring Boot 支持的 Json 库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Web-中的序列化、反序列化"><span class="nav-number">1.1.2.</span> <span class="nav-text">Spring Web 中的序列化、反序列化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ResponseBody"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">@ResponseBody</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RequestBody"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">@RequestBody</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RestController"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">@RestController</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指定类的-Json-序列化、反序列化"><span class="nav-number">1.2.</span> <span class="nav-text">指定类的 Json 序列化、反序列化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JsonTest"><span class="nav-number">1.3.</span> <span class="nav-text">@JsonTest</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot-中的-json-配置"><span class="nav-number">1.4.</span> <span class="nav-text">Spring Boot 中的 json 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Jackson-配置"><span class="nav-number">1.4.1.</span> <span class="nav-text">Jackson 配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GSON-配置"><span class="nav-number">1.4.2.</span> <span class="nav-text">GSON 配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot-中使用-Fastjson"><span class="nav-number">1.5.</span> <span class="nav-text">Spring Boot 中使用 Fastjson</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码"><span class="nav-number">1.6.</span> <span class="nav-text">示例源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更多内容"><span class="nav-number">1.7.</span> <span class="nav-text">更多内容</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-paper-plane"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhang Peng</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/blog/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="javaee,jsp,">
+
+
+
+
+
+  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="JSP 行为是一组 JSP 内置的标签，只需要书写很少的标记代码就能使用 JSP 提供的丰富功能。JSP 行为是对常用的 JSP 功能的抽象与封装，包括两种，自定义 JSP 行为与标准 JSP 行为。 与 JSP 指令元素不同的是，JSP 动作元素在请求处理阶段起作用。JSP 动作元素是用 XML 语法写成的。 利用 JSP 动作可以动态地插入文件、重用 JavaBean 组件、把用户重定向到另外">
+<meta name="keywords" content="javaee,jsp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSP 行为">
+<meta property="og:url" content="http://yoursite.com/2017/11/08/programming/java/javaweb/javaee/jsp/jsp-action/index.html">
+<meta property="og:site_name" content="张鹏的博客">
+<meta property="og:description" content="JSP 行为是一组 JSP 内置的标签，只需要书写很少的标记代码就能使用 JSP 提供的丰富功能。JSP 行为是对常用的 JSP 功能的抽象与封装，包括两种，自定义 JSP 行为与标准 JSP 行为。 与 JSP 指令元素不同的是，JSP 动作元素在请求处理阶段起作用。JSP 动作元素是用 XML 语法写成的。 利用 JSP 动作可以动态地插入文件、重用 JavaBean 组件、把用户重定向到另外">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.runoob.com/wp-content/uploads/2014/01/6AC33FBA-0B76-4BFD-A690-E856E9E01900.jpg">
+<meta property="og:image" content="http://www.runoob.com/wp-content/uploads/2014/01/D7AD87A8-3392-4D4E-8731-18806B0644CD.jpg">
+<meta property="og:image" content="http://www.runoob.com/wp-content/uploads/2014/01/7D8C47F0-0DDE-4F1D-8BE1-B2C9C955683E.jpg">
+<meta property="og:updated_time" content="2019-03-06T08:43:46.851Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JSP 行为">
+<meta name="twitter:description" content="JSP 行为是一组 JSP 内置的标签，只需要书写很少的标记代码就能使用 JSP 提供的丰富功能。JSP 行为是对常用的 JSP 功能的抽象与封装，包括两种，自定义 JSP 行为与标准 JSP 行为。 与 JSP 指令元素不同的是，JSP 动作元素在请求处理阶段起作用。JSP 动作元素是用 XML 语法写成的。 利用 JSP 动作可以动态地插入文件、重用 JavaBean 组件、把用户重定向到另外">
+<meta name="twitter:image" content="http://www.runoob.com/wp-content/uploads/2014/01/6AC33FBA-0B76-4BFD-A690-E856E9E01900.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/08/programming/java/javaweb/javaee/jsp/jsp-action/">
+
+
+
+
+
+  <title>JSP 行为 | 张鹏的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">张鹏的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">大道至简，知易行难</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2017/11/08/programming/java/javaweb/javaee/jsp/jsp-action/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Peng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张鹏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JSP 行为</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-08T00:00:00+08:00">
+                2017-11-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/javaee/" itemprop="url" rel="index">
+                    <span itemprop="name">javaee</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>JSP 行为是一组 JSP 内置的标签，只需要书写很少的标记代码就能使用 JSP 提供的丰富功能。JSP 行为是对常用的 JSP 功能的抽象与封装，包括两种，自定义 JSP 行为与标准 JSP 行为。</p>
+<p>与 JSP 指令元素不同的是，JSP 动作元素在请求处理阶段起作用。JSP 动作元素是用 XML 语法写成的。</p>
+<p>利用 JSP 动作可以动态地插入文件、重用 JavaBean 组件、把用户重定向到另外的页面、为 Java 插件生成 HTML 代码。</p>
+<p>动作元素只有一种语法，它符合 XML 标准：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:action_name attribute=&quot;value&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>动作元素基本上都是预定义的函数，JSP 规范定义了一系列的标准动作，它用 JSP 作为前缀，可用的标准动作元素如下：</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jsp:include</td>
+<td>在页面被请求的时候引入一个文件。</td>
+</tr>
+<tr>
+<td>jsp:useBean</td>
+<td>寻找或者实例化一个 JavaBean。</td>
+</tr>
+<tr>
+<td>jsp:setProperty</td>
+<td>设置 JavaBean 的属性。</td>
+</tr>
+<tr>
+<td>jsp:getProperty</td>
+<td>输出某个 JavaBean 的属性。</td>
+</tr>
+<tr>
+<td>jsp:forward</td>
+<td>把请求转到一个新的页面。</td>
+</tr>
+<tr>
+<td>jsp:plugin</td>
+<td>根据浏览器类型为 Java 插件生成 OBJECT 或 EMBED 标记。</td>
+</tr>
+<tr>
+<td>jsp:element</td>
+<td>定义动态 XML 元素</td>
+</tr>
+<tr>
+<td>jsp:attribute</td>
+<td>设置动态定义的 XML 元素属性。</td>
+</tr>
+<tr>
+<td>jsp:body</td>
+<td>设置动态定义的 XML 元素内容。</td>
+</tr>
+<tr>
+<td>jsp:text</td>
+<td>在 JSP 页面和文档中使用写入文本的模板</td>
+</tr>
+</tbody>
+</table>
+<h2 id="常见的属性"><a href="#常见的属性" class="headerlink" title="常见的属性"></a>常见的属性</h2><p>所有的动作要素都有两个属性：id 属性和 scope 属性。</p>
+<ul>
+<li><strong>id 属性：</strong>id 属性是动作元素的唯一标识，可以在 JSP 页面中引用。动作元素创建的 id 值可以通过 PageContext 来调用。</li>
+<li><strong>scope 属性：</strong>该属性用于识别动作元素的生命周期。 id 属性和 scope 属性有直接关系，scope 属性定义了相关联 id 对象的寿命。 scope 属性有四个可能的值： (a) page, (b)request, (c)session, 和 (d) application。</li>
+</ul>
+<h2 id="jsp-include"><a href="#jsp-include" class="headerlink" title="jsp:include"></a><a href="jsp:include" target="_blank" rel="noopener">jsp:include</a></h2><p><code>&lt;jsp:include&gt;</code>用来包含静态和动态的文件。该动作把指定文件插入正在生成的页面。</p>
+<p>如果被包含的文件为 JSP 程序，则会先执行 JSP 程序，再将执行结果包含进来。</p>
+<p>语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:include page=&quot;相对 URL 地址&quot; flush=&quot;true&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>前面已经介绍过 include 指令，它是在 JSP 文件被转换成 Servlet 的时候引入文件，而这里的 jsp:include 动作不同，插入文件的时间是在页面被请求的时候。</p>
+<p>以下是 include 动作相关的属性列表。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page</td>
+<td>包含在页面中的相对 URL 地址。</td>
+</tr>
+<tr>
+<td>flush</td>
+<td>布尔属性，定义在包含资源前是否刷新缓存区。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例</strong></p>
+<p>以下我们定义了两个文件  <strong>date.jsp</strong>  和  <strong>main.jsp</strong>，代码如下所示：</p>
+<p>date.jsp 文件代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">"java"</span> contentType=<span class="string">"text/html; charset=UTF-8"</span></span><br><span class="line">    pageEncoding=<span class="string">"UTF-8"</span>%&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">   今天的日期是: &lt;%= (<span class="keyword">new</span> java.util.Date())%&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>main.jsp 文件代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">"java"</span> contentType=<span class="string">"text/html; charset=UTF-8"</span></span><br><span class="line">    pageEncoding=<span class="string">"UTF-8"</span>%&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;h2&gt;include 动作实例&lt;/h2&gt;</span><br><span class="line">&lt;jsp:include page=<span class="string">"date.jsp"</span> flush=<span class="string">"true"</span> /&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>现在将以上两个文件放在服务器的根目录下，访问 main.jsp 文件。显示结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">include 动作实例</span><br><span class="line"></span><br><span class="line">今天的日期是: 2016-6-25 14:08:17</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="jsp-useBean"><a href="#jsp-useBean" class="headerlink" title="jsp:useBean"></a><a href="jsp:useBean" target="_blank" rel="noopener">jsp:useBean</a></h2><p><strong>jsp:useBean</strong>  动作用来加载一个将在 JSP 页面中使用的 JavaBean。</p>
+<p>这个功能非常有用，因为它使得我们可以发挥 Java 组件复用的优势。</p>
+<p>jsp:useBean 动作最简单的语法为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=&quot;name&quot; class=&quot;package.class&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>在类载入后，我们既可以通过 jsp:setProperty 和 jsp:getProperty 动作来修改和检索 bean 的属性。</p>
+<p>以下是 useBean 动作相关的属性列表。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>class</td>
+<td>指定 Bean 的完整包名。</td>
+</tr>
+<tr>
+<td>type</td>
+<td>指定将引用该对象变量的类型。</td>
+</tr>
+<tr>
+<td>beanName</td>
+<td>通过 java.beans.Beans 的 instantiate() 方法指定 Bean 的名字。</td>
+</tr>
+</tbody>
+</table>
+<p>在给出具体实例前，让我们先来看下 jsp:setProperty 和 jsp:getProperty 动作元素：</p>
+<hr>
+<h2 id="jsp-setProperty"><a href="#jsp-setProperty" class="headerlink" title="jsp:setProperty"></a><a href="jsp:setProperty" target="_blank" rel="noopener">jsp:setProperty</a></h2><p>jsp:setProperty 用来设置已经实例化的 Bean 对象的属性，有两种用法。首先，你可以在 jsp:useBean 元素的外面（后面）使用 jsp:setProperty，如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=&quot;myName&quot; ... /&gt;</span><br><span class="line">...</span><br><span class="line">&lt;jsp:setProperty name=&quot;myName&quot; property=&quot;someProperty&quot; .../&gt;</span><br></pre></td></tr></table></figure>
+<p>此时，不管 jsp:useBean 是找到了一个现有的 Bean，还是新创建了一个 Bean 实例，jsp:setProperty 都会执行。第二种用法是把 jsp:setProperty 放入 jsp:useBean 元素的内部，如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=&quot;myName&quot; ... &gt;</span><br><span class="line">...</span><br><span class="line">   &lt;jsp:setProperty name=&quot;myName&quot; property=&quot;someProperty&quot; .../&gt;</span><br><span class="line">&lt;/jsp:useBean&gt;</span><br></pre></td></tr></table></figure>
+<p>此时，jsp:setProperty 只有在新建 Bean 实例时才会执行，如果是使用现有实例则不执行 jsp:setProperty。</p>
+<p>jsp:setProperty 动作有下面四个属性,如下表：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>name 属性是必需的。它表示要设置属性的是哪个 Bean。</td>
+</tr>
+<tr>
+<td>property</td>
+<td>property 属性是必需的。它表示要设置哪个属性。有一个特殊用法：如果 property 的值是”*“，表示所有名字和 Bean 属性名字匹配的请求参数都将被传递给相应的属性 set 方法。</td>
+</tr>
+<tr>
+<td>value</td>
+<td>value 属性是可选的。该属性用来指定 Bean 属性的值。字符串数据会在目标类中通过标准的 valueOf 方法自动转换成数字、boolean、Boolean、 byte、Byte、char、Character。例如，boolean 和 Boolean 类型的属性值（比如”true”）通过 Boolean.valueOf 转换，int 和 Integer 类型的属性值（比如”42”）通过 Integer.valueOf 转换。 　　 value 和 param 不能同时使用，但可以使用其中任意一个。</td>
+</tr>
+<tr>
+<td>param</td>
+<td>param 是可选的。它指定用哪个请求参数作为 Bean 属性的值。如果当前请求没有参数，则什么事情也不做，系统不会把 null 传递给 Bean 属性的 set 方法。因此，你可以让 Bean 自己提供默认属性值，只有当请求参数明确指定了新值时才修改默认属性值。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="jsp-getProperty"><a href="#jsp-getProperty" class="headerlink" title="jsp:getProperty"></a><a href="jsp:getProperty" target="_blank" rel="noopener">jsp:getProperty</a></h2><p>jsp:getProperty 动作提取指定 Bean 属性的值，转换成字符串，然后输出。语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=&quot;myName&quot; ... /&gt;</span><br><span class="line">...</span><br><span class="line">&lt;jsp:getProperty name=&quot;myName&quot; property=&quot;someProperty&quot; .../&gt;</span><br></pre></td></tr></table></figure>
+<p>下表是与 getProperty 相关联的属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>要检索的 Bean 属性名称。Bean 必须已定义。</td>
+</tr>
+<tr>
+<td>property</td>
+<td>表示要提取 Bean 属性的值</td>
+</tr>
+</tbody>
+</table>
+<p>实例</p>
+<p>以下实例我们使用了 Bean:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package com.runoob.main;</span><br><span class="line"></span><br><span class="line">public class TestBean &#123;</span><br><span class="line">   private String message = &quot;菜鸟教程&quot;;</span><br><span class="line"></span><br><span class="line">   public String getMessage() &#123;</span><br><span class="line">      return(message);</span><br><span class="line">   &#125;</span><br><span class="line">   public void setMessage(String message) &#123;</span><br><span class="line">      this.message = message;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>编译以上实例文件 TestBean.java ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ javac TestBean.java</span><br></pre></td></tr></table></figure>
+<p>编译完成后会在当前目录下生成一个  <strong>TestBean.class</strong>  文件， 将该文件拷贝至当前 JSP 项目的  <strong>WebContent/WEB-INF/classes/com/runoob/main</strong>  下( com/runoob/main 包路径，没有需要手动创建)。</p>
+<p>下面是一个 Eclipse 中目录结构图：</p>
+<p><br><div align="center"><img src="http://www.runoob.com/wp-content/uploads/2014/01/6AC33FBA-0B76-4BFD-A690-E856E9E01900.jpg"></div><br></p>
+<p>下面是一个很简单的例子，它的功能是装载一个 Bean，然后设置/读取它的 message 属性。</p>
+<p>现在让我们在 main.jsp 文件中调用该 Bean:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;</span><br><span class="line">    pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;h2&gt;Jsp 使用 JavaBean 实例&lt;/h2&gt;</span><br><span class="line">&lt;jsp:useBean id=&quot;test&quot; class=&quot;com.runoob.main.TestBean&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;jsp:setProperty name=&quot;test&quot;</span><br><span class="line">                    property=&quot;message&quot;</span><br><span class="line">                    value=&quot;菜鸟教程...&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;输出信息....&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;jsp:getProperty name=&quot;test&quot; property=&quot;message&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>浏览器访问，执行以上文件，输出如下所示：</p>
+<p><br><div align="center"><img src="http://www.runoob.com/wp-content/uploads/2014/01/D7AD87A8-3392-4D4E-8731-18806B0644CD.jpg"></div><br></p>
+<hr>
+<h2 id="jsp-forward"><a href="#jsp-forward" class="headerlink" title="jsp:forward"></a><a href="jsp:forward" target="_blank" rel="noopener">jsp:forward</a></h2><p>jsp:forward 动作把请求转到另外的页面。jsp:forward 标记只有一个属性 page。语法格式如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:forward page=&quot;相对 URL 地址&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>以下是 forward 相关联的属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page</td>
+<td>page 属性包含的是一个相对 URL。page 的值既可以直接给出，也可以在请求的时候动态计算，可以是一个 JSP 页面或者一个 Java Servlet.</td>
+</tr>
+</tbody>
+</table>
+<p>实例</p>
+<p>以下实例我们使用了两个文件，分别是： date.jsp 和 main.jsp。</p>
+<p>date.jsp 文件代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;</span><br><span class="line">    pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">   今天的日期是: &lt;%= (new java.util.Date()).toLocaleString()%&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>main.jsp 文件代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;</span><br><span class="line">    pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;h2&gt;forward 动作实例&lt;/h2&gt;</span><br><span class="line">&lt;jsp:forward page=&quot;date.jsp&quot; /&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>现在将以上两个文件放在服务器的根目录下，访问 main.jsp 文件。显示结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">今天的日期是: 2016-6-25 14:37:25</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="jsp-plugin"><a href="#jsp-plugin" class="headerlink" title="jsp:plugin"></a><a href="jsp:plugin" target="_blank" rel="noopener">jsp:plugin</a></h2><p>jsp:plugin 动作用来根据浏览器的类型，插入通过 Java 插件 运行 Java Applet 所必需的 OBJECT 或 EMBED 元素。</p>
+<p>如果需要的插件不存在，它会下载插件，然后执行 Java 组件。 Java 组件可以是一个 applet 或一个 JavaBean。</p>
+<p>plugin 动作有多个对应 HTML 元素的属性用于格式化 Java 组件。param 元素可用于向 Applet 或 Bean 传递参数。</p>
+<p>以下是使用 plugin 动作元素的典型实例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:plugin type=&quot;applet&quot; codebase=&quot;dirname&quot; code=&quot;MyApplet.class&quot;</span><br><span class="line">                           width=&quot;60&quot; height=&quot;80&quot;&gt;</span><br><span class="line">   &lt;jsp:param name=&quot;fontcolor&quot; value=&quot;red&quot; /&gt;</span><br><span class="line">   &lt;jsp:param name=&quot;background&quot; value=&quot;black&quot; /&gt;</span><br><span class="line"></span><br><span class="line">   &lt;jsp:fallback&gt;</span><br><span class="line">      Unable to initialize Java Plugin</span><br><span class="line">   &lt;/jsp:fallback&gt;</span><br><span class="line"></span><br><span class="line">&lt;/jsp:plugin&gt;</span><br></pre></td></tr></table></figure>
+<p>如果你有兴趣可以尝试使用 applet 来测试 jsp:plugin 动作元素，<fallback>元素是一个新元素，在组件出现故障的错误是发送给用户错误信息。</fallback></p>
+<hr>
+<h2 id="jsp-element-、-jsp-attribute、-jsp-body"><a href="#jsp-element-、-jsp-attribute、-jsp-body" class="headerlink" title="jsp:element 、 jsp:attribute、 jsp:body"></a><a href="jsp:element" target="_blank" rel="noopener">jsp:element</a> 、 <a href="jsp:attribute" target="_blank" rel="noopener">jsp:attribute</a>、 <a href="jsp:body" target="_blank" rel="noopener">jsp:body</a></h2><p><a href="jsp:element" target="_blank" rel="noopener">jsp:element</a> 、 <a href="jsp:attribute" target="_blank" rel="noopener">jsp:attribute</a>、 <a href="jsp:body" target="_blank" rel="noopener">jsp:body</a>动作元素动态定义 XML 元素。动态是非常重要的，这就意味着 XML 元素在编译时是动态生成的而非静态。</p>
+<p>以下实例动态定义了 XML 元素：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;</span><br><span class="line">    pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;jsp:element name=&quot;xmlElement&quot;&gt;</span><br><span class="line">&lt;jsp:attribute name=&quot;xmlElementAttr&quot;&gt;</span><br><span class="line">   属性值</span><br><span class="line">&lt;/jsp:attribute&gt;</span><br><span class="line">&lt;jsp:body&gt;</span><br><span class="line">   XML 元素的主体</span><br><span class="line">&lt;/jsp:body&gt;</span><br><span class="line">&lt;/jsp:element&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>浏览器访问以下页面，输出结果如下所示：</p>
+<p><br><div align="center"><img src="http://www.runoob.com/wp-content/uploads/2014/01/7D8C47F0-0DDE-4F1D-8BE1-B2C9C955683E.jpg"></div><br></p>
+<hr>
+<h2 id="jsp-text"><a href="#jsp-text" class="headerlink" title="jsp:text"></a><a href="jsp:text" target="_blank" rel="noopener">jsp:text</a></h2><p><a href="jsp:text" target="_blank" rel="noopener">jsp:text</a>动作元素允许在 JSP 页面和文档中使用写入文本的模板，语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:text&gt;模板数据&lt;/jsp:text&gt;</span><br></pre></td></tr></table></figure>
+<p>以上文本模板不能包含其他元素，只能只能包含文本和 EL 表达式（注：EL 表达式将在后续章节中介绍）。请注意，在 XML 文件中，您不能使用表达式如 ${whatever &gt; 0}，因为&gt;符号是非法的。 你可以使用 ${whatever gt 0}表达式或者嵌入在一个 CDATA 部分的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:text&gt;&lt;![CDATA[&lt;br&gt;]]&gt;&lt;/jsp:text&gt;</span><br></pre></td></tr></table></figure>
+<p>如果你需要在 XHTML 中声明 DOCTYPE,必须使用到<a href="jsp:text" target="_blank" rel="noopener">jsp:text</a>动作元素，实例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:text&gt;&lt;![CDATA[&lt;!DOCTYPE html</span><br><span class="line">PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;</span><br><span class="line">&quot;DTD/xhtml1-strict.dtd&quot;&gt;]]&gt;</span><br><span class="line">&lt;/jsp:text&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;jsp:text action&lt;/title&gt;&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;books&gt;&lt;book&gt;&lt;jsp:text&gt;  </span><br><span class="line">    Welcome to JSP Programming</span><br><span class="line">&lt;/jsp:text&gt;&lt;/book&gt;&lt;/books&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>你可以对以上实例尝试使用<a href="jsp:text" target="_blank" rel="noopener">jsp:text</a>及不使用该动作元素执行结果的区别。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/javaee/" rel="tag"># javaee</a>
+          
+            <a href="/blog/tags/jsp/" rel="tag"># jsp</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2017/11/08/programming/java/javaweb/javaee/jstl/jstl-xml/" rel="next" title="JSTL XML标签">
+                <i class="fa fa-chevron-left"></i> JSTL XML标签
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2017/11/08/programming/java/javaweb/javaee/jstl/jstl-core/" rel="prev" title="JSTL 核心标签">
+                JSTL 核心标签 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/blog/images/avatar.gif" alt="Zhang Peng">
+            
+              <p class="site-author-name" itemprop="name">Zhang Peng</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives/">
+              
+                  <span class="site-state-item-count">381</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">76</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/blog/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/dunwu" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:forbreak@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常见的属性"><span class="nav-number">1.</span> <span class="nav-text">常见的属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jsp-include"><span class="nav-number">2.</span> <span class="nav-text">jsp:include</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jsp-useBean"><span class="nav-number">3.</span> <span class="nav-text">jsp:useBean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jsp-setProperty"><span class="nav-number">4.</span> <span class="nav-text">jsp:setProperty</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jsp-getProperty"><span class="nav-number">5.</span> <span class="nav-text">jsp:getProperty</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jsp-forward"><span class="nav-number">6.</span> <span class="nav-text">jsp:forward</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jsp-plugin"><span class="nav-number">7.</span> <span class="nav-text">jsp:plugin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jsp-element-、-jsp-attribute、-jsp-body"><span class="nav-number">8.</span> <span class="nav-text">jsp:element 、 jsp:attribute、 jsp:body</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jsp-text"><span class="nav-number">9.</span> <span class="nav-text">jsp:text</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-paper-plane"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhang Peng</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/blog/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="javacore,java,io,">
+
+
+
+
+
+  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="Java 流操作 关键词：InputStream、OutputStream、Reader、Writer    1. 字符流和字节流 2. FileReader 和 FileWriter 3. InputStreamReader 和 OutputStreamWriter 4. BufferedReader 5. PrintStream 6. FileInputStream 和 FileOutputS">
+<meta name="keywords" content="javacore,java,io">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 流操作">
+<meta property="og:url" content="http://yoursite.com/2018/07/01/programming/java/javacore/io/Java流操作/index.html">
+<meta property="og:site_name" content="张鹏的博客">
+<meta property="og:description" content="Java 流操作 关键词：InputStream、OutputStream、Reader、Writer    1. 字符流和字节流 2. FileReader 和 FileWriter 3. InputStreamReader 和 OutputStreamWriter 4. BufferedReader 5. PrintStream 6. FileInputStream 和 FileOutputS">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-06T08:43:46.510Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java 流操作">
+<meta name="twitter:description" content="Java 流操作 关键词：InputStream、OutputStream、Reader、Writer    1. 字符流和字节流 2. FileReader 和 FileWriter 3. InputStreamReader 和 OutputStreamWriter 4. BufferedReader 5. PrintStream 6. FileInputStream 和 FileOutputS">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/01/programming/java/javacore/io/Java流操作/">
+
+
+
+
+
+  <title>Java 流操作 | 张鹏的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">张鹏的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">大道至简，知易行难</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/07/01/programming/java/javacore/io/Java流操作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Peng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张鹏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java 流操作</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-01T00:00:00+08:00">
+                2018-07-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/javacore/" itemprop="url" rel="index">
+                    <span itemprop="name">javacore</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Java-流操作"><a href="#Java-流操作" class="headerlink" title="Java 流操作"></a>Java 流操作</h1><blockquote>
+<p>关键词：<code>InputStream</code>、<code>OutputStream</code>、<code>Reader</code>、<code>Writer</code></p>
+</blockquote>
+<!-- TOC depthFrom:2 depthTo:2 -->
+<ul>
+<li><a href="#1-字符流和字节流">1. 字符流和字节流</a></li>
+<li><a href="#2-filereader-和-filewriter">2. FileReader 和 FileWriter</a></li>
+<li><a href="#3-inputstreamreader-和-outputstreamwriter">3. InputStreamReader 和 OutputStreamWriter</a></li>
+<li><a href="#4-bufferedreader">4. BufferedReader</a></li>
+<li><a href="#5-printstream">5. PrintStream</a></li>
+<li><a href="#6-fileinputstream-和-fileoutputstream">6. FileInputStream 和 FileOutputStream</a></li>
+<li><a href="#7-bytearrayinputstream-和-bytearrayoutputstream">7. ByteArrayInputStream 和 ByteArrayOutputStream</a></li>
+<li><a href="#8-pipedinputstream-和-pipedoutputstream">8. PipedInputStream 和 PipedOutputStream</a></li>
+<li><a href="#9-datainputstream-和-dataoutputstream">9. DataInputStream 和 DataOutputStream</a></li>
+<li><a href="#10-zipinputstream-和-zipoutputstream">10. ZipInputStream 和 ZipOutputStream</a></li>
+<li><a href="#11-objectinputstream-和-objectoutputstream">11. ObjectInputStream 和 ObjectOutputStream</a></li>
+</ul>
+<!-- /TOC -->
+<h2 id="1-字符流和字节流"><a href="#1-字符流和字节流" class="headerlink" title="1. 字符流和字节流"></a>1. 字符流和字节流</h2><p>JAVA IO 中的流操作分为两类：</p>
+<ul>
+<li><strong>字节流主要操作字节类型数据（byte）。主要类是 <code>InputStream</code>（输入） 和 <code>OutputStream</code>（输出）。</strong></li>
+<li><strong>字符流主要操作字符类型数据，一个字符占两个字节。主要类是 <code>Reader</code>（输入） 和 <code>Writer</code>（输出）。</strong></li>
+</ul>
+<p>JAVA IO 中的流操作类，常常是以输入、输出两种形式成对提供。</p>
+<p>在 JAVA IO 中，流操作的一般流程如下：</p>
+<ol>
+<li>使用 File 类绑定一个文件。</li>
+<li>把 File 对象绑定到流对象上。</li>
+<li>进行读或写操作。</li>
+<li>关闭流</li>
+</ol>
+<h3 id="字符流和字节流的区别"><a href="#字符流和字节流的区别" class="headerlink" title="字符流和字节流的区别"></a>字符流和字节流的区别</h3><ul>
+<li>字节流主要操作字节类型数据（byte）；字符流主要操作字符类型数据，一个字符占两个字节。</li>
+<li>字节流在操作时本身不会用到缓冲区（内存），而是对文件本身直接操作的；字符流在操作时使用了缓冲区，通过缓冲区再操作文件。</li>
+</ul>
+<h2 id="2-FileReader-和-FileWriter"><a href="#2-FileReader-和-FileWriter" class="headerlink" title="2. FileReader 和 FileWriter"></a>2. FileReader 和 FileWriter</h2><p><strong>FileReader 和 FileWriter 用于输入输出文本文件。</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReaderAndWriterDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">output</span><span class="params">(String filepath)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 1.使用 File 类绑定一个文件</span></span><br><span class="line">        File f = <span class="keyword">new</span> File(filepath);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.把 File 对象绑定到流对象上</span></span><br><span class="line">        Writer out = <span class="keyword">new</span> FileWriter(f);</span><br><span class="line">        <span class="comment">// Writer out = new FileWriter(f, true); // 追加内容方式</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.进行读或写操作</span></span><br><span class="line">        String str = <span class="string">"Hello World!!!\r\n"</span>;</span><br><span class="line">        out.write(str);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4.关闭流</span></span><br><span class="line">        <span class="comment">// 字符流操作时使用了缓冲区，并在关闭字符流时会强制将缓冲区内容输出</span></span><br><span class="line">        <span class="comment">// 如果不关闭流，则缓冲区的内容是无法输出的</span></span><br><span class="line">        <span class="comment">// 如果想在不关闭流时，将缓冲区内容输出，可以使用 flush 强制清空缓冲区</span></span><br><span class="line">        out.flush();</span><br><span class="line">        out.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">char</span>[] input(String filepath) <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="comment">// 1.使用 File 类绑定一个文件</span></span><br><span class="line">        File f = <span class="keyword">new</span> File(filepath);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.把 File 对象绑定到流对象上</span></span><br><span class="line">        Reader input = <span class="keyword">new</span> FileReader(f);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.进行读或写操作</span></span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">0</span>; <span class="comment">// 接收每一个内容</span></span><br><span class="line">        <span class="keyword">int</span> len = <span class="number">0</span>; <span class="comment">// 读取内容</span></span><br><span class="line">        <span class="keyword">char</span>[] c = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">1024</span>];</span><br><span class="line">        <span class="keyword">while</span> ((temp = input.read()) != -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="comment">// 如果不是-1就表示还有内容，可以继续读取</span></span><br><span class="line">            c[len] = (<span class="keyword">char</span>) temp;</span><br><span class="line">            len++;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"文件字符数为："</span> + len);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4.关闭流</span></span><br><span class="line">        input.close();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> c;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        String filepath = <span class="string">"d:\\test.txt"</span>;</span><br><span class="line"></span><br><span class="line">        output(filepath);</span><br><span class="line">        System.out.println(<span class="string">"内容为："</span> + <span class="keyword">new</span> String(input(filepath)));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-InputStreamReader-和-OutputStreamWriter"><a href="#3-InputStreamReader-和-OutputStreamWriter" class="headerlink" title="3. InputStreamReader 和 OutputStreamWriter"></a>3. InputStreamReader 和 OutputStreamWriter</h2><p><strong>InputStreamReader 和 OutputStreamWriter 可以将 InputStream 和 OutputStream 分别转换为 Reader 和 Writer。</strong></p>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OutputStreamWriterDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        File f = <span class="keyword">new</span> File(<span class="string">"d:"</span> + File.separator + <span class="string">"test.txt"</span>);</span><br><span class="line">        Writer out = <span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(f));</span><br><span class="line">        out.write(<span class="string">"hello world!!"</span>);</span><br><span class="line">        out.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InputStreamReaderDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        File f = <span class="keyword">new</span> File(<span class="string">"d:"</span> + File.separator + <span class="string">"test.txt"</span>);</span><br><span class="line">        Reader reader = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(f));</span><br><span class="line">        <span class="keyword">char</span> c[] = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">1024</span>];</span><br><span class="line">        <span class="keyword">int</span> len = reader.read(c);</span><br><span class="line">        reader.close();</span><br><span class="line">        System.out.println(<span class="keyword">new</span> String(c, <span class="number">0</span>, len));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-BufferedReader"><a href="#4-BufferedReader" class="headerlink" title="4. BufferedReader"></a>4. BufferedReader</h2><p>BufferedReader 类用于从缓冲区中读取内容，所有的输入字节数据都放在缓冲区中。</p>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BufferedReaderDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        BufferedReader buf = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            System.out.print(<span class="string">"请输入内容："</span>);</span><br><span class="line">            String str = buf.readLine();</span><br><span class="line">            <span class="keyword">if</span> (str.equalsIgnoreCase(<span class="string">"exit"</span>)) &#123;</span><br><span class="line">                System.out.print(<span class="string">"退出"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">"输入的内容为："</span> + str);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="5-PrintStream"><a href="#5-PrintStream" class="headerlink" title="5. PrintStream"></a>5. PrintStream</h2><p>PrintStream 提供了非常方便的打印功能。</p>
+<p>事实上，我们常用的 System 中提供的静态成员 System.out 和 System.err 就是 PrintStream 对象。</p>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrintStreamDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String arg[])</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">final</span> String filepath = <span class="string">"d:\\test.txt"</span>;</span><br><span class="line">        <span class="comment">// 如果现在是使用 FileOuputStream 实例化，意味着所有的数据都会输出到文件中</span></span><br><span class="line">        OutputStream os = <span class="keyword">new</span> FileOutputStream(<span class="keyword">new</span> File(filepath));</span><br><span class="line">        PrintStream ps = <span class="keyword">new</span> PrintStream(os);</span><br><span class="line">        ps.print(<span class="string">"Hello "</span>);</span><br><span class="line">        ps.println(<span class="string">"World!!!"</span>);</span><br><span class="line">        ps.printf(<span class="string">"姓名：%s；年龄：%d"</span>, <span class="string">"张三"</span>, <span class="number">18</span>);</span><br><span class="line">        ps.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="6-FileInputStream-和-FileOutputStream"><a href="#6-FileInputStream-和-FileOutputStream" class="headerlink" title="6. FileInputStream 和 FileOutputStream"></a>6. FileInputStream 和 FileOutputStream</h2><p><strong>FileInputStream 和 FileOutputStream 用于输入、输出文件。</strong></p>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileStreamDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String FILEPATH = <span class="string">"d:\\test.txt"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">output</span><span class="params">(String filepath)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 第1步、使用File类找到一个文件</span></span><br><span class="line">        File f = <span class="keyword">new</span> File(filepath);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 第2步、通过子类实例化父类对象</span></span><br><span class="line">        OutputStream out = <span class="keyword">new</span> FileOutputStream(f);</span><br><span class="line">        <span class="comment">// 实例化时，默认为覆盖原文件内容方式；如果添加true参数，则变为对原文件追加内容的方式。</span></span><br><span class="line">        <span class="comment">// OutputStream out = new FileOutputStream(f, true);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 第3步、进行写操作</span></span><br><span class="line">        String str = <span class="string">"Hello World\r\n"</span>;</span><br><span class="line">        <span class="keyword">byte</span>[] bytes = str.getBytes();</span><br><span class="line">        out.write(bytes);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 第4步、关闭输出流</span></span><br><span class="line">        out.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">input</span><span class="params">(String filepath)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 第1步、使用File类找到一个文件</span></span><br><span class="line">        File f = <span class="keyword">new</span> File(filepath);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 第2步、通过子类实例化父类对象</span></span><br><span class="line">        InputStream input = <span class="keyword">new</span> FileInputStream(f);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 第3步、进行读操作</span></span><br><span class="line">        <span class="comment">// 有三种读取方式，体会其差异</span></span><br><span class="line">        <span class="keyword">byte</span>[] bytes = <span class="keyword">new</span> <span class="keyword">byte</span>[(<span class="keyword">int</span>) f.length()];</span><br><span class="line">        <span class="keyword">int</span> len = input.read(bytes); <span class="comment">// 读取内容</span></span><br><span class="line">        System.out.println(<span class="string">"读入数据的长度："</span> + len);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 第4步、关闭输入流</span></span><br><span class="line">        input.close();</span><br><span class="line">        System.out.println(<span class="string">"内容为：\n"</span> + <span class="keyword">new</span> String(bytes));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        output(FILEPATH);</span><br><span class="line">        input(FILEPATH);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="7-ByteArrayInputStream-和-ByteArrayOutputStream"><a href="#7-ByteArrayInputStream-和-ByteArrayOutputStream" class="headerlink" title="7. ByteArrayInputStream 和 ByteArrayOutputStream"></a>7. ByteArrayInputStream 和 ByteArrayOutputStream</h2><p><strong>ByteArrayInputStream 和 ByteArrayOutputStream 用于在内存中输入、输出数据。</strong></p>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ByteArrayStreamDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">        String str = <span class="string">"HELLOWORLD"</span>; <span class="comment">// 定义一个字符串，全部由大写字母组成</span></span><br><span class="line">        ByteArrayInputStream bis = <span class="keyword">new</span> ByteArrayInputStream(str.getBytes());</span><br><span class="line">        ByteArrayOutputStream bos = <span class="keyword">new</span> ByteArrayOutputStream();</span><br><span class="line">        <span class="comment">// 准备从内存ByteArrayInputStream中读取内容</span></span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> ((temp = bis.read()) != -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">char</span> c = (<span class="keyword">char</span>) temp;    <span class="comment">// 读取的数字变为字符</span></span><br><span class="line">            bos.write(Character.toLowerCase(c));    <span class="comment">// 将字符变为小写</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 所有的数据就全部都在ByteArrayOutputStream中</span></span><br><span class="line">        String newStr = bos.toString();    <span class="comment">// 取出内容</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            bis.close();</span><br><span class="line">            bos.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(newStr);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="8-PipedInputStream-和-PipedOutputStream"><a href="#8-PipedInputStream-和-PipedOutputStream" class="headerlink" title="8. PipedInputStream 和 PipedOutputStream"></a>8. PipedInputStream 和 PipedOutputStream</h2><p><strong>PipedInputStream 和 PipedOutputStream 可以在两个线程间进行通信。</strong></p>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PipedStreamDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Send</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> PipedOutputStream pos = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        Send() &#123;</span><br><span class="line">            pos = <span class="keyword">new</span> PipedOutputStream();    <span class="comment">// 实例化输出流</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            String str = <span class="string">"Hello World!!!"</span>;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                pos.write(str.getBytes());</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                pos.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 得到此线程的管道输出流</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="function">PipedOutputStream <span class="title">getPos</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> pos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Receive</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> PipedInputStream pis = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        Receive() &#123;</span><br><span class="line">            pis = <span class="keyword">new</span> PipedInputStream();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">byte</span> b[] = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">            <span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                len = pis.read(b);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                pis.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">"接收的内容为："</span> + <span class="keyword">new</span> String(b, <span class="number">0</span>, len));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 得到此线程的管道输入流</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="function">PipedInputStream <span class="title">getPis</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> pis;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">        Send s = <span class="keyword">new</span> Send();</span><br><span class="line">        Receive r = <span class="keyword">new</span> Receive();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            s.getPos().connect(r.getPis());    <span class="comment">// 连接管道</span></span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">new</span> Thread(s).start();    <span class="comment">// 启动线程</span></span><br><span class="line">        <span class="keyword">new</span> Thread(r).start();    <span class="comment">// 启动线程</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="9-DataInputStream-和-DataOutputStream"><a href="#9-DataInputStream-和-DataOutputStream" class="headerlink" title="9. DataInputStream 和 DataOutputStream"></a>9. DataInputStream 和 DataOutputStream</h2><p>DataInputStream 和 DataOutputStream 会一定格式将数据输入、输出。</p>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataStreamDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String FILEPATH = <span class="string">"d:\\order.txt"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">output</span><span class="params">(String filepath)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 1.使用 File 类绑定一个文件</span></span><br><span class="line">        File f = <span class="keyword">new</span> File(filepath);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.把 File 对象绑定到流对象上</span></span><br><span class="line">        DataOutputStream dos = <span class="keyword">new</span> DataOutputStream(<span class="keyword">new</span> FileOutputStream(f));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.进行读或写操作</span></span><br><span class="line">        String names[] = &#123;<span class="string">"衬衣"</span>, <span class="string">"手套"</span>, <span class="string">"围巾"</span>&#125;;</span><br><span class="line">        <span class="keyword">float</span> prices[] = &#123;<span class="number">98.3f</span>, <span class="number">30.3f</span>, <span class="number">50.5f</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span> nums[] = &#123;<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; names.length; i++) &#123;</span><br><span class="line">            dos.writeChars(names[i]);</span><br><span class="line">            dos.writeChar(<span class="string">'\t'</span>);</span><br><span class="line">            dos.writeFloat(prices[i]);</span><br><span class="line">            dos.writeChar(<span class="string">'\t'</span>);</span><br><span class="line">            dos.writeInt(nums[i]);</span><br><span class="line">            dos.writeChar(<span class="string">'\n'</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4.关闭流</span></span><br><span class="line">        dos.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">input</span><span class="params">(String filepath)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 1.使用 File 类绑定一个文件</span></span><br><span class="line">        File f = <span class="keyword">new</span> File(filepath);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.把 File 对象绑定到流对象上</span></span><br><span class="line">        DataInputStream dis = <span class="keyword">new</span> DataInputStream(<span class="keyword">new</span> FileInputStream(f));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.进行读或写操作</span></span><br><span class="line">        String name = <span class="keyword">null</span>;    <span class="comment">// 接收名称</span></span><br><span class="line">        <span class="keyword">float</span> price = <span class="number">0.0f</span>;    <span class="comment">// 接收价格</span></span><br><span class="line">        <span class="keyword">int</span> num = <span class="number">0</span>;    <span class="comment">// 接收数量</span></span><br><span class="line">        <span class="keyword">char</span> temp[] = <span class="keyword">null</span>;    <span class="comment">// 接收商品名称</span></span><br><span class="line">        <span class="keyword">int</span> len = <span class="number">0</span>;    <span class="comment">// 保存读取数据的个数</span></span><br><span class="line">        <span class="keyword">char</span> c = <span class="number">0</span>;    <span class="comment">// '\u0000'</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                temp = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">200</span>];    <span class="comment">// 开辟空间</span></span><br><span class="line">                len = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">while</span> ((c = dis.readChar()) != <span class="string">'\t'</span>) &#123;    <span class="comment">// 接收内容</span></span><br><span class="line">                    temp[len] = c;</span><br><span class="line">                    len++;    <span class="comment">// 读取长度加1</span></span><br><span class="line">                &#125;</span><br><span class="line">                name = <span class="keyword">new</span> String(temp, <span class="number">0</span>, len);    <span class="comment">// 将字符数组变为String</span></span><br><span class="line">                price = dis.readFloat();    <span class="comment">// 读取价格</span></span><br><span class="line">                dis.readChar();    <span class="comment">// 读取\t</span></span><br><span class="line">                num = dis.readInt();    <span class="comment">// 读取int</span></span><br><span class="line">                dis.readChar();    <span class="comment">// 读取\n</span></span><br><span class="line">                System.out.printf(<span class="string">"名称：%s；价格：%5.2f；数量：%d\n"</span>, name, price, num);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (EOFException e) &#123;</span><br><span class="line">            System.out.println(<span class="string">"结束"</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4.关闭流</span></span><br><span class="line">        dis.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        output(FILEPATH);</span><br><span class="line">        input(FILEPATH);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="10-ZipInputStream-和-ZipOutputStream"><a href="#10-ZipInputStream-和-ZipOutputStream" class="headerlink" title="10. ZipInputStream 和 ZipOutputStream"></a>10. ZipInputStream 和 ZipOutputStream</h2><p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.zip.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ZipStreamDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String ZIP_FILE_PATH = <span class="string">"d:\\zipdemo.zip"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">demo01</span><span class="params">(String zipfilepath)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        File file = <span class="keyword">new</span> File(zipfilepath);</span><br><span class="line">        ZipFile zipFile = <span class="keyword">new</span> ZipFile(file);</span><br><span class="line">        ZipEntry entry = zipFile.getEntry(<span class="string">"mldn.txt"</span>);</span><br><span class="line">        System.out.println(<span class="string">"压缩文件的名称："</span> + zipFile.getName());</span><br><span class="line"></span><br><span class="line">        File outputFile = <span class="keyword">new</span> File(<span class="string">"d:"</span> + File.separator + <span class="string">"mldn_unzip.txt"</span>);</span><br><span class="line">        OutputStream out = <span class="keyword">new</span> FileOutputStream(outputFile); <span class="comment">// 实例化输出流</span></span><br><span class="line">        InputStream input = zipFile.getInputStream(entry);    <span class="comment">// 得到一个压缩实体的输入流</span></span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> ((temp = input.read()) != -<span class="number">1</span>) &#123;</span><br><span class="line">            out.write(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        input.close();    <span class="comment">// 关闭输入流</span></span><br><span class="line">        out.close();    <span class="comment">// 关闭输出流</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 压缩一个文件</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">output1</span><span class="params">(String filepath, String zipfilepath)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">// 1.使用 File 类绑定一个文件</span></span><br><span class="line">        <span class="comment">// 定义要压缩的文件</span></span><br><span class="line">        File file = <span class="keyword">new</span> File(filepath);</span><br><span class="line">        <span class="comment">// 定义压缩文件名称</span></span><br><span class="line">        File zipFile = <span class="keyword">new</span> File(zipfilepath);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.把 File 对象绑定到流对象上</span></span><br><span class="line">        InputStream input = <span class="keyword">new</span> FileInputStream(file);</span><br><span class="line">        ZipOutputStream zipOut = <span class="keyword">new</span> ZipOutputStream(<span class="keyword">new</span> FileOutputStream(zipFile));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.进行读或写操作</span></span><br><span class="line">        zipOut.putNextEntry(<span class="keyword">new</span> ZipEntry(file.getName()));</span><br><span class="line">        zipOut.setComment(<span class="string">"This is a zip file."</span>);</span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> ((temp = input.read()) != -<span class="number">1</span>) &#123;    <span class="comment">// 读取内容</span></span><br><span class="line">            zipOut.write(temp);    <span class="comment">// 压缩输出</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4.关闭流</span></span><br><span class="line">        input.close();</span><br><span class="line">        zipOut.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 读取实体为一个文件的压缩包</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">input1</span><span class="params">(String zipfilepath, String filepath)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">// 1.使用 File 类绑定一个文件</span></span><br><span class="line">        File zipFile = <span class="keyword">new</span> File(zipfilepath);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.把 File 对象绑定到流对象上</span></span><br><span class="line">        ZipInputStream input = <span class="keyword">new</span> ZipInputStream(<span class="keyword">new</span> FileInputStream(zipFile));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.进行读或写操作</span></span><br><span class="line">        ZipEntry entry = input.getNextEntry();    <span class="comment">// 得到一个压缩实体</span></span><br><span class="line">        System.out.println(<span class="string">"压缩实体名称："</span> + entry.getName());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4.关闭流</span></span><br><span class="line">        input.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 压缩一个目录</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">output2</span><span class="params">(String dirpath, String zipfilepath)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">// 1.使用 File 类绑定一个文件</span></span><br><span class="line">        <span class="comment">// 定义要压缩的文件夹</span></span><br><span class="line">        File file = <span class="keyword">new</span> File(dirpath);</span><br><span class="line">        <span class="comment">// 定义压缩文件名称</span></span><br><span class="line">        File zipFile = <span class="keyword">new</span> File(zipfilepath);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.把 File 对象绑定到流对象上</span></span><br><span class="line">        ZipOutputStream zipOut = <span class="keyword">new</span> ZipOutputStream(<span class="keyword">new</span> FileOutputStream(zipFile));</span><br><span class="line">        zipOut.setComment(<span class="string">"This is zip folder."</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.进行读或写操作</span></span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (file.isDirectory()) &#123;    <span class="comment">// 判断是否是文件夹</span></span><br><span class="line">            File lists[] = file.listFiles();    <span class="comment">// 列出全部文件</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lists.length; i++) &#123;</span><br><span class="line">                InputStream input = <span class="keyword">new</span> FileInputStream(lists[i]);</span><br><span class="line">                <span class="comment">// 设置ZipEntry对象</span></span><br><span class="line">                zipOut.putNextEntry(<span class="keyword">new</span> ZipEntry(file.getName() + File.separator + lists[i].getName()));</span><br><span class="line">                <span class="keyword">while</span> ((temp = input.read()) != -<span class="number">1</span>) &#123;</span><br><span class="line">                    zipOut.write(temp);</span><br><span class="line">                &#125;</span><br><span class="line">                input.close();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4.关闭流</span></span><br><span class="line">        zipOut.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 解压实体为一个目录的压缩包</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">input2</span><span class="params">(String zipfilepath, String dirpath)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">// 1.使用 File 类绑定一个文件</span></span><br><span class="line">        File file = <span class="keyword">new</span> File(zipfilepath);</span><br><span class="line">        ZipFile zipFile = <span class="keyword">new</span> ZipFile(file);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.把 File 对象绑定到流对象上</span></span><br><span class="line">        ZipInputStream zis = <span class="keyword">new</span> ZipInputStream(<span class="keyword">new</span> FileInputStream(file));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.进行读或写操作</span></span><br><span class="line">        ZipEntry entry = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">while</span> ((entry = zis.getNextEntry()) != <span class="keyword">null</span>) &#123;    <span class="comment">// 得到一个压缩实体</span></span><br><span class="line">            System.out.println(<span class="string">"解压缩"</span> + entry.getName() + <span class="string">"文件。"</span>);</span><br><span class="line">            <span class="comment">// 定义输出的文件路径</span></span><br><span class="line">            File outFile = <span class="keyword">new</span> File(dirpath + File.separator + entry.getName());</span><br><span class="line">            <span class="keyword">if</span> (!outFile.getParentFile().exists()) &#123;    <span class="comment">// 如果输出文件夹不存在</span></span><br><span class="line">                outFile.getParentFile().mkdirs();    <span class="comment">// 创建文件夹</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (!outFile.exists()) &#123;    <span class="comment">// 判断输出文件是否存在</span></span><br><span class="line">                outFile.createNewFile();    <span class="comment">// 创建文件</span></span><br><span class="line">            &#125;</span><br><span class="line">            InputStream input = zipFile.getInputStream(entry);    <span class="comment">// 得到每一个实体的输入流</span></span><br><span class="line">            OutputStream out = <span class="keyword">new</span> FileOutputStream(outFile);    <span class="comment">// 实例化文件输出流</span></span><br><span class="line">            <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> ((temp = input.read()) != -<span class="number">1</span>) &#123;</span><br><span class="line">                out.write(temp);</span><br><span class="line">            &#125;</span><br><span class="line">            input.close();        <span class="comment">// 关闭输入流</span></span><br><span class="line">            out.close();    <span class="comment">// 关闭输出流</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4.关闭流</span></span><br><span class="line">        zis.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">final</span> String filepath = <span class="string">"d:\\demo.txt"</span>;</span><br><span class="line">        <span class="keyword">final</span> String zipfilepath = <span class="string">"d:\\demo.zip"</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">final</span> String dirpath = <span class="string">"d:\\demo2"</span>;</span><br><span class="line">        <span class="keyword">final</span> String dirpath2 = <span class="string">"d:\\new"</span>;</span><br><span class="line">        <span class="keyword">final</span> String zipfilepath2 = <span class="string">"d:\\demo2.zip"</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//        demo01(ZIP_FILE_PATH);</span></span><br><span class="line">        output1(filepath, zipfilepath);</span><br><span class="line">        input1(zipfilepath, filepath);</span><br><span class="line"></span><br><span class="line">        output2(dirpath, zipfilepath2);</span><br><span class="line">        input2(zipfilepath2, dirpath2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="11-ObjectInputStream-和-ObjectOutputStream"><a href="#11-ObjectInputStream-和-ObjectOutputStream" class="headerlink" title="11. ObjectInputStream 和 ObjectOutputStream"></a>11. ObjectInputStream 和 ObjectOutputStream</h2><p><strong>ObjectInputStream 和 ObjectOutputStream 是对象输入输出流，一般用于对象序列化。</strong></p>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ObjectStream</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> String name;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.name = name;</span><br><span class="line">            <span class="keyword">this</span>.age = age;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"姓名："</span> + <span class="keyword">this</span>.name + <span class="string">"；年龄："</span> + <span class="keyword">this</span>.age;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">writeObject</span><span class="params">(String filepath, Object obj[])</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">// 1.使用 File 类绑定一个文件</span></span><br><span class="line">        File f = <span class="keyword">new</span> File(filepath);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.把 File 对象绑定到流对象上</span></span><br><span class="line">        OutputStream out = <span class="keyword">new</span> FileOutputStream(f);</span><br><span class="line">        ObjectOutputStream oos = <span class="keyword">new</span> ObjectOutputStream(out);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.进行读或写操作</span></span><br><span class="line">        oos.writeObject(obj);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4.关闭流</span></span><br><span class="line">        oos.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Object[] readObject(String filepath) <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="comment">// 1.使用 File 类绑定一个文件</span></span><br><span class="line">        File f = <span class="keyword">new</span> File(filepath);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.把 File 对象绑定到流对象上</span></span><br><span class="line">        InputStream input = <span class="keyword">new</span> FileInputStream(f);</span><br><span class="line">        ObjectInputStream ois = <span class="keyword">new</span> ObjectInputStream(input);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.进行读或写操作</span></span><br><span class="line">        Object[] objects = (Object[]) ois.readObject();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4.关闭流</span></span><br><span class="line">        ois.close();</span><br><span class="line">        <span class="keyword">return</span> objects;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">final</span> String filepath = <span class="string">"d:\\object.txt"</span>;</span><br><span class="line">        Person per[] = &#123;<span class="keyword">new</span> Person(<span class="string">"张三"</span>, <span class="number">30</span>), <span class="keyword">new</span> Person(<span class="string">"李四"</span>, <span class="number">31</span>), <span class="keyword">new</span> Person(<span class="string">"王五"</span>, <span class="number">32</span>)&#125;;</span><br><span class="line">        writeObject(filepath, per);</span><br><span class="line">        Object o[] = readObject(filepath);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; o.length; i++) &#123;</span><br><span class="line">            Person p = (Person) o[i];</span><br><span class="line">            System.out.println(p);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/javacore/" rel="tag"># javacore</a>
+          
+            <a href="/blog/tags/java/" rel="tag"># java</a>
+          
+            <a href="/blog/tags/io/" rel="tag"># io</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2018/06/29/programming/java/javacore/container/Queue/" rel="next" title="Java 容器之 Queue">
+                <i class="fa fa-chevron-left"></i> Java 容器之 Queue
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2018/07/01/programming/java/javacore/io/Java常用IO类/" rel="prev" title="Java 常用 IO 类">
+                Java 常用 IO 类 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/blog/images/avatar.gif" alt="Zhang Peng">
+            
+              <p class="site-author-name" itemprop="name">Zhang Peng</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives/">
+              
+                  <span class="site-state-item-count">381</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">76</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/blog/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/dunwu" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:forbreak@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-流操作"><span class="nav-number">1.</span> <span class="nav-text">Java 流操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-字符流和字节流"><span class="nav-number">1.1.</span> <span class="nav-text">1. 字符流和字节流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符流和字节流的区别"><span class="nav-number">1.1.1.</span> <span class="nav-text">字符流和字节流的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-FileReader-和-FileWriter"><span class="nav-number">1.2.</span> <span class="nav-text">2. FileReader 和 FileWriter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-InputStreamReader-和-OutputStreamWriter"><span class="nav-number">1.3.</span> <span class="nav-text">3. InputStreamReader 和 OutputStreamWriter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-BufferedReader"><span class="nav-number">1.4.</span> <span class="nav-text">4. BufferedReader</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-PrintStream"><span class="nav-number">1.5.</span> <span class="nav-text">5. PrintStream</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-FileInputStream-和-FileOutputStream"><span class="nav-number">1.6.</span> <span class="nav-text">6. FileInputStream 和 FileOutputStream</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-ByteArrayInputStream-和-ByteArrayOutputStream"><span class="nav-number">1.7.</span> <span class="nav-text">7. ByteArrayInputStream 和 ByteArrayOutputStream</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-PipedInputStream-和-PipedOutputStream"><span class="nav-number">1.8.</span> <span class="nav-text">8. PipedInputStream 和 PipedOutputStream</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-DataInputStream-和-DataOutputStream"><span class="nav-number">1.9.</span> <span class="nav-text">9. DataInputStream 和 DataOutputStream</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-ZipInputStream-和-ZipOutputStream"><span class="nav-number">1.10.</span> <span class="nav-text">10. ZipInputStream 和 ZipOutputStream</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-ObjectInputStream-和-ObjectOutputStream"><span class="nav-number">1.11.</span> <span class="nav-text">11. ObjectInputStream 和 ObjectOutputStream</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-paper-plane"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhang Peng</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/blog/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

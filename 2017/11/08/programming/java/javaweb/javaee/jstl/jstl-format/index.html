@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="javaee,jstl,">
+
+
+
+
+
+  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="JSTL 格式化标签用来格式化并输出文本、日期、时间、数字。引用格式化标签库的语法如下： 12&amp;lt;%@ taglib prefix=&quot;fmt&quot;           uri=&quot;http://java.sun.com/jsp/jstl/fmt&quot; %&amp;gt;    标签 描述     &amp;lt;fmt:formatNumber&amp;gt; 使用指定的格式或精度格式化数字   &amp;lt;fmt:parseNu">
+<meta name="keywords" content="javaee,jstl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSTL 格式化标签">
+<meta property="og:url" content="http://yoursite.com/2017/11/08/programming/java/javaweb/javaee/jstl/jstl-format/index.html">
+<meta property="og:site_name" content="张鹏的博客">
+<meta property="og:description" content="JSTL 格式化标签用来格式化并输出文本、日期、时间、数字。引用格式化标签库的语法如下： 12&amp;lt;%@ taglib prefix=&quot;fmt&quot;           uri=&quot;http://java.sun.com/jsp/jstl/fmt&quot; %&amp;gt;    标签 描述     &amp;lt;fmt:formatNumber&amp;gt; 使用指定的格式或精度格式化数字   &amp;lt;fmt:parseNu">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-06T08:43:46.890Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JSTL 格式化标签">
+<meta name="twitter:description" content="JSTL 格式化标签用来格式化并输出文本、日期、时间、数字。引用格式化标签库的语法如下： 12&amp;lt;%@ taglib prefix=&quot;fmt&quot;           uri=&quot;http://java.sun.com/jsp/jstl/fmt&quot; %&amp;gt;    标签 描述     &amp;lt;fmt:formatNumber&amp;gt; 使用指定的格式或精度格式化数字   &amp;lt;fmt:parseNu">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/08/programming/java/javaweb/javaee/jstl/jstl-format/">
+
+
+
+
+
+  <title>JSTL 格式化标签 | 张鹏的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">张鹏的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">大道至简，知易行难</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2017/11/08/programming/java/javaweb/javaee/jstl/jstl-format/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Peng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张鹏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JSTL 格式化标签</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-08T00:00:00+08:00">
+                2017-11-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/javaee/" itemprop="url" rel="index">
+                    <span itemprop="name">javaee</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>JSTL 格式化标签用来格式化并输出文本、日期、时间、数字。引用格式化标签库的语法如下：</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ taglib prefix=<span class="string">"fmt"</span></span><br><span class="line">           uri=<span class="string">"http://java.sun.com/jsp/jstl/fmt"</span> %&gt;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>标签</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;fmt:formatNumber&gt;</code></td>
+<td>使用指定的格式或精度格式化数字</td>
+</tr>
+<tr>
+<td><code>&lt;fmt:parseNumber&gt;</code></td>
+<td>解析一个代表着数字，货币或百分比的字符串</td>
+</tr>
+<tr>
+<td><code>&lt;fmt:formatDate&gt;</code></td>
+<td>使用指定的风格或模式格式化日期和时间</td>
+</tr>
+<tr>
+<td><code>&lt;fmt:parseDate&gt;</code></td>
+<td>解析一个代表着日期或时间的字符串</td>
+</tr>
+<tr>
+<td><code>&lt;fmt:bundle&gt;</code></td>
+<td>绑定资源</td>
+</tr>
+<tr>
+<td><code>&lt;fmt:setLocale&gt;</code></td>
+<td>指定地区</td>
+</tr>
+<tr>
+<td><code>&lt;fmt:setBundle&gt;</code></td>
+<td>绑定资源</td>
+</tr>
+<tr>
+<td><code>&lt;fmt:timeZone&gt;</code></td>
+<td>指定时区</td>
+</tr>
+<tr>
+<td><code>&lt;fmt:setTimeZone&gt;</code></td>
+<td>指定时区</td>
+</tr>
+<tr>
+<td><code>&lt;fmt:message&gt;</code></td>
+<td>显示资源配置文件信息</td>
+</tr>
+<tr>
+<td><code>&lt;fmt:requestEncoding&gt;</code></td>
+<td>设置 request 的字符编码</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lt-fmt-formatNumber-gt-标签"><a href="#lt-fmt-formatNumber-gt-标签" class="headerlink" title="&lt;fmt:formatNumber&gt;标签"></a><code>&lt;fmt:formatNumber&gt;</code>标签</h2><p><code>&lt;fmt:formatNumber&gt;</code>标签用于格式化数字，百分比，货币。</p>
+<h3 id="语法格式"><a href="#语法格式" class="headerlink" title="语法格式"></a>语法格式</h3><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;fmt:formatNumber</span><br><span class="line">  value=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  type=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  pattern=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  currencyCode=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  currencySymbol=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  groupingUsed=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  maxIntegerDigits=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  minIntegerDigits=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  maxFractionDigits=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  minFractionDigits=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  <span class="keyword">var</span>=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  scope=<span class="string">"&lt;string&gt;"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p><code>&lt;fmt:formatNumber&gt;</code>标签有如下属性：</p>
+<table>
+<thead>
+<tr>
+<th><strong>属性</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>是否必要</strong></th>
+<th><strong>默认值</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>要显示的数字</td>
+<td>是</td>
+<td>无</td>
+</tr>
+<tr>
+<td>type</td>
+<td>NUMBER，CURRENCY，或 PERCENT 类型</td>
+<td>否</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>pattern</td>
+<td>指定一个自定义的格式化模式用与输出</td>
+<td>否</td>
+<td>无</td>
+</tr>
+<tr>
+<td>currencyCode</td>
+<td>货币码（当 type=”currency”时）</td>
+<td>否</td>
+<td>取决于默认区域</td>
+</tr>
+<tr>
+<td>currencySymbol</td>
+<td>货币符号 (当 type=”currency”时)</td>
+<td>否</td>
+<td>取决于默认区域</td>
+</tr>
+<tr>
+<td>groupingUsed</td>
+<td>是否对数字分组 (TRUE 或 FALSE)</td>
+<td>否</td>
+<td>true</td>
+</tr>
+<tr>
+<td>maxIntegerDigits</td>
+<td>整型数最大的位数</td>
+<td>否</td>
+<td>无</td>
+</tr>
+<tr>
+<td>minIntegerDigits</td>
+<td>整型数最小的位数</td>
+<td>否</td>
+<td>无</td>
+</tr>
+<tr>
+<td>maxFractionDigits</td>
+<td>小数点后最大的位数</td>
+<td>否</td>
+<td>无</td>
+</tr>
+<tr>
+<td>minFractionDigits</td>
+<td>小数点后最小的位数</td>
+<td>否</td>
+<td>无</td>
+</tr>
+<tr>
+<td>var</td>
+<td>存储格式化数字的变量</td>
+<td>否</td>
+<td>Print to page</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>var 属性的作用域</td>
+<td>否</td>
+<td>page</td>
+</tr>
+</tbody>
+</table>
+<p>如果<code>type</code>属性为 percent 或 number，那么您就可以使用其它几个格式化数字属性。</p>
+<p><code>maxIntegerDigits</code>属性和<code>minIntegerDigits</code>属性允许您指定整数的长度。若实际数字超过了<code>maxIntegerDigits</code>所指定的最大值，则数字将会被截断。</p>
+<p>有一些属性允许您指定小数点后的位数。<code>minFractionalDigits</code>属性和<code>maxFractionalDigits</code>属性允许您指定小数点后的位数。若实际的数字超出了所指定的范围，则这个数字会被截断。</p>
+<p>数字分组可以用来在每三个数字中插入一个逗号。<code>groupingIsUsed</code>属性用来指定是否使用数字分组。当与<code>minIntegerDigits</code>属性一同使用时，就必须要很小心地来获取预期的结果了。</p>
+<p>您或许会使用<code>pattern</code>属性。这个属性可以让您在对数字编码时包含指定的字符。接下来的表格中列出了这些字符。</p>
+<table>
+<thead>
+<tr>
+<th><strong>符号</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>代表一位数字</td>
+</tr>
+<tr>
+<td>E</td>
+<td>使用指数格式</td>
+</tr>
+<tr>
+<td>#</td>
+<td>代表一位数字，若没有则显示 0</td>
+</tr>
+<tr>
+<td>.</td>
+<td>小数点</td>
+</tr>
+<tr>
+<td>,</td>
+<td>数字分组分隔符</td>
+</tr>
+<tr>
+<td>;</td>
+<td>分隔格式</td>
+</tr>
+<tr>
+<td>-</td>
+<td>使用默认负数前缀</td>
+</tr>
+<tr>
+<td>%</td>
+<td>百分数</td>
+</tr>
+<tr>
+<td>?</td>
+<td>千分数</td>
+</tr>
+<tr>
+<td>¤</td>
+<td>货币符号，使用实际的货币符号代替</td>
+</tr>
+<tr>
+<td>X</td>
+<td>指定可以作为前缀或后缀的字符</td>
+</tr>
+<tr>
+<td>‘</td>
+<td>在前缀或后缀中引用特殊字符</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lt-fmt-parseNumber-gt-标签"><a href="#lt-fmt-parseNumber-gt-标签" class="headerlink" title="&lt;fmt:parseNumber&gt; 标签"></a><code>&lt;fmt:parseNumber&gt;</code> 标签</h2><p><code>&lt;fmt:parseNumber&gt;</code>标签用来解析数字，百分数，货币。</p>
+<h3 id="语法格式-1"><a href="#语法格式-1" class="headerlink" title="语法格式"></a>语法格式</h3><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;fmt:parseNumber</span><br><span class="line">  value=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  type=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  pattern=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  parseLocale=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  integerOnly=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  <span class="keyword">var</span>=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  scope=<span class="string">"&lt;string&gt;"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h3><p><code>&lt;fmt:parseNumber&gt;</code>标签有如下属性：</p>
+<table>
+<thead>
+<tr>
+<th><strong>属性</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>是否必要</strong></th>
+<th><strong>默认值</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>要解析的数字</td>
+<td>否</td>
+<td>Body</td>
+</tr>
+<tr>
+<td>type</td>
+<td>NUMBER,，CURRENCY，或 PERCENT</td>
+<td>否</td>
+<td>number</td>
+</tr>
+<tr>
+<td>parseLocale</td>
+<td>解析数字时所用的区域</td>
+<td>否</td>
+<td>默认区域</td>
+</tr>
+<tr>
+<td>integerOnly</td>
+<td>是否只解析整型数（true）或浮点数（false）</td>
+<td>否</td>
+<td>false</td>
+</tr>
+<tr>
+<td>pattern</td>
+<td>自定义解析模式</td>
+<td>否</td>
+<td>无</td>
+</tr>
+<tr>
+<td>timeZone</td>
+<td>要显示的日期的时区</td>
+<td>否</td>
+<td>默认时区</td>
+</tr>
+<tr>
+<td>var</td>
+<td>存储待解析数字的变量</td>
+<td>否</td>
+<td>Print to page</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>var 属性的作用域</td>
+<td>否</td>
+<td>page</td>
+</tr>
+</tbody>
+</table>
+<p><code>pattern</code>属性与<code>&lt;fmt:formatNumber&gt;</code>标签中的<code>pattern</code>有相同的作用。在解析时，<code>pattern</code>属性告诉解析器期望的格式。</p>
+<h2 id="lt-fmt-formatDate-gt-标签"><a href="#lt-fmt-formatDate-gt-标签" class="headerlink" title="&lt;fmt:formatDate&gt; 标签"></a><code>&lt;fmt:formatDate&gt;</code> 标签</h2><p><code>&lt;fmt:formatDate&gt;</code>标签用于使用不同的方式格式化日期。</p>
+<h3 id="语法格式-2"><a href="#语法格式-2" class="headerlink" title="语法格式"></a>语法格式</h3><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;fmt:formatDate</span><br><span class="line">  value=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  type=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  dateStyle=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  timeStyle=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  pattern=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  timeZone=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  <span class="keyword">var</span>=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">  scope=<span class="string">"&lt;string&gt;"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="属性-2"><a href="#属性-2" class="headerlink" title="属性"></a>属性</h3><p><code>&lt;fmt:formatDate&gt;</code>标签有如下属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>是否必要</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>要显示的日期</td>
+<td>是</td>
+<td>无</td>
+</tr>
+<tr>
+<td>type</td>
+<td>DATE, TIME, 或 BOTH</td>
+<td>否</td>
+<td>date</td>
+</tr>
+<tr>
+<td>dateStyle</td>
+<td>FULL, LONG, MEDIUM, SHORT, 或 DEFAULT</td>
+<td>否</td>
+<td>default</td>
+</tr>
+<tr>
+<td>timeStyle</td>
+<td>FULL, LONG, MEDIUM, SHORT, 或 DEFAULT</td>
+<td>否</td>
+<td>default</td>
+</tr>
+<tr>
+<td>pattern</td>
+<td>自定义格式模式</td>
+<td>否</td>
+<td>无</td>
+</tr>
+<tr>
+<td>timeZone</td>
+<td>显示日期的时区</td>
+<td>否</td>
+<td>默认时区</td>
+</tr>
+<tr>
+<td>var</td>
+<td>存储格式化日期的变量名</td>
+<td>否</td>
+<td>显示在页面</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>存储格式化日志变量的范围</td>
+<td>否</td>
+<td>页面</td>
+</tr>
+</tbody>
+</table>
+<p><code>&lt;fmt:formatDate&gt;</code> 标签格式模式</p>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G</td>
+<td>时代标志</td>
+<td>AD</td>
+</tr>
+<tr>
+<td>y</td>
+<td>不包含纪元的年份。如果不包含纪元的年份小于 10，则显示不具有前导零的年份。</td>
+<td>2002</td>
+</tr>
+<tr>
+<td>M</td>
+<td>月份数字。一位数的月份没有前导零。</td>
+<td>April &amp; 04</td>
+</tr>
+<tr>
+<td>d</td>
+<td>月中的某一天。一位数的日期没有前导零。</td>
+<td>20</td>
+</tr>
+<tr>
+<td>h</td>
+<td>12 小时制的小时。一位数的小时数没有前导零。</td>
+<td>12</td>
+</tr>
+<tr>
+<td>H</td>
+<td>24 小时制的小时。一位数的小时数没有前导零。</td>
+<td>0</td>
+</tr>
+<tr>
+<td>m</td>
+<td>分钟。一位数的分钟数没有前导零。</td>
+<td>45</td>
+</tr>
+<tr>
+<td>s</td>
+<td>秒。一位数的秒数没有前导零。</td>
+<td>52</td>
+</tr>
+<tr>
+<td>S</td>
+<td>毫秒</td>
+<td>970</td>
+</tr>
+<tr>
+<td>E</td>
+<td>周几</td>
+<td>Tuesday</td>
+</tr>
+<tr>
+<td>D</td>
+<td>一年中的第几天</td>
+<td>180</td>
+</tr>
+<tr>
+<td>F</td>
+<td>一个月中的第几个周几</td>
+<td>2 (一个月中的第二个星期三)</td>
+</tr>
+<tr>
+<td>w</td>
+<td>一年中的第几周 r</td>
+<td>27</td>
+</tr>
+<tr>
+<td>W</td>
+<td>一个月中的第几周</td>
+<td>2</td>
+</tr>
+<tr>
+<td>a</td>
+<td>a.m./p.m. 指示符</td>
+<td>PM</td>
+</tr>
+<tr>
+<td>k</td>
+<td>小时(12 小时制的小时)</td>
+<td>24</td>
+</tr>
+<tr>
+<td>K</td>
+<td>小时(24 小时制的小时)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>z</td>
+<td>时区</td>
+<td>中部标准时间</td>
+</tr>
+<tr>
+<td>‘</td>
+<td></td>
+<td>转义文本</td>
+</tr>
+<tr>
+<td>‘’</td>
+<td></td>
+<td>单引号</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lt-fmt-parseDate-gt-标签"><a href="#lt-fmt-parseDate-gt-标签" class="headerlink" title="&lt;fmt:parseDate&gt; 标签"></a><code>&lt;fmt:parseDate&gt;</code> 标签</h2><p><code>&lt;fmt:parseDate&gt;</code> 标签用于解析日期。</p>
+<h3 id="语法格式-3"><a href="#语法格式-3" class="headerlink" title="语法格式"></a>语法格式</h3><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;fmt:parseDate</span><br><span class="line">   value=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">   type=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">   dateStyle=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">   timeStyle=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">   pattern=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">   timeZone=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">   parseLocale=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">   <span class="keyword">var</span>=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">   scope=<span class="string">"&lt;string&gt;"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="属性-3"><a href="#属性-3" class="headerlink" title="属性"></a>属性</h3><p><code>&lt;fmt:parseDate&gt;</code>标签有如下属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>是否必要</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>要显示的日期</td>
+<td>是</td>
+<td>无</td>
+</tr>
+<tr>
+<td>type</td>
+<td>DATE, TIME, 或 BOTH</td>
+<td>否</td>
+<td>date</td>
+</tr>
+<tr>
+<td>dateStyle</td>
+<td>FULL, LONG, MEDIUM, SHORT, 或 DEFAULT</td>
+<td>否</td>
+<td>default</td>
+</tr>
+<tr>
+<td>timeStyle</td>
+<td>FULL, LONG, MEDIUM, SHORT, 或 DEFAULT</td>
+<td>否</td>
+<td>default</td>
+</tr>
+<tr>
+<td>pattern</td>
+<td>自定义格式模式</td>
+<td>否</td>
+<td>无</td>
+</tr>
+<tr>
+<td>timeZone</td>
+<td>显示日期的时区</td>
+<td>否</td>
+<td>默认时区</td>
+</tr>
+<tr>
+<td>var</td>
+<td>存储格式化日期的变量名</td>
+<td>否</td>
+<td>显示在页面</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>存储格式化日志变量的范围</td>
+<td>否</td>
+<td>页面</td>
+</tr>
+</tbody>
+</table>
+<p>属性设置我们需要的输出的时间格式。</p>
+<h2 id="lt-fmt-bundle-gt-标签"><a href="#lt-fmt-bundle-gt-标签" class="headerlink" title="&lt;fmt:bundle&gt; 标签"></a><code>&lt;fmt:bundle&gt;</code> 标签</h2><p><code>&lt;fmt:bundle&gt;</code>标签将指定的资源束对出现在<code>&lt;fmt:bundle&gt;</code>标签中的<code>&lt;fmt:message&gt;</code>标签可用。这可以使您省去为每个<code>&lt;fmt:message&gt;</code>标签指定资源束的很多步骤。</p>
+<p>举例来说，下面的两个<code>&lt;fmt:bundle&gt;</code>块将产生同样的输出：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;fmt:bundle basename=<span class="string">"com.tutorialspoint.Example"</span>&gt;</span><br><span class="line">    &lt;fmt:message key=<span class="string">"count.one"</span>/&gt;</span><br><span class="line">&lt;/fmt:bundle&gt;</span><br><span class="line"></span><br><span class="line">&lt;fmt:bundle basename=<span class="string">"com.tutorialspoint.Example"</span> prefix=<span class="string">"count."</span>&gt;</span><br><span class="line">    &lt;fmt:message key=<span class="string">"title"</span>/&gt;</span><br><span class="line">&lt;/fmt:bundle&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="语法格式-4"><a href="#语法格式-4" class="headerlink" title="语法格式"></a>语法格式</h3><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;fmt:bundle baseName=<span class="string">"&lt;string&gt;"</span> prefix=<span class="string">"&lt;string&gt;"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="属性-4"><a href="#属性-4" class="headerlink" title="属性"></a>属性</h3><p><code>&lt;fmt:bundle&gt;</code>标签有如下属性：</p>
+<table>
+<thead>
+<tr>
+<th><strong>属性</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>是否必要</strong></th>
+<th><strong>默认值</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>basename</td>
+<td>指定被载入的资源束的基础名称</td>
+<td>是</td>
+<td>无</td>
+</tr>
+<tr>
+<td>prefix</td>
+<td>指定<code>&lt;fmt:message&gt;</code>标签 key 属性的前缀</td>
+<td>否</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lt-fmt-setLocale-gt-标签"><a href="#lt-fmt-setLocale-gt-标签" class="headerlink" title="&lt;fmt:setLocale&gt; 标签"></a><code>&lt;fmt:setLocale&gt;</code> 标签</h2><p><code>&lt;fmt:setLocale&gt;</code>标签用来将给定的区域存储在 locale 配置变量中。</p>
+<h3 id="语法格式-5"><a href="#语法格式-5" class="headerlink" title="语法格式"></a>语法格式</h3><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;fmt:setLocale value=<span class="string">"&lt;string&gt;"</span> variant=<span class="string">"&lt;string&gt;"</span> scope=<span class="string">"&lt;string&gt;"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="属性-5"><a href="#属性-5" class="headerlink" title="属性"></a>属性</h3><p><code>&lt;fmt:setLocale&gt;</code>标签有如下属性：</p>
+<table>
+<thead>
+<tr>
+<th><strong>属性</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>是否必要</strong></th>
+<th><strong>默认值</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>指定 ISO-639 语言码和 ISO-3166 国家码</td>
+<td>是</td>
+<td>en_US</td>
+</tr>
+<tr>
+<td>variant</td>
+<td>特定浏览器变体</td>
+<td>否</td>
+<td>无</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>Locale 配置变量的作用域</td>
+<td>否</td>
+<td>Page</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lt-fmt-timeZone-gt-标签"><a href="#lt-fmt-timeZone-gt-标签" class="headerlink" title="&lt;fmt:timeZone&gt; 标签"></a><code>&lt;fmt:timeZone&gt;</code> 标签</h2><p><code>&lt;fmt:timeZone&gt;</code>标签用来指定时区，供其它标签使用。</p>
+<h3 id="语法格式-6"><a href="#语法格式-6" class="headerlink" title="语法格式"></a>语法格式</h3><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;fmt:setLocale value=<span class="string">"&lt;string&gt;"</span> variant=<span class="string">"&lt;string&gt;"</span> scope=<span class="string">"&lt;string&gt;"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="属性-6"><a href="#属性-6" class="headerlink" title="属性"></a>属性</h3><p><code>&lt;fmt:timeZone&gt;</code>标签有如下属性：</p>
+<table>
+<thead>
+<tr>
+<th><strong>属性</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>是否必要</strong></th>
+<th><strong>默认值</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>时区</td>
+<td>是</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lt-fmt-setTimeZone-gt-标签"><a href="#lt-fmt-setTimeZone-gt-标签" class="headerlink" title="&lt;fmt:setTimeZone&gt; 标签"></a><code>&lt;fmt:setTimeZone&gt;</code> 标签</h2><p><code>&lt;fmt:setTimeZone&gt;</code>标签用来复制一个时区对象至指定的作用域。</p>
+<h3 id="语法格式-7"><a href="#语法格式-7" class="headerlink" title="语法格式"></a>语法格式</h3><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;fmt:setTimeZone value=<span class="string">"&lt;string&gt;"</span> <span class="keyword">var</span>=<span class="string">"&lt;string&gt;"</span> scope=<span class="string">"&lt;string&gt;"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="属性-7"><a href="#属性-7" class="headerlink" title="属性"></a>属性</h3><p><code>&lt;fmt:setTimeZone&gt;</code>标签有如下属性：</p>
+<table>
+<thead>
+<tr>
+<th><strong>属性</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>是否必要</strong></th>
+<th><strong>默认值</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>时区</td>
+<td>是</td>
+<td>无</td>
+</tr>
+<tr>
+<td>var</td>
+<td>存储新时区的变量名</td>
+<td>否</td>
+<td>Replace default</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>变量的作用域</td>
+<td>否</td>
+<td>Page</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lt-fmt-message-gt-标签"><a href="#lt-fmt-message-gt-标签" class="headerlink" title="&lt;fmt:message&gt; 标签"></a><code>&lt;fmt:message&gt;</code> 标签</h2><p><code>&lt;fmt:message&gt;</code>标签映射一个关键字给局部消息，然后执行参数替换。</p>
+<h3 id="语法格式-8"><a href="#语法格式-8" class="headerlink" title="语法格式"></a>语法格式</h3><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;fmt:message</span><br><span class="line">   key=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">   bundle=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">   <span class="keyword">var</span>=<span class="string">"&lt;string&gt;"</span></span><br><span class="line">   scope=<span class="string">"&lt;string&gt;"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="属性-8"><a href="#属性-8" class="headerlink" title="属性"></a>属性</h3><p><code>&lt;fmt:message&gt;</code>标签有如下属性：</p>
+<table>
+<thead>
+<tr>
+<th><strong>属性</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>是否必要</strong></th>
+<th><strong>默认值</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>要检索的消息关键字</td>
+<td>否</td>
+<td>Body</td>
+</tr>
+<tr>
+<td>bundle</td>
+<td>要使用的资源束</td>
+<td>否</td>
+<td>默认资源束</td>
+</tr>
+<tr>
+<td>var</td>
+<td>存储局部消息的变量名</td>
+<td>否</td>
+<td>Print to page</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>var 属性的作用域</td>
+<td>否</td>
+<td>Page</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lt-fmt-requestEncoding-gt-标签"><a href="#lt-fmt-requestEncoding-gt-标签" class="headerlink" title="&lt;fmt:requestEncoding&gt; 标签"></a><code>&lt;fmt:requestEncoding&gt;</code> 标签</h2><p><code>&lt;fmt:requestEncoding&gt;</code>标签用来指定返回给 Web 应用程序的表单编码类型。</p>
+<h3 id="语法格式-9"><a href="#语法格式-9" class="headerlink" title="语法格式"></a>语法格式</h3><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;fmt:requestEncoding value=<span class="string">"&lt;string&gt;"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="属性-9"><a href="#属性-9" class="headerlink" title="属性"></a>属性</h3><p><code>&lt;fmt:requestEncoding&gt;</code>标签有如下属性：</p>
+<table>
+<thead>
+<tr>
+<th><strong>属性</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>是否必要</strong></th>
+<th><strong>默认值</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>字符编码集的名称，用于解码 request 参数</td>
+<td>是</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+<p>使用<code>&lt;fmt:requestEncoding&gt;</code>标签来指定字符集，用于解码来自表单的数据。在字符集不是 ISO-8859-1 时必须使用这个标签。由于大多数浏览器在它们的请求中不包含 Content-Type 头，所以需要这个标签。</p>
+<p><code>&lt;fmt:requestEncoding&gt;</code>标签的目的就是用来指定请求的 Content-Type。您必须指定一个 Content-Type，就算 response 是通过 Page 指令的 contentType 属性来编码。这是因为 response 的实际区域可能与 Page 指令所指定的不同。</p>
+<p>如果页面包含 I18N-capable 格式行为用于设置 response 的 locale 属性（通过调用 ServletResponse.setLocale()方法），任何在页面中指定的编码集将会被覆盖。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/javaee/" rel="tag"># javaee</a>
+          
+            <a href="/blog/tags/jstl/" rel="tag"># jstl</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2017/11/08/programming/java/javaweb/javaee/servlet/servlet-demo/" rel="next" title="JavaEE Servlet 示例">
+                <i class="fa fa-chevron-left"></i> JavaEE Servlet 示例
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2017/11/08/programming/java/spring/core/aop/" rel="prev" title="Spring AOP">
+                Spring AOP <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/blog/images/avatar.gif" alt="Zhang Peng">
+            
+              <p class="site-author-name" itemprop="name">Zhang Peng</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives/">
+              
+                  <span class="site-state-item-count">381</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">76</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/blog/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/dunwu" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:forbreak@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-fmt-formatNumber-gt-标签"><span class="nav-number">1.</span> <span class="nav-text">&lt;fmt:formatNumber&gt;标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法格式"><span class="nav-number">1.1.</span> <span class="nav-text">语法格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性"><span class="nav-number">1.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-fmt-parseNumber-gt-标签"><span class="nav-number">2.</span> <span class="nav-text">&lt;fmt:parseNumber&gt; 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法格式-1"><span class="nav-number">2.1.</span> <span class="nav-text">语法格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性-1"><span class="nav-number">2.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-fmt-formatDate-gt-标签"><span class="nav-number">3.</span> <span class="nav-text">&lt;fmt:formatDate&gt; 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法格式-2"><span class="nav-number">3.1.</span> <span class="nav-text">语法格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性-2"><span class="nav-number">3.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-fmt-parseDate-gt-标签"><span class="nav-number">4.</span> <span class="nav-text">&lt;fmt:parseDate&gt; 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法格式-3"><span class="nav-number">4.1.</span> <span class="nav-text">语法格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性-3"><span class="nav-number">4.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-fmt-bundle-gt-标签"><span class="nav-number">5.</span> <span class="nav-text">&lt;fmt:bundle&gt; 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法格式-4"><span class="nav-number">5.1.</span> <span class="nav-text">语法格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性-4"><span class="nav-number">5.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-fmt-setLocale-gt-标签"><span class="nav-number">6.</span> <span class="nav-text">&lt;fmt:setLocale&gt; 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法格式-5"><span class="nav-number">6.1.</span> <span class="nav-text">语法格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性-5"><span class="nav-number">6.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-fmt-timeZone-gt-标签"><span class="nav-number">7.</span> <span class="nav-text">&lt;fmt:timeZone&gt; 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法格式-6"><span class="nav-number">7.1.</span> <span class="nav-text">语法格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性-6"><span class="nav-number">7.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-fmt-setTimeZone-gt-标签"><span class="nav-number">8.</span> <span class="nav-text">&lt;fmt:setTimeZone&gt; 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法格式-7"><span class="nav-number">8.1.</span> <span class="nav-text">语法格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性-7"><span class="nav-number">8.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-fmt-message-gt-标签"><span class="nav-number">9.</span> <span class="nav-text">&lt;fmt:message&gt; 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法格式-8"><span class="nav-number">9.1.</span> <span class="nav-text">语法格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性-8"><span class="nav-number">9.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-fmt-requestEncoding-gt-标签"><span class="nav-number">10.</span> <span class="nav-text">&lt;fmt:requestEncoding&gt; 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法格式-9"><span class="nav-number">10.1.</span> <span class="nav-text">语法格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性-9"><span class="nav-number">10.2.</span> <span class="nav-text">属性</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-paper-plane"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhang Peng</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/blog/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
