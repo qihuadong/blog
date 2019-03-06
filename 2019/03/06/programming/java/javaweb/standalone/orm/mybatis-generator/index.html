@@ -2,14 +2,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +29,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -38,9 +45,22 @@
 
 
 
-  
-  
-  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.0.1" color="#222">
 
 
 
@@ -48,67 +68,18 @@
 
 
 
-<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
-
-
-
-
-
-
-<meta name="description" content="1. MyBatis Generator (MBG) 指南 MyBatis Generator (MBG) 用于自动生成 Mybatis 代码。 本文转载自 MyBatis Generator 详解    1. 配置详解 1.1. 文件头 1.2. 根元素 1.3. properties 元素 1.4. classPathEntry 元素 1.5. context 元素 1.5.1. plugin">
-<meta property="og:type" content="article">
-<meta property="og:title" content="1. MyBatis Generator (MBG) 指南">
-<meta property="og:url" content="https://dunwu.github.io/2019/03/06/programming/java/javaweb/standalone/orm/mybatis-generator/index.html">
-<meta property="og:site_name" content="张鹏的博客">
-<meta property="og:description" content="1. MyBatis Generator (MBG) 指南 MyBatis Generator (MBG) 用于自动生成 Mybatis 代码。 本文转载自 MyBatis Generator 详解    1. 配置详解 1.1. 文件头 1.2. 根元素 1.3. properties 元素 1.4. classPathEntry 元素 1.5. context 元素 1.5.1. plugin">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-06T08:43:46.939Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1. MyBatis Generator (MBG) 指南">
-<meta name="twitter:description" content="1. MyBatis Generator (MBG) 指南 MyBatis Generator (MBG) 用于自动生成 Mybatis 代码。 本文转载自 MyBatis Generator 详解    1. 配置详解 1.1. 文件头 1.2. 根元素 1.3. properties 元素 1.4. classPathEntry 元素 1.5. context 元素 1.5.1. plugin">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/blog/',
     scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -120,12 +91,39 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="1. MyBatis Generator (MBG) 指南 MyBatis Generator (MBG) 用于自动生成 Mybatis 代码。 本文转载自 MyBatis Generator 详解    1. 配置详解 1.1. 文件头 1.2. 根元素 1.3. properties 元素 1.4. classPathEntry 元素 1.5. context 元素 1.5.1. plugin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1. MyBatis Generator (MBG) 指南">
+<meta property="og:url" content="https://dunwu.github.io/2019/03/06/programming/java/javaweb/standalone/orm/mybatis-generator/index.html">
+<meta property="og:site_name" content="张鹏的博客">
+<meta property="og:description" content="1. MyBatis Generator (MBG) 指南 MyBatis Generator (MBG) 用于自动生成 Mybatis 代码。 本文转载自 MyBatis Generator 详解    1. 配置详解 1.1. 文件头 1.2. 根元素 1.3. properties 元素 1.4. classPathEntry 元素 1.5. context 元素 1.5.1. plugin">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-06T08:43:46.939Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1. MyBatis Generator (MBG) 指南">
+<meta name="twitter:description" content="1. MyBatis Generator (MBG) 指南 MyBatis Generator (MBG) 用于自动生成 Mybatis 代码。 本文转载自 MyBatis Generator 详解    1. 配置详解 1.1. 文件头 1.2. 根元素 1.3. properties 元素 1.4. classPathEntry 元素 1.5. context 元素 1.5.1. plugin">
+
+
+
+  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
+
+
+
 
   <link rel="canonical" href="https://dunwu.github.io/2019/03/06/programming/java/javaweb/standalone/orm/mybatis-generator/">
 
 
 
-
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>1. MyBatis Generator (MBG) 指南 | 张鹏的博客</title>
   
@@ -137,9 +135,38 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -151,7 +178,7 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -161,13 +188,16 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">大道至简，知易行难</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -175,110 +205,163 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/blog/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/blog/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/blog/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/blog/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/blog/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+            
+            
+            
+              
+              
+
+  
+  
+    
+  
+  <li class="menu-item menu-item-docs">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/docs/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>docs</a>
+
+  </li>
+
+
+            
+          
+            
+            
+            
+          
+        
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -289,6 +372,10 @@
 
   
   
+  
+
+  
+    <div class="reading-progress-bar"></div>
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -313,11 +400,20 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">1. MyBatis Generator (MBG) 指南</h1>
+          <h1 class="post-title" itemprop="name headline">1. MyBatis Generator (MBG) 指南<a href="https://github.com/dunwu/blog/blob/master/source/_posts/programming/java/javaweb/standalone/orm/mybatis-generator.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil"></i></a>
+
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -325,13 +421,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -339,6 +440,7 @@
 
           
             
+            
           
 
           
@@ -346,6 +448,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">20k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">18 分钟</span>
+              
+            </div>
           
 
           
@@ -401,9 +531,9 @@
 <p>MBG 支持 xml 格式的配置文件。</p>
 </blockquote>
 <h3 id="1-1-文件头"><a href="#1-1-文件头" class="headerlink" title="1.1. 文件头"></a>1.1. 文件头</h3><p>配置文件必须包含上面的 <code>DOCTYPE</code>。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE generatorConfiguration</span></span><br><span class="line"><span class="meta">        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"</span></span><br><span class="line"><span class="meta">        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE generatorConfiguration</span></span><br><span class="line"><span class="meta">        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"</span></span><br><span class="line"><span class="meta">        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="1-2-根元素"><a href="#1-2-根元素" class="headerlink" title="1.2. 根元素"></a>1.2. 根元素</h3><p><code>&lt;generatorConfiguration&gt;</code> 是 MBG 的根节点，它没有任何属性。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">generatorConfiguration</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 具体配置内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">generatorConfiguration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">generatorConfiguration</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 具体配置内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">generatorConfiguration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><code>&lt;generatorConfiguration&gt;</code> 元素包含以下子元素（有严格的顺序）：</p>
 <ol>
 <li><code>&lt;properties&gt;</code> (0 个或 1 个)</li>
@@ -419,7 +549,7 @@
 </ul>
 <h3 id="1-4-classPathEntry-元素"><a href="#1-4-classPathEntry-元素" class="headerlink" title="1.4. classPathEntry 元素"></a>1.4. classPathEntry 元素</h3><p>这个元素可以 0 或多个，不受限制。</p>
 <p>最常见的用法是通过这个属性指定驱动的路径，例如：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">classPathEntry</span> <span class="attr">location</span>=<span class="string">"E:\mysql\mysql-connector-java-5.1.29.jar"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">classPathEntry</span> <span class="attr">location</span>=<span class="string">"E:\mysql\mysql-connector-java-5.1.29.jar"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 <p>注意，<code>classPathEntry</code> 只在下面这两种情况下才有效：</p>
 <ul>
 <li>当加载 JDBC 驱动默认数据库时</li>
@@ -447,9 +577,9 @@
 <li><code>introspectedColumnImpl</code> - 该参数可以指定扩展 <code>org.mybatis.generator.api.IntrospectedColumn</code> 该类的实现类。</li>
 </ul>
 <p>一般情况下，我们使用如下的配置即可：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context</span> <span class="attr">id</span>=<span class="string">"Mysql"</span> <span class="attr">defaultModelType</span>=<span class="string">"flat"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context</span> <span class="attr">id</span>=<span class="string">"Mysql"</span> <span class="attr">defaultModelType</span>=<span class="string">"flat"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>如果你希望不生成和 Example 查询有关的内容，那么可以按照如下进行配置:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context</span> <span class="attr">id</span>=<span class="string">"Mysql"</span> <span class="attr">targetRuntime</span>=<span class="string">"MyBatis3Simple"</span> <span class="attr">defaultModelType</span>=<span class="string">"flat"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context</span> <span class="attr">id</span>=<span class="string">"Mysql"</span> <span class="attr">targetRuntime</span>=<span class="string">"MyBatis3Simple"</span> <span class="attr">defaultModelType</span>=<span class="string">"flat"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>使用 MyBatis3Simple 可以避免在后面的 <code>&lt;table&gt;</code> 中逐个进行配置（后面会提到）。</p>
 <p>MBG 配置中的其他几个元素，基本上都是 <code>&lt;context&gt;</code> 的子元素，这些子元素（有严格的配置顺序）包括：</p>
 <ul>
@@ -465,7 +595,7 @@
 </ul>
 <p>其中 <code>&lt;property&gt;</code> 属性比较特殊，后面讲解的时候都会和父元素一起进行讲解。在讲解 <code>&lt;property&gt;</code> 属性前，我们先看看<strong>什么是分隔符？</strong>。</p>
 <p>这里通过一个例子说明。假设在 Mysql 数据库中有一个表名为 <code>user info</code>，你没有看错，中间是一个空格，这种情况下如果写出 <code>select * from user info</code> 这样的语句，肯定是要报错的，在 Mysql 中的时候我们一般会写成如下的样子:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> <span class="string">`user info`</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> <span class="string">`user info`</span></span><br></pre></td></tr></table></figure>
 <p>这里的使用的<strong>反单引号(`)</strong>就是<strong>分隔符</strong>，<strong>分隔符</strong>可以用于<strong>表名</strong>或者<strong>列名</strong>。</p>
 <p>下面继续看 <code>&lt;property&gt;</code> 支持的属性：</p>
 <ul>
@@ -480,7 +610,7 @@
 <p>首先是 <code>autoDelimitKeywords</code>，当表名或者字段名为 SQL 关键字的时候，可以设置该属性为 true，MBG 会自动给表名或字段名添加<strong>分隔符</strong>。</p>
 <p>然后这里继续上面的例子来讲 <code>beginningDelimiter</code> 和 <code>endingDelimiter</code> 属性。</p>
 <p>由于 <code>beginningDelimiter</code> 和 <code>endingDelimiter</code> 的默认值为双引号(“)，在 Mysql 中不能这么写，所以还要将这两个默认值改为<strong>反单引号(`)</strong>，配置如下：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"beginningDelimiter"</span> <span class="attr">value</span>=<span class="string">"`"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"endingDelimiter"</span> <span class="attr">value</span>=<span class="string">"`"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"beginningDelimiter"</span> <span class="attr">value</span>=<span class="string">"`"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"endingDelimiter"</span> <span class="attr">value</span>=<span class="string">"`"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 <p>属性 <code>javaFileEncoding</code> 设置要使用的 Java 文件的编码，默认使用当前平台的编码，只有当生产的编码需要特殊指定时才需要使用，一般用不到。</p>
 <p>最后两个 <code>javaFormatter</code> 和 <code>xmlFormatter</code> 属性<strong>可能会</strong>很有用，如果你想使用模板来定制生成的 java 文件和 xml 文件的样式，你可以通过指定这两个属性的值来实现。</p>
 <h4 id="1-5-1-plugin-元素"><a href="#1-5-1-plugin-元素" class="headerlink" title="1.5.1. plugin 元素"></a>1.5.1. plugin 元素</h4><p>该元素可以配置 0 个或者多个，不受限制。</p>
@@ -497,14 +627,14 @@
 <li><code>suppressDate</code> - 阻止生成的注释包含时间戳，默认为 false</li>
 </ul>
 <p>一般情况下由于 MBG 生成的注释信息没有任何价值，而且有时间戳的情况下每次生成的注释都不一样，使用版本控制的时候每次都会提交，因而一般情况下我们都会屏蔽注释信息，可以如下配置：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">commentGenerator</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"suppressAllComments"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"suppressDate"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">commentGenerator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">commentGenerator</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"suppressAllComments"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"suppressDate"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">commentGenerator</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>接下来我们简单举例实现生成包含表字段注释信息的注释</p>
 <p>因为系统提供了一个默认的实现类，所以对我们来说，自己实现一个会很容易，最简单的方法就是复制默认实现类代码到一个新的文件中，修改类名如 <code>MyCommentGenerator</code>，在你自己的实现类中，你可以选择是否继续支持上面的两个属性，你还可以增加对其他属性的支持。</p>
 <p>我们通过下面一个方法的修改来了解，其他几个方法请自行修改(写本章的时候我也没有完全实现该类，所以不提供完整源码了):</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addFieldComment</span><span class="params">(Field field, IntrospectedTable introspectedTable, IntrospectedColumn introspectedColumn)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (introspectedColumn.getRemarks() != <span class="keyword">null</span> &amp;&amp; !introspectedColumn.getRemarks().equals(<span class="string">""</span>)) &#123;</span><br><span class="line">        field.addJavaDocLine(<span class="string">"/**"</span>);</span><br><span class="line">        field.addJavaDocLine(<span class="string">" * "</span> + introspectedColumn.getRemarks());</span><br><span class="line">        addJavadocTag(field, <span class="keyword">false</span>);</span><br><span class="line">        field.addJavaDocLine(<span class="string">" */"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addFieldComment</span><span class="params">(Field field, IntrospectedTable introspectedTable, IntrospectedColumn introspectedColumn)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (introspectedColumn.getRemarks() != <span class="keyword">null</span> &amp;&amp; !introspectedColumn.getRemarks().equals(<span class="string">""</span>)) &#123;</span><br><span class="line">        field.addJavaDocLine(<span class="string">"/**"</span>);</span><br><span class="line">        field.addJavaDocLine(<span class="string">" * "</span> + introspectedColumn.getRemarks());</span><br><span class="line">        addJavadocTag(field, <span class="keyword">false</span>);</span><br><span class="line">        field.addJavaDocLine(<span class="string">" */"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这个方法是给字段添加注释信息的，其中 <code>IntrospectedColumn</code> 包含了字段的完整信息，通过 getRemarks 方法可以获取字段的注释信息。上面这个方法修改起来还是很容易的。除了字段的注释外还有 <code>Getter</code> 和 <code>Setter</code>，以及类的注释。此外还有生成 XML 的注释，大家可以根据默认的实现进行修改。</p>
 <p>完成我们自己的实现类后，我们还需要做如下配置：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">commentGenerator</span> <span class="attr">type</span>=<span class="string">"com.github.abel533.mybatis.generator.MyCommentGenerator"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">commentGenerator</span> <span class="attr">type</span>=<span class="string">"com.github.abel533.mybatis.generator.MyCommentGenerator"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="1-5-3-jdbcConnection-元素"><a href="#1-5-3-jdbcConnection-元素" class="headerlink" title="1.5.3. jdbcConnection 元素"></a>1.5.3. jdbcConnection 元素</h4><p><code>&lt;jdbcConnection&gt;</code> 用于指定数据库连接信息，该元素必选，并且只能有一个。</p>
 <p>配置该元素只需要注意如果 JDBC 驱动不在<strong>classpath</strong>下，就需要通过 <code>&lt;classPathEntry&gt;</code> 元素引入 jar 包，这里<strong>推荐</strong>将 jar 包放到<strong>classpath</strong>下。</p>
 <p>该元素有两个必选属性:</p>
@@ -519,7 +649,7 @@
 </ul>
 <p>此外该元素还可以接受多个 <code>&lt;property&gt;</code> 子元素，这里配置的 <code>&lt;property&gt;</code> 属性都会添加到 JDBC 驱动的属性中。</p>
 <p>这个元素配置起来最容易，这里举个简单例子：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">jdbcConnection</span> <span class="attr">driverClass</span>=<span class="string">"com.mysql.jdbc.Driver"</span></span></span><br><span class="line"><span class="tag">                <span class="attr">connectionURL</span>=<span class="string">"jdbc:mysql://localhost:3306/test"</span></span></span><br><span class="line"><span class="tag">                <span class="attr">userId</span>=<span class="string">"root"</span></span></span><br><span class="line"><span class="tag">                <span class="attr">password</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">jdbcConnection</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">jdbcConnection</span> <span class="attr">driverClass</span>=<span class="string">"com.mysql.jdbc.Driver"</span></span></span><br><span class="line"><span class="tag">                <span class="attr">connectionURL</span>=<span class="string">"jdbc:mysql://localhost:3306/test"</span></span></span><br><span class="line"><span class="tag">                <span class="attr">userId</span>=<span class="string">"root"</span></span></span><br><span class="line"><span class="tag">                <span class="attr">password</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">jdbcConnection</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="1-5-4-javaTypeResolver-元素"><a href="#1-5-4-javaTypeResolver-元素" class="headerlink" title="1.5.4. javaTypeResolver 元素"></a>1.5.4. javaTypeResolver 元素</h4><p>该元素最多可以配置一个。</p>
 <p>这个元素的配置用来指定 JDBC 类型和 Java 类型如何转换。</p>
 <p>该元素提供了一个可选的属性 type，和 <code>&lt;commentGenerator&gt;</code> 比较类型，提供了默认的实现 DEFAULT，一般情况下使用默认即可，需要特殊处理的情况可以通过其他元素配置来解决，不建议修改该属性。</p>
@@ -533,7 +663,7 @@
 <li>如果 <code>精度=0</code> 并且 <code>长度&lt;5</code>，就会使用 <code>java.lang.Short</code></li>
 <li>如果设置为 <code>true</code>，那么一定会使用 <code>java.math.BigDecimal</code>，配置示例如下：</li>
 </ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">javaTypeResolver</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"forceBigDecimals"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">javaTypeResolver</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">javaTypeResolver</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"forceBigDecimals"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">javaTypeResolver</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="1-5-5-javaModelGenerator-元素"><a href="#1-5-5-javaModelGenerator-元素" class="headerlink" title="1.5.5. javaModelGenerator 元素"></a>1.5.5. javaModelGenerator 元素</h4><p>该元素必须配置一个，并且最多一个。</p>
 <p>该元素用来控制生成的实体类，根据 <code>&lt;context&gt;</code> 中配置的 <code>defaultModelType</code>，一个表可能会对应生成多个不同的实体类。一个表对应多个类实际上并不方便，所以前面也推荐使用 <code>flat</code>，这种情况下一个表对应一个实体类。</p>
 <p>该元素只有两个属性，都是必选的。</p>
@@ -556,7 +686,7 @@
 <li><code>trimStrings</code> - 是否对数据库查询结果进行 trim 操作，如果设置为 true 就会生成类似这样 <code>public void setUsername(String username) {this.username = username == null ? null : username.trim();}</code> 的 setter 方法。默认值为 false。</li>
 </ul>
 <p>配置示例如下：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">javaModelGenerator</span> <span class="attr">targetPackage</span>=<span class="string">"test.model"</span> <span class="attr">targetProject</span>=<span class="string">"src\main\java"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"enableSubPackages"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"trimStrings"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">javaModelGenerator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">javaModelGenerator</span> <span class="attr">targetPackage</span>=<span class="string">"test.model"</span> <span class="attr">targetProject</span>=<span class="string">"src\main\java"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"enableSubPackages"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"trimStrings"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">javaModelGenerator</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="1-6-sqlMapGenerator-元素"><a href="#1-6-sqlMapGenerator-元素" class="headerlink" title="1.6. sqlMapGenerator 元素"></a>1.6. sqlMapGenerator 元素</h3><p>该元素可选，最多配置一个。但是有如下两种必选的特殊情况：</p>
 <ul>
 <li>如果 <code>targetRuntime</code> 目标是<strong>iBATIS2</strong>，该元素必须配置一个。</li>
@@ -572,7 +702,7 @@
 <li><code>enableSubPackages</code> - 如果 true，MBG 会根据 <code>catalog</code> 和 <code>schema</code> 来生成子包。如果 false 就会直接用 <code>targetPackage</code> 属性。默认为 false。</li>
 </ul>
 <p>配置示例：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">sqlMapGenerator</span> <span class="attr">targetPackage</span>=<span class="string">"test.xml"</span>  <span class="attr">targetProject</span>=<span class="string">"src\main\resources"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"enableSubPackages"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">sqlMapGenerator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">sqlMapGenerator</span> <span class="attr">targetPackage</span>=<span class="string">"test.xml"</span>  <span class="attr">targetProject</span>=<span class="string">"src\main\resources"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"enableSubPackages"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">sqlMapGenerator</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="1-7-javaClientGenerator-元素"><a href="#1-7-javaClientGenerator-元素" class="headerlink" title="1.7. javaClientGenerator 元素"></a>1.7. javaClientGenerator 元素</h3><p>该元素可选，最多配置一个。</p>
 <p>如果不配置该元素，就不会生成 Mapper 接口。</p>
 <p>该元素有 3 个必选属性：</p>
@@ -613,7 +743,7 @@
 </li>
 </ul>
 <p>配置示例：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">javaClientGenerator</span> <span class="attr">type</span>=<span class="string">"XMLMAPPER"</span> <span class="attr">targetPackage</span>=<span class="string">"test.dao"</span></span></span><br><span class="line"><span class="tag">              <span class="attr">targetProject</span>=<span class="string">"src\main\java"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">javaClientGenerator</span> <span class="attr">type</span>=<span class="string">"XMLMAPPER"</span> <span class="attr">targetPackage</span>=<span class="string">"test.dao"</span></span></span><br><span class="line"><span class="tag">              <span class="attr">targetProject</span>=<span class="string">"src\main\java"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="1-8-table-元素"><a href="#1-8-table-元素" class="headerlink" title="1.8. table 元素"></a>1.8. table 元素</h3><p>该元素至少要配置一个，可以配置多个。</p>
 <p>该元素用来配置要通过内省的表。只有配置的才会生成实体类和其他文件。</p>
 <p>该元素有一个必选属性：</p>
@@ -621,7 +751,7 @@
 <li><code>tableName</code> - 指定要生成的表名，可以使用 SQL 通配符匹配多个表。</li>
 </ul>
 <p>例如要生成全部的表，可以按如下配置：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"%"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"%"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 <p>该元素包含多个可选属性：</p>
 <ul>
 <li><code>schema</code> - 数据库的 <code>schema</code>,可以使用 SQL 通配符匹配。如果设置了该值，生成 SQL 的表名会变成如 <code>schema.tableName</code> 的形式。</li>
@@ -679,13 +809,13 @@
 <li><code>type</code> - <code>type=post and identity=true</code> 的时候生成的 <code>&lt;selectKey&gt;</code> 中的 order=AFTER，当 type=pre 的时候，identity 只能为 false，生成的 <code>&lt;selectKey&gt;</code> 中的 order=BEFORE。可以这么理解，自动增长的列只有插入到数据库后才能得到 ID，所以是 AFTER,使用序列时，只有先获取序列之后，才能插入数据库，所以是 BEFORE。</li>
 </ul>
 <p>配置示例一</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"user login info"</span> <span class="attr">domainObjectName</span>=<span class="string">"UserLoginInfo"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">generatedKey</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">sqlStatement</span>=<span class="string">"Mysql"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"user login info"</span> <span class="attr">domainObjectName</span>=<span class="string">"UserLoginInfo"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">generatedKey</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">sqlStatement</span>=<span class="string">"Mysql"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>对应的生成的结果</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"insert"</span> <span class="attr">parameterType</span>=<span class="string">"test.model.UserLoginInfo"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">selectKey</span> <span class="attr">keyProperty</span>=<span class="string">"id"</span> <span class="attr">order</span>=<span class="string">"AFTER"</span> <span class="attr">resultType</span>=<span class="string">"java.lang.Integer"</span>&gt;</span></span><br><span class="line">        SELECT LAST_INSERT_ID()</span><br><span class="line">    <span class="tag">&lt;/<span class="name">selectKey</span>&gt;</span></span><br><span class="line">    insert into `user login info` (Id, username, logindate, loginip)</span><br><span class="line">    values (#&#123;id,jdbcType=INTEGER&#125;, #&#123;username,jdbcType=VARCHAR&#125;, #&#123;logindate,jdbcType=TIMESTAMP&#125;, #&#123;loginip,jdbcType=VARCHAR&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"insert"</span> <span class="attr">parameterType</span>=<span class="string">"test.model.UserLoginInfo"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">selectKey</span> <span class="attr">keyProperty</span>=<span class="string">"id"</span> <span class="attr">order</span>=<span class="string">"AFTER"</span> <span class="attr">resultType</span>=<span class="string">"java.lang.Integer"</span>&gt;</span></span><br><span class="line">        SELECT LAST_INSERT_ID()</span><br><span class="line">    <span class="tag">&lt;/<span class="name">selectKey</span>&gt;</span></span><br><span class="line">    insert into `user login info` (Id, username, logindate, loginip)</span><br><span class="line">    values (#&#123;id,jdbcType=INTEGER&#125;, #&#123;username,jdbcType=VARCHAR&#125;, #&#123;logindate,jdbcType=TIMESTAMP&#125;, #&#123;loginip,jdbcType=VARCHAR&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>配置示例二</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"user login info"</span> <span class="attr">domainObjectName</span>=<span class="string">"UserLoginInfo"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">generatedKey</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">sqlStatement</span>=<span class="string">"select SEQ_ID.nextval from dual"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"user login info"</span> <span class="attr">domainObjectName</span>=<span class="string">"UserLoginInfo"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">generatedKey</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">sqlStatement</span>=<span class="string">"select SEQ_ID.nextval from dual"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>对应的生成结果</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"insert"</span> <span class="attr">parameterType</span>=<span class="string">"test.model.UserLoginInfo"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">selectKey</span> <span class="attr">keyProperty</span>=<span class="string">"id"</span> <span class="attr">order</span>=<span class="string">"BEFORE"</span> <span class="attr">resultType</span>=<span class="string">"java.lang.Integer"</span>&gt;</span></span><br><span class="line">        select SEQ_ID.nextval from dual</span><br><span class="line">    <span class="tag">&lt;/<span class="name">selectKey</span>&gt;</span></span><br><span class="line">    insert into `user login info` (Id, username, logindate, loginip)</span><br><span class="line">    values (#&#123;id,jdbcType=INTEGER&#125;, #&#123;username,jdbcType=VARCHAR&#125;, #&#123;logindate,jdbcType=TIMESTAMP&#125;,#&#123;loginip,jdbcType=VARCHAR&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"insert"</span> <span class="attr">parameterType</span>=<span class="string">"test.model.UserLoginInfo"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">selectKey</span> <span class="attr">keyProperty</span>=<span class="string">"id"</span> <span class="attr">order</span>=<span class="string">"BEFORE"</span> <span class="attr">resultType</span>=<span class="string">"java.lang.Integer"</span>&gt;</span></span><br><span class="line">        select SEQ_ID.nextval from dual</span><br><span class="line">    <span class="tag">&lt;/<span class="name">selectKey</span>&gt;</span></span><br><span class="line">    insert into `user login info` (Id, username, logindate, loginip)</span><br><span class="line">    values (#&#123;id,jdbcType=INTEGER&#125;, #&#123;username,jdbcType=VARCHAR&#125;, #&#123;logindate,jdbcType=TIMESTAMP&#125;,#&#123;loginip,jdbcType=VARCHAR&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="1-8-2-columnRenamingRule-元素"><a href="#1-8-2-columnRenamingRule-元素" class="headerlink" title="1.8.2. columnRenamingRule 元素"></a>1.8.2. columnRenamingRule 元素</h4><p>该元素最多可以配置一个，使用该元素可以在生成列之前，对列进行重命名。这对那些存在同一前缀的字段想在生成属性名时去除前缀的表非常有用。例如假设一个表包含以下的列：</p>
 <ul>
 <li>CUST_BUSINESS_NAME</li>
@@ -694,7 +824,7 @@
 <li>CUST_STATE</li>
 </ul>
 <p>生成的所有属性名中如果都包含 CUST 的前缀可能会让人不爽。这些前缀可以通过如下方式定义重命名规则:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">columnRenamingRule</span> <span class="attr">searchString</span>=<span class="string">"^CUST_"</span> <span class="attr">replaceString</span>=<span class="string">""</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">columnRenamingRule</span> <span class="attr">searchString</span>=<span class="string">"^CUST_"</span> <span class="attr">replaceString</span>=<span class="string">""</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 <p>注意，在内部，MBG 使用 <code>java.util.regex.Matcher.replaceAll</code> 方法实现这个功能。 请参阅有关该方法的文档和在 Java 中使用正则表达式的例子。</p>
 <p>当 <code>&lt;columnOverride&gt;</code> 匹配一列时，这个元素（ <code>&lt;columnRenamingRule&gt;</code> ）会被忽略。 <code>&lt;columnOverride&gt;</code> 优先于重命名的规则。</p>
 <p>该元素有一个必选属性：</p>
@@ -719,7 +849,7 @@
 </li>
 </ul>
 <p>配置示例：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">schema</span>=<span class="string">"DB2ADMIN"</span> <span class="attr">tableName</span>=<span class="string">"ALLTYPES"</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">columnOverride</span> <span class="attr">column</span>=<span class="string">"LONG_VARCHAR_FIELD"</span> <span class="attr">javaType</span>=<span class="string">"java.lang.String"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">schema</span>=<span class="string">"DB2ADMIN"</span> <span class="attr">tableName</span>=<span class="string">"ALLTYPES"</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">columnOverride</span> <span class="attr">column</span>=<span class="string">"LONG_VARCHAR_FIELD"</span> <span class="attr">javaType</span>=<span class="string">"java.lang.String"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="1-8-4-ignoreColumn-元素"><a href="#1-8-4-ignoreColumn-元素" class="headerlink" title="1.8.4. ignoreColumn 元素"></a>1.8.4. ignoreColumn 元素</h4><p>该元素可选，可以配置多个。</p>
 <p>该元素可以用来屏蔽不需要生成的列。</p>
 <p>该元素有一个必选属性：</p>
@@ -740,7 +870,7 @@
 <p>建议尽可能在 <code>&lt;table&gt;</code> 中配置 <code>&lt;generatedKey&gt;</code> ，避免手工操作，以便于 MBG 重复执行代码生成。</p>
 <p>如果有其他有价值的经验，会继续补充。</p>
 <p>综合以上信息，这里给出一个 Mysql 的简单配置：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE generatorConfiguration</span></span><br><span class="line"><span class="meta">        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"</span></span><br><span class="line"><span class="meta">        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">generatorConfiguration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context</span> <span class="attr">id</span>=<span class="string">"MysqlContext"</span> <span class="attr">targetRuntime</span>=<span class="string">"MyBatis3"</span> <span class="attr">defaultModelType</span>=<span class="string">"flat"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"beginningDelimiter"</span> <span class="attr">value</span>=<span class="string">"`"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"endingDelimiter"</span> <span class="attr">value</span>=<span class="string">"`"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">commentGenerator</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"suppressDate"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">commentGenerator</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdbcConnection</span> <span class="attr">driverClass</span>=<span class="string">"com.mysql.jdbc.Driver"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">connectionURL</span>=<span class="string">"jdbc:mysql://localhost:3306/test"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">userId</span>=<span class="string">"root"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">password</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">jdbcConnection</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaModelGenerator</span> <span class="attr">targetPackage</span>=<span class="string">"test.model"</span> <span class="attr">targetProject</span>=<span class="string">"src\main\java"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"trimStrings"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">javaModelGenerator</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">sqlMapGenerator</span> <span class="attr">targetPackage</span>=<span class="string">"test.xml"</span>  <span class="attr">targetProject</span>=<span class="string">"src\main\resources"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaClientGenerator</span> <span class="attr">type</span>=<span class="string">"XMLMAPPER"</span> <span class="attr">targetPackage</span>=<span class="string">"test.dao"</span>  <span class="attr">targetProject</span>=<span class="string">"src\main\java"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"%"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">generatedKey</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">sqlStatement</span>=<span class="string">"Mysql"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">context</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">generatorConfiguration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE generatorConfiguration</span></span><br><span class="line"><span class="meta">        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"</span></span><br><span class="line"><span class="meta">        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">generatorConfiguration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context</span> <span class="attr">id</span>=<span class="string">"MysqlContext"</span> <span class="attr">targetRuntime</span>=<span class="string">"MyBatis3"</span> <span class="attr">defaultModelType</span>=<span class="string">"flat"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"beginningDelimiter"</span> <span class="attr">value</span>=<span class="string">"`"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"endingDelimiter"</span> <span class="attr">value</span>=<span class="string">"`"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">commentGenerator</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"suppressDate"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">commentGenerator</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdbcConnection</span> <span class="attr">driverClass</span>=<span class="string">"com.mysql.jdbc.Driver"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">connectionURL</span>=<span class="string">"jdbc:mysql://localhost:3306/test"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">userId</span>=<span class="string">"root"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">password</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">jdbcConnection</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaModelGenerator</span> <span class="attr">targetPackage</span>=<span class="string">"test.model"</span> <span class="attr">targetProject</span>=<span class="string">"src\main\java"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"trimStrings"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">javaModelGenerator</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">sqlMapGenerator</span> <span class="attr">targetPackage</span>=<span class="string">"test.xml"</span>  <span class="attr">targetProject</span>=<span class="string">"src\main\resources"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaClientGenerator</span> <span class="attr">type</span>=<span class="string">"XMLMAPPER"</span> <span class="attr">targetPackage</span>=<span class="string">"test.dao"</span>  <span class="attr">targetProject</span>=<span class="string">"src\main\java"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"%"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">generatedKey</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">sqlStatement</span>=<span class="string">"Mysql"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">context</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">generatorConfiguration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><code>&lt;table&gt;</code> 这里用的通配符匹配全部的表，另外所有表都有自动增长的 id 字段。如果不是所有表的配置都一样，可以做针对性的配置。</p>
 <h2 id="3-引用和引申"><a href="#3-引用和引申" class="headerlink" title="3. 引用和引申"></a>3. 引用和引申</h2><ul>
 <li><a href="https://github.com/mybatis/generator" target="_blank" rel="noopener">Github</a></li>
@@ -750,12 +880,22 @@
 
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -771,8 +911,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2019/03/06/os/linux/ops/service/kafka/" rel="next" title="Kafka 安装部署">
-                <i class="fa fa-chevron-left"></i> Kafka 安装部署
+              <a href="/blog/2019/03/06/network/data-link-layer/" rel="next" title="数据链路层">
+                <i class="fa fa-chevron-left"></i> 数据链路层
               </a>
             
           </div>
@@ -781,8 +921,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2019/03/06/programming/java/javastack/javatool/build/maven/maven-settings/" rel="prev" title="Maven 之 settings.xml 详解">
-                Maven 之 settings.xml 详解 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2019/03/06/style/project-style/" rel="prev" title="项目规范">
+                项目规范 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -799,17 +939,10 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -829,7 +962,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -845,7 +977,7 @@
         </ul>
       
 
-      <section class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -855,42 +987,226 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/blog/archives/">
+                
+                    <span class="site-state-item-count">381</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/blog/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/blog/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">381</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/blog/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">76</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">76</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -903,48 +1219,61 @@
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/dunwu" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:forbreak@163.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/dunwu" title="GitHub &rarr; https://github.com/dunwu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:forbreak@163.com" title="E-Mail &rarr; mailto:forbreak@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
             </div>
           
 
           
-          
 
           
           
 
+          
+            
+          
           
 
         </div>
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-MyBatis-Generator-MBG-指南"><span class="nav-number">1.</span> <span class="nav-text">1. MyBatis Generator (MBG) 指南</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-配置详解"><span class="nav-number">1.1.</span> <span class="nav-text">1. 配置详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-文件头"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1. 文件头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-根元素"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2. 根元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-properties-元素"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3. properties 元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-classPathEntry-元素"><span class="nav-number">1.1.4.</span> <span class="nav-text">1.4. classPathEntry 元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-context-元素"><span class="nav-number">1.1.5.</span> <span class="nav-text">1.5. context 元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-1-plugin-元素"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">1.5.1. plugin 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-2-commentGenerator-元素"><span class="nav-number">1.1.5.2.</span> <span class="nav-text">1.5.2. commentGenerator 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-3-jdbcConnection-元素"><span class="nav-number">1.1.5.3.</span> <span class="nav-text">1.5.3. jdbcConnection 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-4-javaTypeResolver-元素"><span class="nav-number">1.1.5.4.</span> <span class="nav-text">1.5.4. javaTypeResolver 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-5-javaModelGenerator-元素"><span class="nav-number">1.1.5.5.</span> <span class="nav-text">1.5.5. javaModelGenerator 元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-sqlMapGenerator-元素"><span class="nav-number">1.1.6.</span> <span class="nav-text">1.6. sqlMapGenerator 元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-javaClientGenerator-元素"><span class="nav-number">1.1.7.</span> <span class="nav-text">1.7. javaClientGenerator 元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-8-table-元素"><span class="nav-number">1.1.8.</span> <span class="nav-text">1.8. table 元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-8-1-generatedKey-元素"><span class="nav-number">1.1.8.1.</span> <span class="nav-text">1.8.1. generatedKey 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-8-2-columnRenamingRule-元素"><span class="nav-number">1.1.8.2.</span> <span class="nav-text">1.8.2. columnRenamingRule 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-8-3-columnOverride-元素"><span class="nav-number">1.1.8.3.</span> <span class="nav-text">1.8.3. columnOverride 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-8-4-ignoreColumn-元素"><span class="nav-number">1.1.8.4.</span> <span class="nav-text">1.8.4. ignoreColumn 元素</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-MyBatis-Generator-最佳实践"><span class="nav-number">1.2.</span> <span class="nav-text">2. MyBatis Generator 最佳实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-引用和引申"><span class="nav-number">1.3.</span> <span class="nav-text">3. 引用和引申</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-MyBatis-Generator-MBG-指南"><span class="nav-text">1. MyBatis Generator (MBG) 指南</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-配置详解"><span class="nav-text">1. 配置详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-文件头"><span class="nav-text">1.1. 文件头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-根元素"><span class="nav-text">1.2. 根元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-properties-元素"><span class="nav-text">1.3. properties 元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-classPathEntry-元素"><span class="nav-text">1.4. classPathEntry 元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-context-元素"><span class="nav-text">1.5. context 元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-1-plugin-元素"><span class="nav-text">1.5.1. plugin 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-2-commentGenerator-元素"><span class="nav-text">1.5.2. commentGenerator 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-3-jdbcConnection-元素"><span class="nav-text">1.5.3. jdbcConnection 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-4-javaTypeResolver-元素"><span class="nav-text">1.5.4. javaTypeResolver 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-5-javaModelGenerator-元素"><span class="nav-text">1.5.5. javaModelGenerator 元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-sqlMapGenerator-元素"><span class="nav-text">1.6. sqlMapGenerator 元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-javaClientGenerator-元素"><span class="nav-text">1.7. javaClientGenerator 元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-8-table-元素"><span class="nav-text">1.8. table 元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-8-1-generatedKey-元素"><span class="nav-text">1.8.1. generatedKey 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-8-2-columnRenamingRule-元素"><span class="nav-text">1.8.2. columnRenamingRule 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-8-3-columnOverride-元素"><span class="nav-text">1.8.3. columnOverride 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-8-4-ignoreColumn-元素"><span class="nav-text">1.8.4. ignoreColumn 元素</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-MyBatis-Generator-最佳实践"><span class="nav-text">2. MyBatis Generator 最佳实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-引用和引申"><span class="nav-text">3. 引用和引申</span></a></li></ol></li></ol></div>
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -952,6 +1281,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -960,12 +1290,28 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-paper-plane"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Zhang Peng</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">2.1m</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">31:18</span>
   
 </div>
 
@@ -985,6 +1331,7 @@
 
 
 
+
         
       </div>
     </footer>
@@ -993,16 +1340,21 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -1016,104 +1368,16 @@
 
 
 
-  
-
-
-  
-
-
-
-
-
-
 
 
 
 
 
   
+    
+    
   
-    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
@@ -1127,341 +1391,163 @@
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/blog/" + search_path;
-    // monitor main search box;
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
+
+  
+  <script src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/blog/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/blog/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/blog/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/blog/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/blog/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/blog/js/src/bootstrap.js?v=7.0.1"></script>
+
+
+  
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+      
+      user-select: none;
+      outline: 0;
     }
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      
+        right: 4px;
+        top: 8px;
+      
     }
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === '') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1;
     }
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; // Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.readOnly = true;
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, code.length);
+        ta.readOnly = false;
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); // For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
   </script>
 
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

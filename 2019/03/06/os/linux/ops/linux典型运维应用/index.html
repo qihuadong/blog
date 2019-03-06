@@ -2,14 +2,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +29,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -38,9 +45,22 @@
 
 
 
-  
-  
-  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.0.1" color="#222">
 
 
 
@@ -48,67 +68,18 @@
 
 
 
-<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
-
-
-
-
-
-
-<meta name="description" content="Linux 典型运维应用 :bulb: 如果没有特殊说明，本文的案例都是针对 Centos 发行版本。  网络操作无法访问外网域名（1）在 hosts 中添加本机实际 IP 和本机实际域名的映射 1echo &quot;192.168.0.1 hostname&quot; &amp;gt;&amp;gt; /etc/hosts 如果不知道本机域名，使用 hostname 命令查一下；如果不知道本机实际 IP，使用 ifconfig">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Linux 典型运维应用">
-<meta property="og:url" content="https://dunwu.github.io/2019/03/06/os/linux/ops/linux典型运维应用/index.html">
-<meta property="og:site_name" content="张鹏的博客">
-<meta property="og:description" content="Linux 典型运维应用 :bulb: 如果没有特殊说明，本文的案例都是针对 Centos 发行版本。  网络操作无法访问外网域名（1）在 hosts 中添加本机实际 IP 和本机实际域名的映射 1echo &quot;192.168.0.1 hostname&quot; &amp;gt;&amp;gt; /etc/hosts 如果不知道本机域名，使用 hostname 命令查一下；如果不知道本机实际 IP，使用 ifconfig">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-06T08:43:46.146Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux 典型运维应用">
-<meta name="twitter:description" content="Linux 典型运维应用 :bulb: 如果没有特殊说明，本文的案例都是针对 Centos 发行版本。  网络操作无法访问外网域名（1）在 hosts 中添加本机实际 IP 和本机实际域名的映射 1echo &quot;192.168.0.1 hostname&quot; &amp;gt;&amp;gt; /etc/hosts 如果不知道本机域名，使用 hostname 命令查一下；如果不知道本机实际 IP，使用 ifconfig">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/blog/',
     scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -120,12 +91,39 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="Linux 典型运维应用 :bulb: 如果没有特殊说明，本文的案例都是针对 Centos 发行版本。  网络操作无法访问外网域名（1）在 hosts 中添加本机实际 IP 和本机实际域名的映射 echo &quot;192.168.0.1 hostname&quot; &amp;gt;&amp;gt; /etc/hosts 如果不知道本机域名，使用 hostname 命令查一下；如果不知道本机实际 IP，使用 ifconfig 查">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 典型运维应用">
+<meta property="og:url" content="https://dunwu.github.io/2019/03/06/os/linux/ops/linux典型运维应用/index.html">
+<meta property="og:site_name" content="张鹏的博客">
+<meta property="og:description" content="Linux 典型运维应用 :bulb: 如果没有特殊说明，本文的案例都是针对 Centos 发行版本。  网络操作无法访问外网域名（1）在 hosts 中添加本机实际 IP 和本机实际域名的映射 echo &quot;192.168.0.1 hostname&quot; &amp;gt;&amp;gt; /etc/hosts 如果不知道本机域名，使用 hostname 命令查一下；如果不知道本机实际 IP，使用 ifconfig 查">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-06T08:43:46.146Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux 典型运维应用">
+<meta name="twitter:description" content="Linux 典型运维应用 :bulb: 如果没有特殊说明，本文的案例都是针对 Centos 发行版本。  网络操作无法访问外网域名（1）在 hosts 中添加本机实际 IP 和本机实际域名的映射 echo &quot;192.168.0.1 hostname&quot; &amp;gt;&amp;gt; /etc/hosts 如果不知道本机域名，使用 hostname 命令查一下；如果不知道本机实际 IP，使用 ifconfig 查">
+
+
+
+  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
+
+
+
 
   <link rel="canonical" href="https://dunwu.github.io/2019/03/06/os/linux/ops/linux典型运维应用/">
 
 
 
-
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>Linux 典型运维应用 | 张鹏的博客</title>
   
@@ -137,9 +135,38 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -151,7 +178,7 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -161,13 +188,16 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">大道至简，知易行难</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -175,110 +205,163 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/blog/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/blog/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/blog/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/blog/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/blog/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+            
+            
+            
+              
+              
+
+  
+  
+    
+  
+  <li class="menu-item menu-item-docs">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/docs/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>docs</a>
+
+  </li>
+
+
+            
+          
+            
+            
+            
+          
+        
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -289,6 +372,10 @@
 
   
   
+  
+
+  
+    <div class="reading-progress-bar"></div>
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -313,11 +400,20 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux 典型运维应用</h1>
+          <h1 class="post-title" itemprop="name headline">Linux 典型运维应用<a href="https://github.com/dunwu/blog/blob/master/source/_posts/os/linux/ops/linux典型运维应用.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil"></i></a>
+
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -325,13 +421,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -339,6 +440,7 @@
 
           
             
+            
           
 
           
@@ -346,6 +448,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">4.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">4 分钟</span>
+              
+            </div>
           
 
           
@@ -367,35 +497,35 @@
 <p>:bulb: 如果没有特殊说明，本文的案例都是针对 Centos 发行版本。</p>
 </blockquote>
 <h2 id="网络操作"><a href="#网络操作" class="headerlink" title="网络操作"></a>网络操作</h2><h3 id="无法访问外网域名"><a href="#无法访问外网域名" class="headerlink" title="无法访问外网域名"></a>无法访问外网域名</h3><p>（1）在 hosts 中添加本机实际 IP 和本机实际域名的映射</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"192.168.0.1 hostname"</span> &gt;&gt; /etc/hosts</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"192.168.0.1 hostname"</span> &gt;&gt; /etc/hosts</span><br></pre></td></tr></table></figure>
 <p>如果不知道本机域名，使用 <code>hostname</code> 命令查一下；如果不知道本机实际 IP，使用 <code>ifconfig</code> 查一下。</p>
 <p>（2）配置信赖的 DNS 服务器</p>
 <p>执行 <code>vi /etc/resolv.conf</code> ，添加以下内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nameserver 114.114.114.114</span><br><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nameserver 114.114.114.114</span><br><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>114.114.114.114 是国内老牌 DNS</p>
 <p>8.8.8.8 是 Google DNS</p>
 <p>👉 参考：<a href="https://www.zhihu.com/question/32229915" target="_blank" rel="noopener">公共 DNS 哪家强</a></p>
 </blockquote>
 <p>（3）测试一下能否 ping 通 <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></p>
-<h3 id="开启、关闭防火墙"><a href="#开启、关闭防火墙" class="headerlink" title="开启、关闭防火墙"></a>开启、关闭防火墙</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启防火墙 22 端口</span></span><br><span class="line">iptables -I INPUT -p tcp --dport 22 -j accept</span><br><span class="line"></span><br><span class="line"><span class="comment"># 彻底关闭防火墙</span></span><br><span class="line">sudo systemctl status firewalld.service</span><br><span class="line">sudo systemctl stop firewalld.service</span><br><span class="line">sudo systemctl <span class="built_in">disable</span> firewalld.service</span><br></pre></td></tr></table></figure>
+<h3 id="开启、关闭防火墙"><a href="#开启、关闭防火墙" class="headerlink" title="开启、关闭防火墙"></a>开启、关闭防火墙</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开启防火墙 22 端口</span></span><br><span class="line">iptables -I INPUT -p tcp --dport 22 -j accept</span><br><span class="line"></span><br><span class="line"><span class="comment"># 彻底关闭防火墙</span></span><br><span class="line">sudo systemctl status firewalld.service</span><br><span class="line">sudo systemctl stop firewalld.service</span><br><span class="line">sudo systemctl <span class="built_in">disable</span> firewalld.service</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>:point_right: 参考：<a href="https://www.cnblogs.com/moxiaoan/p/5683743.html" target="_blank" rel="noopener">https://www.cnblogs.com/moxiaoan/p/5683743.html</a></p>
 </blockquote>
 <h2 id="系统维护"><a href="#系统维护" class="headerlink" title="系统维护"></a>系统维护</h2><h3 id="使用-NTP-进行时间同步"><a href="#使用-NTP-进行时间同步" class="headerlink" title="使用 NTP 进行时间同步"></a>使用 NTP 进行时间同步</h3><p>（1）先安装时钟同步工具 ntp</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install ntp</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">yum -y <span class="keyword">install</span> ntp</span><br></pre></td></tr></table></figure>
 <p>ntp 的配置文件路径为： <code>/etc/ntp.conf</code></p>
 <p>（2）启动 NTP 服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start ntpd.service</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start ntpd.service</span><br></pre></td></tr></table></figure>
 <p>（3）放开防火墙 123 端口</p>
 <p>NTP 服务的端口是 123,使用的是 udp 协议，所以 NTP 服务器的防火墙必须对外开放 udp 123 这个端口。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/sbin/iptables -A INPUT -p UDP -i eth0 -s 192.168.0.0/24 --dport 123 -j ACCEPT</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line">/sbin/iptables -A INPUT -p UDP -i eth0 -s <span class="number">192.168</span><span class="number">.0</span><span class="number">.0</span>/<span class="number">24</span> --dport <span class="number">123</span> -j ACCEPT</span><br></pre></td></tr></table></figure>
 <p>（4）执行时间同步</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/sbin/ntpdate ntp.sjtu.edu.cn</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">/usr/sbin/ntpdate ntp<span class="selector-class">.sjtu</span><span class="selector-class">.edu</span><span class="selector-class">.cn</span></span><br></pre></td></tr></table></figure>
 <p>ntp.sjtu.edu.cn 是上海交通大学 ntp 服务器。</p>
 <p>（5）自动定时同步时间</p>
 <p>执行如下命令，就可以在每天凌晨 3 点同步系统时间：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;* 3 * * * /usr/sbin/ntpdate ntp.sjtu.edu.cn&quot; &gt;&gt; /etc/crontab</span><br><span class="line">systemctl restart crond.service</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">echo <span class="string">"* 3 * * * /usr/sbin/ntpdate ntp.sjtu.edu.cn"</span> <span class="meta">&gt;&gt; </span>/etc/crontab</span><br><span class="line">systemctl restart crond.service</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>:point_right: 参考：<a href="https://www.cnblogs.com/quchunhui/p/7658853.html" target="_blank" rel="noopener">https://www.cnblogs.com/quchunhui/p/7658853.html</a></p>
 </blockquote>
@@ -407,21 +537,21 @@
 </ol>
 <p>例：</p>
 <p>执行 <code>vim /etc/rc.local</code> 命令，输入以下内容：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This script will be executed *after* all the other init scripts.</span></span><br><span class="line"><span class="comment"># You can put your own initialization stuff in here if you don't</span></span><br><span class="line"><span class="comment"># want to do the full Sys V style init stuff.</span></span><br><span class="line"></span><br><span class="line">touch /var/lock/subsys/<span class="built_in">local</span></span><br><span class="line">/opt/pjt_test/test.pl</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This script will be executed *after* all the other init scripts.</span></span><br><span class="line"><span class="comment"># You can put your own initialization stuff in here if you don't</span></span><br><span class="line"><span class="comment"># want to do the full Sys V style init stuff.</span></span><br><span class="line"></span><br><span class="line">touch /var/lock/subsys/<span class="built_in">local</span></span><br><span class="line">/opt/pjt_test/test.pl</span><br></pre></td></tr></table></figure>
 <p>（2）在 <code>/etc/rc.d/init.d</code> 目录下添加自启动脚本</p>
 <p>Linux 在 <code>/etc/rc.d/init.d</code> 下有很多的文件，每个文件都是可以看到内容的，其实都是一些 shell 脚本或者可执行二进制文件。</p>
 <p>Linux 开机的时候，会加载运行 <code>/etc/rc.d/init.d</code> 目录下的程序，因此我们可以把想要自动运行的脚本放到这个目录下即可。系统服务的启动就是通过这种方式实现的。</p>
 <p>（3）运行级别设置</p>
 <p>简单的说，运行级就是操作系统当前正在运行的功能级别。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">不同的运行级定义如下:</span><br><span class="line"># 0 - 停机（千万不能把initdefault 设置为0 ）</span><br><span class="line"># 1 - 单用户模式       　　进入方法#init s = init 1</span><br><span class="line"># 2 - 多用户，没有 NFS</span><br><span class="line"># 3 - 完全多用户模式(标准的运行级)</span><br><span class="line"># 4 - 没有用到</span><br><span class="line"># 5 - X11 多用户图形模式（xwindow)</span><br><span class="line"># 6 - 重新启动 （千万不要把initdefault 设置为6 ）</span><br></pre></td></tr></table></figure>
+<figure class="highlight vala"><table><tr><td class="code"><pre><span class="line">不同的运行级定义如下:</span><br><span class="line"><span class="meta"># 0 - 停机（千万不能把initdefault 设置为0 ）</span></span><br><span class="line"><span class="meta"># 1 - 单用户模式       　　进入方法#init s = init 1</span></span><br><span class="line"><span class="meta"># 2 - 多用户，没有 NFS</span></span><br><span class="line"><span class="meta"># 3 - 完全多用户模式(标准的运行级)</span></span><br><span class="line"><span class="meta"># 4 - 没有用到</span></span><br><span class="line"><span class="meta"># 5 - X11 多用户图形模式（xwindow)</span></span><br><span class="line"><span class="meta"># 6 - 重新启动 （千万不要把initdefault 设置为6 ）</span></span><br></pre></td></tr></table></figure>
 <p>这些级别在 <code>/etc/inittab</code> 文件里指定，这个文件是 init 程序寻找的主要文件，最先运行的服务是放在/etc/rc.d 目录下的文件。</p>
 <p>在 <code>/etc</code> 目录下面有这么几个目录值得注意：rcS.d rc0.d rc1.d … rc6.d  (0，1… 6 代表启动级别 0 代表停止，1 代表单用户模式，2-5 代表多用户模式，6 代表重启)  它们的作用就相当于 redhat 下的 rc.d ，你可以把脚本放到 rcS.d，然后修改文件名，给它一个启动序号，如: S88mysql</p>
 <p>不过，最好的办法是放到相应的启动级别下面。具体作法:</p>
 <p>（1）先把脚本 mysql 放到 /etc/init.d 目录下</p>
 <p>（2）查看当前系统的启动级别</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ runlevel</span><br><span class="line">N 3</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ runlevel</span><br><span class="line">N 3</span><br></pre></td></tr></table></figure>
 <p>（3）设定启动级别</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#  98 为启动序号</span><br><span class="line">#  2 是系统的运行级别，可自己调整，注意不要忘了结尾的句点</span><br><span class="line">$ update-rc.d mysql start 98 2 .</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line">#  <span class="number">98</span> 为启动序号</span><br><span class="line">#  <span class="number">2</span> 是系统的运行级别，可自己调整，注意不要忘了结尾的句点</span><br><span class="line">$ update-rc.d mysql start <span class="number">98</span> <span class="number">2</span> .</span><br></pre></td></tr></table></figure>
 <p>现在我们到 /etc/rc2.d 下，就多了一个 S98mysql 这样的符号链接。</p>
 <p>（4）重启系统，验证设置是否有效。</p>
 <p>（5）移除符号链接</p>
@@ -444,7 +574,7 @@
 <p>（2）开启crontab服务</p>
 <p>开机自动启动 crond 服务：<code>chkconfig crond on</code></p>
 <p>或者，按以下命令手动启动：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动服务</span></span><br><span class="line">systemctl start crond.service</span><br><span class="line"><span class="comment"># 停止服务</span></span><br><span class="line">systemctl stop crond.service</span><br><span class="line"><span class="comment"># 重启服务</span></span><br><span class="line">systemctl restart crond.service</span><br><span class="line"><span class="comment"># 重新载入配置</span></span><br><span class="line">systemctl reload crond.service</span><br><span class="line"><span class="comment"># 查看状态</span></span><br><span class="line">systemctl status crond.service</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 启动服务</span></span><br><span class="line">systemctl start crond.service</span><br><span class="line"><span class="comment"># 停止服务</span></span><br><span class="line">systemctl stop crond.service</span><br><span class="line"><span class="comment"># 重启服务</span></span><br><span class="line">systemctl restart crond.service</span><br><span class="line"><span class="comment"># 重新载入配置</span></span><br><span class="line">systemctl reload crond.service</span><br><span class="line"><span class="comment"># 查看状态</span></span><br><span class="line">systemctl status crond.service</span><br></pre></td></tr></table></figure>
 <p>（3）设置需要执行的脚本</p>
 <p>有两种方法：</p>
 <ul>
@@ -452,7 +582,7 @@
 <li>直接编辑 <code>/etc/crontab</code> 文件，即 <code>vi /etc/crontab</code>，添加相应的任务。 </li>
 </ul>
 <p>示例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">SHELL=/bin/bash</span><br><span class="line">PATH=/sbin:/bin:/usr/sbin:/usr/bin</span><br><span class="line">MAILTO=root</span><br><span class="line"></span><br><span class="line"><span class="comment"># For details see man 4 crontabs</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Example of job definition:</span></span><br><span class="line"><span class="comment"># .---------------- minute (0 - 59)</span></span><br><span class="line"><span class="comment"># |  .------------- hour (0 - 23)</span></span><br><span class="line"><span class="comment"># |  |  .---------- day of month (1 - 31)</span></span><br><span class="line"><span class="comment"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span></span><br><span class="line"><span class="comment"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span></span><br><span class="line"><span class="comment"># |  |  |  |  |</span></span><br><span class="line"><span class="comment"># *  *  *  *  * user-name  command to be executed</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 每天早上3点时钟同步</span></span><br><span class="line">* 3 * * * /usr/sbin/ntpdate ntp.sjtu.edu.cn</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 每两个小时以root身份执行 /home/hello.sh 脚本</span></span><br><span class="line">0 */2 * * * root /home/hello.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">SHELL=/bin/bash</span><br><span class="line">PATH=/sbin:/bin:/usr/sbin:/usr/bin</span><br><span class="line">MAILTO=root</span><br><span class="line"></span><br><span class="line"><span class="comment"># For details see man 4 crontabs</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Example of job definition:</span></span><br><span class="line"><span class="comment"># .---------------- minute (0 - 59)</span></span><br><span class="line"><span class="comment"># |  .------------- hour (0 - 23)</span></span><br><span class="line"><span class="comment"># |  |  .---------- day of month (1 - 31)</span></span><br><span class="line"><span class="comment"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span></span><br><span class="line"><span class="comment"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span></span><br><span class="line"><span class="comment"># |  |  |  |  |</span></span><br><span class="line"><span class="comment"># *  *  *  *  * user-name  command to be executed</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 每天早上3点时钟同步</span></span><br><span class="line">* 3 * * * /usr/sbin/ntpdate ntp.sjtu.edu.cn</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 每两个小时以root身份执行 /home/hello.sh 脚本</span></span><br><span class="line">0 */2 * * * root /home/hello.sh</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>👉 参考：<a href="https://blog.csdn.net/z_yong_cool/article/details/79288397" target="_blank" rel="noopener">https://blog.csdn.net/z_yong_cool/article/details/79288397</a></p>
 </blockquote>
@@ -466,16 +596,26 @@
 <li>重新启动 (记得不要把 initdefault 配置为 6，因为这样会使 Linux 不断地重新启动)</li>
 </ol>
 <p>设置方法：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sed -i <span class="string">'s/id:5:initdefault:/id:3:initdefault:/'</span> /etc/inittab</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ sed -i <span class="string">'s/id:5:initdefault:/id:3:initdefault:/'</span> /etc/inittab</span><br></pre></td></tr></table></figure>
 
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -519,17 +659,10 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -549,7 +682,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -565,7 +697,7 @@
         </ul>
       
 
-      <section class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -575,42 +707,226 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/blog/archives/">
+                
+                    <span class="site-state-item-count">381</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/blog/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/blog/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">381</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/blog/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">76</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">76</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -623,48 +939,61 @@
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/dunwu" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:forbreak@163.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/dunwu" title="GitHub &rarr; https://github.com/dunwu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:forbreak@163.com" title="E-Mail &rarr; mailto:forbreak@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
             </div>
           
 
           
-          
 
           
           
 
+          
+            
+          
           
 
         </div>
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux-典型运维应用"><span class="nav-number">1.</span> <span class="nav-text">Linux 典型运维应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络操作"><span class="nav-number">1.1.</span> <span class="nav-text">网络操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无法访问外网域名"><span class="nav-number">1.1.1.</span> <span class="nav-text">无法访问外网域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启、关闭防火墙"><span class="nav-number">1.1.2.</span> <span class="nav-text">开启、关闭防火墙</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统维护"><span class="nav-number">1.2.</span> <span class="nav-text">系统维护</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-NTP-进行时间同步"><span class="nav-number">1.2.1.</span> <span class="nav-text">使用 NTP 进行时间同步</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动化脚本"><span class="nav-number">1.3.</span> <span class="nav-text">自动化脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux-开机自启动脚本"><span class="nav-number">1.3.1.</span> <span class="nav-text">Linux 开机自启动脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定时执行脚本"><span class="nav-number">1.3.2.</span> <span class="nav-text">定时执行脚本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">1.4.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置-Linux-启动模式"><span class="nav-number">1.4.1.</span> <span class="nav-text">设置 Linux 启动模式</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux-典型运维应用"><span class="nav-text">Linux 典型运维应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络操作"><span class="nav-text">网络操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无法访问外网域名"><span class="nav-text">无法访问外网域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启、关闭防火墙"><span class="nav-text">开启、关闭防火墙</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统维护"><span class="nav-text">系统维护</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-NTP-进行时间同步"><span class="nav-text">使用 NTP 进行时间同步</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动化脚本"><span class="nav-text">自动化脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux-开机自启动脚本"><span class="nav-text">Linux 开机自启动脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定时执行脚本"><span class="nav-text">定时执行脚本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置-Linux-启动模式"><span class="nav-text">设置 Linux 启动模式</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -672,6 +1001,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -680,12 +1010,28 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-paper-plane"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Zhang Peng</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">2.1m</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">31:18</span>
   
 </div>
 
@@ -705,6 +1051,7 @@
 
 
 
+
         
       </div>
     </footer>
@@ -713,16 +1060,21 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -736,104 +1088,16 @@
 
 
 
-  
-
-
-  
-
-
-
-
-
-
 
 
 
 
 
   
+    
+    
   
-    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
@@ -847,341 +1111,163 @@
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/blog/" + search_path;
-    // monitor main search box;
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
+
+  
+  <script src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/blog/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/blog/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/blog/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/blog/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/blog/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/blog/js/src/bootstrap.js?v=7.0.1"></script>
+
+
+  
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+      
+      user-select: none;
+      outline: 0;
     }
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      
+        right: 4px;
+        top: 8px;
+      
     }
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === '') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1;
     }
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; // Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.readOnly = true;
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, code.length);
+        ta.readOnly = false;
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); // For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
   </script>
 
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

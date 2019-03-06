@@ -2,14 +2,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +29,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -38,9 +45,22 @@
 
 
 
-  
-  
-  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.0.1" color="#222">
 
 
 
@@ -48,63 +68,18 @@
 
 
 
-<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
-
-
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="张鹏的博客">
-<meta property="og:url" content="https://dunwu.github.io/page/13/index.html">
-<meta property="og:site_name" content="张鹏的博客">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张鹏的博客">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/blog/',
     scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -116,14 +91,37 @@
 </script>
 
 
+  
+
+
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="张鹏的博客">
+<meta property="og:url" content="https://dunwu.github.io/page/13/index.html">
+<meta property="og:site_name" content="张鹏的博客">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="张鹏的博客">
+
+
+
+  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
+
+
+
 
   <link rel="canonical" href="https://dunwu.github.io/page/13/">
 
 
 
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title>张鹏的博客 - 大道至简，知易行难</title>
+  <title>张鹏的博客</title>
   
 
 
@@ -133,9 +131,38 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -148,7 +175,7 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -158,13 +185,16 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">大道至简，知易行难</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -172,110 +202,163 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/blog/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/blog/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/blog/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/blog/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/blog/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+            
+            
+            
+              
+              
+
+  
+  
+    
+  
+  <li class="menu-item menu-item-docs">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/docs/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>docs</a>
+
+  </li>
+
+
+            
+          
+            
+            
+            
+          
+        
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -286,6 +369,389 @@
 
   
   
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/design/refactor/chapter04/夸夸其谈未来性/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Peng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张鹏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/blog/2019/03/06/design/refactor/chapter04/夸夸其谈未来性/" class="post-title-link" itemprop="url">未命名</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:45" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">999</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              坏味道——夸夸其谈未来性(Speculative Generality)特征存在未被使用的类、函数、字段或参数。
+
+问题原因有时，代码仅仅为了支持未来的特性而产生，然而却一直未实现。结果，代码变得难以理解和维护。
+解决方法
+如果你的某个抽象类其实没有太大作用，请运用 折叠继承体系(Collapse Hierarch) 。
+
+
+
+不必要的委托可运用 将类内联化(Inline Class)  消除。
+
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/design/refactor/chapter04/夸夸其谈未来性/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/design/refactor/chapter04/纯稚的数据类/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Peng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张鹏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/blog/2019/03/06/design/refactor/chapter04/纯稚的数据类/" class="post-title-link" itemprop="url">未命名</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:45" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              坏味道——纯稚的数据类(Data Class)特征纯稚的数据类(Data Class) 指的是只包含字段和访问它们的getter和setter函数的类。这些仅仅是供其他类使用的数据容器。这些类不包含任何附加功能，并且不能对自己拥有的数据进行独立操作。
+
+问题原因当一个新创建的类只包含几个公共字段（甚至可能几个getters / setters）是很正常的。但是对象的真正力量在于它们可以包含作用于数
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/design/refactor/chapter04/纯稚的数据类/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -312,11 +778,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/design/refactor/chapter04/过多的注释/" itemprop="url">未命名</a></h1>
+                
+                <a href="/blog/2019/03/06/design/refactor/chapter04/过多的注释/" class="post-title-link" itemprop="url">未命名</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -324,13 +799,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:45" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -338,6 +818,7 @@
 
           
             
+            
           
 
           
@@ -345,6 +826,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
           
 
           
@@ -364,64 +873,44 @@
       
         
           
-            <h2 id="坏味道——过多的注释-Comments"><a href="#坏味道——过多的注释-Comments" class="headerlink" title="坏味道——过多的注释(Comments)"></a>坏味道——过多的注释(Comments)</h2><h3 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h3><p>注释本身并不是坏事。但是常常有这样的情况：一段代码中出现长长的注释，而它之所以存在，是因为代码很糟糕。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/comments-1.png"></div><br></p>
-<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>注释的作者意识到自己的代码不直观或不明显，所以想使用注释来说明自己的意图。这种情况下，注释就像是烂代码的除臭剂。</p>
-<blockquote>
-<p>最好的注释是为函数或类起一个恰当的名字。</p>
-</blockquote>
-<p>如果你觉得一个代码片段没有注释就无法理解，请先尝试重构，试着让所有注释都变得多余。</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ul>
-<li>如果一个注释是为了解释一个复杂的表达式，可以运用 <code>提炼变量(Extract Variable)</code> 将表达式切分为易理解的子表达式。</li>
-<li>如果你需要通过注释来解释一段代码做了什么，请试试 <code>提炼函数(Extract Method)</code> 。</li>
-<li>如果函数已经被提炼，但仍需要注释函数做了什么，试试运用 <code>函数改名(Rename Method)</code> 来为函数起一个可以自解释的名字。</li>
-<li>如果需要对系统某状态进行断言，请运用 <code>引入断言(Introduce Assertion)</code> 。</li>
-</ul>
-<h3 id="收益"><a href="#收益" class="headerlink" title="收益"></a>收益</h3><ul>
-<li>代码变得更直观和明显。</li>
-</ul>
-<h3 id="何时忽略"><a href="#何时忽略" class="headerlink" title="何时忽略"></a>何时忽略</h3><p>注释有时候很有用：</p>
-<ul>
-<li>当解释为什么某事物要以特殊方式实现时。</li>
-<li>当解释某种复杂算法时。</li>
-<li>当你实在不知可以做些什么时。</li>
-</ul>
-<h2 id="重构方法说明"><a href="#重构方法说明" class="headerlink" title="重构方法说明"></a>重构方法说明</h2><h3 id="提炼变量-Extract-Variable"><a href="#提炼变量-Extract-Variable" class="headerlink" title="提炼变量(Extract Variable)"></a>提炼变量(Extract Variable)</h3><p><strong>问题</strong></p>
-<p>你有个难以理解的表达式。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">renderBanner</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> ((platform.toUpperCase().indexOf(<span class="string">"MAC"</span>) &gt; -<span class="number">1</span>) &amp;&amp;</span><br><span class="line">       (browser.toUpperCase().indexOf(<span class="string">"IE"</span>) &gt; -<span class="number">1</span>) &amp;&amp;</span><br><span class="line">        wasInitialized() &amp;&amp; resize &gt; <span class="number">0</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>解决</strong></p>
-<p>将表达式的结果或它的子表达式的结果用不言自明的变量来替代。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">renderBanner</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> <span class="keyword">boolean</span> isMacOs = platform.toUpperCase().indexOf(<span class="string">"MAC"</span>) &gt; -<span class="number">1</span>;</span><br><span class="line">  <span class="keyword">final</span> <span class="keyword">boolean</span> isIE = browser.toUpperCase().indexOf(<span class="string">"IE"</span>) &gt; -<span class="number">1</span>;</span><br><span class="line">  <span class="keyword">final</span> <span class="keyword">boolean</span> wasResized = resize &gt; <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (isMacOs &amp;&amp; isIE &amp;&amp; wasInitialized() &amp;&amp; wasResized) &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="提炼函数-Extract-Method"><a href="#提炼函数-Extract-Method" class="headerlink" title="提炼函数(Extract Method)"></a>提炼函数(Extract Method)</h3><p><strong>问题</strong></p>
-<p>你有一段代码可以组织在一起。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printOwing</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  printBanner();</span><br><span class="line"></span><br><span class="line">  <span class="comment">//print details</span></span><br><span class="line">  System.out.println(<span class="string">"name: "</span> + name);</span><br><span class="line">  System.out.println(<span class="string">"amount: "</span> + getOutstanding());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>解决</strong></p>
-<p>移动这段代码到一个新的函数中，使用函数的调用来替代老代码。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printOwing</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  printBanner();</span><br><span class="line">  printDetails(getOutstanding());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printDetails</span><span class="params">(<span class="keyword">double</span> outstanding)</span> </span>&#123;</span><br><span class="line">  System.out.println(<span class="string">"name: "</span> + name);</span><br><span class="line">  System.out.println(<span class="string">"amount: "</span> + outstanding);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="函数改名-Rename-Method"><a href="#函数改名-Rename-Method" class="headerlink" title="函数改名(Rename Method)"></a>函数改名(Rename Method)</h3><p><strong>问题</strong></p>
-<p>函数的名称未能恰当的揭示函数的用途。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">getsnm</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>解决</strong></p>
-<p>修改函数名。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">getSecondName</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="引入断言-Introduce-Assertion"><a href="#引入断言-Introduce-Assertion" class="headerlink" title="引入断言(Introduce Assertion)"></a>引入断言(Introduce Assertion)</h3><p><strong>问题</strong></p>
-<p>某一段代码需要对程序状态做出某种假设。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">getExpenseLimit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// should have either expense limit or a primary project</span></span><br><span class="line">  <span class="keyword">return</span> (expenseLimit != NULL_EXPENSE) ?</span><br><span class="line">    expenseLimit:</span><br><span class="line">    primaryProject.getMemberExpenseLimit();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>解决</strong></p>
-<p>以断言明确表现这种假设。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">getExpenseLimit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Assert.isTrue(expenseLimit != NULL_EXPENSE || primaryProject != <span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (expenseLimit != NULL_EXPENSE) ?</span><br><span class="line">    expenseLimit:</span><br><span class="line">    primaryProject.getMemberExpenseLimit();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><em>注：请不要滥用断言。不要使用它来检查”应该为真“的条件，只能使用它来检查“一定必须为真”的条件。实际上，断言更多是用于自我检测代码的一种手段。在产品真正交付时，往往都会消除所有断言。</em></p>
+            <p>
+              坏味道——过多的注释(Comments)特征注释本身并不是坏事。但是常常有这样的情况：一段代码中出现长长的注释，而它之所以存在，是因为代码很糟糕。
 
+问题原因注释的作者意识到自己的代码不直观或不明显，所以想使用注释来说明自己的意图。这种情况下，注释就像是烂代码的除臭剂。
+
+最好的注释是为函数或类起一个恰当的名字。
+
+如果你觉得一个代码片段没有注释就无法理解，请先尝试重构，试着让所有注释都变得多余。
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/design/refactor/chapter04/过多的注释/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -452,6 +941,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -478,11 +969,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/design/refactor/chapter04/重复代码/" itemprop="url">未命名</a></h1>
+                
+                <a href="/blog/2019/03/06/design/refactor/chapter04/重复代码/" class="post-title-link" itemprop="url">未命名</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -490,13 +990,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:45" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -504,6 +1009,7 @@
 
           
             
+            
           
 
           
@@ -511,6 +1017,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.8k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
           
 
           
@@ -530,102 +1064,43 @@
       
         
           
-            <h2 id="坏味道——重复代码-Duplicate-Code"><a href="#坏味道——重复代码-Duplicate-Code" class="headerlink" title="坏味道——重复代码(Duplicate Code)"></a>坏味道——重复代码(Duplicate Code)</h2><p>重复代码堪称为代码坏味道之首。消除重复代码总是有利无害的。</p>
-<h3 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h3><p>两个代码片段看上去几乎一样。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/duplicate-code-1.png"></div><br></p>
-<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>重复代码通常发生在多个程序员同时在同一程序的不同部分上工作时。由于他们正在处理不同的任务，他们可能不知道他们的同事已经写了类似的代码。</p>
-<p>还有一种更隐晦的重复，特定部分的代码看上去不同但实际在做同一件事。这种重复代码往往难以找到和消除。</p>
-<p>有时重复是有目的性的。当急于满足deadline，并且现有代码对于要交付的任务是“几乎正确的”时，新手程序员可能无法抵抗复制和粘贴相关代码的诱惑。在某些情况下，程序员只是太懒惰。</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ul>
-<li>同一个类的两个函数含有相同的表达式，这时可以采用 <code>提炼函数(Extract Method)</code>  提炼出重复的代码，然后让这两个地点都调用被提炼出来的那段代码。</li>
-</ul>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/duplicate-code-2.png"></div><br></p>
-<ul>
-<li>如果两个互为兄弟的子类含有重复代码：<ul>
-<li>首先对两个类都运用 <code>提炼函数(Extract Method)</code> ，然后对被提炼出来的函数运用 <code>函数上移(Pull Up Method)</code>  ，将它推入超类。</li>
-<li>如果重复代码在构造函数中，运用 <code>构造函数本体上移(Pull Up Constructor Body)</code> 。</li>
-<li>如果重复代码只是相似但不是完全相同，运用 <code>塑造模板函数(Form Template Method)</code> 获得一个 <strong>模板方法模式(Template Method)</strong> 。</li>
-<li>如果有些函数以不同的算法做相同的事，你可以选择其中较清晰地一个，并运用 <code>替换算法(Substitute Algorithm)</code>  将其他函数的算法替换掉。</li>
-</ul>
-</li>
-<li>如果两个毫不相关的类中有重复代码：<ul>
-<li>请尝试运用 <code>提炼超类(Extract Superclass)</code> ，以便为维护所有先前功能的这些类创建一个超类。</li>
-<li>如果创建超类十分困难，可以在一个类中运用 <code>提炼类(Extract Class)</code> ，并在另一个类中使用这个新的组件。</li>
-</ul>
-</li>
-<li>如果存在大量的条件表达式，并且它们执行完全相同的代码（仅仅是它们的条件不同），可以运用 <code>合并条件表达式(Consolidate Conditional Expression)</code> 将这些操作合并为单个条件，并运用 <code>提炼函数(Extract Method)</code> 将该条件放入一个名字容易理解的独立函数中。</li>
-<li>如果条件表达式的所有分支都有部分相同的代码片段：可以运用 <code>合并重复的条件片段(Consolidate Duplicate Conditional Fragments)</code> 将它们都存在的代码片段置于条件表达式外部。</li>
-</ul>
-<h3 id="收益"><a href="#收益" class="headerlink" title="收益"></a>收益</h3><ul>
-<li>合并重复代码会简化代码的结构，并减少代码量。</li>
-<li>代码更简化、更易维护。</li>
-</ul>
-<h2 id="重构方法说明"><a href="#重构方法说明" class="headerlink" title="重构方法说明"></a>重构方法说明</h2><h3 id="提炼函数-Extract-Method"><a href="#提炼函数-Extract-Method" class="headerlink" title="提炼函数(Extract Method)"></a>提炼函数(Extract Method)</h3><p><strong>问题</strong></p>
-<p>你有一段代码可以组织在一起。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printOwing</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  printBanner();</span><br><span class="line"></span><br><span class="line">  <span class="comment">//print details</span></span><br><span class="line">  System.out.println(<span class="string">"name: "</span> + name);</span><br><span class="line">  System.out.println(<span class="string">"amount: "</span> + getOutstanding());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>解决</strong></p>
-<p>移动这段代码到一个新的函数中，使用函数的调用来替代老代码。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printOwing</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  printBanner();</span><br><span class="line">  printDetails(getOutstanding());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printDetails</span><span class="params">(<span class="keyword">double</span> outstanding)</span> </span>&#123;</span><br><span class="line">  System.out.println(<span class="string">"name: "</span> + name);</span><br><span class="line">  System.out.println(<span class="string">"amount: "</span> + outstanding);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="函数上移-Pull-Up-Method"><a href="#函数上移-Pull-Up-Method" class="headerlink" title="函数上移(Pull Up Method)"></a>函数上移(Pull Up Method)</h3><p><strong>问题</strong></p>
-<p>有些函数，在各个子类中产生完全相同的结果。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/pull-up-method-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>将该函数移至超类。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/pull-up-method-after.png"></div><br></p>
-<h3 id="构造函数本体上移-Pull-Up-Constructor-Body"><a href="#构造函数本体上移-Pull-Up-Constructor-Body" class="headerlink" title="构造函数本体上移(Pull Up Constructor Body)"></a>构造函数本体上移(Pull Up Constructor Body)</h3><p><strong>问题</strong></p>
-<p>你在各个子类中拥有一些构造函数，它们的本体几乎完全一致。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Manager</span> <span class="keyword">extends</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Manager</span><span class="params">(String name, String id, <span class="keyword">int</span> grade)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.id = id;</span><br><span class="line">    <span class="keyword">this</span>.grade = grade;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>解决</strong></p>
-<p>在超类中新建一个构造函数，并在子类构造函数中调用它。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Manager</span> <span class="keyword">extends</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Manager</span><span class="params">(String name, String id, <span class="keyword">int</span> grade)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>(name, id);</span><br><span class="line">    <span class="keyword">this</span>.grade = grade;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="塑造模板函数-Form-Template-Method"><a href="#塑造模板函数-Form-Template-Method" class="headerlink" title="塑造模板函数(Form Template Method)"></a>塑造模板函数(Form Template Method)</h3><p><strong>问题</strong></p>
-<p>你有一些子类，其中相应的某些函数以相同的顺序执行类似的操作，但各个操作的细节上有所不同。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/form-template-method-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>将这些操作分别放进独立函数中，并保持它们都有相同的签名，于是原函数也就变得相同了。然后将原函数上移至超类。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/form-template-method-after.png"></div><br></p>
-<p><em>注：这里只提到具体做法，建议了解一下模板方法设计模式。</em></p>
-<h3 id="替换算法-Substitute-Algorithm"><a href="#替换算法-Substitute-Algorithm" class="headerlink" title="替换算法(Substitute Algorithm)"></a>替换算法(Substitute Algorithm)</h3><p><strong>问题</strong></p>
-<p>你想要把某个算法替换为另一个更清晰的算法。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">foundPerson</span><span class="params">(String[] people)</span></span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; people.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (people[i].equals(<span class="string">"Don"</span>))&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">"Don"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (people[i].equals(<span class="string">"John"</span>))&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">"John"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (people[i].equals(<span class="string">"Kent"</span>))&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">"Kent"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>解决</strong></p>
-<p>将函数本体替换为另一个算法。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">foundPerson</span><span class="params">(String[] people)</span></span>&#123;</span><br><span class="line">  List candidates =</span><br><span class="line">    Arrays.asList(<span class="keyword">new</span> String[] &#123;<span class="string">"Don"</span>, <span class="string">"John"</span>, <span class="string">"Kent"</span>&#125;);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i &lt; people.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (candidates.contains(people[i])) &#123;</span><br><span class="line">      <span class="keyword">return</span> people[i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="提炼超类-Extract-Superclass"><a href="#提炼超类-Extract-Superclass" class="headerlink" title="提炼超类(Extract Superclass)"></a>提炼超类(Extract Superclass)</h3><p><strong>问题</strong></p>
-<p>两个类有相似特性。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/extract-superclass-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>为这两个类建立一个超类，将相同特性移至超类。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/extract-superclass-after.png"></div><br></p>
-<h3 id="提炼类-Extract-Class"><a href="#提炼类-Extract-Class" class="headerlink" title="提炼类(Extract Class)"></a>提炼类(Extract Class)</h3><p><strong>问题</strong></p>
-<p>某个类做了不止一件事。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/extract-class-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>建立一个新类，将相关的字段和函数从旧类搬移到新类。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/extract-class-after.png"></div><br></p>
-<h3 id="合并条件表达式-Consolidate-Conditional-Expression"><a href="#合并条件表达式-Consolidate-Conditional-Expression" class="headerlink" title="合并条件表达式(Consolidate Conditional Expression)"></a>合并条件表达式(Consolidate Conditional Expression)</h3><p><strong>问题</strong></p>
-<p>你有一系列条件分支，都得到相同结果。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">disabilityAmount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (seniority &lt; <span class="number">2</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (monthsDisabled &gt; <span class="number">12</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (isPartTime) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// compute the disability amount</span></span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>解决</strong></p>
-<p>将这些条件分支合并为一个条件，并将这个条件提炼为一个独立函数。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">disabilityAmount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (isNotEligableForDisability()) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// compute the disability amount</span></span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="合并重复的条件片段-Consolidate-Duplicate-Conditional-Fragments"><a href="#合并重复的条件片段-Consolidate-Duplicate-Conditional-Fragments" class="headerlink" title="合并重复的条件片段(Consolidate Duplicate Conditional Fragments)"></a>合并重复的条件片段(Consolidate Duplicate Conditional Fragments)</h3><p><strong>问题</strong></p>
-<p>在条件表达式的每个分支上有着相同的一段代码。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (isSpecialDeal()) &#123;</span><br><span class="line">  total = price * <span class="number">0.95</span>;</span><br><span class="line">  send();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">  total = price * <span class="number">0.98</span>;</span><br><span class="line">  send();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>解决</strong></p>
-<p>将这段重复代码搬移到条件表达式之外。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (isSpecialDeal()) &#123;</span><br><span class="line">  total = price * <span class="number">0.95</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">  total = price * <span class="number">0.98</span>;</span><br><span class="line">&#125;</span><br><span class="line">send();</span><br></pre></td></tr></table></figure>
+            <p>
+              坏味道——重复代码(Duplicate Code)重复代码堪称为代码坏味道之首。消除重复代码总是有利无害的。
+特征两个代码片段看上去几乎一样。
 
+问题原因重复代码通常发生在多个程序员同时在同一程序的不同部分上工作时。由于他们正在处理不同的任务，他们可能不知道他们的同事已经写了类似的代码。
+还有一种更隐晦的重复，特定部分的代码看上去不同但实际在做同一件事。这种重复代码往往难以找到和消除。
+有时重复是
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/design/refactor/chapter04/重复代码/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -656,6 +1131,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -682,11 +1159,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/design/refactor/chapter05/不完美的库类/" itemprop="url">未命名</a></h1>
+                
+                <a href="/blog/2019/03/06/design/refactor/chapter05/不完美的库类/" class="post-title-link" itemprop="url">未命名</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -694,13 +1180,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:45" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -708,6 +1199,7 @@
 
           
             
+            
           
 
           
@@ -715,6 +1207,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">982</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -734,41 +1254,41 @@
       
         
           
-            <h2 id="坏味道——不完美的库类-Incomplete-Library-Class"><a href="#坏味道——不完美的库类-Incomplete-Library-Class" class="headerlink" title="坏味道——不完美的库类(Incomplete Library Class)"></a>坏味道——不完美的库类(Incomplete Library Class)</h2><h3 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h3><p>当一个类库已经不能满足实际需要时，你就不得不改变这个库（如果这个库是只读的，那就没辙了）。</p>
-<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>许多编程技术都建立在库类的基础上。库类的作者没用未卜先知的能力，不能因此责怪他们。麻烦的是库往往构造的不够好，而且往往不可能让我们修改其中的类以满足我们的需要。</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ul>
-<li>如果你只想修改类库的一两个函数，可以运用 <code>引入外加函数(Introduce Foreign Method)</code>；</li>
-<li>如果想要添加一大堆额外行为，就得运用 <code>引入本地扩展(Introduce Local Extension)</code> 。</li>
-</ul>
-<h3 id="收益"><a href="#收益" class="headerlink" title="收益"></a>收益</h3><ul>
-<li>减少代码重复（你不用一言不合就自己动手实现一个库的全部功能，代价太高）</li>
-</ul>
-<h3 id="何时忽略"><a href="#何时忽略" class="headerlink" title="何时忽略"></a>何时忽略</h3><ul>
-<li>如果扩展库会带来额外的工作量。</li>
-</ul>
-<h2 id="重构方法说明"><a href="#重构方法说明" class="headerlink" title="重构方法说明"></a>重构方法说明</h2><h3 id="引入外加函数-Introduce-Foreign-Method"><a href="#引入外加函数-Introduce-Foreign-Method" class="headerlink" title="引入外加函数(Introduce Foreign Method)"></a>引入外加函数(Introduce Foreign Method)</h3><p><strong>问题</strong></p>
-<p>你需要为提供服务的类增加一个函数，但你无法修改这个类。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Report</span> </span>&#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">sendReport</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Date nextDay = <span class="keyword">new</span> Date(previousEnd.getYear(),</span><br><span class="line">      previousEnd.getMonth(), previousEnd.getDate() + <span class="number">1</span>);</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>解决</strong></p>
-<p>在客户类中建立一个函数，并一个第一个参数形式传入一个服务类实例。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Report</span> </span>&#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">sendReport</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Date newStart = nextDay(previousEnd);</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Date <span class="title">nextDay</span><span class="params">(Date arg)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Date(arg.getYear(), arg.getMonth(), arg.getDate() + <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="引入本地扩展-Introduce-Local-Extension"><a href="#引入本地扩展-Introduce-Local-Extension" class="headerlink" title="引入本地扩展(Introduce Local Extension)"></a>引入本地扩展(Introduce Local Extension)</h3><p><strong>问题</strong></p>
-<p>你需要为服务类提供一些额外函数，但你无法修改这个类。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/introduce-local-extension-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>建立一个新类，使它包含这些额外函数，让这个扩展品成为源类的子类或包装类。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/introduce-local-extension-after.png"></div><br></p>
-
+            <p>
+              坏味道——不完美的库类(Incomplete Library Class)特征当一个类库已经不能满足实际需要时，你就不得不改变这个库（如果这个库是只读的，那就没辙了）。
+问题原因许多编程技术都建立在库类的基础上。库类的作者没用未卜先知的能力，不能因此责怪他们。麻烦的是库往往构造的不够好，而且往往不可能让我们修改其中的类以满足我们的需要。
+解决方法
+如果你只想修改类库的一两个函数，可以运用 引入外加
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/design/refactor/chapter05/不完美的库类/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -799,6 +1319,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -825,11 +1347,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/design/refactor/chapter05/中间人/" itemprop="url">未命名</a></h1>
+                
+                <a href="/blog/2019/03/06/design/refactor/chapter05/中间人/" class="post-title-link" itemprop="url">未命名</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -837,13 +1368,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:45" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -851,6 +1387,7 @@
 
           
             
+            
           
 
           
@@ -858,6 +1395,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">365</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -877,36 +1442,41 @@
       
         
           
-            <h2 id="坏味道——中间人-Middle-Man"><a href="#坏味道——中间人-Middle-Man" class="headerlink" title="坏味道——中间人(Middle Man)"></a>坏味道——中间人(Middle Man)</h2><h3 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h3><p>如果一个类的作用仅仅是指向另一个类的委托，为什么要存在呢？</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/middle-man-1.png"></div><br></p>
-<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>对象的基本特征之一就是封装：对外部世界隐藏其内部细节。封装往往伴随委托。但是人们可能过度运用委托。比如，你也许会看到一个类的大部分有用工作都委托给了其他类，类本身成了一个空壳，除了委托之外不做任何事情。</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>应该运用 <code>移除中间人(Remove Middle Man)</code>，直接和真正负责的对象打交道。</p>
-<h3 id="收益"><a href="#收益" class="headerlink" title="收益"></a>收益</h3><ul>
-<li>减少笨重的代码。</li>
-</ul>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/middle-man-2.png"></div><br></p>
-<h3 id="何时忽略"><a href="#何时忽略" class="headerlink" title="何时忽略"></a>何时忽略</h3><p>如果是以下情况，不要删除已创建的中间人：</p>
-<ul>
-<li>添加中间人是为了避免类之间依赖关系。</li>
-<li>一些设计模式有目的地创建中间人（例如代理模式和装饰器模式）。</li>
-</ul>
-<h2 id="重构方法说明"><a href="#重构方法说明" class="headerlink" title="重构方法说明"></a>重构方法说明</h2><h3 id="移除中间人-Remove-Middle-Man"><a href="#移除中间人-Remove-Middle-Man" class="headerlink" title="移除中间人(Remove Middle Man)"></a>移除中间人(Remove Middle Man)</h3><p><strong>问题</strong></p>
-<p>某个类做了过多的简单委托动作。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/remove-middle-man-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>让客户直接调用委托类。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/remove-middle-man-after.png"></div><br></p>
+            <p>
+              坏味道——中间人(Middle Man)特征如果一个类的作用仅仅是指向另一个类的委托，为什么要存在呢？
 
+问题原因对象的基本特征之一就是封装：对外部世界隐藏其内部细节。封装往往伴随委托。但是人们可能过度运用委托。比如，你也许会看到一个类的大部分有用工作都委托给了其他类，类本身成了一个空壳，除了委托之外不做任何事情。
+解决方法应该运用 移除中间人(Remove Middle Man)，直接和真正负责
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/design/refactor/chapter05/中间人/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -937,6 +1507,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -963,11 +1535,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/design/refactor/chapter05/依恋情结/" itemprop="url">未命名</a></h1>
+                
+                <a href="/blog/2019/03/06/design/refactor/chapter05/依恋情结/" class="post-title-link" itemprop="url">未命名</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -975,13 +1556,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:45" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -989,6 +1575,7 @@
 
           
             
+            
           
 
           
@@ -996,6 +1583,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -1015,48 +1630,41 @@
       
         
           
-            <h2 id="坏味道——依恋情结-Feature-Envy"><a href="#坏味道——依恋情结-Feature-Envy" class="headerlink" title="坏味道——依恋情结(Feature Envy)"></a>坏味道——依恋情结(Feature Envy)</h2><h3 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h3><p>一个函数访问其它对象的数据比访问自己的数据更多。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/feature-envy-1.png"></div><br></p>
-<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>这种气味可能发生在字段移动到数据类之后。如果是这种情况，你可能想将数据类的操作移动到这个类中。</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>As a basic rule, if things change at the same time, you should keep them in the same place. Usually data and functions that use this data are changed together (although exceptions are possible).</p>
-<p>有一个基本原则：同时会发生改变的事情应该被放在同一个地方。通常，数据和使用这些数据的函数是一起改变的。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/feature-envy-2.png"></div><br></p>
-<ul>
-<li>如果一个函数明显应该被移到另一个地方，可运用 <code>搬移函数(Move Method)</code> 。</li>
-<li>如果仅仅是函数的部分代码访问另一个对象的数据，运用 <code>提炼函数(Extract Method)</code> 将这部分代码移到独立的函数中。</li>
-<li>如果一个方法使用来自其他几个类的函数，首先确定哪个类包含大多数使用的数据。然后，将该方法与其他数据一起放在此类中。或者，使用 <code>提炼函数(Extract Method)</code> 将方法拆分为几个部分，可以放置在不同类中的不同位置。</li>
-</ul>
-<h3 id="收益"><a href="#收益" class="headerlink" title="收益"></a>收益</h3><ul>
-<li>减少重复代码（如果数据处理的代码放在中心位置）。</li>
-<li>更好的代码组织性（处理数据的函数靠近实际数据）。</li>
-</ul>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/feature-envy-3.png"></div><br></p>
-<h3 id="何时忽略"><a href="#何时忽略" class="headerlink" title="何时忽略"></a>何时忽略</h3><ul>
-<li>有时，行为被有意地与保存数据的类分开。这通常的优点是能够动态地改变行为（见策略设计模式，访问者设计模式和其他模式）。</li>
-</ul>
-<h2 id="重构方法说明"><a href="#重构方法说明" class="headerlink" title="重构方法说明"></a>重构方法说明</h2><h3 id="搬移函数-Move-Method"><a href="#搬移函数-Move-Method" class="headerlink" title="搬移函数(Move Method)"></a>搬移函数(Move Method)</h3><p><strong>问题</strong></p>
-<p>你的程序中，有个函数与其所驻类之外的另一个类进行更多交流：调用后者，或被后者调用。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/move-method-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>在该函数最常引用的类中建立一个有着类似行为的新函数。将旧函数变成一个单纯的委托函数，或是旧函数完全移除。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/move-method-after.png"></div><br></p>
-<h3 id="提炼函数-Extract-Method"><a href="#提炼函数-Extract-Method" class="headerlink" title="提炼函数(Extract Method)"></a>提炼函数(Extract Method)</h3><p><strong>问题</strong></p>
-<p>你有一段代码可以组织在一起。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printOwing</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  printBanner();</span><br><span class="line"></span><br><span class="line">  <span class="comment">//print details</span></span><br><span class="line">  System.out.println(<span class="string">"name: "</span> + name);</span><br><span class="line">  System.out.println(<span class="string">"amount: "</span> + getOutstanding());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>解决</strong></p>
-<p>移动这段代码到一个新的函数中，使用函数的调用来替代老代码。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printOwing</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  printBanner();</span><br><span class="line">  printDetails(getOutstanding());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printDetails</span><span class="params">(<span class="keyword">double</span> outstanding)</span> </span>&#123;</span><br><span class="line">  System.out.println(<span class="string">"name: "</span> + name);</span><br><span class="line">  System.out.println(<span class="string">"amount: "</span> + outstanding);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <p>
+              坏味道——依恋情结(Feature Envy)特征一个函数访问其它对象的数据比访问自己的数据更多。
 
+问题原因这种气味可能发生在字段移动到数据类之后。如果是这种情况，你可能想将数据类的操作移动到这个类中。
+解决方法As a basic rule, if things change at the same time, you should keep them in the same place. U
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/design/refactor/chapter05/依恋情结/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1087,6 +1695,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1113,11 +1723,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/design/refactor/chapter05/狎昵关系/" itemprop="url">未命名</a></h1>
+                
+                <a href="/blog/2019/03/06/design/refactor/chapter05/狎昵关系/" class="post-title-link" itemprop="url">未命名</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1125,13 +1744,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:45" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1139,6 +1763,7 @@
 
           
             
+            
           
 
           
@@ -1146,6 +1771,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -1165,72 +1818,46 @@
       
         
           
-            <h2 id="坏味道——狎昵关系-Inappropriate-Intimacy"><a href="#坏味道——狎昵关系-Inappropriate-Intimacy" class="headerlink" title="坏味道——狎昵关系(Inappropriate Intimacy)"></a>坏味道——狎昵关系(Inappropriate Intimacy)</h2><h3 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h3><p>一个类大量使用另一个类的内部字段和方法。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/inappropriate-intimacy-1.png"></div><br></p>
-<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>类和类之间应该尽量少的感知彼此（减少耦合）。这样的类更容易维护和复用。</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ul>
-<li>最简单的解决方法是运用 <code>搬移函数(Move Method)</code> 和 <code>搬移字段(Move Field)</code> 来让类之间斩断羁绊。</li>
-</ul>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/inappropriate-intimacy-2.png"></div><br></p>
-<ul>
-<li><p>你也可以看看是否能运用 <code>将双向关联改为单向关联(Change Bidirectional Association to Unidirectional)</code> 让其中一个类对另一个说分手。</p>
-</li>
-<li><p>如果这两个类实在是情比金坚，难分难舍，可以运用 <code>提炼类(Extract Class)</code> 把二者共同点提炼到一个新类中，让它们产生爱的结晶。或者，可以尝试运用 <code>隐藏委托关系(Hide Delegate)</code> 让另一个类来为它们牵线搭桥。</p>
-</li>
-<li>继承往往造成类之间过分紧密，因为子类对超类的了解总是超过后者的主观愿望，如果你觉得该让这个子类自己闯荡，请运用 <code>以委托取代继承(Replace Inheritance with Delegation)</code>  来让超类和子类分家。</li>
-</ul>
-<h3 id="收益"><a href="#收益" class="headerlink" title="收益"></a>收益</h3><ul>
-<li>提高代码组织性。</li>
-<li>提高代码复用性。</li>
-</ul>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/inappropriate-intimacy-3.png"></div><br></p>
-<h2 id="重构方法说明"><a href="#重构方法说明" class="headerlink" title="重构方法说明"></a>重构方法说明</h2><h3 id="搬移函数-Move-Method"><a href="#搬移函数-Move-Method" class="headerlink" title="搬移函数(Move Method)"></a>搬移函数(Move Method)</h3><p><strong>问题</strong></p>
-<p>你的程序中，有个函数与其所驻类之外的另一个类进行更多交流：调用后者，或被后者调用。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/move-method-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>在该函数最常引用的类中建立一个有着类似行为的新函数。将旧函数变成一个单纯的委托函数，或是旧函数完全移除。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/move-method-after.png"></div><br></p>
-<h3 id="搬移字段-Move-Field"><a href="#搬移字段-Move-Field" class="headerlink" title="搬移字段(Move Field)"></a>搬移字段(Move Field)</h3><p><strong>问题</strong></p>
-<p>在你的程序中，某个字段被其所驻类之外的另一个类更多地用到。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/move-field-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>在目标类新建一个字段，修改源字段的所有用户，令他们改用新字段。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/move-field-after.png"></div><br></p>
-<h3 id="将双向关联改为单向关联-Change-Bidirectional-Association-to-Unidirectional"><a href="#将双向关联改为单向关联-Change-Bidirectional-Association-to-Unidirectional" class="headerlink" title="将双向关联改为单向关联(Change Bidirectional Association to Unidirectional)"></a>将双向关联改为单向关联(Change Bidirectional Association to Unidirectional)</h3><p><strong>问题</strong></p>
-<p>两个类之间有双向关联，但其中一个类如今不再需要另一个类的特性。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/change-bidirectional-association-to-unidirectional-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>去除不必要的关联。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/change-bidirectional-association-to-unidirectional-after.png"></div><br></p>
-<h3 id="提炼类-Extract-Class"><a href="#提炼类-Extract-Class" class="headerlink" title="提炼类(Extract Class)"></a>提炼类(Extract Class)</h3><p><strong>问题</strong></p>
-<p>某个类做了不止一件事。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/extract-class-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>建立一个新类，将相关的字段和函数从旧类搬移到新类。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/extract-class-after.png"></div><br></p>
-<h3 id="隐藏委托关系-Hide-Delegate"><a href="#隐藏委托关系-Hide-Delegate" class="headerlink" title="隐藏委托关系(Hide Delegate)"></a>隐藏委托关系(Hide Delegate)</h3><p><strong>问题</strong></p>
-<p>客户通过一个委托类来调用另一个对象。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/hide-delegate-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>在服务类上建立客户所需的所有函数，用以隐藏委托关系。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/hide-delegate-after.png"></div><br></p>
-<h3 id="以委托取代继承-Replace-Inheritance-with-Delegation"><a href="#以委托取代继承-Replace-Inheritance-with-Delegation" class="headerlink" title="以委托取代继承(Replace Inheritance with Delegation)"></a>以委托取代继承(Replace Inheritance with Delegation)</h3><p><strong>问题</strong></p>
-<p>某个子类只使用超类接口中的一部分，或是根本不需要继承而来的数据。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/replace-delegation-with-inheritance-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>在子类中新建一个字段用以保存超类；调整子类函数，令它改而委托超类；然后去掉两者之间的继承关系。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/replace-delegation-with-inheritance-after.png"></div><br></p>
+            <p>
+              坏味道——狎昵关系(Inappropriate Intimacy)特征一个类大量使用另一个类的内部字段和方法。
 
+问题原因类和类之间应该尽量少的感知彼此（减少耦合）。这样的类更容易维护和复用。
+解决方法
+最简单的解决方法是运用 搬移函数(Move Method) 和 搬移字段(Move Field) 来让类之间斩断羁绊。
+
+
+
+你也可以看看是否能运用 将双向关联改为单向关联(Change Bidi
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/design/refactor/chapter05/狎昵关系/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1261,6 +1888,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1287,11 +1916,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/design/refactor/chapter05/过度耦合的消息链/" itemprop="url">未命名</a></h1>
+                
+                <a href="/blog/2019/03/06/design/refactor/chapter05/过度耦合的消息链/" class="post-title-link" itemprop="url">未命名</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1299,13 +1937,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:45" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1313,6 +1956,7 @@
 
           
             
+            
           
 
           
@@ -1320,6 +1964,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -1339,53 +2011,40 @@
       
         
           
-            <h2 id="坏味道——过度耦合的消息链-Message-Chains"><a href="#坏味道——过度耦合的消息链-Message-Chains" class="headerlink" title="坏味道——过度耦合的消息链(Message Chains)"></a>坏味道——过度耦合的消息链(Message Chains)</h2><h3 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h3><p>消息链的形式类似于：<code>obj.getA().getB().getC()</code>。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/message-chains-1.png"></div><br></p>
-<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>如果你看到用户向一个对象请求另一个对象，然后再向后者请求另一个对象，然后再请求另一个对象……这就是消息链。实际代码中你看到的可能是一长串getThis()或一长串临时变量。采取这种方式，意味客户代码将与查找过程中的导航紧密耦合。一旦对象间关系发生任何变化，客户端就不得不做出相应的修改。</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ul>
-<li>可以运用 <code>隐藏委托关系(Hide Delegate)</code> 删除一个消息链。</li>
-</ul>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/message-chains-2.png"></div><br></p>
-<ul>
-<li>有时更好的选择是：先观察消息链最终得到的对象是用来干什么的。看看能否以 <code>提炼函数(Extract Method)</code>把使用该对象的代码提炼到一个独立函数中，再运用 <code>搬移函数(Move Method)</code> 把这个函数推入消息链。</li>
-</ul>
-<h3 id="收益"><a href="#收益" class="headerlink" title="收益"></a>收益</h3><ul>
-<li>能减少链中类之间的依赖。</li>
-<li>能减少代码量。</li>
-</ul>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/message-chains-3.png"></div><br></p>
-<h3 id="何时忽略"><a href="#何时忽略" class="headerlink" title="何时忽略"></a>何时忽略</h3><ul>
-<li>过于侵略性的委托可能会使程序员难以理解功能是如何触发的。</li>
-</ul>
-<h2 id="重构方法说明"><a href="#重构方法说明" class="headerlink" title="重构方法说明"></a>重构方法说明</h2><h3 id="隐藏委托关系-Hide-Delegate"><a href="#隐藏委托关系-Hide-Delegate" class="headerlink" title="隐藏委托关系(Hide Delegate)"></a>隐藏委托关系(Hide Delegate)</h3><p><strong>问题</strong></p>
-<p>客户通过一个委托类来调用另一个对象。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/hide-delegate-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>在服务类上建立客户所需的所有函数，用以隐藏委托关系。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/hide-delegate-after.png"></div><br></p>
-<h3 id="提炼函数-Extract-Method"><a href="#提炼函数-Extract-Method" class="headerlink" title="提炼函数(Extract Method)"></a>提炼函数(Extract Method)</h3><p><strong>问题</strong></p>
-<p>你有一段代码可以组织在一起。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printOwing</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  printBanner();</span><br><span class="line"></span><br><span class="line">  <span class="comment">//print details</span></span><br><span class="line">  System.out.println(<span class="string">"name: "</span> + name);</span><br><span class="line">  System.out.println(<span class="string">"amount: "</span> + getOutstanding());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>解决</strong></p>
-<p>移动这段代码到一个新的函数中，使用函数的调用来替代老代码。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printOwing</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  printBanner();</span><br><span class="line">  printDetails(getOutstanding());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printDetails</span><span class="params">(<span class="keyword">double</span> outstanding)</span> </span>&#123;</span><br><span class="line">  System.out.println(<span class="string">"name: "</span> + name);</span><br><span class="line">  System.out.println(<span class="string">"amount: "</span> + outstanding);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="搬移函数-Move-Method"><a href="#搬移函数-Move-Method" class="headerlink" title="搬移函数(Move Method)"></a>搬移函数(Move Method)</h3><p><strong>问题</strong></p>
-<p>你的程序中，有个函数与其所驻类之外的另一个类进行更多交流：调用后者，或被后者调用。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/move-method-before.png"></div><br></p>
-<p><strong>解决</strong></p>
-<p>在该函数最常引用的类中建立一个有着类似行为的新函数。将旧函数变成一个单纯的委托函数，或是旧函数完全移除。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/design/refactor/move-method-after.png"></div><br></p>
+            <p>
+              坏味道——过度耦合的消息链(Message Chains)特征消息链的形式类似于：obj.getA().getB().getC()。
 
+问题原因如果你看到用户向一个对象请求另一个对象，然后再向后者请求另一个对象，然后再请求另一个对象……这就是消息链。实际代码中你看到的可能是一长串getThis()或一长串临时变量。采取这种方式，意味客户代码将与查找过程中的导航紧密耦合。一旦对象间关系发生任何变化，
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/design/refactor/chapter05/过度耦合的消息链/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1416,6 +2075,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1442,161 +2103,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/frontend/mvc/vue/vue/" itemprop="url">Vue 教程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Vue-教程"><a href="#Vue-教程" class="headerlink" title="Vue 教程"></a>Vue 教程</h1><!-- TOC depthFrom:2 depthTo:3 -->
-<ul>
-<li><a href="#简介">简介</a><ul>
-<li><a href="#vue-生命周期">vue 生命周期</a></li>
-</ul>
-</li>
-<li><a href="#更多内容">更多内容</a></li>
-</ul>
-<!-- /TOC -->
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Vue (读音 /vjuː/，类似于 <strong>view</strong>) 是一套用于构建用户界面的<strong>渐进式框架</strong>。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。</p>
-<p>Vue.js 的核心是一个允许采用简洁的模板语法来声明式地将数据渲染进 DOM 的系统：</p>
-<p>html</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>Javascript</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    message: <span class="string">'Hello Vue!'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="vue-生命周期"><a href="#vue-生命周期" class="headerlink" title="vue 生命周期"></a>vue 生命周期</h3><p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/front/mvc/vue/vue-lifecycle.png"></div><br></p>
-<h2 id="更多内容"><a href="#更多内容" class="headerlink" title="更多内容"></a>更多内容</h2><ul>
-<li>官方<ul>
-<li><a href="https://github.com/vuejs/vue" target="_blank" rel="noopener">vue Github</a></li>
-<li><a href="https://cn.vuejs.org/index.html" target="_blank" rel="noopener">vue 官方文档</a></li>
-<li><a href="https://github.com/vuejs/vue-router" target="_blank" rel="noopener">vue-router Github</a> - vue 官方路由框架</li>
-<li><a href="https://github.com/vuejs/vuex" target="_blank" rel="noopener">vuex Github</a> - vue 官方集中式状态管理框架</li>
-<li><a href="https://github.com/vuejs/vue-cli" target="_blank" rel="noopener">vue-cli Github</a> - vue 官方开发工具</li>
-<li><a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="noopener">vue-devtools Github</a> - vue 官方 debug 工具</li>
-</ul>
-</li>
-<li>更多资源<ul>
-<li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a></li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/minds/人文/军事/README/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Peng">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张鹏的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/minds/人文/军事/README/" itemprop="url">军事</a></h1>
+                <a href="/blog/2019/03/06/frontend/mvc/vue/vue/" class="post-title-link" itemprop="url">Vue 教程</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1604,136 +2124,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
-            
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="军事"><a href="#军事" class="headerlink" title="军事"></a>军事</h1><blockquote>
-<p>军事是与战争、军队、军人等有关事务的总称。</p>
-</blockquote>
-<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><p>战争、战役、战斗、战士、战略、战术、武器、兵种、进攻、防御、指挥、兵法、军衔</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/os/docker/advanced/docker-design/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Peng">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张鹏的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+              
                 
-                <a class="post-title-link" href="/blog/2019/03/06/os/docker/advanced/docker-design/" itemprop="url">Docker 的设计</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
               
-                <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:45" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
+            
+
+            
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
-            
 
-            
-
+              
             
           </span>
 
@@ -1741,6 +2143,7 @@
 
           
             
+            
           
 
           
@@ -1748,6 +2151,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">550</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -1767,74 +2198,50 @@
       
         
           
-            <!-- TOC -->
-<ul>
-<li><a href="#docker-%E7%9A%84%E8%AE%BE%E8%AE%A1">Docker 的设计</a><ul>
-<li><a href="#docker-%E6%9E%B6%E6%9E%84">Docker 架构</a><ul>
-<li><a href="#docker-%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B%EF%BC%88docker-daemon%EF%BC%89">Docker 守护进程（docker daemon）</a></li>
-<li><a href="#docker-%E5%AE%A2%E6%88%B7%E7%AB%AF">Docker 客户端</a></li>
-<li><a href="#docker-%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83">Docker 注册中心</a></li>
-<li><a href="#docker-%E5%AF%B9%E8%B1%A1">Docker 对象</a><ul>
-<li><a href="#%E9%95%9C%E5%83%8F">镜像</a></li>
-<li><a href="#%E5%AE%B9%E5%99%A8">容器</a></li>
-<li><a href="#%E6%9C%8D%E5%8A%A1">服务</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%BA%95%E5%B1%82%E6%8A%80%E6%9C%AF">底层技术</a><ul>
-<li><a href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4">命名空间</a></li>
-<li><a href="#%E6%8E%A7%E5%88%B6%E7%BB%84">控制组</a></li>
-<li><a href="#%E8%81%94%E5%90%88%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F">联合文件系统</a></li>
-<li><a href="#%E5%AE%B9%E5%99%A8%E6%A0%BC%E5%BC%8F">容器格式</a></li>
-</ul>
-</li>
-<li><a href="#%E8%B5%84%E6%96%99">资料</a></li>
-</ul>
-</li>
-</ul>
-<!-- /TOC -->
-<h1 id="Docker-的设计"><a href="#Docker-的设计" class="headerlink" title="Docker 的设计"></a>Docker 的设计</h1><h2 id="Docker-架构"><a href="#Docker-架构" class="headerlink" title="Docker 架构"></a>Docker 架构</h2><p>Docker 使用 C/S 体系结构。Docker 守护进程，负责构建、运行和分发 Docker 容器；Docker 客户端与 Docker 守护进程通信。Docker 客户端和守护进程可以在同一个系统上运行，也可以将 Docker 客户端连接到远程 Docker 守护进程。Docker 客户端和守护进程使用 REST API，并通过 UNIX 套接字或网络接口进行通信。</p>
-<p><br><div align="center"><img src="https://docs.docker.com/engine/images/architecture.svg"></div><br></p>
-<h3 id="Docker-守护进程（docker-daemon）"><a href="#Docker-守护进程（docker-daemon）" class="headerlink" title="Docker 守护进程（docker daemon）"></a>Docker 守护进程（docker daemon）</h3><p>Docker 守护进程（<code>dockerd</code>）监听 Docker API 请求并管理 Docker 对象（如镜像，容器，网络和卷）。守护进程还可以与其他守护进程通信来管理 Docker 服务。</p>
-<h3 id="Docker-客户端"><a href="#Docker-客户端" class="headerlink" title="Docker 客户端"></a>Docker 客户端</h3><p>Docker 客户端（<code>docker</code>）是许多 Docker 用户与 Docker 进行交互的主要方式。当你使用诸如 <code>docker run</code> 之类的命令时，客户端将这些命令发送到 <code>dockerd</code>，<code>dockerd</code> 执行这些命令。 <code>docker</code> 命令使用 Docker API。 Docker 客户端可以与多个守护进程进行通信。</p>
-<h3 id="Docker-注册中心"><a href="#Docker-注册中心" class="headerlink" title="Docker 注册中心"></a>Docker 注册中心</h3><p>Docker 注册中心存储 Docker 镜像。Docker Hub 和 Docker Cloud 是任何人都可以使用的公共注册中心，并且 Docker 默认配置为在 Docker Hub 上查找镜像。你甚至可以运行你自己的私人注册中心。如果您使用 Docker Datacenter（DDC），它包括 Docker Trusted Registry（DTR）。</p>
-<p>当您使用 <code>docker pull</code> 或 <code>docker run</code> 命令时，所需的镜像将从配置的注册中心中提取。当您使用 <code>docker push</code> 命令时，您的镜像将被推送到您配置的注册中心。</p>
-<p><a href="http://store.docker.com/" target="_blank" rel="noopener">Docker 商店</a> 允许您购买和销售 Docker 镜像或免费发布。例如，您可以购买包含来自软件供应商的应用程序或服务的 Docker 镜像，并使用该镜像将应用程序部署到您的测试，临时和生产环境中。您可以通过拉取新版本的镜像并重新部署容器来升级应用程序。</p>
-<h3 id="Docker-对象"><a href="#Docker-对象" class="headerlink" title="Docker 对象"></a>Docker 对象</h3><h4 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h4><p>镜像是一个只读模板，带有创建 Docker 容器的说明。通常，镜像基于另一个镜像，并具有一些额外的自定义功能。例如，您可以构建基于 ubuntu 镜像的镜像，但会安装 Apache Web 服务器和应用程序，以及使应用程序运行所需的配置细节。</p>
-<p>您可能会创建自己的镜像，或者您可能只能使用其他人创建并在注册中心中发布的镜像。为了构建您自己的镜像，您可以使用简单的语法创建 <code>Dockerfile</code>，以定义创建镜像并运行所需的步骤。  <code>Dockerfile</code> 中的每条指令都会在镜像中创建一个图层。当您更改 <code>Dockerfile</code> 并重建镜像时，只重建那些已更改的图层。与其他虚拟化技术相比，这是使镜像轻量，小巧，快速的一部分。</p>
-<h4 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h4><p>容器是镜像的可运行实例。您可以使用 Docker API 或 CLI 创建、启动、停止、移动或删除容器。您可以将容器连接到一个或多个网络，将存储器连接到它，甚至可以根据其当前状态创建新镜像。</p>
-<p>默认情况下，容器与其他容器及其主机相对隔离。您可以控制容器的网络、存储或其他底层子系统与其他容器或主机的隔离程度。</p>
-<p>容器由其镜像以及您在创建或启动时提供给它的任何配置选项来定义。当一个容器被移除时，其未被存储在永久存储器中的状态将消失。</p>
-<h4 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h4><p>通过服务，您可以跨多个 Docker 守护进程扩展容器，这些守护进程可以作为一个群组与多个管理人员、工作人员一起工作。集群中的每个成员都是 Docker 守护进程，守护进程都使用 Docker API 进行通信。服务允许您定义所需的状态，例如在任何给定时间必须可用的服务的副本数量。默认情况下，该服务在所有工作节点之间进行负载平衡。对于消费者来说，Docker 服务似乎是一个单一的应用程序。Docker 引擎在 Docker 1.12 及更高版本中支持集群模式。</p>
-<h2 id="底层技术"><a href="#底层技术" class="headerlink" title="底层技术"></a>底层技术</h2><p>Docker 使用 Go 编写，利用 Linux 内核的几个特性来提供其功能。</p>
-<h3 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h3><p>Docker 使用名为 <code>namespaces</code> 的技术来提供独立工作空间（即容器）。当你运行一个容器时，Docker 会为该容器创建一组命名空间。</p>
-<p>这些命名空间提供了一个隔离层。容器的每个方面都在单独的命名空间中运行，并且其访问权限限于该命名空间。</p>
-<p>Docker 引擎在 Linux 上使用如下的命名空间：</p>
-<ul>
-<li><code>pid</code> 命名空间：进程隔离（PID：进程ID）。</li>
-<li><code>net</code> 命名空间：管理网络接口（NET：网络）。</li>
-<li><code>ipc</code> 命名空间：管理对IPC资源的访问（IPC：InterProcess Communication）。</li>
-<li><code>mnt</code> 命名空间：管理文件系统挂载点（MNT：挂载）。</li>
-<li><code>uts</code> 命名空间：隔离内核和版本标识符。 （UTS：Unix分时系统）。</li>
-</ul>
-<h3 id="控制组"><a href="#控制组" class="headerlink" title="控制组"></a>控制组</h3><p>Linux 上的 Docker Engine 也依赖于另一种称为控制组（<code>cgroups</code>）的技术。 cgroup 将应用程序限制为一组特定的资源。控制组允许 Docker 引擎将可用硬件资源共享给容器，并可选地强制实施限制和约束。例如，您可以限制可用于特定容器的内存。</p>
-<h3 id="联合文件系统"><a href="#联合文件系统" class="headerlink" title="联合文件系统"></a>联合文件系统</h3><p>联合文件系统（UnionFS）是通过创建图层进行操作的文件系统，这使它们非常轻巧和快速。 Docker 引擎使用 UnionFS 为容器提供构建块。Docker 引擎可以使用多种 UnionFS 变体，包括 AUFS，btrfs，vfs 和 DeviceMapper。</p>
-<h3 id="容器格式"><a href="#容器格式" class="headerlink" title="容器格式"></a>容器格式</h3><p>Docker 引擎将命名空间，控制组和 UnionFS 组合成一个名为容器格式的包装器。默认的容器格式是<code>libcontainer</code>。将来，Docker 可以通过与诸如 BSD Jails 或 Solaris Zones 等技术集成来支持其他容器格式。</p>
-<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><ul>
-<li><a href="https://docs.docker.com/engine/docker-overview/" target="_blank" rel="noopener">https://docs.docker.com/engine/docker-overview/</a></li>
-</ul>
+            <p>
+              Vue 教程
 
+简介
+vue 生命周期
+
+
+更多内容
+
+
+简介Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。
+Vue.js 的核心是一个允许采用简洁的模板语法来声明式地将数据渲染进 DOM 的系统：
+html
+&lt;di
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/frontend/mvc/vue/vue/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1863,15 +2270,12 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/page/12/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/blog/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/39/">39</a><a class="extend next" rel="next" href="/blog/page/14/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/blog/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/blog/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/39/">39</a><a class="extend next" rel="next" href="/blog/page/14/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -1887,14 +2291,13 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1904,42 +2307,226 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/blog/archives/">
+                
+                    <span class="site-state-item-count">381</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/blog/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/blog/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">381</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/blog/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">76</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">76</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -1952,32 +2539,44 @@
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/dunwu" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:forbreak@163.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/dunwu" title="GitHub &rarr; https://github.com/dunwu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:forbreak@163.com" title="E-Mail &rarr; mailto:forbreak@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
             </div>
           
 
           
-          
 
           
           
 
+          
+            
+          
           
 
         </div>
-      </section>
+      </div>
 
       
 
@@ -1985,6 +2584,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -1993,12 +2593,28 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-paper-plane"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Zhang Peng</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">2.1m</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">31:18</span>
   
 </div>
 
@@ -2018,6 +2634,7 @@
 
 
 
+
         
       </div>
     </footer>
@@ -2026,16 +2643,21 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -2049,100 +2671,16 @@
 
 
 
-  
-
-
-  
-
-
-
-
-
-
 
 
 
 
 
   
+    
+    
   
-    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
@@ -2156,341 +2694,157 @@
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/blog/" + search_path;
-    // monitor main search box;
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
+
+  
+  <script src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/blog/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/blog/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/blog/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/blog/js/src/bootstrap.js?v=7.0.1"></script>
+
+
+  
+  
+
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+      
+      user-select: none;
+      outline: 0;
     }
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      
+        right: 4px;
+        top: 8px;
+      
     }
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === '') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1;
     }
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; // Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.readOnly = true;
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, code.length);
+        ta.readOnly = false;
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); // For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
   </script>
 
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

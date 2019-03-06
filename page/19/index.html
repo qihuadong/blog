@@ -2,14 +2,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +29,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -38,9 +45,22 @@
 
 
 
-  
-  
-  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.0.1" color="#222">
 
 
 
@@ -48,63 +68,18 @@
 
 
 
-<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
-
-
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="张鹏的博客">
-<meta property="og:url" content="https://dunwu.github.io/page/19/index.html">
-<meta property="og:site_name" content="张鹏的博客">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张鹏的博客">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/blog/',
     scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -116,14 +91,37 @@
 </script>
 
 
+  
+
+
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="张鹏的博客">
+<meta property="og:url" content="https://dunwu.github.io/page/19/index.html">
+<meta property="og:site_name" content="张鹏的博客">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="张鹏的博客">
+
+
+
+  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
+
+
+
 
   <link rel="canonical" href="https://dunwu.github.io/page/19/">
 
 
 
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title>张鹏的博客 - 大道至简，知易行难</title>
+  <title>张鹏的博客</title>
   
 
 
@@ -133,9 +131,38 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -148,7 +175,7 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -158,13 +185,16 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">大道至简，知易行难</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -172,110 +202,163 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/blog/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/blog/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/blog/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/blog/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/blog/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+            
+            
+            
+              
+              
+
+  
+  
+    
+  
+  <li class="menu-item menu-item-docs">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/docs/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>docs</a>
+
+  </li>
+
+
+            
+          
+            
+            
+            
+          
+        
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -288,12 +371,14 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javastack/style/effective/chapter08/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/os/linux/ops/service/tomcat/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -312,11 +397,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/programming/java/javastack/style/effective/chapter08/" itemprop="url">未命名</a></h1>
+                
+                <a href="/blog/2019/03/06/os/linux/ops/service/tomcat/" class="post-title-link" itemprop="url">Tomcat 安装</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -324,13 +418,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -338,6 +437,7 @@
 
           
             
+            
           
 
           
@@ -345,6 +445,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">624</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -364,255 +492,48 @@
       
         
           
-            <h2 id="第8章-通用程序设计"><a href="#第8章-通用程序设计" class="headerlink" title="第8章 通用程序设计"></a>第8章 通用程序设计</h2><h3 id="第45条：将局部变量的作用域最小化"><a href="#第45条：将局部变量的作用域最小化" class="headerlink" title="第45条：将局部变量的作用域最小化"></a>第45条：将局部变量的作用域最小化</h3><p>要使局部变量的作用域最小化，最有力的方法就是在第一次使用它的地方声明。</p>
-<p>几乎每个局部变量的声明都应该包含一个初始化表达式。</p>
-<p>for 循环优于 while 循环。</p>
-<p>使方法小而集中。</p>
-<h3 id="第46条：for-each循环优先于传统的for循环"><a href="#第46条：for-each循环优先于传统的for循环" class="headerlink" title="第46条：for-each循环优先于传统的for循环"></a>第46条：for-each循环优先于传统的for循环</h3><p>for-each 循环，通过完全隐藏迭代器或者索引变量，避免了混乱和出错的可能。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// No longer the preferred idiom to iterate over a collection!</span></span><br><span class="line"><span class="keyword">for</span> (Iterator i = c.iterator(); i.hasNext(); ) &#123;</span><br><span class="line">    doSomething((Element) i.next()); <span class="comment">// (No generics before 1.5)</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// No longer the preferred idiom to iterate over an array!</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i++) &#123;</span><br><span class="line">   doSomething(a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>使用 foreach 循环：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// The preferred idiom for iterating over collections and arrays</span></span><br><span class="line"><span class="keyword">for</span> (Element e : elements) &#123;</span><br><span class="line">    doSomething(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>迭代器多重循环时出错</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Can you spot the bug?</span></span><br><span class="line"><span class="keyword">enum</span> Suit &#123; CLUB, DIAMOND, HEART, SPADE &#125;</span><br><span class="line"><span class="keyword">enum</span> Rank &#123; ACE, DEUCE, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT,</span><br><span class="line">NINE, TEN, JACK, QUEEN, KING &#125;</span><br><span class="line">...</span><br><span class="line">Collection&lt;Suit&gt; suits = Arrays.asList(Suit.values());</span><br><span class="line">Collection&lt;Rank&gt; ranks = Arrays.asList(Rank.values());</span><br><span class="line">List&lt;Card&gt; deck = <span class="keyword">new</span> ArrayList&lt;Card&gt;();</span><br><span class="line"><span class="keyword">for</span> (Iterator&lt;Suit&gt; i = suits.iterator(); i.hasNext(); )</span><br><span class="line">    <span class="keyword">for</span> (Iterator&lt;Rank&gt; j = ranks.iterator(); j.hasNext(); )</span><br><span class="line">        deck.add(<span class="keyword">new</span> Card(i.next(), j.next())); <span class="comment">// i.next() should be run only in the outer loop</span></span><br></pre></td></tr></table></figure>
-<p>一种解决方案：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Fixed, but ugly - you can do better!</span></span><br><span class="line"><span class="keyword">for</span> (Iterator&lt;Suit&gt; i = suits.iterator(); i.hasNext(); ) &#123;</span><br><span class="line">    Suit suit = i.next();</span><br><span class="line">    <span class="keyword">for</span> (Iterator&lt;Rank&gt; j = ranks.iterator(); j.hasNext(); )</span><br><span class="line">        deck.add(<span class="keyword">new</span> Card(suit, j.next()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>foreach 的解决方案：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Preferred idiom for nested iteration on collections and arrays</span></span><br><span class="line"><span class="keyword">for</span> (Suit suit : suits)</span><br><span class="line">    <span class="keyword">for</span> (Rank rank : ranks)</span><br><span class="line">        deck.add(<span class="keyword">new</span> Card(suit, rank));</span><br></pre></td></tr></table></figure>
-<p>有三种常见的情况无法使用 for-each 循环：</p>
-<ul>
-<li><strong>过滤——</strong>如果需要遍历集合，并删除选定元素，就需要使用显示的迭代器，以便可以调用它的 remove 方法。</li>
-<li><strong>转换——</strong>如果需要遍历列表或者数组，并取代它部分或者全部的元素值，就需要列表迭代器或者数组索引，以便设定元素的值。</li>
-<li><strong>平行迭代</strong>——如果需要并行地遍历多个集合，就需要显式地控制迭代器或者索引变量，以便所有迭代器或者索引变量都可以得到同步前移。</li>
-</ul>
-<h3 id="第47条：了解和使用类库"><a href="#第47条：了解和使用类库" class="headerlink" title="第47条：了解和使用类库"></a>第47条：了解和使用类库</h3><p>避免重复造轮子。</p>
-<p>使用标准库的好处：</p>
-<ul>
-<li>可以充分利用这些编写标准类库的专家的知识，以及在你之前的其他人的使用经验。</li>
-<li>不必浪费时间为那些与工作不太相关的问题提供特别的解决方案。</li>
-<li>它们的性能往往会随着时间的推移而不断提高，无需你做任何努力。</li>
-<li>这样的代码更易读、更易维护、更易被大多数的开发人员重用。</li>
-</ul>
-<p>每个程序员应该熟悉这些库：</p>
-<ul>
-<li>java.lang</li>
-<li>java.util</li>
-<li>java.io</li>
-<li>java.util.concurrent</li>
-</ul>
-<h3 id="第48条：如果需要精确的答案，请避免使用float和double"><a href="#第48条：如果需要精确的答案，请避免使用float和double" class="headerlink" title="第48条：如果需要精确的答案，请避免使用float和double"></a>第48条：如果需要精确的答案，请避免使用float和double</h3><p>float 和 double 类型主要是为了科学计算和工程计算而设计的，不适合用于货币计算。</p>
-<p>如果数值范围没有超过 9 位十进制数字，就可以使用 int；如果不超过 18 位数字，就可以使用 long。如果数值可能超过 18 位数字，就必须使用 BigDecimal。</p>
-<h3 id="第49条：基本类型优先于装箱基本类型"><a href="#第49条：基本类型优先于装箱基本类型" class="headerlink" title="第49条：基本类型优先于装箱基本类型"></a>第49条：基本类型优先于装箱基本类型</h3><p>基本类型：<em>int</em>, <em>double</em>, <em>boolean</em></p>
-<p>基本装箱类型：<em>Integer</em>, <em>Double</em>, <em>Boolean</em></p>
-<p>差异：</p>
-<ul>
-<li>两个基本装箱类型可能有相同的值，但却是不同的识别。</li>
-<li>基本装箱类型有一个非功能值：null</li>
-<li>基本类型更节省时间和空间</li>
-</ul>
-<p>不要在原型数据和装箱类之间使用 ==</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">first = <span class="keyword">new</span> Integer(<span class="number">1</span>);</span><br><span class="line">second = <span class="keyword">new</span> Integer(<span class="number">1</span>);</span><br><span class="line">first == second; <span class="comment">//Uses unboxing  Don't have to be true.</span></span><br></pre></td></tr></table></figure>
-<p>使用自动拆箱创建新的原型数据</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="keyword">int</span> f = first;  <span class="comment">//Auto-unboxing</span></span><br><span class="line"><span class="keyword">int</span> s = second  <span class="comment">//Auto-unboxing</span></span><br><span class="line">f == s;<span class="comment">// This is true</span></span><br></pre></td></tr></table></figure>
-<p>如果一个基本装箱类型没有被初始化，将返回 null</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Integer  i;</span><br><span class="line">i == <span class="number">42</span> <span class="comment">// NullPointerException</span></span><br></pre></td></tr></table></figure>
-<p>当在操作中混合使用基本类型和装箱基本类型是，装箱基本类就会自动拆箱，这会导致性能下降。</p>
-<p>必须使用装箱基本类型的场景：</p>
-<ul>
-<li>作为集合中的元素、键和值</li>
-<li>在参数化类型中，作为类型参数</li>
-<li>在进行反射的方法调用时，</li>
-</ul>
-<p>其他场景，都应该尽量使用基本类型。</p>
-<h3 id="第50条：如果其他类型更适合，则尽量避免使用字符串"><a href="#第50条：如果其他类型更适合，则尽量避免使用字符串" class="headerlink" title="第50条：如果其他类型更适合，则尽量避免使用字符串"></a>第50条：如果其他类型更适合，则尽量避免使用字符串</h3><ul>
-<li>字符串不适合代替其他的值类型。</li>
-<li>字符串不适合代替枚举类型。</li>
-<li>字符串不适合代替聚集类型（<em>aggregate</em> types）。</li>
-<li>字符串不适合代替能力表（capabilities）。</li>
-<li>若使用不当，字符串会比其他的类型更不灵活、速度更慢、也更容易出错。</li>
-</ul>
-<h3 id="第51条：当心字符串连接的性能"><a href="#第51条：当心字符串连接的性能" class="headerlink" title="第51条：当心字符串连接的性能"></a>第51条：当心字符串连接的性能</h3><p>为连接 n 个字符串而重复使用字符串连接操作符，需要 n 的平方级的时间。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Inappropriate use of string concatenation - Performs horribly!</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">statement</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String result = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numItems(); i++)</span><br><span class="line">        result += lineForItem(i);</span><br><span class="line">    <span class="keyword">return</span> result; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>为了获得可以接受的性能，请使用 StringBuilder 代替 String 做连接操作。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">statement</span><span class="params">()</span></span>&#123;</span><br><span class="line">	StringBuilder b = <span class="keyword">new</span> StringBuilder(numItems() * LINE_WIDTH);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numItems(); i++)</span><br><span class="line">		b.append(lineForItem(i));</span><br><span class="line">	<span class="keyword">return</span> b.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="第52条：通过接口引用对象"><a href="#第52条：通过接口引用对象" class="headerlink" title="第52条：通过接口引用对象"></a>第52条：通过接口引用对象</h3><p>如果有合适的接口类型存在，那么对于参数、返回值、变量和域来说，就都应该使用接口类型进行声明。</p>
-<p>Good 示例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Good - uses interface as type</span></span><br><span class="line">List&lt;Subscriber&gt; subscribers = <span class="keyword">new</span> Vector&lt;Subscriber&gt;();</span><br></pre></td></tr></table></figure>
-<p>Bad 示例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Bad - uses class as type!</span></span><br><span class="line">Vector&lt;Subscriber&gt; subscribers = <span class="keyword">new</span> Vector&lt;Subscriber&gt;();</span><br></pre></td></tr></table></figure>
-<p>使用接口作为类型，使得程序更加灵活。当你决定更换实现时，所要做的仅仅是改变构造器中类的名称（或者使用一个不同的静态工厂）。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Subscriber&gt; subscribers = <span class="keyword">new</span> ArrayList&lt;Subscriber&gt;();</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>注意</strong></p>
-<p>如果原来的实现提供了某种特殊的功能，而这种功能并不是这个接口的通用约定所要求的，并且周围代码又依赖于这个功能，那么很关键的一点是：新的实现也要提供同样的功能。</p>
-</blockquote>
-<p>如果不存在合适的接口，完全可以用类来引用对象。主要场景有：</p>
-<ul>
-<li>值类：String, BigDecimal 等。</li>
-<li>框架中的类。</li>
-<li>类实现了接口，但是它提供了接口中不存在的额外方法，例如 LinkedHashMap 。</li>
-</ul>
-<h3 id="第53条：接口优先于反射机制"><a href="#第53条：接口优先于反射机制" class="headerlink" title="第53条：接口优先于反射机制"></a>第53条：接口优先于反射机制</h3><p><code>java.lang.reflection</code> 支持<strong>通过程序来访问关于已装载的类的信息</strong>。给定一个 Class 实例，你可以获得  Constructor, Method 和 Field 实例。</p>
-<p>反射机制允许一个类使用另一个类，及时当前者被编译的时候还根本不存在。但是，也会付出一定的代价：</p>
-<ul>
-<li>丧失了编译时类型检查的好处。</li>
-<li>执行反射访问所需要的代码非常笨拙和冗长。</li>
-<li>性能损失。</li>
-</ul>
-<p><strong>通常，普通应用程序在运行时不应该以反射方式访问对象。</strong></p>
-<p>如果是<strong>以反射方式创建实例，然后通过它们的接口或者超类，以正常方式访问这些实例</strong>，这种形式代价较小，但是可以获得许多好处。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Reflective instantiation with interface access</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">	<span class="comment">// Translate the class name into a class object</span></span><br><span class="line">	Class&lt;?&gt; cl =  <span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">		cl = Class.forName(args[<span class="number">0</span>]);<span class="comment">// Class is specified by the first command line argument</span></span><br><span class="line">	&#125;<span class="keyword">catch</span>(ClassNotFoundException e)&#123;</span><br><span class="line">		System.err.println(<span class="string">"Class not found"</span>);</span><br><span class="line">		System.exit(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//Instantiate the class</span></span><br><span class="line">	Set&lt;String&gt; s = <span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">		s = (Set&lt;String&gt;) cl.newInstance(); <span class="comment">//  The class can be either a HashSet or a TreeSet</span></span><br><span class="line">	&#125; <span class="keyword">catch</span>(IllegalAccessException e)&#123;</span><br><span class="line">		System.err.println(<span class="string">"Class not accessible"</span>);</span><br><span class="line">		System.exit(<span class="number">1</span>);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(InstantionationException e)&#123;</span><br><span class="line">		System.err.println(<span class="string">"Class not instantiable"</span>);</span><br><span class="line">		System.exit(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//Excercise the Set</span></span><br><span class="line">	<span class="comment">// Print the remaining arguments. The order depends in the class. If it is a HashSet</span></span><br><span class="line">	<span class="comment">// the order will be random, if it is a TreeSet it will be alphabetically</span></span><br><span class="line">	s.addAll(Arrays.asList(args).subList(<span class="number">1</span>,args.length));</span><br><span class="line">	System.out.println(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>类对于在运行时可能不存在的其他类、方法或者域的依赖性，用反射法进行管理，这种用法是合理的。</p>
-<p>反射机制是一种功能强大的机制，对于特定的复杂系统编程任务，它是非常必要的，但它也有一些缺点。如果你编写的程序必须要与编译时未知的类一起工作，如有可能，就应该仅仅使用反射机制来实例化对象，而访问对象时则使用编译时已知的某个接口或者超类。</p>
-<h3 id="第54条：谨慎地使用本地方法"><a href="#第54条：谨慎地使用本地方法" class="headerlink" title="第54条：谨慎地使用本地方法"></a>第54条：谨慎地使用本地方法</h3><blockquote>
-<p><strong>Java Native Interface(JNI)</strong> 允许 Java 程序可以调用本地方法，所谓本地方法是指用本地程序设计语言（如 C 或者 C++）来编写的特殊方法。</p>
-</blockquote>
-<p>从历史上看，本地方法主要有三种用途：</p>
-<ul>
-<li>它们可以访问特定平台中的功能，如：注册表、文件锁。</li>
-<li>它们可以访问遗留代码库。</li>
-<li>编写程序中注重性能的部分。</li>
-</ul>
-<p>随着 JVM 越来越快，使用本地方法来提高性能的做法就变得没有必要了。</p>
-<p>而且，使用本地方法有一些严重缺点：</p>
-<ul>
-<li><p>本地语言不是安全的（可能出现内存问题）。</p>
-<p>比如本地语言为 C 或者 C++ 程序，你可能就需要考虑内存的创建和释放，使用不当，可能会出现内存泄漏的风险。</p>
-</li>
-<li><p>本地语言与平台相关，导致程序不再是可以自由跨平台移植的。</p>
-</li>
-<li><p>本地方法的应用程序更难调试。</p>
-</li>
-<li><p>进入和退出本地代码时，需要相关的固定开销。</p>
-</li>
-</ul>
-<p>总之，请谨慎的使用本地方法。</p>
-<h3 id="第55条：谨慎地进行优化"><a href="#第55条：谨慎地进行优化" class="headerlink" title="第55条：谨慎地进行优化"></a>第55条：谨慎地进行优化</h3><p>业内专家们的建议：</p>
-<ul>
-<li>优化的弊大于利，特别是不成熟的优化。</li>
-<li>要努力编写好的程序，而不是快的程序。</li>
-<li>努力避免那些限制性能的设计决策。</li>
-<li>要考虑 API 设计决策的性能后果。</li>
-</ul>
-<p>总结：</p>
-<p>指导性原则是：要努力编写好的程序，而不是快的程序。</p>
-<p>设计系统时，对于 API、协议、永久数据格式等一些关键点，需要考虑性能因素。在构建系统完成后，测量性能，如果速度足够快，任务就完成了。否则，可以在性能剖析器的帮助下，反复测试，直到真正找到问题的根源，然后设法优化相关部分。</p>
-<h3 id="第56条：遵守普遍接受的命名惯例"><a href="#第56条：遵守普遍接受的命名惯例" class="headerlink" title="第56条：遵守普遍接受的命名惯例"></a>第56条：遵守普遍接受的命名惯例</h3><p><strong>字面命名惯例</strong></p>
-<table>
-<thead>
-<tr>
-<th>标识符</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Package</td>
-<td>com.google.inject, org.joda.time.format</td>
-</tr>
-<tr>
-<td>Class or Interface</td>
-<td>Timer, FutureTask, LinkedHashMap, HttpServlet</td>
-</tr>
-<tr>
-<td>Method or Field</td>
-<td>remove, ensureCapacity, getCrc</td>
-</tr>
-<tr>
-<td>Constant Field</td>
-<td>MIN_VALUE, NEGATIVE_INFINITY</td>
-</tr>
-<tr>
-<td>Local Variable</td>
-<td>i, xref, houseNumber</td>
-</tr>
-<tr>
-<td>Type Parameter</td>
-<td>T, E, K, V, X, T1, T2</td>
-</tr>
-</tbody>
-</table>
-<p><strong>语法命名惯例</strong></p>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>惯例</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Classes and enum types</td>
-<td>Singular noun or noun phrase</td>
-<td>Timer, BufferedWriter, ChessPiece</td>
-</tr>
-<tr>
-<td>Interfaces</td>
-<td>Like classes</td>
-<td>Collection, Comparator</td>
-</tr>
-<tr>
-<td>Interfaces</td>
-<td>With an adjective ending in <em>able</em> or <em>ible</em></td>
-<td>Runnable, Iterable, Accessible</td>
-</tr>
-<tr>
-<td>Annotation types</td>
-<td>Nouns, verbs, prepositions, adjectives …</td>
-<td>BindingAnnotation, Inject, ImplementedBy, Singleton</td>
-</tr>
-<tr>
-<td>Static factories (common names)</td>
-<td>—</td>
-<td>valueOf, of, getInstance, newInstance, getType, newType</td>
-</tr>
-<tr>
-<td><strong>Methods that…</strong></td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>perform actions</td>
-<td>verb or verb phrase</td>
-<td>append, drawImage</td>
-</tr>
-<tr>
-<td>return a boolean</td>
-<td>names beginning with <em>is</em> or, <em>has</em></td>
-<td>isDigit, isProbablePrime, isEmpty, isEnabled, hasSiblings</td>
-</tr>
-<tr>
-<td>return a non-boolean or attribute</td>
-<td>noun, a noun phrase, or begin with <em>get</em></td>
-<td>size, hashCode, or getTime</td>
-</tr>
-<tr>
-<td>convert the type of an object</td>
-<td><em>toType</em></td>
-<td>toString, toArray</td>
-</tr>
-<tr>
-<td>return a view (<a href="https://github.com/HugoMatilla/Effective-JAVA-Summary#5-avoid-creating-objects" target="_blank" rel="noopener">Item 5</a>) of a different type</td>
-<td><em>asType</em></td>
-<td>asList</td>
-</tr>
-<tr>
-<td>return a primitive with the same value</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+            <p>
+              Tomcat 安装
 
+安装
+启动
+脚本
+
+
+安装安装步骤如下：
+（1）下载并解压到本地
+进入官网下载地址：https://tomcat.apache.org/download-80.cgi ，选择合适的版本下载。
+我选择的是最新稳定版本 8.5.28：http://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-8/v8.5.28/bin/apa
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/os/linux/ops/service/tomcat/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -643,6 +564,399 @@
 
   
   
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/os/linux/ops/service/zookeeper/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Peng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张鹏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/blog/2019/03/06/os/linux/ops/service/zookeeper/" class="post-title-link" itemprop="url">ZooKeeper 安装部署</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              ZooKeeper 安装部署
+环境要求：JDK6+
+
+
+
+下载解压 ZooKeeper
+创建配置文件
+启动 ZooKeeper 服务器
+启动 CLI
+停止 ZooKeeper 服务器
+
+
+在安装 ZooKeeper 之前，请确保你的系统是在以下任一操作系统上运行：
+
+任意 Linux OS - 支持开发和部署。适合演示应用程序。
+Windows OS - 仅支持开发。
+Mac OS - 仅支持开发
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/os/linux/ops/service/zookeeper/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/os/linux/ops/service/elastic/README/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Peng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张鹏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/blog/2019/03/06/os/linux/ops/service/elastic/README/" class="post-title-link" itemprop="url">Elastic 技术栈</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">480</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              Elastic 技术栈
+Elastic 技术栈通常被用来作为日志中心。
+ELK 是 elastic 公司旗下三款产品 ElasticSearch 、Logstash 、Kibana 的首字母组合。
+ElasticSearch 是一个基于 Lucene 构建的开源，分布式，RESTful 搜索引擎。
+Logstash 传输和处理你的日志、事务或其他数据。
+Kibana 将 Elasticsearch
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/os/linux/ops/service/elastic/README/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -669,11 +983,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/programming/java/javacore/advanced/README/" itemprop="url">JavaCore - 进阶篇</a></h1>
+                
+                <a href="/blog/2019/03/06/programming/java/javacore/advanced/README/" class="post-title-link" itemprop="url">JavaCore - 进阶篇</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -681,13 +1004,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -695,6 +1023,7 @@
 
           
             
+            
           
 
           
@@ -702,6 +1031,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">107</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -721,27 +1078,48 @@
       
         
           
-            <h1 id="JavaCore-进阶篇"><a href="#JavaCore-进阶篇" class="headerlink" title="JavaCore - 进阶篇"></a>JavaCore - 进阶篇</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="java-annotation.html">Java 注解</a></li>
-<li><a href="java-regex-01.html">Java 正则（一）</a></li>
-<li><a href="java-regex-02.html">Java 正则（二）</a></li>
-<li><a href="java-regex-03.html">Java 正则（三）</a></li>
-<li><a href="encode/java-message-digest.html">Java 实现消息摘要与数字签名</a></li>
-<li><a href="encode/java-encryption.html">Java 实现加密算法</a></li>
-<li><a href="encode/java-encryption.html">Java 实现加密算法</a></li>
-<li><a href="jdk-upgrade.html">JDK 升级</a></li>
-</ul>
+            <p>
+              JavaCore - 进阶篇目录
+Java 注解
+Java 正则（一）
+Java 正则（二）
+Java 正则（三）
+Java 实现消息摘要与数字签名
+Java 实现加密算法
+Java 实现加密算法
+JDK 升级
 
+
+              
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/programming/java/javacore/advanced/README/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -774,12 +1152,14 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javacore/appendix/README/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/os/linux/tool/git/basics/git-installation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -798,11 +1178,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/programming/java/javacore/appendix/README/" itemprop="url">附录</a></h1>
+                
+                <a href="/blog/2019/03/06/os/linux/tool/git/basics/git-installation/" class="post-title-link" itemprop="url">Git 安装</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -810,13 +1199,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -824,6 +1218,7 @@
 
           
             
+            
           
 
           
@@ -831,6 +1226,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">195</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -850,17 +1273,47 @@
       
         
           
-            <h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a><a href="resources.html">资源</a></h2>
+            <p>
+              Git 安装安装方法
+Git 可以安装在 Mac、Windows、Linux/Unix 环境。
+
+Mac在 mac 下载页面 选择合适版本，按照安装向导安装。
+Windows在 win 下载页面 选择合适版本，按照安装向导安装。
+Linux/Unix参考 linux 下载页面 的指导，根据实际发行版本下载安装 Git。
+资料
+https://git-scm.com/downloads
+
+
+              
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/os/linux/tool/git/basics/git-installation/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -893,12 +1346,14 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javacore/appendix/how-to-learn-program-lang/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/os/linux/tool/git/appendix/git-resource/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -917,11 +1372,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/programming/java/javacore/appendix/how-to-learn-program-lang/" itemprop="url">如何学习一门编程语言</a></h1>
+                
+                <a href="/blog/2019/03/06/os/linux/tool/git/appendix/git-resource/" class="post-title-link" itemprop="url">Git 资源</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -929,13 +1393,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -943,6 +1412,7 @@
 
           
             
+            
           
 
           
@@ -950,6 +1420,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">913</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -969,86 +1467,52 @@
       
         
           
-            <h1 id="如何学习一门编程语言"><a href="#如何学习一门编程语言" class="headerlink" title="如何学习一门编程语言"></a>如何学习一门编程语言</h1><p>很多人喜欢争论什么什么编程语言好，我认为这个话题如果不限定应用范围，就毫无意义。</p>
-<p>每种编程语言必然有其优点和缺点，这也决定了它有适合的应用场景和不适合的应用场景。现代软件行业，想一门编程语言包打天下是不现实的。这中现状也造成了一种现象，一个程序员往往要掌握多种编程语言。</p>
-<p>学习任何一门编程语言，都会面临的第一个问题都是：如何学习 XX 语言？</p>
-<p>我不想说什么多看、多学、多写、多练之类的废话。世上事有难易乎？无他，唯手熟尔。谁不知道熟能生巧的道理？</p>
-<p>我觉得有必要谈谈的是：如何由浅入深的学习一门编程语言？学习所有编程语言有没有一个相对统一的学习方法？</p>
-<p>曾几何时，当我还是一名小菜鸟时，总是叹服那些大神掌握多门编程语言。后来，在多年编程工作和学习中，我陆陆续续也接触过不少编程语言：C、C++、Java、C#、Javascript、shell 等等。每次学习一门新的编程语言，掌握程度或深或浅，但是学习的曲线却大抵相似。</p>
-<p>下面，我按照个人的学习经验总结一下，学习编程语言的基本步骤。</p>
-<h2 id="学习编程语言的步骤"><a href="#学习编程语言的步骤" class="headerlink" title="学习编程语言的步骤"></a>学习编程语言的步骤</h2><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p>首先当然是了解语言的最基本语法。</p>
-<p>控制台输出，如 C 的 printf，Java 的 System.out.println 等。</p>
-<p>普通程序员的第一行代码一般都是输出 “Hello World” 吧。</p>
-<ul>
-<li><p>基本数据类型</p>
-<p>不同编程语言的基本数据类型不同。基本数据类型是的申请内存空间变得方便、规范化。</p>
-</li>
-<li><p>变量</p>
-<p>不同编程语言的声明变量方式有很大不同。有的如 Java 、C++ 需要明确指定变量数据类型，这种叫强类型定义语言。有的语言（主要是脚本语言），如 Javascript、Shell 等，不需要明确指定数据类型，这种叫若类型定义语言。</p>
-<p>还需要注意的一点是变量的作用域范围和生命周期。不同语言变量的作用域范围和生命周期不一定一样，这个需要在代码中细细体会，有时会为此埋雷。</p>
-</li>
-<li><p>逻辑控制语句</p>
-<p>编程语言都会有逻辑控制语句，哪怕是汇编语言。</p>
-<p>掌握条件语句、循环语句、中断循环语句（break、continue）、选择语句。一般区别仅仅在于关键字、语法格式略有不同。</p>
-</li>
-<li><p>运算符</p>
-<p>掌握基本运算符，如算术运算符、关系运算符、逻辑运算符、赋值运算符等。</p>
-<p>有些语言还提供位运算符、特殊运算符，视情节掌握。</p>
-</li>
-<li><p>注释（没啥好说的）</p>
-</li>
-<li><p>函数</p>
-<p>编程语言基本都有函数。注意语法格式：是否支持出参；支持哪些数据作为入参，有些语言允许将函数作为参数传入另一个参数（即回调）；返回值；如何退出函数（如 Java、C++的 return，）。</p>
-</li>
-</ul>
-<h3 id="数组、枚举、集合"><a href="#数组、枚举、集合" class="headerlink" title="数组、枚举、集合"></a>数组、枚举、集合</h3><p>枚举只有部分编程语言有，如 Java、C++、C#。</p>
-<p>但是数组和集合（有些语言叫容器）一般编程语言都有，只是有的编程语言提供的集合比较丰富。使用方法基本类似。</p>
-<h3 id="常用类"><a href="#常用类" class="headerlink" title="常用类"></a>常用类</h3><p>比较常用的类（当然有些语言中不叫类，叫对象或者其他什么，这个不重要，领会精神）请了解其 API 用法，如：字符串、日期、数学计算等等。</p>
-<h3 id="语言特性"><a href="#语言特性" class="headerlink" title="语言特性"></a>语言特性</h3><p>语言特性这个特字反映的就是各个编程语言自身的”独特个性”，这涉及的点比较多，简单列举一些。</p>
-<p><strong>编程模式</strong></p>
-<p>比较流行的编程模式大概有：</p>
-<p>面向对象编程，主要是封装、继承、多态；函数式编程，主要是应用 Lambda；过程式编程，可以理解为实现需求功能的特定步骤。</p>
-<p>每种编程模式都有一定的道理，我从不认为只有面向对象编程才是王道。</p>
-<p>Java 是面向对象语言，从 Java8 开始也支持函数编程（引入 Lambda 表达式）；C++ 可以算是半面向对象，半面向过程式语言。</p>
-<p><strong>语言自身特性</strong></p>
-<p>每个语言自身都有一些重要特性需要了解。例如，学习 C、C++，你必须了解内存的申请和释放，了解指针、引用。而学习 Java，你需要了解 JVM，垃圾回收机制。学习 Javascript，你需要了解 DOM 操作等。</p>
-<h3 id="代码组织、模块加载、库管理"><a href="#代码组织、模块加载、库管理" class="headerlink" title="代码组织、模块加载、库管理"></a>代码组织、模块加载、库管理</h3><p>一个程序一般都有很多个源代码文件。这就会引入这些问题：如何将代码文件组织起来？如何根据业务需要，选择将部分模块启动时进行加载，部分模块使用懒加载（或者热加载）？</p>
-<p>最基本的引用文件就不提了，如C、C++的#include，Java 的 import 等。</p>
-<p>针对代码组织、模块加载、库管理这些问题，不同语言会有不同的解决方案。</p>
-<p>如 Java 可以用 maven、gradle 管理项目依赖、组织代码结构；Javascript （包括 Nodejs、jquery、react 等等库）可以用 npm、yarn 管理依赖，用 webpack 等工具管理模块加载。</p>
-<h3 id="容错处理"><a href="#容错处理" class="headerlink" title="容错处理"></a>容错处理</h3><p>程序总难免会有 bug。</p>
-<p>所以为了代码健壮性也好，为了方便定位问题也好，代码中需要有容错处理。常见的手段有：</p>
-<ul>
-<li>异常</li>
-<li>断言</li>
-<li>日志</li>
-<li>调试</li>
-<li>单元测试</li>
-</ul>
-<h3 id="输入输出和文件处理"><a href="#输入输出和文件处理" class="headerlink" title="输入输出和文件处理"></a>输入输出和文件处理</h3><p>这块知识比较繁杂。建议提纲挈领的学习一下，理解基本概念，比如输入输出流、管道等等。至于 API，用到的时候再查一下即可。</p>
-<h3 id="回调机制"><a href="#回调机制" class="headerlink" title="回调机制"></a>回调机制</h3><p>每种语言实现回调的方式有所不同，如 .Net 的 delegate （大量被用于 WinForm 程序）；Javascript 中函数天然支持回调：Javascript 函数允许传入另一个函数作为入参，然后在方法中调用它。其它语言的回调方式不一一列举。</p>
-<h3 id="序列化和反序列化"><a href="#序列化和反序列化" class="headerlink" title="序列化和反序列化"></a>序列化和反序列化</h3><p>首先需要了解的是，序列化和反序列化的作用是为了在不同平台之间传输对象。</p>
-<p>其次，要知道序列化存在多种方式，不同编程语言可能有多种方案。根据应用的序列化方式，选择性了解即可。</p>
-<h3 id="进阶特性"><a href="#进阶特性" class="headerlink" title="进阶特性"></a>进阶特性</h3><p>以下学习内容属于进阶性内容。可以根据开发需要去学习、掌握。需要注意的是，学习这些特性的态度应该是不学则已，学则死磕。因为半懂半不懂，特别容易引入问题。</p>
-<p><em>对于半桶水的同学，我想说：放过自己，也放过别人，活着不好吗？</em></p>
-<p><strong>并发编程：</strong>好处多多，十分重要，但是并发代码容易出错，且出错难以定位。要学习还是要花很大力气的，需要了解大量知识，如：进程、线程、同步、异步、读写锁等等。</p>
-<p><strong>反射：</strong>让你可以动态编程（慎用）。</p>
-<p><strong>泛型：</strong>集合（或者叫容器）的基石。精通泛型，能大大提高你的代码效率。</p>
-<p><strong>元数据</strong>：描述数据的数据。Java 中叫做注解。</p>
-<h3 id="库和框架"><a href="#库和框架" class="headerlink" title="库和框架"></a>库和框架</h3><p>学习一门编程语言，难免需要用到围绕它构建的技术生态圈——库和框架。这方面知识范围太庞大，根据实际应用领域去学习吧。比如搞 JavaWeb，你多多少少肯定要用到 Spring、Mybatis、Hibernate、Shiro等大量开发框架；如果做 Javascript 前端，你可能会用到 React、Vue、Angular 、jQuery 等库或框架。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>总结以上，编程语言学习的道路是任重而道远的，未来是光明的。</p>
-<p>最后一句话与君共勉：路漫漫兮其修远，吾将上下而求索。</p>
+            <p>
+              Git 资源官方资源
+Git 官网 
+Git Github
 
+模板
+gitignore 模板 - .gitignore 文件模板
+gitattributes 模板 - .gitattributes 文件模板
+github-cheat-sheet - git 命令简略图表
+
+Git 书
+Git 官方推荐教程 - Scott Chacon 的 Git 书。
+
+Git 教程
+Git中文教程
+廖雪峰的Gi
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/os/linux/tool/git/appendix/git-resource/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1081,12 +1545,14 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javacore/advanced/encode/java-message-digest/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/os/linux/tool/git/appendix/git-command/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -1105,11 +1571,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/programming/java/javacore/advanced/encode/java-message-digest/" itemprop="url">未命名</a></h1>
+                
+                <a href="/blog/2019/03/06/os/linux/tool/git/appendix/git-command/" class="post-title-link" itemprop="url">Git 命令</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1117,13 +1592,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1131,6 +1611,7 @@
 
           
             
+            
           
 
           
@@ -1138,6 +1619,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">29</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -1157,57 +1666,39 @@
       
         
           
-            <h2 id="消息摘要"><a href="#消息摘要" class="headerlink" title="消息摘要"></a>消息摘要</h2><h3 id="算法简述"><a href="#算法简述" class="headerlink" title="算法简述"></a>算法简述</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>它是一个唯一对应一个消息或文本的固定长度的值，它由一个单向 Hash 加密函数对消息进行作用而产生。如果消息在途中改变了，则接收者通过对收到消息的新产生的摘要与原摘要比较，就可知道消息是否被改变了。因此消息摘要保证了消息的完整性。消息摘要采用单向 Hash  函数将需加密的明文”摘要”成一串密文，这一串密文亦称为数字指纹(Finger Print)。它有固定的长度，且不同的明文摘要成密文，其结果总是不同的，而同样的明文其摘要必定一致。这样这串摘要便可成为验证明文是否是”真身”的”指纹”了。</p>
-<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>消息摘要具有以下特点：</p>
-<ul>
-<li>唯一性：数据只要有一点改变，那么再通过消息摘要算法得到的摘要也会发生变化。虽然理论上有可能会发生碰撞，但是概率极其低。</li>
-<li>不可逆：消息摘要算法的密文无法被解密。</li>
-<li>不需要密钥，可使用于分布式网络。</li>
-<li>无论输入的明文有多长，计算出来的消息摘要的长度总是固定的。</li>
-</ul>
-<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>消息摘要，其实就是将需要摘要的数据作为参数，经过哈希函数(Hash)的计算，得到的散列值。</p>
-<h4 id="常用算法"><a href="#常用算法" class="headerlink" title="常用算法"></a>常用算法</h4><p>消息摘要算法包括<strong>MD(Message Digest，消息摘要算法)</strong>、<strong>SHA(Secure Hash Algorithm，安全散列算法)</strong>、<strong>MAC(Message AuthenticationCode，消息认证码算法)</strong>共 3 大系列，常用于验证数据的完整性，是数字签名算法的核心算法。</p>
-<p><strong>MD5</strong>和<strong>SHA1</strong>分别是<strong>MD</strong>、<strong>SHA</strong>算法系列中最有代表性的算法。</p>
-<p>如今，MD5 已被发现有许多漏洞，从而不再安全。SHA 算法比 MD 算法的摘要长度更长，也更加安全。</p>
-<h3 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h3><h4 id="MD5、SHA-的范例"><a href="#MD5、SHA-的范例" class="headerlink" title="MD5、SHA 的范例"></a>MD5、SHA 的范例</h4><p>JDK 中使用 MD5 和 SHA 这两种消息摘要的方式基本一致，步骤如下：</p>
-<ol>
-<li>初始化 MessageDigest 对象</li>
-<li>更新要计算的内容</li>
-<li>生成摘要</li>
-</ol>
-<p><strong>范例</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">importjava.io.UnsupportedEncodingException;</span><br><span class="line"><span class="keyword">import</span> java.security.MessageDigest;</span><br><span class="line"><span class="keyword">import</span> java.security.NoSuchAlgorithmException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.commons.codec.binary.Base64;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MsgDigestDemo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> NoSuchAlgorithmException, UnsupportedEncodingException </span>&#123;</span><br><span class="line">        String msg = <span class="string">"Hello World!"</span>;</span><br><span class="line"></span><br><span class="line">        MessageDigest md5Digest = MessageDigest.getInstance(<span class="string">"MD5"</span>);</span><br><span class="line">        <span class="comment">// 更新要计算的内容</span></span><br><span class="line">        md5Digest.update(msg.getBytes());</span><br><span class="line">        <span class="comment">// 完成哈希计算，得到摘要</span></span><br><span class="line">        <span class="keyword">byte</span>[] md5Encoded = md5Digest.digest();</span><br><span class="line"></span><br><span class="line">        MessageDigest shaDigest = MessageDigest.getInstance(<span class="string">"SHA"</span>);</span><br><span class="line">        <span class="comment">// 更新要计算的内容</span></span><br><span class="line">        shaDigest.update(msg.getBytes());</span><br><span class="line">        <span class="comment">// 完成哈希计算，得到摘要</span></span><br><span class="line">        <span class="keyword">byte</span>[] shaEncoded = shaDigest.digest();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"原文: "</span> + msg);</span><br><span class="line">        System.out.println(<span class="string">"MD5摘要: "</span> + Base64.encodeBase64URLSafeString(md5Encoded));</span><br><span class="line">        System.out.println(<span class="string">"SHA摘要: "</span> + Base64.encodeBase64URLSafeString(shaEncoded));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>输出</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">原文:Hello World!</span><br><span class="line">MD5摘要: 7Qdih1MuhjZehB6Sv8UNjA</span><br><span class="line">SHA摘要:Lve95gjOVATpfV8EL5X4nxwjKHE</span><br></pre></td></tr></table></figure>
-<h4 id="HMAC-的范例"><a href="#HMAC-的范例" class="headerlink" title="HMAC 的范例"></a>HMAC 的范例</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">importjavax.crypto.Mac;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.spec.SecretKeySpec;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.commons.codec.binary.Base64;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HmacCoder</span></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * JDK支持HmacMD5, HmacSHA1,HmacSHA256, HmacSHA384, HmacSHA512</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">enum</span> HmacTypeEn &#123;</span><br><span class="line">        HmacMD5, HmacSHA1, HmacSHA256, HmacSHA384, HmacSHA512;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] encode(<span class="keyword">byte</span>[] plaintext, <span class="keyword">byte</span>[] secretKey, HmacTypeEn type) throwsException &#123;</span><br><span class="line">        SecretKeySpec keySpec = <span class="keyword">new</span> SecretKeySpec(secretKey, type.name());</span><br><span class="line">        Mac mac = Mac.getInstance(keySpec.getAlgorithm());</span><br><span class="line">        mac.init(keySpec);</span><br><span class="line">        <span class="keyword">return</span> mac.doFinal(plaintext);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        String msg = <span class="string">"Hello World!"</span>;</span><br><span class="line">        <span class="keyword">byte</span>[] secretKey = <span class="string">"Secret_Key"</span>.getBytes(<span class="string">"UTF8"</span>);</span><br><span class="line">        <span class="keyword">byte</span>[] digest = HmacCoder.encode(msg.getBytes(), secretKey, HmacTypeEn.HmacSHA256);</span><br><span class="line">        System.out.println(<span class="string">"原文: "</span> + msg);</span><br><span class="line">        System.out.println(<span class="string">"摘要: "</span> + Base64.encodeBase64URLSafeString(digest));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>输出</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">原文:Hello World!</span><br><span class="line">摘要: b8-eUifaOJ5OUFweOoq08HbGAMsIpC3Nt-Yv-S91Yr4</span><br></pre></td></tr></table></figure>
-<h2 id="数字签名"><a href="#数字签名" class="headerlink" title="数字签名"></a>数字签名</h2><h3 id="算法简述-1"><a href="#算法简述-1" class="headerlink" title="算法简述"></a>算法简述</h3><p>数字签名算法可以看做是一种带有密钥的消息摘要算法，并且这种密钥包含了公钥和私钥。也就是说，数字签名算法是非对称加密算法和消息摘要算法的结合体。</p>
-<h4 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h4><p>数字签名算法要求能够验证数据完整性、认证数据来源，并起到抗否认的作用。</p>
-<h4 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h4><p>数字签名算法包含签名和验证两项操作，遵循私钥签名，公钥验证的方式。</p>
-<p>签名时要使用私钥和待签名数据，验证时则需要公钥、签名值和待签名数据，其核心算法主要是消息摘要算法。</p>
-<p><br><div align="center"><img src="http://oyz7npk35.bkt.clouddn.com//image/javase/encode/java-message-digest-process.jpg"></div><br></p>
-<h4 id="常用算法-1"><a href="#常用算法-1" class="headerlink" title="常用算法"></a>常用算法</h4><p>RSA、DSA、ECDSA</p>
-<h3 id="算法实现-1"><a href="#算法实现-1" class="headerlink" title="算法实现"></a>算法实现</h3><h4 id="DSA-的范例"><a href="#DSA-的范例" class="headerlink" title="DSA 的范例"></a>DSA 的范例</h4><p>数字签名有两个流程：签名和验证。</p>
-<p>它们的前提都是要有一个公钥、密钥对。</p>
-<p><strong>签名</strong></p>
-<p>用私钥为消息计算签名</p>
-<p><strong>范例</strong></p>
-<p>用公钥验证摘要</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">importjava.security.KeyFactory;</span><br><span class="line"><span class="keyword">import</span> java.security.KeyPair;</span><br><span class="line"><span class="keyword">import</span> java.security.KeyPairGenerator;</span><br><span class="line"><span class="keyword">import</span> java.security.PrivateKey;</span><br><span class="line"><span class="keyword">import</span> java.security.PublicKey;</span><br><span class="line"><span class="keyword">import</span> java.security.Signature;</span><br><span class="line"><span class="keyword">import</span> java.security.spec.PKCS8EncodedKeySpec;</span><br><span class="line"><span class="keyword">import</span> java.security.spec.X509EncodedKeySpec;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.commons.codec.binary.Base64;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DsaCoder</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String KEY_ALGORITHM = <span class="string">"DSA"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">enum</span> DsaTypeEn &#123;</span><br><span class="line">        MD5withDSA, SHA1withDSA</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * DSA密钥长度默认1024位。 密钥长度必须是64的整数倍，范围在512~1024之间</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> KEY_SIZE = <span class="number">1024</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> KeyPair keyPair;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DsaCoder</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        keyPair = initKey();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">byte</span>[] signature(<span class="keyword">byte</span>[] data, <span class="keyword">byte</span>[] privateKey) <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        PKCS8EncodedKeySpec keySpec = <span class="keyword">new</span> PKCS8EncodedKeySpec(privateKey);</span><br><span class="line">        KeyFactory keyFactory = KeyFactory.getInstance(KEY_ALGORITHM);</span><br><span class="line">        PrivateKey key =keyFactory.generatePrivate(keySpec);</span><br><span class="line"></span><br><span class="line">        Signature signature = Signature.getInstance(DsaTypeEn.SHA1withDSA.name());</span><br><span class="line">        signature.initSign(key);</span><br><span class="line">        signature.update(data);</span><br><span class="line">        <span class="keyword">return</span> signature.sign();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">verify</span><span class="params">(<span class="keyword">byte</span>[] data, <span class="keyword">byte</span>[] publicKey, <span class="keyword">byte</span>[] sign)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        X509EncodedKeySpec keySpec = <span class="keyword">new</span> X509EncodedKeySpec(publicKey);</span><br><span class="line">        KeyFactory keyFactory = KeyFactory.getInstance(KEY_ALGORITHM);</span><br><span class="line">        PublicKey key =keyFactory.generatePublic(keySpec);</span><br><span class="line"></span><br><span class="line">        Signature signature = Signature.getInstance(DsaTypeEn.SHA1withDSA.name());</span><br><span class="line">        signature.initVerify(key);</span><br><span class="line">        signature.update(data);</span><br><span class="line">        <span class="keyword">return</span> signature.verify(sign);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> KeyPair <span class="title">initKey</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">// 初始化密钥对生成器</span></span><br><span class="line">        KeyPairGenerator keyPairGen = KeyPairGenerator.getInstance(KEY_ALGORITHM);</span><br><span class="line">        <span class="comment">// 实例化密钥对生成器</span></span><br><span class="line">        keyPairGen.initialize(KEY_SIZE);</span><br><span class="line">        <span class="comment">// 实例化密钥对</span></span><br><span class="line">        <span class="keyword">return</span> keyPairGen.genKeyPair();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">byte</span>[] getPublicKey() &#123;</span><br><span class="line">        <span class="keyword">return</span> keyPair.getPublic().getEncoded();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">byte</span>[] getPrivateKey() &#123;</span><br><span class="line">        <span class="keyword">return</span> keyPair.getPrivate().getEncoded();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        String msg = <span class="string">"Hello World"</span>;</span><br><span class="line">        DsaCoder dsa = <span class="keyword">new</span> DsaCoder();</span><br><span class="line">        <span class="keyword">byte</span>[] sign = dsa.signature(msg.getBytes(), dsa.getPrivateKey());</span><br><span class="line">        <span class="keyword">boolean</span> flag = dsa.verify(msg.getBytes(), dsa.getPublicKey(), sign);</span><br><span class="line">        String result = flag ? <span class="string">"数字签名匹配"</span> : <span class="string">"数字签名不匹配"</span>;</span><br><span class="line">        System.out.println(<span class="string">"数字签名："</span> + Base64.encodeBase64URLSafeString(sign));</span><br><span class="line">        System.out.println(<span class="string">"验证结果："</span> + result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>《Core Java Volume2》</p>
-<p>《Java 加密与解密技术》</p>
+            <p>
+              Git 命令github-git-cheat-sheet
 
+              
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/os/linux/tool/git/appendix/git-command/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1240,12 +1731,14 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javacore/appendix/resources/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javaweb/architecture/大型网站架构概述/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -1264,11 +1757,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/programming/java/javacore/appendix/resources/" itemprop="url">资源</a></h1>
+                
+                <a href="/blog/2019/03/06/programming/java/javaweb/architecture/大型网站架构概述/" class="post-title-link" itemprop="url">大型网站架构概述</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1276,13 +1778,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1290,6 +1797,7 @@
 
           
             
+            
           
 
           
@@ -1297,6 +1805,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">5.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">5 分钟</span>
+              
+            </div>
           
 
           
@@ -1316,42 +1852,54 @@
       
         
           
-            <h1 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h1><h2 id="经典书籍"><a href="#经典书籍" class="headerlink" title="经典书籍"></a>经典书籍</h2><ul>
-<li><p><strong>Java 从入门到精通</strong></p>
-<p>几乎每个小白程序员都会有一本xxx 语言入门到精通。听说过新手村装备吗？</p>
-</li>
-<li><p><strong>Core Java (vol. 1, 2)</strong> <em>by Cay S. Horstmann, Gary Cornell</em></p>
-<p>Java 核心技术（卷1、卷2）内容详实，示例丰富，适合作为新手入门。不过有些技术点，如 swing 等属于过时技术，没必要投入精力去学习。</p>
-</li>
-<li><p><strong>Thinking in Java</strong> <em>by Bruce Eckel</em></p>
-<p>《Java 编程思想》 本书几乎包含了 Java 语法的各领域（不含 jdk8），且内容非常细节。作者也十分精通 C、C++ ，他也是 《Thinking in C++》 的作者。在编写本书，作者加入了 C++ 语法的视角，使读者除了学习 Java 语法外，还能理解语法的优点缺点，以及为什么这么去设计。</p>
-<p>本书由于篇幅太大、内容太细致，适合作为进阶类书籍。新手 Java 程序员不推荐（有 C++ 经验除外），很可能会让人看晕掉。</p>
-</li>
-<li><p><strong>Effective Java , Second Edition</strong> <em>by Joshua Bloch</em></p>
-<p>Effective Java （第二版）本书介绍了在 Java 编程中77条极具实用价值的经验规则，这些经验规则涵盖了大多数开发人员每天所面临的问题的解决方案。通过对Java平台设计专家所使用的技术的全面描述，揭示了应该做什么，不应该做什么才能产生清晰、健壮和高效的代码。.<br>本书适合作为对代码质量有要求的程序员进一步提升的工具书。</p>
-</li>
-<li><p><strong>Java Concurrency in Practice</strong> <em>by Brian Goetz</em></p>
-<p>《Java 并发编程实战》是进阶类书籍。想做大神，怎么能不深入理解并发？</p>
-</li>
-<li><p><strong>深入理解 Java 虚拟机:JVM高级特性与最佳实践</strong> by 周志明</p>
-<p>进阶类书籍。想做大神，怎么能不深入理解 JVM ？</p>
-</li>
-<li><p><strong>Head First Design Patterns</strong></p>
-<p>本书以轻松、幽默的笔触一一叙述各种经典设计模式（Gof 的23条经典设计模式）的应用场景及设计理念，示例详实、易懂。</p>
-<p>自古深情留不住，唯有套路得人心。设计模式之于 Java ，就是套路。</p>
-</li>
-</ul>
+            <p>
+              大型网站架构概述
 
+1. 大型网站系统的特点
+2. 大型网站架构演化历程
+2.1. 初始阶段架构
+2.2. 应用服务和数据服务分离
+2.3. 使用缓存改善性能
+2.4. 使用应用服务器集群
+2.5. 数据库读写分离
+2.6. 反向代理和 CDN 加速
+2.7. 分布式文件系统和分布式数据库
+2.8. 使用 NoSQL 和搜索引擎
+2.9. 业务拆分
+2.10. 分布式服务
+
+
+3. 大型网站架构模
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/programming/java/javaweb/architecture/大型网站架构概述/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1384,12 +1932,14 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/os/linux/tool/git/basics/git-configuration/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javastack/javalib/mockito/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -1408,11 +1958,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/os/linux/tool/git/basics/git-configuration/" itemprop="url">Git 配置</a></h1>
+                
+                <a href="/blog/2019/03/06/programming/java/javastack/javalib/mockito/" class="post-title-link" itemprop="url">mockito 快速指南</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1420,13 +1979,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1434,6 +1998,7 @@
 
           
             
+            
           
 
           
@@ -1441,6 +2006,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">14k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">13 分钟</span>
+              
+            </div>
           
 
           
@@ -1460,78 +2053,54 @@
       
         
           
-            <h1 id="Git-配置"><a href="#Git-配置" class="headerlink" title="Git 配置"></a>Git 配置</h1><h2 id="配置-Git"><a href="#配置-Git" class="headerlink" title="配置 Git"></a>配置 Git</h2><p>Git 使用一系列配置文件来保存你自定义的行为。 它首先会查找 <code>/etc/gitconfig</code> 文件，该文件含有系统里每位用户及他们所拥有的仓库的配置值。 如果你传递 <code>--system</code> 选项给 <code>git config</code>，它就会读写该文件。</p>
-<p>接下来 Git 会查找每个用户的 <code>\~/.gitconfig</code> 文件（或者 <code>\~/.config/git/config</code> 文件）。 你可以传递 <code>--global</code> 选项让 Git 读写该文件。</p>
-<p>最后 Git 会查找你正在操作的版本库所对应的 Git 目录下的配置文件（<code>.git/config</code>）。 这个文件中的值只对该版本库有效。</p>
-<p>以上三个层次中每层的配置（系统、全局、本地）都会覆盖掉上一层次的配置，所以 <code>.git/config</code> 中的值会覆盖掉 <code>/etc/gitconfig</code> 中所对应的值。</p>
-<h2 id="客户端基本配置"><a href="#客户端基本配置" class="headerlink" title="客户端基本配置"></a>客户端基本配置</h2><h3 id="core-editor"><a href="#core-editor" class="headerlink" title="core.editor"></a><code>core.editor</code></h3><p>默认情况下，Git 会调用环境变量（<code>$VISUAL</code> 或 <code>$EDITOR</code>）设置的任意文本编辑器，如果没有设置，会调用 <code>vi</code> 来创建和编辑你的提交以及标签信息。 你可以使用 <code>core.editor</code> 选项来修改默认的编辑器：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.editor emacs</span><br></pre></td></tr></table></figure>
-<p>现在，无论你定义了什么终端编辑器，Git 都会调用 Emacs 编辑信息。</p>
-<h3 id="commit-template"><a href="#commit-template" class="headerlink" title="commit.template"></a><code>commit.template</code></h3><p>如果把此项指定为你的系统上某个文件的路径，当你提交的时候， Git 会使用该文件的内容作为提交的默认信息。 例如：假设你创建了一个叫 <code>\~/.gitmessage.txt</code> 的模板文件，类似这样：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">subject line</span><br><span class="line"></span><br><span class="line">what happened</span><br><span class="line"></span><br><span class="line">[ticket: X]</span><br></pre></td></tr></table></figure>
-<p>要想让 Git 把它作为运行 <code>git commit</code> 时显示在你的编辑器中的默认信息， 如下设置 <code>commit.template</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global commit.template ~/.gitmessage.txt</span><br><span class="line">$ git commit</span><br></pre></td></tr></table></figure>
-<p>然后当你提交时，编辑器中就会显示如下的提交信息占位符：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">subject line</span><br><span class="line"></span><br><span class="line">what happened</span><br><span class="line"></span><br><span class="line">[ticket: X]</span><br><span class="line"># Please enter the commit message for your changes. Lines starting</span><br><span class="line"># with &apos;#&apos; will be ignored, and an empty message aborts the commit.</span><br><span class="line"># On branch master</span><br><span class="line"># Changes to be committed:</span><br><span class="line">#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</span><br><span class="line">#</span><br><span class="line"># modified:   lib/test.rb</span><br><span class="line">#</span><br><span class="line">~</span><br><span class="line">~</span><br><span class="line">&quot;.git/COMMIT_EDITMSG&quot; 14L, 297C</span><br></pre></td></tr></table></figure>
-<p>如果你的团队对提交信息有格式要求，可以在系统上创建一个文件，并配置 Git 把它作为默认的模板，这样可以更加容易地使提交信息遵循格式。</p>
-<h3 id="core-pager"><a href="#core-pager" class="headerlink" title="core.pager"></a><code>core.pager</code></h3><p>该配置项指定 Git 运行诸如 <code>log</code> 和 <code>diff</code> 等命令所使用的分页器。 你可以把它设置成用 <code>more</code> 或者任何你喜欢的分页器（默认用的是 <code>less</code>），当然也可以设置成空字符串，关闭该选项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.pager &apos;&apos;</span><br></pre></td></tr></table></figure>
-<p>这样不管命令的输出量多少，Git 都会在一页显示所有内容。</p>
-<h3 id="user-signingkey"><a href="#user-signingkey" class="headerlink" title="user.signingkey"></a><code>user.signingkey</code></h3><p>如果你要创建经签署的含附注的标签（正如 <a href="https://git-scm.com/book/zh/v2/ch00/r_signing" target="_blank" rel="noopener">签署工作</a> 所述），那么把你的 GPG 签署密钥设置为配置项会更好。 如下设置你的密钥 ID：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.signingkey &lt;gpg-key-id&gt;</span><br></pre></td></tr></table></figure>
-<p>现在，你每次运行 <code>git tag</code> 命令时，即可直接签署标签，而无需定义密钥：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git tag -s &lt;tag-name&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="core-excludesfile"><a href="#core-excludesfile" class="headerlink" title="core.excludesfile"></a><code>core.excludesfile</code></h3><p>正如 <a href="https://git-scm.com/book/zh/v2/ch00/r_ignoring" target="_blank" rel="noopener">忽略文件</a> 所述，你可以在你的项目的 <code>.gitignore</code> 文件里面规定无需纳入 Git 管理的文件的模板，这样它们既不会出现在未跟踪列表，也不会在你运行 <code>git add</code> 后被暂存。</p>
-<p>不过有些时候，你想要在你所有的版本库中忽略掉某一类文件。 如果你的操作系统是 OS X，很可能就是指<code>.DS_Store</code>。 如果你把 Emacs 或 Vim 作为首选的编辑器，你肯定知道以 <code>\~</code> 结尾的临时文件。</p>
-<p>这个配置允许你设置类似于全局生效的 <code>.gitignore</code> 文件。 如果你按照下面的内容创建一个<code>\~/.gitignore_global</code> 文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*~</span><br><span class="line">.DS_Store</span><br></pre></td></tr></table></figure>
-<p>……然后运行 <code>git config --global core.excludesfile \~/.gitignore_global</code>，Git 将把那些文件永远地拒之门外。</p>
-<h3 id="help-autocorrect"><a href="#help-autocorrect" class="headerlink" title="help.autocorrect"></a><code>help.autocorrect</code></h3><p>假如你打错了一条命令，会显示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git chekcout master</span><br><span class="line">git：&apos;chekcout&apos; 不是一个 git 命令。参见 &apos;git --help&apos;。</span><br><span class="line"></span><br><span class="line">您指的是这个么？</span><br><span class="line">  checkout</span><br></pre></td></tr></table></figure>
-<p>Git 会尝试猜测你的意图，但是它不会越俎代庖。 如果你把 <code>help.autocorrect</code> 设置成 1，那么只要有一个命令被模糊匹配到了，Git 会自动运行该命令。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git chekcout master</span><br><span class="line">警告：您运行一个不存在的 Git 命令 &apos;chekcout&apos;。继续执行假定您要要运行的</span><br><span class="line">是 &apos;checkout&apos;</span><br><span class="line">在 0.1 秒钟后自动运行...</span><br></pre></td></tr></table></figure>
-<p>注意提示信息中的“0.1 秒”。<code>help.autocorrect</code> 接受一个代表十分之一秒的整数。 所以如果你把它设置为 50, Git 将在自动执行命令前给你 5 秒的时间改变主意。</p>
-<h2 id="格式化与多余的空白字符"><a href="#格式化与多余的空白字符" class="headerlink" title="格式化与多余的空白字符"></a>格式化与多余的空白字符</h2><p>格式化与多余的空白字符是许多开发人员在协作时，特别是在跨平台情况下，不时会遇到的令人头疼的琐碎的问题。 由于编辑器的不同或者文件行尾的换行符在 Windows 下被替换了，一些细微的空格变化会不经意地混入提交的补丁或其它协作成果中。 不用怕，Git 提供了一些配置项来帮助你解决这些问题。</p>
-<h3 id="core-autocrlf"><a href="#core-autocrlf" class="headerlink" title="core.autocrlf"></a><code>core.autocrlf</code></h3><p>假如你正在 Windows 上写程序，而你的同伴用的是其他系统（或相反），你可能会遇到 CRLF 问题。 这是因为 Windows 使用回车（CR）和换行（LF）两个字符来结束一行，而 Mac 和 Linux 只使用换行（LF）一个字符。 虽然这是小问题，但它会极大地扰乱跨平台协作。许多 Windows 上的编辑器会悄悄把行尾的换行字符转换成回车和换行，或在用户按下 Enter 键时，插入回车和换行两个字符。</p>
-<p>Git 可以在你提交时自动地把回车和换行转换成换行，而在检出代码时把换行转换成回车和换行。 你可以用 <code>core.autocrlf</code> 来打开此项功能。 如果是在 Windows 系统上，把它设置成 <code>true</code>，这样在检出代码时，换行会被转换成回车和换行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.autocrlf true</span><br></pre></td></tr></table></figure>
-<p>如果使用以换行作为行结束符的 Linux 或 Mac，你不需要 Git 在检出文件时进行自动的转换；然而当一个以回车加换行作为行结束符的文件不小心被引入时，你肯定想让 Git 修正。 你可以把 <code>core.autocrlf</code> 设置成 input 来告诉 Git 在提交时把回车和换行转换成换行，检出时不转换：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.autocrlf input</span><br></pre></td></tr></table></figure>
-<p>这样在 Windows 上的检出文件中会保留回车和换行，而在 Mac 和 Linux 上，以及版本库中会保留换行。</p>
-<p>如果你是 Windows 程序员，且正在开发仅运行在 Windows 上的项目，可以设置 <code>false</code> 取消此功能，把回车保留在版本库中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.autocrlf false</span><br></pre></td></tr></table></figure>
-<h3 id="core-whitespace"><a href="#core-whitespace" class="headerlink" title="core.whitespace"></a><code>core.whitespace</code></h3><p>Git 预先设置了一些选项来探测和修正多余空白字符问题。 它提供了六种处理多余空白字符的主要选项 —— 其中三个默认开启，另外三个默认关闭，不过你可以自由地设置它们。</p>
-<p>默认被打开的三个选项是：<code>blank-at-eol</code>，查找行尾的空格；<code>blank-at-eof</code>，盯住文件底部的空行；<code>space-before-tab</code>，警惕行头 tab 前面的空格。</p>
-<p>默认被关闭的三个选项是：<code>indent-with-non-tab</code>，揪出以空格而非 tab 开头的行（你可以用 <code>tabwidth</code>选项控制它）；<code>tab-in-indent</code>，监视在行头表示缩进的 tab；<code>cr-at-eol</code>，告诉 Git 忽略行尾的回车。</p>
-<p>通过设置 <code>core.whitespace</code>，你可以让 Git 按照你的意图来打开或关闭以逗号分割的选项。 要想关闭某个选项，你可以在输入设置选项时不指定它或在它前面加个 <code>-</code>。 例如，如果你想要打开除 <code>cr-at-eol</code> 之外的所有选项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.whitespace \</span><br><span class="line">    trailing-space,space-before-tab,indent-with-non-tab</span><br></pre></td></tr></table></figure>
-<p>当你运行 <code>git diff</code> 命令并尝试给输出着色时，Git 将探测到这些问题，因此你在提交前就能修复它们。 用<code>git apply</code> 打补丁时你也会从中受益。 如果正准备应用的补丁存有特定的空白问题，你可以让 Git 在应用补丁时发出警告：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git apply --whitespace=warn &lt;patch&gt;</span><br></pre></td></tr></table></figure>
-<p>或者让 Git 在打上补丁前自动修正此问题：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git apply --whitespace=fix &lt;patch&gt;</span><br></pre></td></tr></table></figure>
-<p>这些选项也能运用于 <code>git rebase</code>。 如果提交了有空白问题的文件，但还没推送到上游，你可以运行 <code>git rebase --whitespace=fix</code> 来让 Git 在重写补丁时自动修正它们。</p>
-<h2 id="服务器端配置"><a href="#服务器端配置" class="headerlink" title="服务器端配置"></a>服务器端配置</h2><p>Git 服务器端的配置项相对来说并不多，但仍有一些饶有生趣的选项值得你一看。</p>
-<h3 id="receive-fsckObjects"><a href="#receive-fsckObjects" class="headerlink" title="receive.fsckObjects"></a><code>receive.fsckObjects</code></h3><p>Git 能够确认每个对象的有效性以及 SHA-1 检验和是否保持一致。 但 Git 不会在每次推送时都这么做。这个操作很耗时间，很有可能会拖慢提交的过程，特别是当库或推送的文件很大的情况下。 如果想在每次推送时都要求 Git 检查一致性，设置 <code>receive.fsckObjects</code> 为 true 来强迫它这么做：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --system receive.fsckObjects true</span><br></pre></td></tr></table></figure>
-<p>现在 Git 会在每次推送生效前检查库的完整性，确保没有被有问题的客户端引入破坏性数据。</p>
-<h3 id="receive-denyNonFastForwards"><a href="#receive-denyNonFastForwards" class="headerlink" title="receive.denyNonFastForwards"></a><code>receive.denyNonFastForwards</code></h3><p>如果你变基已经被推送的提交，继而再推送，又或者推送一个提交到远程分支，而这个远程分支当前指向的提交不在该提交的历史中，这样的推送会被拒绝。 这通常是个很好的策略，但有时在变基的过程中，你确信自己需要更新远程分支，可以在 push 命令后加 <code>-f</code> 标志来强制更新（force-update）。</p>
-<p>要禁用这样的强制更新推送（force-pushes），可以设置 <code>receive.denyNonFastForwards</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --system receive.denyNonFastForwards true</span><br></pre></td></tr></table></figure>
-<p>稍后我们会提到，用服务器端的接收钩子也能达到同样的目的。 那种方法可以做到更细致的控制，例如禁止某一类用户做非快进（non-fast-forwards）推送。</p>
-<h3 id="receive-denyDeletes"><a href="#receive-denyDeletes" class="headerlink" title="receive.denyDeletes"></a><code>receive.denyDeletes</code></h3><p>有一些方法可以绕过 <code>denyNonFastForwards</code> 策略。其中一种是先删除某个分支，再连同新的引用一起推送回该分支。 把 <code>receive.denyDeletes</code> 设置为 true 可以把这个漏洞补上：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --system receive.denyDeletes true</span><br></pre></td></tr></table></figure>
-<p>这样会禁止通过推送删除分支和标签 — 没有用户可以这么做。 要删除远程分支，必须从服务器手动删除引用文件。 通过用户访问控制列表（ACL）也能够在用户级的粒度上实现同样的功能，你将在 <a href="https://git-scm.com/book/zh/v2/ch00/r_an_example_git_enforced_policy" target="_blank" rel="noopener">使用强制策略的一个例子</a> 一节学到具体的做法。</p>
+            <p>
+              mockito 快速指南
+Mockito 是一个针对 Java 的 mock 框架。
 
+
+
+预备知识
+使用 mock 对象来进行测试
+单元测试的目标和挑战
+测试类的分类
+Mock 对象的产生
+使用 Mockito 生成 Mock 对象
+
+
+为自己的项目添加 Mockito 依赖
+在 Gradle 添加 Mockito 依赖
+在 Maven 添加 Mockito 依赖
+在 Eclipse IDE 使
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/programming/java/javastack/javalib/mockito/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1564,12 +2133,14 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javastack/javalib/freemark/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/programming/java/javacore/basic/README/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -1588,11 +2159,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/03/06/programming/java/javastack/javalib/freemark/" itemprop="url">Freemark</a></h1>
+                
+                <a href="/blog/2019/03/06/programming/java/javacore/basic/README/" class="post-title-link" itemprop="url">Java 基础教程</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1600,13 +2180,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1614,6 +2199,7 @@
 
           
             
+            
           
 
           
@@ -1621,6 +2207,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">9</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -1640,600 +2254,38 @@
       
         
           
-            <h1 id="Freemark"><a href="#Freemark" class="headerlink" title="Freemark"></a>Freemark</h1><blockquote>
-<p>FreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML 网页，电子邮件，配置文件，源代码等)的通用工具。 它不是面向最终用户的，而是一个 Java 类库，是一款程序员可以嵌入他们所开发产品的组件。</p>
-</blockquote>
-<!-- TOC depthFrom:2 depthTo:3 -->
-<ul>
-<li><a href="#1-简介">1. 简介</a><ul>
-<li><a href="#11-什么是-freemark">1.1. 什么是 Freemark？</a></li>
-</ul>
-</li>
-<li><a href="#2-入门">2. 入门</a><ul>
-<li><a href="#21-创建-configuration-实例">2.1. 创建 Configuration 实例</a></li>
-<li><a href="#22-创建数据模型">2.2. 创建数据模型</a></li>
-<li><a href="#23-获取模板">2.3. 获取模板</a></li>
-<li><a href="#24-合并模板和数据模型">2.4. 合并模板和数据模型</a></li>
-<li><a href="#25-完整示例">2.5. 完整示例</a></li>
-</ul>
-</li>
-<li><a href="#3-基础">3. 基础</a><ul>
-<li><a href="#模板">模板</a></li>
-</ul>
-</li>
-<li><a href="#4-进阶">4. 进阶</a></li>
-<li><a href="#5-引用和引申">5. 引用和引申</a></li>
-</ul>
-<!-- /TOC -->
-<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h2><h3 id="1-1-什么是-Freemark？"><a href="#1-1-什么是-Freemark？" class="headerlink" title="1.1. 什么是 Freemark？"></a>1.1. 什么是 Freemark？</h3><p>FreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML 网页，电子邮件，配置文件，源代码等)的通用工具。 它不是面向最终用户的，而是一个 Java 类库，是一款程序员可以嵌入他们所开发产品的组件。</p>
-<p>简言之：模板 + 数据 = 输出</p>
-<p><br><div align="center"><img src="http://freemarker.foofun.cn/figures/overview.png"></div><br></p>
-<h2 id="2-入门"><a href="#2-入门" class="headerlink" title="2. 入门"></a>2. 入门</h2><h3 id="2-1-创建-Configuration-实例"><a href="#2-1-创建-Configuration-实例" class="headerlink" title="2.1. 创建 Configuration 实例"></a>2.1. 创建 Configuration 实例</h3><p>首先，你应该创建一个 <code>freemarker.template.Configuration</code> 实例， 然后调整它的设置。Configuration 实例是存储 FreeMarker 应用级设置的核心部分。同时，它也处理创建和缓存预解析模板(比如 Template 对象)的工作。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create your Configuration instance, and specify if up to what FreeMarker</span></span><br><span class="line"><span class="comment">// version (here 2.3.22) do you want to apply the fixes that are not 100%</span></span><br><span class="line"><span class="comment">// backward-compatible. See the Configuration JavaDoc for details.</span></span><br><span class="line">Configuration cfg = <span class="keyword">new</span> Configuration(Configuration.VERSION_2_3_22);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Specify the source where the template files come from. Here I set a</span></span><br><span class="line"><span class="comment">// plain directory for it, but non-file-system sources are possible too:</span></span><br><span class="line">cfg.setDirectoryForTemplateLoading(<span class="keyword">new</span> File(<span class="string">"/where/you/store/templates"</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// Set the preferred charset template files are stored in. UTF-8 is</span></span><br><span class="line"><span class="comment">// a good choice in most applications:</span></span><br><span class="line">cfg.setDefaultEncoding(<span class="string">"UTF-8"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Sets how errors will appear.</span></span><br><span class="line"><span class="comment">// During web page *development* TemplateExceptionHandler.HTML_DEBUG_HANDLER is better.</span></span><br><span class="line">cfg.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注：不需要重复创建 Configuration 实例；它的代价很高，尤其是会丢失缓存。Configuration 实例就是应用级别的单例。</p>
-</blockquote>
-<h3 id="2-2-创建数据模型"><a href="#2-2-创建数据模型" class="headerlink" title="2.2. 创建数据模型"></a>2.2. 创建数据模型</h3><p>在简单的示例中你可以使用 <code>java.lang</code> 和 <code>java.util</code> 包中的类， 还有用户自定义的 Java Bean 来构建数据对象：</p>
-<ul>
-<li>使用 <code>java.lang.String</code> 来构建字符串。</li>
-<li>使用 <code>java.lang.Number</code> 来派生数字类型。</li>
-<li>使用 <code>java.lang.Boolean</code> 来构建布尔值。</li>
-<li>使用 <code>java.util.List</code> 或 Java 数组来构建序列。</li>
-<li>使用 <code>java.util.Map</code> 来构建哈希表。</li>
-<li>使用自定义的 bean 类来构建哈希表，bean 中的项和 bean 的属性对应。比如， <code>product</code> 的 <code>price</code> 属性 (<code>getProperty()</code>)可以通过 <code>product.price</code> 获取。(bean 的 action 也可以通过这种方式拿到； 要了解更多可以参看 <a href="http://freemarker.foofun.cn/pgui_misc_beanwrapper.html" target="_blank" rel="noopener">这里</a>)</li>
-</ul>
-<p>示例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create the root hash</span></span><br><span class="line">Map&lt;String, Object&gt; root = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line"><span class="comment">// Put string ``user'' into the root</span></span><br><span class="line">root.put(<span class="string">"user"</span>, <span class="string">"Big Joe"</span>);</span><br><span class="line"><span class="comment">// Create the hash for ``latestProduct''</span></span><br><span class="line">Map&lt;String, Object&gt; latest = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line"><span class="comment">// and put it into the root</span></span><br><span class="line">root.put(<span class="string">"latestProduct"</span>, latest);</span><br><span class="line"><span class="comment">// put ``url'' and ``name'' into latest</span></span><br><span class="line">latest.put(<span class="string">"url"</span>, <span class="string">"products/greenmouse.html"</span>);</span><br><span class="line">latest.put(<span class="string">"name"</span>, <span class="string">"green mouse"</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="2-3-获取模板"><a href="#2-3-获取模板" class="headerlink" title="2.3. 获取模板"></a>2.3. 获取模板</h3><p>模板代表了 <code>freemarker.template.Template</code> 实例。典型的做法是从 <code>Configuration</code> 实例中获取一个 <code>Template</code> 实例。无论什么时候你需要一个模板实例， 都可以使用它的 <code>getTemplate</code> 方法来获取。在 <a href="http://freemarker.foofun.cn/pgui_quickstart_createconfiguration.html" target="_blank" rel="noopener">之前</a> 设置的目录中的 <code>test.ftl</code> 文件中存储 <a href="http://freemarker.foofun.cn/dgui_quickstart_basics.html#example.first" target="_blank" rel="noopener">示例模板</a>，那么就可以这样来做：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Template temp = cfg.getTemplate(<span class="string">"test.ftl"</span>);</span><br></pre></td></tr></table></figure>
-<p>当调用这个方法的时候，将会创建一个 <code>test.ftl</code> 的 <code>Template</code> 实例，通过读取 <code>*/where/you/store/templates/*test.ftl</code> 文件，之后解析(编译)它。<code>Template</code> 实例以解析后的形式存储模板， 而不是以源文件的文本形式。</p>
-<p><code>Configuration</code> 缓存 <code>Template</code> 实例，当再次获得 <code>test.ftl</code> 的时候，它可能再读取和解析模板文件了， 而只是返回第一次的 <code>Template</code>实例。</p>
-<h3 id="2-4-合并模板和数据模型"><a href="#2-4-合并模板和数据模型" class="headerlink" title="2.4. 合并模板和数据模型"></a>2.4. 合并模板和数据模型</h3><p>我们已经知道，数据模型+模板=输出，我们有了一个数据模型 (<code>root</code>) 和一个模板 (<code>temp</code>)， 为了得到输出就需要合并它们。这是由模板的 <code>process</code> 方法完成的。它用数据模型 root 和 <code>Writer</code> 对象作为参数，然后向 <code>Writer</code> 对象写入产生的内容。 为简单起见，这里我们只做标准的输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Writer out = new OutputStreamWriter(System.out);</span><br><span class="line">temp.process(root, out);</span><br></pre></td></tr></table></figure>
-<p>这会向你的终端输出你在模板开发指南部分的 <a href="http://freemarker.foofun.cn/dgui_quickstart_basics.html#example.first" target="_blank" rel="noopener">第一个示例</a> 中看到的内容。</p>
-<p>Java I/O 相关注意事项：基于 <code>out</code> 对象，必须保证 <code>out.close()</code> 最后被调用。当 <code>out</code> 对象被打开并将模板的输出写入文件时，这是很电影的做法。其它时候， 比如典型的 Web 应用程序，那就 _不能_ 关闭 <code>out</code> 对象。FreeMarker 会在模板执行成功后 (也可以在 <code>Configuration</code> 中禁用) 调用 <code>out.flush()</code>，所以不必为此担心。</p>
-<p>请注意，一旦获得了 <code>Template</code> 实例， 就能将它和不同的数据模型进行不限次数 (<code>Template</code>实例是无状态的)的合并。此外， 当 <code>Template</code>实例创建之后 <code>test.ftl</code> 文件才能访问，而不是在调用处理方法时。</p>
-<h3 id="2-5-完整示例"><a href="#2-5-完整示例" class="headerlink" title="2.5. 完整示例"></a>2.5. 完整示例</h3><p><a href="https://github.com/dunwu/spring-boot-tutorial/tree/master/codes/template/sbe-tmpl-freemark" target="_blank" rel="noopener"><strong>源码</strong></a></p>
-<h2 id="3-基础"><a href="#3-基础" class="headerlink" title="3. 基础"></a>3. 基础</h2><h3 id="数值"><a href="#数值" class="headerlink" title="数值"></a>数值</h3><p>注意观察每个数据模型的例子你也许能发现：被”(root)”所标识的内容就是哈希表类型的值。 当编写如 <code>user</code> 这样的代码时，那就意味着要把”user”变量存储在哈希表的根上。 就像编写 <code>root.user</code>一样，这里但并没有名”root”为的变量， 那么这就起不到任何作用了。</p>
-<p>某些人也许会被这种数据模型的例子所困惑，也就是说，根哈希表包含更多的哈希表或序列 (<code>lotteryNumbers</code> and <code>cargo</code>)。其它就没有更特殊的内容了。 哈希表包含其他变量，那些变量包含其它值，这些数值可以是字符串，数字等变量， 当然也可以是哈希表或序列变量。最初我们解释过的，就像字符串和数字， 序列或哈希表也是一种值的表示形式。</p>
-<h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><p>Freemark 支持的类型有：</p>
-<ul>
-<li>标量：<ul>
-<li>字符串</li>
-<li>数字</li>
-<li>布尔值</li>
-<li>日期/时间 (日期，时间或日期时间)</li>
-</ul>
-</li>
-<li>容器：<ul>
-<li>哈希表</li>
-<li>序列</li>
-<li>集合</li>
-</ul>
-</li>
-<li>子程序：<ul>
-<li><a href="http://freemarker.foofun.cn/dgui_datamodel_types.html#dgui_datamodel_method" target="_blank" rel="noopener">方法和函数</a></li>
-<li><a href="http://freemarker.foofun.cn/dgui_datamodel_types.html#dgui_datamodel_userdefdir" target="_blank" rel="noopener">用户自定义指令</a></li>
-</ul>
-</li>
-<li>其它/很少使用：<ul>
-<li><a href="http://freemarker.foofun.cn/dgui_datamodel_types.html#dgui_datamodel_node" target="_blank" rel="noopener">结点</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h3><h4 id="总体结构"><a href="#总体结构" class="headerlink" title="总体结构"></a>总体结构</h4><p>模板(FTL 编程)是由如下部分混合而成的：</p>
-<ul>
-<li><strong>文本</strong>：文本会照着原样来输出。</li>
-<li><strong>插值</strong>：这部分的输出会被计算的值来替换。插值由 <code>${</code> and <code>}</code> 所分隔。</li>
-<li><strong>FTL 标签</strong>：FTL 标签和 HTML 标签很相似，但是它们却是给 FreeMarker 的指示， 而且不会打印在输出内容中。</li>
-<li><strong>注释</strong>：注释和 HTML 的注释也很相似，但它们是由 <code>&lt;#--</code> 和 <code>--&gt;</code>来分隔的。注释会被 FreeMarker 直接忽略， 更不会在输出内容中显示。</li>
-</ul>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/snap/ftl-template.png"></div><br></p>
-<blockquote>
-<p>:warning: 注意：</p>
-<ul>
-<li>FTL 是区分大小写的。</li>
-<li><code>插值</code> 仅仅可以在 <code>文本</code> 中使用。</li>
-<li><code>FTL 标签</code> 不可以在其他 <code>FTL 标签</code> 和 <code>插值</code> 中使用。</li>
-<li><code>注释</code> 可以放在 <code>FTL 标签</code> 和 <code>插值</code> 中。</li>
-</ul>
-</blockquote>
-<h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><p>使用 FTL 标签来调用 <strong>指令</strong>。</p>
-<p>FTL 标签分为两种：</p>
-<ul>
-<li>开始标签： <code>&lt;#*directivename* *parameters*&gt;</code></li>
-<li>结束标签： <code>&lt;/#*directivename*&gt;</code></li>
-</ul>
-<p>除了标签以 <code>#</code> 开头外，其他都和 HTML，XML 的语法很相似。 如果标签没有嵌套内容(在开始标签和结束标签之间的内容)，那么可以只使用开始标签。 例如 <code>&lt;#if *something*&gt;*...*&lt;/#if&gt;</code>， 而 FreeMarker 知道 <code>&lt;#include *something*&gt;</code> 中的 <code>include</code> 指令没有可嵌套的内容。</p>
-<p><code>*parameters*</code> 的格式由 <code>*directivename*</code>来决定。</p>
-<p>事实上，指令有两种类型： <a href="http://freemarker.foofun.cn/gloss.html#gloss.predefinedDirective" target="_blank" rel="noopener">预定义指令</a> 和 <a href="http://freemarker.foofun.cn/gloss.html#gloss.userDefinedDirective" target="_blank" rel="noopener">用户自定义指令</a>。 对于用户自定义的指令使用 <code>@</code> 来代替 <code>#</code>。</p>
-<blockquote>
-<p>:warning: 注意：</p>
-<ul>
-<li>FreeMarker 仅仅关心 FTL 标签的嵌套而不关心 HTML 标签的嵌套。 它只会把 HTML 看做是文本，不会来解释 HTML。</li>
-<li>如果你尝试使用一个不存在的指令(比如，输错了指令的名称)， FreeMarker 就会拒绝执行模板，同时抛出错误信息。</li>
-<li>FreeMarker 会忽略 FTL 标签中多余的 <a href="http://freemarker.foofun.cn/gloss.html#gloss.whiteSpace" target="_blank" rel="noopener">空白标记</a>。</li>
-</ul>
-</blockquote>
-<h4 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h4><p>以下为快速浏览清单，如果需要了解更多细节，请参考<a href="http://freemarker.foofun.cn/dgui_template_exp.html" target="_blank" rel="noopener"><strong>这里</strong></a>。</p>
-<ul>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_direct" target="_blank" rel="noopener">直接指定值</a><ul>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_direct_string" target="_blank" rel="noopener">字符串</a>： <code>&quot;Foo&quot;</code> 或者 <code>&#39;Foo&#39;</code> 或者 <code>&quot;It&#39;s \&quot;quoted\&quot;&quot;</code> 或者 <code>&#39;It\&#39;s &quot;quoted&quot;&#39;</code> 或者 <code>r&quot;C:\raw\string&quot;</code></li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_direct_number" target="_blank" rel="noopener">数字</a>： <code>123.45</code></li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_direct_boolean" target="_blank" rel="noopener">布尔值</a>： <code>true</code>， <code>false</code></li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_direct_seuqence" target="_blank" rel="noopener">序列</a>： <code>[&quot;foo&quot;, &quot;bar&quot;, 123.45]</code>； 值域： <code>0..9</code>, <code>0..&lt;10</code> (或 <code>0..!10</code>), <code>0..</code></li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_direct_hash" target="_blank" rel="noopener">哈希表</a>： <code>{&quot;name&quot;:&quot;green mouse&quot;, &quot;price&quot;:150}</code></li>
-</ul>
-</li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_var" target="_blank" rel="noopener">检索变量</a><ul>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_var_toplevel" target="_blank" rel="noopener">顶层变量</a>： <code>user</code></li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_var_hash" target="_blank" rel="noopener">从哈希表中检索数据</a>： <code>user.name</code>， <code>user[&quot;name&quot;]</code></li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_var_sequence" target="_blank" rel="noopener">从序列中检索数据</a>： <code>products[5]</code></li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_var_special" target="_blank" rel="noopener">特殊变量</a>： <code>.main</code></li>
-</ul>
-</li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_stringop" target="_blank" rel="noopener">字符串操作</a><ul>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_stringop_interpolation" target="_blank" rel="noopener">插值(或连接)</a>： <code>&quot;Hello ${user}!&quot;</code> (或 <code>&quot;Hello &quot; + user + &quot;!&quot;</code>)</li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_get_character" target="_blank" rel="noopener">获取一个字符</a>： <code>name[0]</code></li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_stringop_slice" target="_blank" rel="noopener">字符串切分：</a> 包含结尾： <code>name[0..4]</code>，不包含结尾： <code>name[0..&lt;5]</code>，基于长度(宽容处理)： <code>name[0..*5]</code>，去除开头：<code>name[5..]</code></li>
-</ul>
-</li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_sequenceop" target="_blank" rel="noopener">序列操作</a><ul>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_sequenceop_cat" target="_blank" rel="noopener">连接</a>： <code>users + [&quot;guest&quot;]</code></li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_seqenceop_slice" target="_blank" rel="noopener">序列切分</a>：包含结尾： <code>products[20..29]</code>， 不包含结尾： <code>products[20..&lt;30]</code>，基于长度(宽容处理)：<code>products[20..*10]</code>，去除开头： <code>products[20..]</code></li>
-</ul>
-</li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_hashop" target="_blank" rel="noopener">哈希表操作</a><ul>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_hashop_cat" target="_blank" rel="noopener">连接</a>： <code>passwords + { &quot;joe&quot;: &quot;secret42&quot; }</code></li>
-</ul>
-</li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_arit" target="_blank" rel="noopener">算术运算</a>： <code>(x * 1.5 + 10) / 2 - y % 100</code></li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_comparison" target="_blank" rel="noopener">比较运算</a>： <code>x == y</code>， <code>x != y</code>， <code>x &lt; y</code>， <code>x &gt; y</code>， <code>x &gt;= y</code>， <code>x &lt;= y</code>， <code>x lt y</code>， <code>x lte y</code>， <code>x gt y</code>， <code>x gte y</code>， 等等。。。。。。</li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_logicalop" target="_blank" rel="noopener">逻辑操作</a>： <code>!registered &amp;&amp; (firstVisit || fromEurope)</code></li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_builtin" target="_blank" rel="noopener">内建函数</a>： <code>name?upper_case</code>, <code>path?ensure_starts_with(&#39;/&#39;)</code></li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_methodcall" target="_blank" rel="noopener">方法调用</a>： <code>repeat(&quot;What&quot;, 3)</code></li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_missing" target="_blank" rel="noopener">处理不存在的值</a><ul>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_missing_default" target="_blank" rel="noopener">默认值</a>： <code>name!&quot;unknown&quot;</code> 或者 <code>(user.name)!&quot;unknown&quot;</code> 或者 <code>name!</code> 或者 <code>(user.name)!</code></li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_missing_test" target="_blank" rel="noopener">检测不存在的值</a>： <code>name??</code> 或者 <code>(user.name)??</code></li>
-</ul>
-</li>
-<li><a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_assignment" target="_blank" rel="noopener">赋值操作</a>： <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>++</code>, <code>--</code></li>
-</ul>
-<h4 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h4><p>插值的使用格式是： <code>${*expression*}</code>，这里的 <code>*expression*</code> 可以是所有种类的表达式(比如 <code>${100 + x}</code>)。</p>
-<p>插值是用来给 <code>*表达式*</code> 插入具体值然后转换为文本(字符串)。插值仅仅可以在两种位置使用：在 <a href="http://freemarker.foofun.cn/dgui_template_overallstructure.html" target="_blank" rel="noopener">文本 区</a> (比如 <code>&lt;h1&gt;Hello ${name}!&lt;/h1&gt;</code>) 和 <a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_stringop_interpolation" target="_blank" rel="noopener">字符串表达式</a> (比如 <code>&lt;#include &quot;/footer/${company}.html&quot;&gt;</code>)中。</p>
-<p>表达式的结果必须是字符串，数字或者日期/时间/日期-时间值， 因为(默认是这样)仅仅这些值可以被插值自动转换为字符串。其它类型的值 (比如布尔值，序列)必须 “手动地” 转换成字符串(后续会有一些建议)， 否则就会发生错误，中止模板执行。</p>
-<p>注意：插值 _仅仅_ 在 <a href="http://freemarker.foofun.cn/dgui_template_overallstructure.html" target="_blank" rel="noopener">文本区</a> (比如 <code>&lt;h1&gt;Hello ${name}!&lt;/h1&gt;</code>) 和 <a href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_direct_string" target="_blank" rel="noopener">字符串</a> 中起作用。</p>
-<p>:heavy_check_mark: <code>&lt;#include &quot;/footer/${company}.html&quot;&gt;</code></p>
-<p>:heavy_check_mark: <code>&lt;#if big&gt;...&lt;/#if&gt;</code></p>
-<p>:x: <code>&lt;#if ${big}&gt;...&lt;/#if&gt;</code></p>
-<p>:x: <code>&lt;#if &quot;${big}&quot;&gt;...&lt;/#if&gt;</code></p>
-<h2 id="4-进阶"><a href="#4-进阶" class="headerlink" title="4. 进阶"></a>4. 进阶</h2><h2 id="5-引用和引申"><a href="#5-引用和引申" class="headerlink" title="5. 引用和引申"></a>5. 引用和引申</h2><p><a href="http://freemarker.foofun.cn/" target="_blank" rel="noopener">http://freemarker.foofun.cn/</a></p>
-
+            <p>
+              Java 基础教程
+              
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2019/03/06/programming/java/javacore/basic/README/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
 
     
       
 
-  
 
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/os/linux/ops/service/elastic/elastic-kibana/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Peng">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张鹏的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2019/03/06/os/linux/ops/service/elastic/elastic-kibana/" itemprop="url">Elastic 技术栈之 Kibana</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
     
 
     
     
     
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Elastic-技术栈之-Kibana"><a href="#Elastic-技术栈之-Kibana" class="headerlink" title="Elastic 技术栈之 Kibana"></a>Elastic 技术栈之 Kibana</h1><h2 id="Discover"><a href="#Discover" class="headerlink" title="Discover"></a>Discover</h2><p>单击侧面导航栏中的 <code>Discover</code> ，可以显示 <code>Kibana</code> 的数据查询功能功能。</p>
-<p><br><div align="center"><img src="https://www.elastic.co/guide/en/kibana/current/images/tutorial-discover.png"></div><br></p>
-<p>在搜索栏中，您可以输入Elasticsearch查询条件来搜索您的数据。您可以在 <code>Discover</code> 页面中浏览结果并在 <code>Visualize</code> 页面中创建已保存搜索条件的可视化。</p>
-<p>当前索引模式显示在查询栏下方。索引模式确定提交查询时搜索哪些索引。要搜索一组不同的索引，请从下拉菜单中选择不同的模式。要添加索引模式（index pattern），请转至 <code>Management/Kibana/Index Patterns</code> 并单击 <code>Add New</code>。</p>
-<p>您可以使用字段名称和您感兴趣的值构建搜索。对于数字字段，可以使用比较运算符，如大于（&gt;），小于（&lt;）或等于（=）。您可以将元素与逻辑运算符 <code>AND</code>，<code>OR</code> 和 <code>NOT</code> 链接，全部使用大写。</p>
-<p>默认情况下，每个匹配文档都显示所有字段。要选择要显示的文档字段，请将鼠标悬停在“可用字段”列表上，然后单击要包含的每个字段旁边的添加按钮。例如，如果只添加account_number，则显示将更改为包含五个帐号的简单列表：</p>
-<p><br><div align="center"><img src="https://www.elastic.co/guide/en/kibana/6.1/images/tutorial-discover-3.png"></div><br></p>
-<h3 id="查询语义"><a href="#查询语义" class="headerlink" title="查询语义"></a>查询语义</h3><p>kibana 的搜索栏遵循 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax" target="_blank" rel="noopener">query-string-syntax</a> 文档中所说明的查询语义。</p>
-<p>这里说明一些最基本的查询语义。</p>
-<p>查询字符串会被解析为一系列的术语和运算符。一个术语可以是一个单词（如：quick、brown）或用双引号包围的短语（如”quick brown”）。</p>
-<p>查询操作允许您自定义搜索 - 下面介绍了可用的选项。</p>
-<h4 id="字段名称"><a href="#字段名称" class="headerlink" title="字段名称"></a>字段名称</h4><p>正如查询字符串查询中所述，将在搜索条件中搜索default_field，但可以在查询语法中指定其他字段：</p>
-<p>例如：</p>
-<ul>
-<li>查询 <code>status</code> 字段中包含 <code>active</code> 关键字</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">status:active</span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>title</code> 字段包含 <code>quick</code> 或 <code>brown</code> 关键字。如果您省略 <code>OR</code> 运算符，则将使用默认运算符</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title:(quick OR brown)</span><br><span class="line">title:(quick brown)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>author 字段查找精确的短语 “john smith”，即精确查找。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">author:&quot;John Smith&quot;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>任意字段 <code>book.title</code>，<code>book.content</code> 或 <code>book.date</code> 都包含 <code>quick</code> 或 <code>brown</code>（注意我们需要如何使用 <code>\*</code> 表示通配符）</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">book.\*:(quick brown)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>title 字段包含任意非 null 值</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_exists_:title</span><br></pre></td></tr></table></figure>
-<h4 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h4><p>ELK 提供了 ? 和 * 两个通配符。</p>
-<ul>
-<li><code>?</code> 表示任意单个字符；</li>
-<li><code>*</code> 表示任意零个或多个字符。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qu?ck bro*</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>注意：通配符查询会使用大量的内存并且执行性能较为糟糕，所以请慎用。</strong><br><strong>提示</strong>：纯通配符 * 被写入 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-exists-query.html" target="_blank" rel="noopener">exsits</a> 查询，从而提高了查询效率。因此，通配符 <code>field：*</code> 将匹配包含空值的文档，如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; **提示**：在一个单词的开头（例如：`*ing`）使用通配符这种方式的查询量特别大，因为索引中的所有术语都需要检查，以防万一匹配。通过将 `allow_leading_wildcard` 设置为 `false`，可以禁用。</span><br><span class="line"></span><br><span class="line">#### 正则表达式</span><br><span class="line"></span><br><span class="line">可以通过 `/` 将正则表达式包裹在查询字符串中进行查询</span><br><span class="line"></span><br><span class="line">例：</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>name:/joh?n(ath[oa]n)/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">支持的正则表达式语义可以参考：[Regular expression syntax](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-regexp-query.html#regexp-syntax)</span><br><span class="line"></span><br><span class="line">#### 模糊查询</span><br><span class="line"></span><br><span class="line">我们可以使用 `~` 运算符来进行模糊查询。</span><br><span class="line"></span><br><span class="line">例：</span><br><span class="line"></span><br><span class="line">假设我们实际想查询</span><br></pre></td></tr></table></figure></p>
-<p>quick brown forks<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">但是，由于拼写错误，我们的查询关键字变成如下情况，依然可以查到想要的结果。</span><br></pre></td></tr></table></figure></p>
-<p>quikc~ brwn~ foks~<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这种模糊查询使用 Damerau-Levenshtein 距离来查找所有匹配最多两个更改的项。所谓的更改是指单个字符的插入，删除或替换，或者两个相邻字符的换位。</span><br><span class="line"></span><br><span class="line">默认编辑距离为 `2`，但编辑距离为 `1` 应足以捕捉所有人类拼写错误的80％。它可以被指定为：</span><br></pre></td></tr></table></figure></p>
-<p>quikc~1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 近似检索</span><br><span class="line"></span><br><span class="line">尽管短语查询（例如，`john smith`）期望所有的词条都是完全相同的顺序，但是近似查询允许指定的单词进一步分开或以不同的顺序排列。与模糊查询可以为单词中的字符指定最大编辑距离一样，近似搜索也允许我们指定短语中单词的最大编辑距离：</span><br><span class="line"></span><br><span class="line">例</span><br></pre></td></tr></table></figure></p>
-<p>“fox quick”~5<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">字段中的文本越接近查询字符串中指定的原始顺序，该文档就越被认为是相关的。当与上面的示例查询相比时，短语 `&quot;quick fox&quot;` 将被认为比 `&quot;quick brown fox&quot;` 更近似查询条件。</span><br><span class="line"></span><br><span class="line">#### 范围</span><br><span class="line"></span><br><span class="line">可以为日期，数字或字符串字段指定范围。闭区间范围用方括号 `[min TO max]` 和开区间范围用花括号 `&#123;min TO max&#125;` 来指定。</span><br><span class="line"></span><br><span class="line">我们不妨来看一些示例。</span><br><span class="line"></span><br><span class="line">* 2012 年的所有日子</span><br></pre></td></tr></table></figure></p>
-<p>date:[2012-01-01 TO 2012-12-31]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 数字 1 到 5</span><br></pre></td></tr></table></figure></p>
-<p>count:[1 TO 5]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 在 `alpha` 和 `omega` 之间的标签，不包括 `alpha` 和 `omega`</span><br></pre></td></tr></table></figure></p>
-<p>tag:{alpha TO omega}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 10 以上的数字</span><br></pre></td></tr></table></figure></p>
-<p>count:[10 TO *]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 2012 年以前的所有日期</span><br></pre></td></tr></table></figure></p>
-<p>date:{* TO 2012-01-01}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">此外，开区间和闭区间也可以组合使用</span><br><span class="line"></span><br><span class="line">* 数组 1 到 5，但不包括 5</span><br></pre></td></tr></table></figure></p>
-<p>count:[1 TO 5}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">一边无界的范围也可以使用以下语法：</span><br></pre></td></tr></table></figure></p>
-<p>age:&gt;10<br>age:&gt;=10<br>age:&lt;10<br>age:&lt;=10<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">当然，你也可以使用 AND 运算符来得到连个查询结果的交集</span><br></pre></td></tr></table></figure></p>
-<p>age:(&gt;=10 AND &lt;20)<br>age:(+&gt;=10 +&lt;20)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### Boosting</span><br><span class="line"></span><br><span class="line">使用操作符 `^` 使一个术语比另一个术语更相关。例如，如果我们想查找所有有关狐狸的文档，但我们对狐狸特别感兴趣：</span><br></pre></td></tr></table></figure></p>
-<p>quick^2 fox<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">默认提升值是1，但可以是任何正浮点数。 0到1之间的提升减少了相关性。</span><br><span class="line"></span><br><span class="line">增强也可以应用于短语或组：</span><br></pre></td></tr></table></figure></p>
-<p>“john smith”^2   (foo bar)^4<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 布尔操作</span><br><span class="line"></span><br><span class="line">默认情况下，只要一个词匹配，所有词都是可选的。搜索 `foo bar baz` 将查找包含 `foo` 或 `bar` 或 `baz` 中的一个或多个的任何文档。我们已经讨论了上面的`default_operator`，它允许你强制要求所有的项，但也有布尔运算符可以在查询字符串本身中使用，以提供更多的控制。</span><br><span class="line"></span><br><span class="line">首选的操作符是 `+`（此术语必须存在）和 `-` （此术语不得存在）。所有其他条款是可选的。例如，这个查询：</span><br></pre></td></tr></table></figure></p>
-<p>quick brown +fox -news<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这条查询意味着：</span><br><span class="line"></span><br><span class="line">* fox 必须存在</span><br><span class="line">* news 必须不存在</span><br><span class="line">* quick 和 brown 是可有可无的</span><br><span class="line"></span><br><span class="line">熟悉的运算符 `AND`，`OR` 和 `NOT`（也写成 `&amp;&amp;`，`||` 和 `!`）也被支持。然而，这些操作符有一定的优先级：`NOT` 优先于 `AND`，`AND` 优先于 `OR`。虽然 `+` 和 `-` 仅影响运算符右侧的术语，但 `AND` 和 `OR` 会影响左侧和右侧的术语。</span><br><span class="line"></span><br><span class="line">#### 分组</span><br><span class="line"></span><br><span class="line">多个术语或子句可以用圆括号组合在一起，形成子查询</span><br></pre></td></tr></table></figure></p>
-<p>(quick OR brown) AND fox<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">可以使用组来定位特定的字段，或者增强子查询的结果：</span><br></pre></td></tr></table></figure></p>
-<p>status:(active OR pending) title:(full text search)^2<br><code>`</code></p>
-<h4 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h4><p>如果你需要使用任何在你的查询本身中作为操作符的字符（而不是作为操作符），那么你应该用一个反斜杠来转义它们。例如，要搜索（1 + 1）= 2，您需要将查询写为 <code>\(1\+1\)\=2</code></p>
-<p>保留字符是：<code>+ - = &amp;&amp; || &gt; &lt; ! ( ) { } [ ] ^ &quot; ~ * ? : \ /</code></p>
-<p>无法正确地转义这些特殊字符可能会导致语法错误，从而阻止您的查询运行。</p>
-<h4 id="空查询"><a href="#空查询" class="headerlink" title="空查询"></a>空查询</h4><p>如果查询字符串为空或仅包含空格，则查询将生成一个空的结果集。</p>
-<h2 id="Visualize"><a href="#Visualize" class="headerlink" title="Visualize"></a>Visualize</h2><p>要想使用可视化的方式展示您的数据，请单击侧面导航栏中的 <code>Visualize</code>。</p>
-<p>Visualize工具使您能够以多种方式（如饼图、柱状图、曲线图、分布图等）查看数据。要开始使用，请点击蓝色的 <code>Create a visualization</code> 或 <code>+</code> 按钮。</p>
-<p><img src="https://www.elastic.co/guide/en/kibana/6.1/images/tutorial-visualize-landing.png" alt="https://www.elastic.co/guide/en/kibana/6.1/images/tutorial-visualize-landing.png"></p>
-<p>有许多可视化类型可供选择。</p>
-<p><img src="https://www.elastic.co/guide/en/kibana/6.1/images/tutorial-visualize-wizard-step-1.png" alt="https://www.elastic.co/guide/en/kibana/6.1/images/tutorial-visualize-wizard-step-1.png"></p>
-<p>下面，我们来看创建几个图标示例：</p>
-<h3 id="Pie"><a href="#Pie" class="headerlink" title="Pie"></a>Pie</h3><p>您可以从保存的搜索中构建可视化文件，也可以输入新的搜索条件。要输入新的搜索条件，首先需要选择一个索引模式来指定要搜索的索引。</p>
-<p>默认搜索匹配所有文档。最初，一个“切片”包含整个饼图：</p>
-<p><img src="https://www.elastic.co/guide/en/kibana/6.1/images/tutorial-visualize-pie-1.png" alt="https://www.elastic.co/guide/en/kibana/6.1/images/tutorial-visualize-pie-1.png"></p>
-<p>要指定在图表中展示哪些数据，请使用Elasticsearch存储桶聚合。分组汇总只是将与您的搜索条件相匹配的文档分类到不同的分类中，也称为分组。</p>
-<p>为每个范围定义一个存储桶：</p>
-<ol>
-<li>单击 <code>Split Slices</code>。</li>
-<li>在 <code>Aggregation</code> 列表中选择 <code>Terms</code>。<em>注意：这里的 Terms 是 Elk 采集数据时定义好的字段或标签。</em></li>
-<li>在 <code>Field</code> 列表中选择 <code>level.keyword</code>。</li>
-<li>点击 <img src="https://www.elastic.co/guide/en/kibana/6.1/images/apply-changes-button.png" alt="images/apply-changes-button.png"> 按钮来更新图表。</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/3101171-7fb2042dc6d59520.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>完成后，如果想要保存这个图表，可以点击页面最上方一栏中的 <code>Save</code> 按钮。</p>
-<h3 id="Vertical-Bar"><a href="#Vertical-Bar" class="headerlink" title="Vertical Bar"></a>Vertical Bar</h3><p>我们在展示一下如何创建柱状图。</p>
-<ol>
-<li>点击蓝色的 <code>Create a visualization</code> 或 <code>+</code> 按钮。选择 <code>Vertical Bar</code></li>
-<li>选择索引模式。由于您尚未定义任何 bucket ，因此您会看到一个大栏，显示与默认通配符查询匹配的文档总数。</li>
-<li>指定 Y 轴所代表的字段</li>
-<li>指定 X 轴所代表的字段</li>
-<li>点击 <img src="https://www.elastic.co/guide/en/kibana/6.1/images/apply-changes-button.png" alt="images/apply-changes-button.png"> 按钮来更新图表。</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/3101171-5aa7627284c19a56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>完成后，如果想要保存这个图表，可以点击页面最上方一栏中的 <code>Save</code> 按钮。</p>
-<h2 id="Dashboard"><a href="#Dashboard" class="headerlink" title="Dashboard"></a>Dashboard</h2><p><code>Dashboard</code> 可以整合和共享 <code>Visualize</code> 集合。</p>
-<ol>
-<li>点击侧面导航栏中的 Dashboard。</li>
-<li>点击添加显示保存的可视化列表。</li>
-<li>点击之前保存的 <code>Visualize</code>，然后点击列表底部的小向上箭头关闭可视化列表。</li>
-<li>将鼠标悬停在可视化对象上会显示允许您编辑，移动，删除和调整可视化对象大小的容器控件。</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
 
     
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
 
     
       
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2019/03/06/algorithm/README/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Peng">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张鹏的博客">
-    </span>
-
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2019/03/06/algorithm/README/" itemprop="url">算法和数据结构</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="算法和数据结构"><a href="#算法和数据结构" class="headerlink" title="算法和数据结构"></a>算法和数据结构</h1><blockquote>
-<p>:dart: 所有配套源码整理归档在 <a href="https://github.com/dunwu/algorithm-tutorial" target="_blank" rel="noopener"><strong>algorithm-tutorial</strong></a> 项目中。</p>
-</blockquote>
-<h2 id="memo-知识点"><a href="#memo-知识点" class="headerlink" title=":memo: 知识点"></a>:memo: 知识点</h2><h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><blockquote>
-<p><code>数据结构</code> 是指相互之间存在着一种或多种关系的数据元素的集合和该集合中数据元素之间的关系组成。</p>
-<p>记为：<code>Data_Structure=(D,R)</code>。其中 D 是数据元素的集合，R 是该集合中所有元素之间的关系的有限集合。</p>
-</blockquote>
-<ul>
-<li><strong>常用结构</strong><ul>
-<li><a href="data-structure/array.md">数组</a></li>
-<li><a href="data-structure/stack.md">栈</a></li>
-<li><a href="data-structure/queue.md">队列</a></li>
-<li><a href="data-structure/list.md">链表</a></li>
-<li><a href="data-structure/tree">树</a> - <a href="data-structure/tree/tree.md">树</a>、<a href="data-structure/tree/binary-tree.md">二叉树</a>、<a href="data-structure/tree/red-black-tree.md">红黑树</a></li>
-<li><a href="data-structure/graph.md">图</a></li>
-<li><a href="data-structure/heap.md">堆</a></li>
-<li><a href="data-structure/hash.md">散列表</a></li>
-</ul>
-</li>
-<li><strong>结构算法</strong><ul>
-<li><a href="data-structure/search">查找</a></li>
-<li><a href="data-structure/sort">排序</a> - <a href="data-structure/sort/bubble-sort.md">冒泡排序</a>、<a href="data-structure/sort/quick-sort.md">快速排序</a>、<a href="data-structure/sort/insert-sort.md">直接插入排序</a>、<a href="data-structure/sort/shell-sort.md">希尔排序</a>、<a href="data-structure/sort/selection-sort.md">简单选择排序</a>、<a href="data-structure/sort/heap-sort.md">堆排序</a>、<a href="data-structure/sort/merge-sort.md">归并排序</a>、<a href="data-structure/sort/radix-sort.md">基数排序</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="books-学习资源"><a href="#books-学习资源" class="headerlink" title=":books: 学习资源"></a>:books: 学习资源</h2><h3 id="书"><a href="#书" class="headerlink" title="书"></a>书</h3><h4 id="刷题必备"><a href="#刷题必备" class="headerlink" title="刷题必备"></a>刷题必备</h4><ul>
-<li>《剑指 offer》</li>
-<li>《编程之美》</li>
-<li>《编程之法:面试和算法心得》</li>
-<li>《算法谜题》 都是思维题</li>
-</ul>
-<h4 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h4><ul>
-<li>《<a href="https://www.amazon.cn/gp/product/B00SFZH0DC/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B00SFZH0DC&amp;linkCode=as2&amp;tag=vastwork-23" target="_blank" rel="noopener">编程珠玑（第 2 版）</a>》</li>
-<li>《<a href="https://www.amazon.cn/gp/product/B0150BMQDM/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B0150BMQDM&amp;linkCode=as2&amp;tag=vastwork-23" target="_blank" rel="noopener">编程珠玑（续）</a>》</li>
-<li>《<a href="https://www.amazon.cn/gp/product/B01LDG2DSG/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B01LDG2DSG&amp;linkCode=as2&amp;tag=vastwork-23" target="_blank" rel="noopener">数据结构与算法分析 : C++描述（第 4 版）</a>》</li>
-<li>《<a href="https://www.amazon.cn/gp/product/B002WC7NGS/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B002WC7NGS&amp;linkCode=as2&amp;tag=vastwork-23" target="_blank" rel="noopener">数据结构与算法分析 : C 语言描述（第 2 版）</a>》</li>
-<li>《<a href="https://www.amazon.cn/gp/product/B01CNP0CG6/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B01CNP0CG6&amp;linkCode=as2&amp;tag=vastwork-23" target="_blank" rel="noopener">数据结构与算法分析 : Java 语言描述（第 2 版）</a>》</li>
-<li>《<a href="https://www.amazon.cn/gp/product/B009OCFQ0O/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B009OCFQ0O&amp;linkCode=as2&amp;tag=vastwork-23" target="_blank" rel="noopener">算法（第 4 版）</a>》- 这本近千页的书只有 6 章,其中四章分别是排序，查找，图，字符串，足见介绍细致</li>
-</ul>
-<h4 id="算法设计"><a href="#算法设计" class="headerlink" title="算法设计"></a>算法设计</h4><ul>
-<li>《<a href="https://www.amazon.cn/gp/product/B00S4HCQUI/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B00S4HCQUI&amp;linkCode=as2&amp;tag=vastwork-23" target="_blank" rel="noopener">算法设计与分析基础（第 3 版）</a>》</li>
-<li>《算法引论》 - 告诉你如何创造算法 断货</li>
-<li>《Algorithm Design Manual》 - 算法设计手册 红皮书</li>
-<li><a href="https://www.amazon.cn/gp/product/B00AK7BYJY/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B00AK7BYJY&amp;linkCode=as2&amp;tag=vastwork-23" target="_blank" rel="noopener">《算法导论》</a> - 是一本对算法介绍比较全面的经典书籍</li>
-<li>《Algorithms on Strings,Trees and Sequences》</li>
-<li>《Advanced Data Structures》 - 各种诡异高级的数据结构和算法 如元胞自动机、斐波纳契堆、线段树 600 块</li>
-</ul>
-<h3 id="参考链接和学习网站"><a href="#参考链接和学习网站" class="headerlink" title="参考链接和学习网站"></a>参考链接和学习网站</h3><ul>
-<li><a href="https://github.com/nonstriater/Learn-Algorithms" target="_blank" rel="noopener">https://github.com/nonstriater/Learn-Algorithms</a></li>
-<li><a href="https://github.com/trekhleb/javascript-algorithms" target="_blank" rel="noopener">https://github.com/trekhleb/javascript-algorithms</a></li>
-<li><a href="https://github.com/kdn251/interviews/blob/master/README-zh-cn.md#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84" target="_blank" rel="noopener">https://github.com/kdn251/interviews/blob/master/README-zh-cn.md#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84</a></li>
-<li><a href="http://blog.csdn.net/v_july_v" target="_blank" rel="noopener">July 博客</a><ul>
-<li>《数学建模十大经典算法》</li>
-<li>《数据挖掘领域十大经典算法》</li>
-<li>《十道海量数据处理面试题》</li>
-<li>《数字图像处理领域的二十四个经典算法》</li>
-<li>《精选微软等公司经典的算法面试 100 题》</li>
-</ul>
-</li>
-<li><a href="https://github.com/julycoding/The-Art-Of-Programming-By-July" target="_blank" rel="noopener">The-Art-Of-Programming-By-July</a></li>
-<li><a href="http://blog.csdn.net/column/details/ms100.html" target="_blank" rel="noopener">微软面试 100 题</a></li>
-<li><a href="http://blog.csdn.net/v_JULY_v/article/details/6460494" target="_blank" rel="noopener">程序员编程艺术</a></li>
-</ul>
-<h3 id="基本算法演示"><a href="#基本算法演示" class="headerlink" title="基本算法演示"></a>基本算法演示</h3><ul>
-<li><a href="http://sjjg.js.zwu.edu.cn/SFXX/sf1/sfys.html" target="_blank" rel="noopener">http://sjjg.js.zwu.edu.cn/SFXX/sf1/sfys.html</a></li>
-<li><a href="http://www.cs.usfca.edu/\~galles/visualization/Algorithms.html" target="_blank" rel="noopener">http://www.cs.usfca.edu/\~galles/visualization/Algorithms.html</a></li>
-</ul>
-<h3 id="编程网站"><a href="#编程网站" class="headerlink" title="编程网站"></a>编程网站</h3><ul>
-<li><a href="http://leetcode.com/" target="_blank" rel="noopener">leetcode</a></li>
-<li><a href="http://openjudge.cn/" target="_blank" rel="noopener">openjudge</a> 开放在线程序评测平台，可以创建自己的 OJ 小组 <a href="http://ac.jobdu.com/index.php" target="_blank" rel="noopener">九度 OJ</a></li>
-<li>这有个<a href="http://www.java3z.com/cwbwebhome/article/article19/res041.html" target="_blank" rel="noopener">ACM 训练方案</a></li>
-</ul>
-<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><ul>
-<li><a href="https://www.coursera.org/learn/gaoji-shuju-jiegou/" target="_blank" rel="noopener">高级数据结构和算法</a> 北大教授张铭老师在 coursera 上的课程。完成这门课之时，你将掌握多维数组、广义表、Trie 树、AVL 树、伸展树等高级数据结构，并结合内排序、外排序、检索、索引有关的算法，高效地解决现实生活中一些比较复杂的应用问题。当然 coursera 上也还有很多其它算法方面的视频课程。</li>
-<li><a href="https://class.coursera.org/algorithms-001/lecture" target="_blank" rel="noopener">算法设计与分析 Design and Analysis of Algorithms</a> 由北大教授 Wanling Qu 在 coursera 讲授的一门算法课程。首先介绍一些与算法有关的基础知识，然后阐述经典的算法设计思想和分析技术，主要涉及的算法设计技术是：分治策略、动态规划、贪心法、回溯与分支限界等。每个视频都配有相应的讲义（pdf 文件）以便阅读和复习。</li>
-</ul>
-<h2 id="door-传送门"><a href="#door-传送门" class="headerlink" title=":door: 传送门"></a>:door: 传送门</h2><p>| <a href="https://github.com/dunwu/notes" target="_blank" rel="noopener">回首頁</a> |</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
     
 
     
@@ -2262,15 +2314,12 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/page/18/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/blog/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/39/">39</a><a class="extend next" rel="next" href="/blog/page/20/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/blog/page/18/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/blog/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/39/">39</a><a class="extend next" rel="next" href="/blog/page/20/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -2286,14 +2335,13 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -2303,42 +2351,226 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/blog/archives/">
+                
+                    <span class="site-state-item-count">381</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/blog/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/blog/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">381</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/blog/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">76</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">76</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -2351,32 +2583,44 @@
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/dunwu" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:forbreak@163.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/dunwu" title="GitHub &rarr; https://github.com/dunwu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:forbreak@163.com" title="E-Mail &rarr; mailto:forbreak@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
             </div>
           
 
           
-          
 
           
           
 
+          
+            
+          
           
 
         </div>
-      </section>
+      </div>
 
       
 
@@ -2384,6 +2628,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -2392,12 +2637,28 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-paper-plane"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Zhang Peng</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">2.1m</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">31:18</span>
   
 </div>
 
@@ -2417,6 +2678,7 @@
 
 
 
+
         
       </div>
     </footer>
@@ -2425,16 +2687,21 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -2448,100 +2715,16 @@
 
 
 
-  
-
-
-  
-
-
-
-
-
-
 
 
 
 
 
   
+    
+    
   
-    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
@@ -2555,341 +2738,157 @@
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/blog/" + search_path;
-    // monitor main search box;
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
+
+  
+  <script src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/blog/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/blog/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/blog/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/blog/js/src/bootstrap.js?v=7.0.1"></script>
+
+
+  
+  
+
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+      
+      user-select: none;
+      outline: 0;
     }
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      
+        right: 4px;
+        top: 8px;
+      
     }
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === '') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1;
     }
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; // Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.readOnly = true;
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, code.length);
+        ta.readOnly = false;
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); // For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
   </script>
 
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

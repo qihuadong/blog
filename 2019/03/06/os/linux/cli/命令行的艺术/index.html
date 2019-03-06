@@ -2,14 +2,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +29,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -38,9 +45,22 @@
 
 
 
-  
-  
-  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.0.1" color="#222">
 
 
 
@@ -48,71 +68,18 @@
 
 
 
-<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
-
-
-
-
-
-
-<meta name="description" content="转载自 https://github.com/jlevy/the-art-of-command-line   Čeština ∙ Deutsch ∙ Ελληνικά ∙ English ∙ Español ∙ Français ∙ Indonesia ∙ Italiano ∙ 日本語 ∙ 한국어 ∙ Português ∙ Română ∙ Русский ∙ Slovenščina ∙ Ук">
-<meta property="og:type" content="article">
-<meta property="og:title" content="命令行的艺术">
-<meta property="og:url" content="https://dunwu.github.io/2019/03/06/os/linux/cli/命令行的艺术/index.html">
-<meta property="og:site_name" content="张鹏的博客">
-<meta property="og:description" content="转载自 https://github.com/jlevy/the-art-of-command-line   Čeština ∙ Deutsch ∙ Ελληνικά ∙ English ∙ Español ∙ Français ∙ Indonesia ∙ Italiano ∙ 日本語 ∙ 한국어 ∙ Português ∙ Română ∙ Русский ∙ Slovenščina ∙ Ук">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://gitter.im/jlevy/the-art-of-command-line?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
-<meta property="og:image" content="https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/cowsay.png">
-<meta property="og:image" content="http://creativecommons.org/licenses/by-sa/4.0/">
-<meta property="og:updated_time" content="2019-03-06T08:43:46.140Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="命令行的艺术">
-<meta name="twitter:description" content="转载自 https://github.com/jlevy/the-art-of-command-line   Čeština ∙ Deutsch ∙ Ελληνικά ∙ English ∙ Español ∙ Français ∙ Indonesia ∙ Italiano ∙ 日本語 ∙ 한국어 ∙ Português ∙ Română ∙ Русский ∙ Slovenščina ∙ Ук">
-<meta name="twitter:image" content="https://gitter.im/jlevy/the-art-of-command-line?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/blog/',
     scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -124,12 +91,43 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="转载自 https://github.com/jlevy/the-art-of-command-line   Čeština ∙ Deutsch ∙ Ελληνικά ∙ English ∙ Español ∙ Français ∙ Indonesia ∙ Italiano ∙ 日本語 ∙ 한국어 ∙ Português ∙ Română ∙ Русский ∙ Slovenščina ∙ Ук">
+<meta property="og:type" content="article">
+<meta property="og:title" content="命令行的艺术">
+<meta property="og:url" content="https://dunwu.github.io/2019/03/06/os/linux/cli/命令行的艺术/index.html">
+<meta property="og:site_name" content="张鹏的博客">
+<meta property="og:description" content="转载自 https://github.com/jlevy/the-art-of-command-line   Čeština ∙ Deutsch ∙ Ελληνικά ∙ English ∙ Español ∙ Français ∙ Indonesia ∙ Italiano ∙ 日本語 ∙ 한국어 ∙ Português ∙ Română ∙ Русский ∙ Slovenščina ∙ Ук">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gitter.im/jlevy/the-art-of-command-line?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
+<meta property="og:image" content="https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/cowsay.png">
+<meta property="og:image" content="http://creativecommons.org/licenses/by-sa/4.0/">
+<meta property="og:updated_time" content="2019-03-06T08:43:46.140Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="命令行的艺术">
+<meta name="twitter:description" content="转载自 https://github.com/jlevy/the-art-of-command-line   Čeština ∙ Deutsch ∙ Ελληνικά ∙ English ∙ Español ∙ Français ∙ Indonesia ∙ Italiano ∙ 日本語 ∙ 한국어 ∙ Português ∙ Română ∙ Русский ∙ Slovenščina ∙ Ук">
+<meta name="twitter:image" content="https://gitter.im/jlevy/the-art-of-command-line?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
+
+
+
+  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
+
+
+
 
   <link rel="canonical" href="https://dunwu.github.io/2019/03/06/os/linux/cli/命令行的艺术/">
 
 
 
-
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>命令行的艺术 | 张鹏的博客</title>
   
@@ -141,9 +139,38 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -155,7 +182,7 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -165,13 +192,16 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">大道至简，知易行难</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -179,110 +209,163 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/blog/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/blog/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/blog/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/blog/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/blog/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+            
+            
+            
+              
+              
+
+  
+  
+    
+  
+  <li class="menu-item menu-item-docs">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/docs/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>docs</a>
+
+  </li>
+
+
+            
+          
+            
+            
+            
+          
+        
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -293,6 +376,10 @@
 
   
   
+  
+
+  
+    <div class="reading-progress-bar"></div>
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -317,11 +404,20 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">命令行的艺术</h1>
+          <h1 class="post-title" itemprop="name headline">命令行的艺术<a href="https://github.com/dunwu/blog/blob/master/source/_posts/os/linux/cli/命令行的艺术.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil"></i></a>
+
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -329,13 +425,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -343,6 +444,7 @@
 
           
             
+            
           
 
           
@@ -350,6 +452,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">17k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">16 分钟</span>
+              
+            </div>
           
 
           
@@ -446,7 +576,7 @@
 <li><p>如果你输入命令的时候中途改了主意，按下 <strong>alt-#</strong> 在行首添加 <code>#</code> 把它当做注释再按下回车执行（或者依次按下 <strong>ctrl-a</strong>， <strong>#</strong>， <strong>enter</strong>）。这样做的话，之后借助命令行历史记录，你可以很方便恢复你刚才输入到一半的命令。</p>
 </li>
 <li><p>使用 <code>xargs</code> （ 或 <code>parallel</code>）。他们非常给力。注意到你可以控制每行参数个数（<code>-L</code>）和最大并行数（<code>-P</code>）。如果你不确定它们是否会按你想的那样工作，先使用 <code>xargs echo</code> 查看一下。此外，使用 <code>-I{}</code> 会很方便。例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find . -name <span class="string">'*.py'</span> | xargs grep some_function</span><br><span class="line">cat hosts | xargs -I&#123;&#125; ssh root@&#123;&#125; hostname</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find . -name <span class="string">'*.py'</span> | xargs grep some_function</span><br><span class="line">cat hosts | xargs -I&#123;&#125; ssh root@&#123;&#125; hostname</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>pstree -p</code> 以一种优雅的方式展示进程树。</p>
 </li>
@@ -473,20 +603,20 @@
 <li><p>当变量和文件名中包含空格的时候要格外小心。Bash 变量要用引号括起来，比如 <code>&quot;$FOO&quot;</code>。尽量使用 <code>-0</code> 或 <code>-print0</code> 选项以便用 NULL 来分隔文件名，例如 <code>locate -0 pattern | xargs -0 ls -al</code> 或 <code>find / -print0 -type d | xargs -0 ls -al</code>。如果 for 循环中循环访问的文件名含有空字符（空格、tab 等字符），只需用 <code>IFS=$&#39;\n&#39;</code> 把内部字段分隔符设为换行符。</p>
 </li>
 <li><p>在 Bash 脚本中，使用 <code>set -x</code> 去调试输出（或者使用它的变体 <code>set -v</code>，它会记录原始输入，包括多余的参数和注释）。尽可能地使用严格模式：使用 <code>set -e</code> 令脚本在发生错误时退出而不是继续运行；使用 <code>set -u</code> 来检查是否使用了未赋值的变量；试试 <code>set -o pipefail</code>，它可以监测管道中的错误。当牵扯到很多脚本时，使用 <code>trap</code> 来检测 ERR 和 EXIT。一个好的习惯是在脚本文件开头这样写，这会使它能够检测一些错误，并在错误发生时中断程序并输出信息：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> -euo pipefail</span><br><span class="line"><span class="built_in">trap</span> <span class="string">"echo 'error: Script failed: see failed command above'"</span> ERR</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> -euo pipefail</span><br><span class="line"><span class="built_in">trap</span> <span class="string">"echo 'error: Script failed: see failed command above'"</span> ERR</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在 Bash 脚本中，子 shell（使用括号 <code>(...)</code>）是一种组织参数的便捷方式。一个常见的例子是临时地移动工作路径，代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># do something in current dir</span></span><br><span class="line">(<span class="built_in">cd</span> /some/other/dir &amp;&amp; other-command)</span><br><span class="line"><span class="comment"># continue in original dir</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># do something in current dir</span></span><br><span class="line">(<span class="built_in">cd</span> /some/other/dir &amp;&amp; other-command)</span><br><span class="line"><span class="comment"># continue in original dir</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在 Bash 中，变量有许多的扩展方式。<code>${name:?error message}</code> 用于检查变量是否存在。此外，当 Bash 脚本只需要一个参数时，可以使用这样的代码 <code>input_file=${1:?usage: $0 input_file}</code>。在变量为空时使用默认值：<code>${name:-default}</code>。如果你要在之前的例子中再加一个（可选的）参数，可以使用类似这样的代码 <code>output_file=${2:-logfile}</code>，如果省略了 $2，它的值就为空，于是 <code>output_file</code> 就会被设为 <code>logfile</code>。数学表达式：<code>i=$(( (i + 1) % 5 ))</code>。序列：<code>{1..10}</code>。截断字符串：<code>${var%suffix}</code> 和 <code>${var#prefix}</code>。例如，假设 <code>var=foo.pdf</code>，那么 <code>echo ${var%.pdf}.txt</code> 将输出 <code>foo.txt</code>。</p>
 </li>
 <li><p>使用括号扩展（<code>{</code>…<code>}</code>）来减少输入相似文本，并自动化文本组合。这在某些情况下会很有用，例如 <code>mv foo.{txt,pdf} some-dir</code>（同时移动两个文件），<code>cp somefile{,.bak}</code>（会被扩展成 <code>cp somefile somefile.bak</code>）或者 <code>mkdir -p test-{a,b,c}/subtest-{1,2,3}</code>（会被扩展成所有可能的组合，并创建一个目录树）。</p>
 </li>
 <li><p>通过使用 <code>&lt;(some command)</code> 可以将输出视为文件。例如，对比本地文件 <code>/etc/hosts</code> 和一个远程文件：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diff /etc/hosts &lt;(ssh somehost cat /etc/hosts)</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">diff /etc/hosts &lt;(ssh somehost cat /etc/hosts)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>编写脚本时，你可能会想要把代码都放在大括号里。缺少右括号的话，代码就会因为语法错误而无法执行。如果你的脚本是要放在网上分享供他人使用的，这样的写法就体现出它的好处了，因为这样可以防止下载不完全代码被执行。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">      <span class="comment"># 在这里写代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">      <span class="comment"># 在这里写代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>了解 Bash 中的“here documents”，例如 <code>cat &lt;&lt;EOF ...</code>。</p>
 </li>
@@ -499,14 +629,14 @@
 <li><p>ssh 中，了解如何使用 <code>-L</code> 或 <code>-D</code>（偶尔需要用 <code>-R</code>）开启隧道是非常有用的，比如当你需要从一台远程服务器上访问 web 页面。</p>
 </li>
 <li><p>对 ssh 设置做一些小优化可能是很有用的，例如这个 <code>\~/.ssh/config</code> 文件包含了防止特定网络环境下连接断开、压缩数据、多通道等选项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">TCPKeepAlive=yes</span><br><span class="line">ServerAliveInterval=15</span><br><span class="line">ServerAliveCountMax=6</span><br><span class="line">Compression=yes</span><br><span class="line">ControlMaster auto</span><br><span class="line">ControlPath /tmp/%r@%h:%p</span><br><span class="line">ControlPersist yes</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="attribute">TCPKeepAlive</span>=<span class="literal">yes</span></span><br><span class="line"><span class="attribute">ServerAliveInterval</span>=15</span><br><span class="line"><span class="attribute">ServerAliveCountMax</span>=6</span><br><span class="line"><span class="attribute">Compression</span>=<span class="literal">yes</span></span><br><span class="line">ControlMaster auto</span><br><span class="line">ControlPath /tmp/%r@%h:%p</span><br><span class="line">ControlPersist <span class="literal">yes</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>一些其他的关于 ssh 的选项是与安全相关的，应当小心翼翼的使用。例如你应当只能在可信任的网络中启用 <code>StrictHostKeyChecking=no</code>，<code>ForwardAgent=yes</code>。</p>
 </li>
 <li><p>考虑使用 <a href="https://mosh.mit.edu/" target="_blank" rel="noopener"><code>mosh</code></a> 作为 ssh 的替代品，它使用 UDP 协议。它可以避免连接被中断并且对带宽需求更小，但它需要在服务端做相应的配置。</p>
 </li>
 <li><p>获取八进制形式的文件访问权限（修改系统设置时通常需要，但 <code>ls</code> 的功能不那么好用并且通常会搞砸），可以使用类似如下的代码：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">stat</span> -c <span class="string">'%A %a %n'</span> /etc/timezone</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">stat</span> -c <span class="string">'%A %a %n'</span> /etc/timezone</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>使用 <a href="https://github.com/mooz/percol" target="_blank" rel="noopener"><code>percol</code></a> 或者 <a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener"><code>fzf</code></a> 可以交互式地从另一个命令输出中选取值。</p>
 </li>
@@ -521,7 +651,7 @@
 <li><p>了解命令行的 <a href="https://wiki.debian.org/CommonErrorMessages/ArgumentListTooLong" target="_blank" rel="noopener">128K 限制</a>。使用通配符匹配大量文件名时，常会遇到“Argument list too long”的错误信息。（这种情况下换用 <code>find</code> 或 <code>xargs</code> 通常可以解决。）</p>
 </li>
 <li><p>当你需要一个基本的计算器时，可以使用 <code>python</code> 解释器（当然你要用 python 的时候也是这样）。例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 2+3</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="number">2</span>+<span class="number">3</span></span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="文件及数据处理"><a href="#文件及数据处理" class="headerlink" title="文件及数据处理"></a>文件及数据处理</h2><ul>
@@ -560,13 +690,13 @@
 <li><p>了解如何使用 <code>awk</code> 和 <code>sed</code> 来进行简单的数据处理。 参阅 <a href="#one-liners">One-liners</a> 获取示例。</p>
 </li>
 <li><p>替换一个或多个文件中出现的字符串：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perl -pi.bak -e <span class="string">'s/old-string/new-string/g'</span> my-files-*.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">perl -pi.bak -e <span class="string">'s/old-string/new-string/g'</span> my-files-*.txt</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>使用 <a href="https://github.com/jlevy/repren" target="_blank" rel="noopener"><code>repren</code></a> 来批量重命名文件，或是在多个文件中搜索替换内容。（有些时候 <code>rename</code> 命令也可以批量重命名，但要注意，它在不同 Linux 发行版中的功能并不完全一样。）</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将文件、目录和内容全部重命名 foo -&gt; bar:</span></span><br><span class="line">repren --full --preserve-case --from foo --to bar .</span><br><span class="line"><span class="comment"># 还原所有备份文件 whatever.bak -&gt; whatever:</span></span><br><span class="line">repren --renames --from <span class="string">'(.*)\.bak'</span> --to <span class="string">'\1'</span> *.bak</span><br><span class="line"><span class="comment"># 用 rename 实现上述功能（若可用）:</span></span><br><span class="line">rename <span class="string">'s/\.bak$//'</span> *.bak</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 将文件、目录和内容全部重命名 foo -&gt; bar:</span></span><br><span class="line">repren --full --preserve-case --from foo --to bar .</span><br><span class="line"><span class="comment"># 还原所有备份文件 whatever.bak -&gt; whatever:</span></span><br><span class="line">repren --renames --from <span class="string">'(.*)\.bak'</span> --to <span class="string">'\1'</span> *.bak</span><br><span class="line"><span class="comment"># 用 rename 实现上述功能（若可用）:</span></span><br><span class="line">rename <span class="string">'s/\.bak$//'</span> *.bak</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>根据 man 页面的描述，<code>rsync</code> 是一个快速且非常灵活的文件复制工具。它闻名于设备之间的文件同步，但其实它在本地情况下也同样有用。在安全设置允许下，用 <code>rsync</code> 代替 <code>scp</code> 可以实现文件续传，而不用重新从头开始。它同时也是删除大量文件的<a href="https://web.archive.org/web/20130929001850/http://linuxnote.net/jianingy/en/linux/a-fast-way-to-remove-huge-number-of-files.html" target="_blank" rel="noopener">最快方法</a>之一：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir empty &amp;&amp; rsync -r --delete empty/ some-dir &amp;&amp; rmdir some-dir</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">mkdir empty &amp;&amp; rsync -r --delete empty/ some-dir &amp;&amp; rmdir some-dir</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>若要在复制文件时获取当前进度，可使用 <code>pv</code>，<a href="https://github.com/dmerejkowsky/pycp" target="_blank" rel="noopener"><code>pycp</code></a>，<a href="https://github.com/Xfennec/progress" target="_blank" rel="noopener"><code>progress</code></a>，<code>rsync --progress</code>。若所执行的复制为block块拷贝，可以使用 <code>dd status=progress</code>。</p>
 </li>
@@ -585,7 +715,7 @@
 <li><p>制作二进制差分文件（Delta 压缩），使用 <code>xdelta3</code>。</p>
 </li>
 <li><p>使用 <code>iconv</code> 更改文本编码。需要更高级的功能，可以使用 <code>uconv</code>，它支持一些高级的 Unicode 功能。例如，这条命令移除了所有重音符号：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uconv -f utf-8 -t utf-8 -x <span class="string">'::Any-Lower; ::Any-NFD; [:Nonspacing Mark:] &gt;; ::Any-NFC; '</span> &lt; input.txt &gt; output.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">uconv -f utf-8 -t utf-8 -x <span class="string">'::Any-Lower; ::Any-NFD; [:Nonspacing Mark:] &gt;; ::Any-NFC; '</span> &lt; input.txt &gt; output.txt</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>拆分文件可以使用 <code>split</code>（按大小拆分）和 <code>csplit</code>（按模式拆分）。</p>
 </li>
@@ -596,7 +726,7 @@
 <li><p>文件属性可以通过 <code>chattr</code> 进行设置，它比文件权限更加底层。例如，为了保护文件不被意外删除，可以使用不可修改标记：<code>sudo chattr +i /critical/directory/or/file</code></p>
 </li>
 <li><p>使用 <code>getfacl</code> 和 <code>setfacl</code> 以保存和恢复文件权限。例如：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">getfacl -R /some/path &gt; permissions.txt</span><br><span class="line">setfacl --restore=permissions.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">getfacl -R /some/path &gt; permissions.txt</span><br><span class="line">setfacl --restore=permissions.txt</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>为了高效地创建空文件，请使用 <code>truncate</code>（创建<a href="https://zh.wikipedia.org/wiki/稀疏文件" target="_blank" rel="noopener">稀疏文件</a>），<code>fallocate</code>（用于 ext4，xfs，btrf 和 ocfs2 文件系统），<code>xfs_mkfile</code>（适用于几乎所有的文件系统，包含在 xfsprogs 包中），<code>mkfile</code>（用于类 Unix 操作系统，比如 Solaris 和 Mac OS）。</p>
 </li>
@@ -646,25 +776,25 @@
 <h2 id="单行脚本"><a href="#单行脚本" class="headerlink" title="单行脚本"></a>单行脚本</h2><p>一些命令组合的例子：</p>
 <ul>
 <li><p>当你需要对文本文件做集合交、并、差运算时，<code>sort</code> 和 <code>uniq</code> 会是你的好帮手。具体例子请参照代码后面的，此处假设 <code>a</code> 与 <code>b</code> 是两内容不同的文件。这种方式效率很高，并且在小文件和上 G 的文件上都能运用（注意尽管在 <code>/tmp</code> 在一个小的根分区上时你可能需要 <code>-T</code> 参数，但是实际上 <code>sort</code> 并不被内存大小约束），参阅前文中关于 <code>LC_ALL</code> 和 <code>sort</code> 的 <code>-u</code> 参数的部分。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sort a b | uniq &gt; c   <span class="comment"># c 是 a 并 b</span></span><br><span class="line">sort a b | uniq -d &gt; c   <span class="comment"># c 是 a 交 b</span></span><br><span class="line">sort a b b | uniq -u &gt; c   <span class="comment"># c 是 a - b</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sort a b | uniq &gt; c   <span class="comment"># c 是 a 并 b</span></span><br><span class="line">sort a b | uniq -d &gt; c   <span class="comment"># c 是 a 交 b</span></span><br><span class="line">sort a b b | uniq -u &gt; c   <span class="comment"># c 是 a - b</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>使用 <code>grep . *</code>（每行都会附上文件名）或者 <code>head -100 *</code>（每个文件有一个标题）来阅读检查目录下所有文件的内容。这在检查一个充满配置文件的目录（如 <code>/sys</code>、<code>/proc</code>、<code>/etc</code>）时特别好用。</p>
 </li>
 </ul>
 <ul>
 <li><p>计算文本文件第三列中所有数的和（可能比同等作用的 Python 代码快三倍且代码量少三倍）：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk <span class="string">'&#123; x += $3 &#125; END &#123; print x &#125;'</span> myfile</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">awk <span class="string">'&#123; x += $3 &#125; END &#123; print x &#125;'</span> myfile</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>如果你想在文件树上查看大小/日期，这可能看起来像递归版的 <code>ls -l</code> 但比 <code>ls -lR</code> 更易于理解：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -<span class="built_in">type</span> f -ls</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">find . -<span class="built_in">type</span> f -ls</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>假设你有一个类似于 web 服务器日志文件的文本文件，并且一个确定的值只会出现在某些行上，假设一个 <code>acct_id</code> 参数在 URI 中。如果你想计算出每个 <code>acct_id</code> 值有多少次请求，使用如下代码：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">egrep -o <span class="string">'acct_id=[0-9]+'</span> access.log | cut -d= -f2 | sort | uniq -c | sort -rn</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">egrep -o <span class="string">'acct_id=[0-9]+'</span> access.log | cut -d= -f2 | sort | uniq -c | sort -rn</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>要持续监测文件改动，可以使用 <code>watch</code>，例如检查某个文件夹中文件的改变，可以用 <code>watch -d -n 2 &#39;ls -rtlh | tail&#39;</code>；或者在排查 WiFi 设置故障时要监测网络设置的更改，可以用 <code>watch -d -n 2 ifconfig</code>。</p>
 </li>
 <li><p>运行这个函数从这篇文档中随机获取一条技巧（解析 Markdown 文件并抽取项目）：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">taocl</span></span>() &#123;</span><br><span class="line">  curl -s https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-zh.md|</span><br><span class="line">    pandoc -f markdown -t html |</span><br><span class="line">    iconv -f <span class="string">'utf-8'</span> -t <span class="string">'unicode'</span> |</span><br><span class="line">    xmlstarlet fo --html --dropdtd |</span><br><span class="line">    xmlstarlet sel -t -v <span class="string">"(html/body/ul/li[count(p)&gt;0])[<span class="variable">$RANDOM</span> mod last()+1]"</span> |</span><br><span class="line">    xmlstarlet unesc | fmt -80</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">taocl</span></span>() &#123;</span><br><span class="line">  curl -s https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-zh.md|</span><br><span class="line">    pandoc -f markdown -t html |</span><br><span class="line">    iconv -f <span class="string">'utf-8'</span> -t <span class="string">'unicode'</span> |</span><br><span class="line">    xmlstarlet fo --html --dropdtd |</span><br><span class="line">    xmlstarlet sel -t -v <span class="string">"(html/body/ul/li[count(p)&gt;0])[<span class="variable">$RANDOM</span> mod last()+1]"</span> |</span><br><span class="line">    xmlstarlet unesc | fmt -80</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="冷门但有用"><a href="#冷门但有用" class="headerlink" title="冷门但有用"></a>冷门但有用</h2><ul>
@@ -885,12 +1015,22 @@
 
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -906,8 +1046,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2019/03/06/network/data-link-layer/" rel="next" title="数据链路层">
-                <i class="fa fa-chevron-left"></i> 数据链路层
+              <a href="/blog/2019/03/06/os/docker/basics/docker-dockerfile/" rel="next" title="Dockerfile">
+                <i class="fa fa-chevron-left"></i> Dockerfile
               </a>
             
           </div>
@@ -916,8 +1056,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2019/03/06/style/dir-style/" rel="prev" title="目录规范">
-                目录规范 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2019/03/06/programming/java/javacore/appendix/resources/" rel="prev" title="资源">
+                资源 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -934,17 +1074,10 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -964,7 +1097,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -980,7 +1112,7 @@
         </ul>
       
 
-      <section class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -990,42 +1122,226 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/blog/archives/">
+                
+                    <span class="site-state-item-count">381</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/blog/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/blog/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">381</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/blog/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">76</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">76</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -1038,48 +1354,61 @@
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/dunwu" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:forbreak@163.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/dunwu" title="GitHub &rarr; https://github.com/dunwu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:forbreak@163.com" title="E-Mail &rarr; mailto:forbreak@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
             </div>
           
 
           
-          
 
           
           
 
+          
+            
+          
           
 
         </div>
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#命令行的艺术"><span class="nav-number">1.</span> <span class="nav-text">命令行的艺术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础"><span class="nav-number">1.2.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日常使用"><span class="nav-number">1.3.</span> <span class="nav-text">日常使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件及数据处理"><span class="nav-number">1.4.</span> <span class="nav-text">文件及数据处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统调试"><span class="nav-number">1.5.</span> <span class="nav-text">系统调试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单行脚本"><span class="nav-number">1.6.</span> <span class="nav-text">单行脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#冷门但有用"><span class="nav-number">1.7.</span> <span class="nav-text">冷门但有用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#仅限-OS-X-系统"><span class="nav-number">1.8.</span> <span class="nav-text">仅限 OS X 系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#仅限-Windows-系统"><span class="nav-number">1.9.</span> <span class="nav-text">仅限 Windows 系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在-Winodws-下获取-Unix-工具"><span class="nav-number">1.9.1.</span> <span class="nav-text">在 Winodws 下获取 Unix 工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实用-Windows-命令行工具"><span class="nav-number">1.9.2.</span> <span class="nav-text">实用 Windows 命令行工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cygwin-技巧"><span class="nav-number">1.9.3.</span> <span class="nav-text">Cygwin 技巧</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更多资源"><span class="nav-number">1.10.</span> <span class="nav-text">更多资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#免责声明"><span class="nav-number">1.11.</span> <span class="nav-text">免责声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#授权条款"><span class="nav-number">1.12.</span> <span class="nav-text">授权条款</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#命令行的艺术"><span class="nav-text">命令行的艺术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础"><span class="nav-text">基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日常使用"><span class="nav-text">日常使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件及数据处理"><span class="nav-text">文件及数据处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统调试"><span class="nav-text">系统调试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单行脚本"><span class="nav-text">单行脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#冷门但有用"><span class="nav-text">冷门但有用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#仅限-OS-X-系统"><span class="nav-text">仅限 OS X 系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#仅限-Windows-系统"><span class="nav-text">仅限 Windows 系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在-Winodws-下获取-Unix-工具"><span class="nav-text">在 Winodws 下获取 Unix 工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实用-Windows-命令行工具"><span class="nav-text">实用 Windows 命令行工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cygwin-技巧"><span class="nav-text">Cygwin 技巧</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更多资源"><span class="nav-text">更多资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#免责声明"><span class="nav-text">免责声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#授权条款"><span class="nav-text">授权条款</span></a></li></ol></li></ol></div>
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -1087,6 +1416,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -1095,12 +1425,28 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-paper-plane"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Zhang Peng</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">2.1m</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">31:18</span>
   
 </div>
 
@@ -1120,6 +1466,7 @@
 
 
 
+
         
       </div>
     </footer>
@@ -1128,16 +1475,21 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -1151,104 +1503,16 @@
 
 
 
-  
-
-
-  
-
-
-
-
-
-
 
 
 
 
 
   
+    
+    
   
-    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
@@ -1262,341 +1526,163 @@
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/blog/" + search_path;
-    // monitor main search box;
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
+
+  
+  <script src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/blog/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/blog/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/blog/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/blog/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/blog/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/blog/js/src/bootstrap.js?v=7.0.1"></script>
+
+
+  
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+      
+      user-select: none;
+      outline: 0;
     }
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      
+        right: 4px;
+        top: 8px;
+      
     }
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === '') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1;
     }
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; // Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.readOnly = true;
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, code.length);
+        ta.readOnly = false;
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); // For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
   </script>
 
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

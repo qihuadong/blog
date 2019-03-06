@@ -2,14 +2,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +29,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -36,59 +43,67 @@
 
 
 
+
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Muse',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
 
 
   
-  
-  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
 
-
-
-
-<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="javacore,concurrent,">
-
-
-
-
-
-  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
-
-
-
-
-
-
-<meta name="description" content="并发简介  并发术语 并发和并行 同步和异步 阻塞和非阻塞 进程和线程   多线程的优点 更好的资源利用 程序设计更简单 程序响应更快   多线程的风险 安全性问题 线程不安全的示例 竞态条件和临界区   活跃性问题 死锁（Deadlock） 活锁（Livelock） 饥饿（Starvation）   性能问题 上下文切换 资源限制     资料   并发术语学习并发编程，免不了大量接触一些术语。">
+  <meta name="description" content="并发简介  并发术语 并发和并行 同步和异步 阻塞和非阻塞 进程和线程   多线程的优点 更好的资源利用 程序设计更简单 程序响应更快   多线程的风险 安全性问题 线程不安全的示例 竞态条件和临界区   活跃性问题 死锁（Deadlock） 活锁（Livelock） 饥饿（Starvation）   性能问题 上下文切换 资源限制     资料   并发术语学习并发编程，免不了大量接触一些术语。">
 <meta name="keywords" content="javacore,concurrent">
 <meta property="og:type" content="article">
 <meta property="og:title" content="并发简介">
 <meta property="og:url" content="https://dunwu.github.io/2018/05/21/programming/java/javacore/concurrent/1-并发简介/index.html">
 <meta property="og:site_name" content="张鹏的博客">
 <meta property="og:description" content="并发简介  并发术语 并发和并行 同步和异步 阻塞和非阻塞 进程和线程   多线程的优点 更好的资源利用 程序设计更简单 程序响应更快   多线程的风险 安全性问题 线程不安全的示例 竞态条件和临界区   活跃性问题 死锁（Deadlock） 活锁（Livelock） 饥饿（Starvation）   性能问题 上下文切换 资源限制     资料   并发术语学习并发编程，免不了大量接触一些术语。">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/dunwu/images/master/images/java/concurrent/concurrent-vs-parallel.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/dunwu/images/master/images/java/concurrent/synchronous-vs-asynchronous.gif">
 <meta property="og:image" content="https://raw.githubusercontent.com/dunwu/images/master/images/java/concurrent/processes-vs-threads.jpg">
@@ -103,29 +118,8 @@
 
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/blog/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
+  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
+
 
 
 
@@ -133,7 +127,11 @@
 
 
 
-
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>并发简介 | 张鹏的博客</title>
   
@@ -145,9 +143,38 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -159,7 +186,7 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -169,13 +196,16 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">大道至简，知易行难</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -183,110 +213,163 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/blog/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/blog/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/blog/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/blog/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/blog/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+            
+            
+            
+              
+              
+
+  
+  
+    
+  
+  <li class="menu-item menu-item-docs">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/docs/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>docs</a>
+
+  </li>
+
+
+            
+          
+            
+            
+            
+          
+        
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -297,6 +380,10 @@
 
   
   
+  
+
+  
+    <div class="reading-progress-bar"></div>
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -321,11 +408,20 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">并发简介</h1>
+          <h1 class="post-title" itemprop="name headline">并发简介<a href="https://github.com/dunwu/blog/blob/master/source/_posts/programming/java/javacore/concurrent/1-并发简介.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil"></i></a>
+
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -333,13 +429,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-21T00:00:00+08:00">
-                2018-05-21
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-05-21 00:00:00" itemprop="dateCreated datePublished" datetime="2018-05-21T00:00:00+08:00">2018-05-21</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 16:43:46" itemprop="dateModified" datetime="2019-03-06T16:43:46+08:00">2019-03-06</time>
+              
             
           </span>
 
@@ -355,11 +468,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/javacore/" itemprop="url" rel="index">
-                    <span itemprop="name">javacore</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/javacore/" itemprop="url" rel="index"><span itemprop="name">javacore</span></a></span>
 
                 
                 
@@ -369,6 +478,7 @@
 
           
             
+            
           
 
           
@@ -376,6 +486,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">6.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">6 分钟</span>
+              
+            </div>
           
 
           
@@ -500,17 +638,17 @@
 <li>程序响应更灵敏</li>
 </ul>
 <h3 id="更好的资源利用"><a href="#更好的资源利用" class="headerlink" title="更好的资源利用"></a>更好的资源利用</h3><p>想象一下，一个应用程序需要从本地文件系统中读取和处理文件的情景。比方说，从磁盘读取一个文件需要 5 秒，处理一个文件需要 2 秒。处理两个文件则需要：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5秒读取文件A</span><br><span class="line">2秒处理文件A</span><br><span class="line">5秒读取文件B</span><br><span class="line">2秒处理文件B</span><br><span class="line">---------------------</span><br><span class="line">总共需要14秒</span><br></pre></td></tr></table></figure>
+<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line">5秒读取文件A</span><br><span class="line">2秒处理文件A</span><br><span class="line">5秒读取文件B</span><br><span class="line">2秒处理文件B</span><br><span class="line">---------------------</span><br><span class="line">总共需要14秒</span><br></pre></td></tr></table></figure>
 <p>从磁盘中读取文件的时候，大部分的 CPU 时间用于等待磁盘去读取数据。在这段时间里，CPU 非常的空闲。它可以做一些别的事情。通过改变操作的顺序，就能够更好的使用 CPU 资源。看下面的顺序：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">5秒读取文件A</span><br><span class="line">5秒读取文件B + 2秒处理文件A</span><br><span class="line">2秒处理文件B</span><br><span class="line">---------------------</span><br><span class="line">总共需要12秒</span><br></pre></td></tr></table></figure>
+<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line">5秒读取文件A</span><br><span class="line">5秒读取文件B + 2秒处理文件A</span><br><span class="line">2秒处理文件B</span><br><span class="line">---------------------</span><br><span class="line">总共需要12秒</span><br></pre></td></tr></table></figure>
 <p>CPU 等待第一个文件被读取完。然后开始读取第二个文件。当第二文件在被读取的时候，CPU 会去处理第一个文件。记住，在等待磁盘读取文件的时候，CPU 大 部分时间是空闲的。</p>
 <p>总的说来，CPU 能够在等待 IO 的时候做一些其他的事情。这个不一定就是磁盘 IO。它也可以是网络的 IO，或者用户输入。通常情况下，网络和磁盘的 IO 比 CPU 和内存的 IO 慢的多。</p>
 <h3 id="程序设计更简单"><a href="#程序设计更简单" class="headerlink" title="程序设计更简单"></a>程序设计更简单</h3><p>在单线程应用程序中，如果你想编写程序手动处理上面所提到的读取和处理的顺序，你必须记录每个文件读取和处理的状态。相反，你可以启动两个线程，每个线程处理一个文件的读取和操作。线程会在等待磁盘读取文件的过程中被阻塞。在等待的时候，其他的线程能够使用 CPU 去处理已经读取完的文件。其结果就是，磁盘总是在繁忙地读取不同的文件到内存中。这会带来磁盘和 CPU 利用率的提升。而且每个线程只需要记录一个文件，因此这种方式也很容易编程实现。</p>
 <h3 id="程序响应更快"><a href="#程序响应更快" class="headerlink" title="程序响应更快"></a>程序响应更快</h3><p>将一个单线程应用程序变成多线程应用程序的另一个常见的目的是实现一个响应更快的应用程序。设想一个服务器应用，它在某一个端口监听进来的请求。当一个请求到来时，它去处理这个请求，然后再返回去监听。</p>
 <p>服务器的流程如下所述：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(server is active) &#123;</span><br><span class="line">    listen <span class="keyword">for</span> request</span><br><span class="line">    process request</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(server is active) &#123;</span><br><span class="line">    listen <span class="keyword">for</span> request</span><br><span class="line">    process request</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果一个请求需要占用大量的时间来处理，在这段时间内新的客户端就无法发送请求给服务端。只有服务器在监听的时候，请求才能被接收。另一种设计是，监听线程把请求传递给工作者线程(worker thread)，然后立刻返回去监听。而工作者线程则能够处理这个请求并发送一个回复给客户端。这种设计如下所述：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(server is active) &#123;</span><br><span class="line">    listen <span class="keyword">for</span> request</span><br><span class="line">    hand request to worker thread</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(server is active) &#123;</span><br><span class="line">    listen <span class="keyword">for</span> request</span><br><span class="line">    hand request to worker thread</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这种方式，服务端线程迅速地返回去监听。因此，更多的客户端能够发送请求给服务端。这个服务也变得响应更快。</p>
 <p>桌面应用也是同样如此。如果你点击一个按钮开始运行一个耗时的任务，这个线程既要执行任务又要更新窗口和按钮，那么在任务执行的过程中，这个应用程序看起来好像没有反应一样。相反，任务可以传递给工作者线程（word thread)。当工作者线程在繁忙地处理任务的时候，窗口线程可以自由地响应其他用户的请求。当工作者线程完成任务的时候，它发送信号给窗口线程。窗口线程便可以更新应用程序窗口，并显示任务的结果。对用户而言，这种具有工作者线程设计的程序显得响应速度更快。</p>
 <h2 id="多线程的风险"><a href="#多线程的风险" class="headerlink" title="多线程的风险"></a>多线程的风险</h2><p>凡事有利有弊，引入多线程除了带来的好处以外，也产生了一些问题：</p>
@@ -523,11 +661,11 @@
 <p>线程安全很难定义。我所看到的对于线程安全的定义都太过抽象。</p>
 <p>所以，我觉得有必要反向理解，知道什么是线程不安全，那么就能定义线程安全的边界了。</p>
 <p>在同一程序中运行多个线程本身不会导致问题，问题在于多个线程访问了相同的资源。如：同一内存区（变量，数组，或对象）、系统（数据库，web services 等）或文件。</p>
-<h4 id="线程不安全的示例"><a href="#线程不安全的示例" class="headerlink" title="线程不安全的示例"></a>线程不安全的示例</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Counter</span> </span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">long</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">long</span> value)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.count = <span class="keyword">this</span>.count + value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="线程不安全的示例"><a href="#线程不安全的示例" class="headerlink" title="线程不安全的示例"></a>线程不安全的示例</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Counter</span> </span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">long</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">long</span> value)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.count = <span class="keyword">this</span>.count + value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>想象下线程 A 和 B 同时执行同一个 Counter 对象的 add()方法，我们无法知道操作系统何时会在两个线程之间切换。JVM 并不是将这段代码视为单条指令来执行的，而是按照下面的顺序：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">从内存获取 this.count 的值放到寄存器</span><br><span class="line">将寄存器中的值增加 value</span><br><span class="line">将寄存器中的值写回内存</span><br></pre></td></tr></table></figure>
+<figure class="highlight axapta"><table><tr><td class="code"><pre><span class="line">从内存获取 <span class="keyword">this</span>.<span class="keyword">count</span> 的值放到寄存器</span><br><span class="line">将寄存器中的值增加 value</span><br><span class="line">将寄存器中的值写回内存</span><br></pre></td></tr></table></figure>
 <p>观察线程 A 和 B 交错执行会发生什么：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">this.count = 0;</span><br><span class="line">A: 读取 this.count 到一个寄存器 (0)</span><br><span class="line">B: 读取 this.count 到一个寄存器 (0)</span><br><span class="line">B: 将寄存器的值加 2</span><br><span class="line">B: 回写寄存器值(2)到内存. this.count 现在等于 2</span><br><span class="line">A: 将寄存器的值加 3</span><br><span class="line">A: 回写寄存器值(3)到内存. this.count 现在等于 3</span><br></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.count = <span class="number">0</span>;</span><br><span class="line"><span class="string">A:</span> 读取 <span class="keyword">this</span>.count 到一个寄存器 (<span class="number">0</span>)</span><br><span class="line"><span class="string">B:</span> 读取 <span class="keyword">this</span>.count 到一个寄存器 (<span class="number">0</span>)</span><br><span class="line"><span class="string">B:</span> 将寄存器的值加 <span class="number">2</span></span><br><span class="line"><span class="string">B:</span> 回写寄存器值(<span class="number">2</span>)到内存. <span class="keyword">this</span>.count 现在等于 <span class="number">2</span></span><br><span class="line"><span class="string">A:</span> 将寄存器的值加 <span class="number">3</span></span><br><span class="line"><span class="string">A:</span> 回写寄存器值(<span class="number">3</span>)到内存. <span class="keyword">this</span>.count 现在等于 <span class="number">3</span></span><br></pre></td></tr></table></figure>
 <p>两个线程分别加了 2 和 3 到 count 变量上，两个线程执行结束后 count 变量的值应该等于 5。然而由于两个线程是交叉执行的，两个线程从内存中读出的初始值都是 0。然后各自加了 2 和 3，并分别写回内存。最终的值并不是期望的 5，而是最后写回内存的那个线程的值，上面例子中最后写回内存的是线程 A，但实际中也可能是线程 B。如果没有采用合适的同步机制，线程间的交叉执行情况就无法预料。</p>
 <h4 id="竞态条件和临界区"><a href="#竞态条件和临界区" class="headerlink" title="竞态条件和临界区"></a>竞态条件和临界区</h4><blockquote>
 <p><strong>竞态条件（Race Condition）</strong>：当两个线程竞争同一资源时，如果对资源的访问顺序敏感，就称存在竞态条件。</p>
@@ -603,12 +741,22 @@
 
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -632,8 +780,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/05/19/programming/java/javacore/concurrent/4-内存模型/" rel="next" title="内存模型">
-                <i class="fa fa-chevron-left"></i> 内存模型
+              <a href="/blog/2018/05/19/programming/java/javacore/concurrent/3-并发机制的底层实现/" rel="next" title="并发机制的底层实现">
+                <i class="fa fa-chevron-left"></i> 并发机制的底层实现
               </a>
             
           </div>
@@ -660,17 +808,10 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -690,7 +831,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -706,7 +846,7 @@
         </ul>
       
 
-      <section class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -716,42 +856,226 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/blog/archives/">
+                
+                    <span class="site-state-item-count">381</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/blog/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/blog/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">381</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/blog/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">76</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">76</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -764,48 +1088,61 @@
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/dunwu" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:forbreak@163.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/dunwu" title="GitHub &rarr; https://github.com/dunwu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:forbreak@163.com" title="E-Mail &rarr; mailto:forbreak@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
             </div>
           
 
           
-          
 
           
           
 
+          
+            
+          
           
 
         </div>
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#并发简介"><span class="nav-number">1.</span> <span class="nav-text">并发简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#并发术语"><span class="nav-number">1.1.</span> <span class="nav-text">并发术语</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#并发和并行"><span class="nav-number">1.1.1.</span> <span class="nav-text">并发和并行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步和异步"><span class="nav-number">1.1.2.</span> <span class="nav-text">同步和异步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞和非阻塞"><span class="nav-number">1.1.3.</span> <span class="nav-text">阻塞和非阻塞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程和线程"><span class="nav-number">1.1.4.</span> <span class="nav-text">进程和线程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程的优点"><span class="nav-number">1.2.</span> <span class="nav-text">多线程的优点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更好的资源利用"><span class="nav-number">1.2.1.</span> <span class="nav-text">更好的资源利用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序设计更简单"><span class="nav-number">1.2.2.</span> <span class="nav-text">程序设计更简单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序响应更快"><span class="nav-number">1.2.3.</span> <span class="nav-text">程序响应更快</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程的风险"><span class="nav-number">1.3.</span> <span class="nav-text">多线程的风险</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安全性问题"><span class="nav-number">1.3.1.</span> <span class="nav-text">安全性问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#线程不安全的示例"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">线程不安全的示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#竞态条件和临界区"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">竞态条件和临界区</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#活跃性问题"><span class="nav-number">1.3.2.</span> <span class="nav-text">活跃性问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#死锁（Deadlock）"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">死锁（Deadlock）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是死锁"><span class="nav-number">1.3.2.1.1.</span> <span class="nav-text">什么是死锁</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#避免死锁的方法"><span class="nav-number">1.3.2.1.2.</span> <span class="nav-text">避免死锁的方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#活锁（Livelock）"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">活锁（Livelock）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是活锁？"><span class="nav-number">1.3.2.2.1.</span> <span class="nav-text">什么是活锁？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#避免活锁"><span class="nav-number">1.3.2.2.2.</span> <span class="nav-text">避免活锁</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#饥饿（Starvation）"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">饥饿（Starvation）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#导致饥饿问题的原因"><span class="nav-number">1.3.2.3.1.</span> <span class="nav-text">导致饥饿问题的原因</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解决饥饿问题的方法"><span class="nav-number">1.3.2.3.2.</span> <span class="nav-text">解决饥饿问题的方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能问题"><span class="nav-number">1.3.3.</span> <span class="nav-text">性能问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#上下文切换"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">上下文切换</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是上下文切换？"><span class="nav-number">1.3.3.1.1.</span> <span class="nav-text">什么是上下文切换？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#减少上下文切换的方法"><span class="nav-number">1.3.3.1.2.</span> <span class="nav-text">减少上下文切换的方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#资源限制"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">资源限制</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是资源限制"><span class="nav-number">1.3.3.2.1.</span> <span class="nav-text">什么是资源限制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#资源限制引发的问题"><span class="nav-number">1.3.3.2.2.</span> <span class="nav-text">资源限制引发的问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何解决资源限制的问题"><span class="nav-number">1.3.3.2.3.</span> <span class="nav-text">如何解决资源限制的问题</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资料"><span class="nav-number">1.4.</span> <span class="nav-text">资料</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#并发简介"><span class="nav-text">并发简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#并发术语"><span class="nav-text">并发术语</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#并发和并行"><span class="nav-text">并发和并行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步和异步"><span class="nav-text">同步和异步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞和非阻塞"><span class="nav-text">阻塞和非阻塞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程和线程"><span class="nav-text">进程和线程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程的优点"><span class="nav-text">多线程的优点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更好的资源利用"><span class="nav-text">更好的资源利用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序设计更简单"><span class="nav-text">程序设计更简单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序响应更快"><span class="nav-text">程序响应更快</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程的风险"><span class="nav-text">多线程的风险</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安全性问题"><span class="nav-text">安全性问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#线程不安全的示例"><span class="nav-text">线程不安全的示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#竞态条件和临界区"><span class="nav-text">竞态条件和临界区</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#活跃性问题"><span class="nav-text">活跃性问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#死锁（Deadlock）"><span class="nav-text">死锁（Deadlock）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#活锁（Livelock）"><span class="nav-text">活锁（Livelock）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#饥饿（Starvation）"><span class="nav-text">饥饿（Starvation）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能问题"><span class="nav-text">性能问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#上下文切换"><span class="nav-text">上下文切换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#资源限制"><span class="nav-text">资源限制</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资料"><span class="nav-text">资料</span></a></li></ol></li></ol></div>
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -813,6 +1150,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -821,12 +1159,28 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-paper-plane"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Zhang Peng</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">2.1m</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">31:18</span>
   
 </div>
 
@@ -846,6 +1200,7 @@
 
 
 
+
         
       </div>
     </footer>
@@ -854,16 +1209,21 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -877,104 +1237,16 @@
 
 
 
-  
-
-
-  
-
-
-
-
-
-
 
 
 
 
 
   
+    
+    
   
-    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
@@ -988,341 +1260,163 @@
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/blog/" + search_path;
-    // monitor main search box;
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
+
+  
+  <script src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/blog/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/blog/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/blog/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/blog/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/blog/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/blog/js/src/bootstrap.js?v=7.0.1"></script>
+
+
+  
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+      
+      user-select: none;
+      outline: 0;
     }
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      
+        right: 4px;
+        top: 8px;
+      
     }
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === '') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1;
     }
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; // Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.readOnly = true;
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, code.length);
+        ta.readOnly = false;
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); // For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
   </script>
 
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

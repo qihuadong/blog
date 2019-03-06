@@ -2,14 +2,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +29,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -38,9 +45,22 @@
 
 
 
-  
-  
-  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.0.1" color="#222">
 
 
 
@@ -48,63 +68,18 @@
 
 
 
-<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
-
-
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="张鹏的博客">
-<meta property="og:url" content="https://dunwu.github.io/page/25/index.html">
-<meta property="og:site_name" content="张鹏的博客">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张鹏的博客">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/blog/',
     scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -116,14 +91,37 @@
 </script>
 
 
+  
+
+
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="张鹏的博客">
+<meta property="og:url" content="https://dunwu.github.io/page/25/index.html">
+<meta property="og:site_name" content="张鹏的博客">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="张鹏的博客">
+
+
+
+  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
+
+
+
 
   <link rel="canonical" href="https://dunwu.github.io/page/25/">
 
 
 
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title>张鹏的博客 - 大道至简，知易行难</title>
+  <title>张鹏的博客</title>
   
 
 
@@ -133,9 +131,38 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -148,7 +175,7 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -158,13 +185,16 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">大道至简，知易行难</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -172,110 +202,163 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/blog/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/blog/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/blog/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/blog/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/blog/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+            
+            
+            
+              
+              
+
+  
+  
+    
+  
+  <li class="menu-item menu-item-docs">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/docs/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>docs</a>
+
+  </li>
+
+
+            
+          
+            
+            
+            
+          
+        
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -286,6 +369,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -312,11 +397,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/09/28/os/linux/ops/samba使用详解/" itemprop="url">samba 使用详解</a></h1>
+                
+                <a href="/blog/2018/09/28/os/linux/ops/samba使用详解/" class="post-title-link" itemprop="url">samba 使用详解</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -324,13 +418,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-28T00:00:00+08:00">
-                2018-09-28
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-28 00:00:00" itemprop="dateCreated datePublished" datetime="2018-09-28T00:00:00+08:00">2018-09-28</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 16:43:46" itemprop="dateModified" datetime="2019-03-06T16:43:46+08:00">2019-03-06</time>
+              
             
           </span>
 
@@ -346,11 +457,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
 
                 
                 
@@ -360,6 +467,7 @@
 
           
             
+            
           
 
           
@@ -367,6 +475,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">11k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">10 分钟</span>
+              
+            </div>
           
 
           
@@ -386,132 +522,50 @@
       
         
           
-            <h1 id="samba-使用详解"><a href="#samba-使用详解" class="headerlink" title="samba 使用详解"></a>samba 使用详解</h1><blockquote>
-<p>samba 是在 Linux 和 UNIX 系统上实现 SMB 协议的一个免费软件。</p>
-<p>samba 提供了在不同计算机（即使操作系统不同）上共享服务的能力。</p>
-<p>关键词：<code>samba</code>, <code>selinux</code></p>
-</blockquote>
-<!-- TOC depthFrom:2 depthTo:3 -->
-<ul>
-<li><a href="#1-安装配置-samba">1. 安装配置 samba</a><ul>
-<li><a href="#11-查看是否已经安装-samba">1.1. 查看是否已经安装 samba</a></li>
-<li><a href="#12-安装-samba-工具">1.2. 安装 samba 工具</a></li>
-<li><a href="#13-配置-samba">1.3. 配置 samba</a></li>
-<li><a href="#14-创建-samba-用户">1.4. 创建 samba 用户</a></li>
-<li><a href="#15-启动-samba-服务">1.5. 启动 samba 服务</a></li>
-<li><a href="#16-为-samba-添加防火墙规则">1.6. 为 samba 添加防火墙规则</a></li>
-<li><a href="#17-测试-samba-服务">1.7. 测试 samba 服务</a></li>
-<li><a href="#18-访问-samba-服务共享的目录">1.8. 访问 samba 服务共享的目录</a></li>
-</ul>
-</li>
-<li><a href="#2-配置详解">2. 配置详解</a><ul>
-<li><a href="#21-samba-默认配置">2.1. samba 默认配置</a></li>
-<li><a href="#22-全局参数-global">2.2. 全局参数 [global]</a></li>
-<li><a href="#23-共享参数-共享名">2.3. 共享参数 [共享名]</a></li>
-</ul>
-</li>
-<li><a href="#3-常见问题">3. 常见问题</a><ul>
-<li><a href="#31-你可能没有权限访问网络资源">3.1. 你可能没有权限访问网络资源</a></li>
-<li><a href="#32-window-下对-samba-的清理操作">3.2. window 下对 samba 的清理操作</a></li>
-</ul>
-</li>
-<li><a href="#4-参考资料">4. 参考资料</a></li>
-</ul>
-<!-- /TOC -->
-<h2 id="1-安装配置-samba"><a href="#1-安装配置-samba" class="headerlink" title="1. 安装配置 samba"></a>1. 安装配置 samba</h2><p>本文将以一个完整的示例来展示如何配置 samba 来实现 Linux 和 Windows 的文件共享。</p>
-<p>目标：假设希望共享 Linux 服务器上的 /share/fs 目录。</p>
-<h3 id="1-1-查看是否已经安装-samba"><a href="#1-1-查看是否已经安装-samba" class="headerlink" title="1.1. 查看是否已经安装 samba"></a>1.1. 查看是否已经安装 samba</h3><ul>
-<li>CentOS：<code>rpm -qa | grep samba</code></li>
-<li>Ubuntu：<code>dpkg -l | grep samba</code></li>
-</ul>
-<h3 id="1-2-安装-samba-工具"><a href="#1-2-安装-samba-工具" class="headerlink" title="1.2. 安装 samba 工具"></a>1.2. 安装 samba 工具</h3><ul>
-<li>CentOS：<code>yum install -y samba samba-client samba-common</code></li>
-<li>Ubuntu：<code>sudo apt-get install -y samba samba-client</code></li>
-</ul>
-<h3 id="1-3-配置-samba"><a href="#1-3-配置-samba" class="headerlink" title="1.3. 配置 samba"></a>1.3. 配置 samba</h3><p>samba 服务的配置文件是 <code>/etc/samba/smb.conf</code>，如果没有则 samba 无法启动。</p>
-<p>执行以下命令，编辑配置文件：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/samba/smb.conf</span><br></pre></td></tr></table></figure>
-<p>修改配置如下：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[global]</span></span><br><span class="line">        workgroup = SAMBA</span><br><span class="line">        security = user</span><br><span class="line"></span><br><span class="line">        passdb backend = tdbsam</span><br><span class="line"></span><br><span class="line">        printing = cups</span><br><span class="line">        printcap name = cups</span><br><span class="line">        load printers = yes</span><br><span class="line">        cups options = raw</span><br><span class="line"></span><br><span class="line"><span class="section">[homes]</span></span><br><span class="line">        comment = Home Directories</span><br><span class="line">        valid users = %S, %D%w%S</span><br><span class="line">        browseable = No</span><br><span class="line">        read only = No</span><br><span class="line">        inherit acls = Yes</span><br><span class="line"></span><br><span class="line"><span class="section">[printers]</span></span><br><span class="line">        comment = All Printers</span><br><span class="line">        path = /var/tmp</span><br><span class="line">        printable = Yes</span><br><span class="line">        create mask = 0600</span><br><span class="line">        browseable = No</span><br><span class="line"></span><br><span class="line"><span class="section">[print$]</span></span><br><span class="line">        comment = Printer Drivers</span><br><span class="line">        path = /var/lib/samba/drivers</span><br><span class="line">        write list = @printadmin root</span><br><span class="line">        force group = @printadmin</span><br><span class="line">        create mask = 0664</span><br><span class="line">        directory mask = 0775</span><br><span class="line"></span><br><span class="line"><span class="section">[fs]</span></span><br><span class="line">        comment = share folder</span><br><span class="line">        path = /share/fs</span><br><span class="line">        browseable = yes</span><br><span class="line">        writable = yes</span><br><span class="line">        read only = no</span><br><span class="line">        guest ok = yes</span><br><span class="line">        create mask = 0777</span><br><span class="line">        directory mask = 0777</span><br><span class="line">        public = yes</span><br><span class="line">        valid users = root</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>说明：</p>
-<ul>
-<li>我在这里添加了一个 <strong>[fs]</strong> 标签，这就是共享区域的配置。</li>
-<li>这里设置 <code>path</code> 属性为 <code>/share/fs</code>，意味着准备共享 <code>/share/fs</code> 目录，需要根据实际需要设置路径。<code>/share/fs</code> 目录的权限要设置为 <strong>777</strong>：<code>chmod 777 /share/fs</code>。</li>
-<li><code>browseable</code>、<code>writable</code> 等属性就比较容易理解了，即配置共享目录的访问权限。</li>
-<li><code>valid users</code> 属性指定允许访问的用户，需要注意的是指定的用户必须是 Linux 机器上实际存在的用户。</li>
-</ul>
-</blockquote>
-<h3 id="1-4-创建-samba-用户"><a href="#1-4-创建-samba-用户" class="headerlink" title="1.4. 创建 samba 用户"></a>1.4. 创建 samba 用户</h3><p>创建的 samba 用户必须是 Linux 机器上实际存在的用户。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo smbpasswd -a root</span><br><span class="line">New SMB password:</span><br><span class="line">Retype new SMB password:</span><br><span class="line">Added user root.</span><br></pre></td></tr></table></figure>
-<p>根据提示输入 samba 用户的密码。当 samba 服务成功安装、启动后，通过 Windows 系统访问机器共享目录时，就要输入这里配置的用户名、密码。</p>
-<ul>
-<li>查看 samba 服务器中已拥有哪些用户 - <code>pdbedit -L</code></li>
-<li>删除 samba 服务中的某个用户 - <code>smbpasswd -x 用户名</code></li>
-</ul>
-<h3 id="1-5-启动-samba-服务"><a href="#1-5-启动-samba-服务" class="headerlink" title="1.5. 启动 samba 服务"></a>1.5. 启动 samba 服务</h3><p>CentOS 6</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service samba restart  <span class="comment"># 重启 samba</span></span><br><span class="line">$ sudo service smb restart    <span class="comment"># 重启 samba</span></span><br></pre></td></tr></table></figure>
-<p>CentOS 7</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl start smb.service     <span class="comment"># 启动 samba</span></span><br><span class="line">$ sudo systemctl restart smb.service   <span class="comment"># 重启 samba</span></span><br><span class="line">$ sudo systemctl <span class="built_in">enable</span> smb.service    <span class="comment"># 设置开机自动启动</span></span><br><span class="line">$ sudo systemctl status smb.service    <span class="comment"># 查询 samba 状态</span></span><br></pre></td></tr></table></figure>
-<p>Ubuntu 16.04.3</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service smbd restart</span><br></pre></td></tr></table></figure>
-<h3 id="1-6-为-samba-添加防火墙规则"><a href="#1-6-为-samba-添加防火墙规则" class="headerlink" title="1.6. 为 samba 添加防火墙规则"></a>1.6. 为 samba 添加防火墙规则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo firewall-cmd --permanent --zone=public --add-service=samba</span><br><span class="line">$ sudo firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-<h3 id="1-7-测试-samba-服务"><a href="#1-7-测试-samba-服务" class="headerlink" title="1.7. 测试 samba 服务"></a>1.7. 测试 samba 服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ smbclient //localhost/fs -U root</span><br></pre></td></tr></table></figure>
-<p>输入 samba 用户的密码，如果成功，就会进入 <code>smb: \&gt;</code>。</p>
-<h3 id="1-8-访问-samba-服务共享的目录"><a href="#1-8-访问-samba-服务共享的目录" class="headerlink" title="1.8. 访问 samba 服务共享的目录"></a>1.8. 访问 samba 服务共享的目录</h3><p>Windows：</p>
-<p>访问：<code>\\&lt;你的ip&gt;\&lt;你的共享路径&gt;</code> ：</p>
-<p><br><div align="center"><img src="http://oyz7npk35.bkt.clouddn.com/images/20180920180928161334.png"></div><br></p>
-<p>Mac：</p>
-<p>与 Windows 类似，直接在 Finder 中访问 <code>smb://&lt;你的ip&gt;/&lt;你的共享路径&gt;</code> 即可。</p>
-<h2 id="2-配置详解"><a href="#2-配置详解" class="headerlink" title="2. 配置详解"></a>2. 配置详解</h2><h3 id="2-1-samba-默认配置"><a href="#2-1-samba-默认配置" class="headerlink" title="2.1. samba 默认配置"></a>2.1. samba 默认配置</h3><p>你可以从 <a href="https://git.samba.org/samba.git/?p=samba.git;a=blob_plain;f=examples/smb.conf.default;hb=HEAD" target="_blank" rel="noopener">这里</a> 获取到默认配置文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cp /etc/samba/smb.conf /etc/samba/smb.conf.bak</span><br><span class="line">$ wget &quot;https://git.samba.org/samba.git/?p=samba.git;a=blob_plain;f=examples/smb.conf.default;hb=HEAD&quot; -O /etc/samba/smb.conf</span><br></pre></td></tr></table></figure>
-<p>smb.conf 默认内容如下：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[global]</span></span><br><span class="line">        workgroup = SAMBA</span><br><span class="line">        security = user</span><br><span class="line"></span><br><span class="line">        passdb backend = tdbsam</span><br><span class="line"></span><br><span class="line">        printing = cups</span><br><span class="line">        printcap name = cups</span><br><span class="line">        load printers = yes</span><br><span class="line">        cups options = raw</span><br><span class="line"></span><br><span class="line"><span class="section">[homes]</span></span><br><span class="line">        comment = Home Directories</span><br><span class="line">        valid users = %S, %D%w%S</span><br><span class="line">        browseable = No</span><br><span class="line">        read only = No</span><br><span class="line">        inherit acls = Yes</span><br><span class="line"></span><br><span class="line"><span class="section">[printers]</span></span><br><span class="line">        comment = All Printers</span><br><span class="line">        path = /var/tmp</span><br><span class="line">        printable = Yes</span><br><span class="line">        create mask = 0600</span><br><span class="line">        browseable = No</span><br><span class="line"></span><br><span class="line"><span class="section">[print$]</span></span><br><span class="line">        comment = Printer Drivers</span><br><span class="line">        path = /var/lib/samba/drivers</span><br><span class="line">        write list = root</span><br><span class="line">        create mask = 0664</span><br><span class="line">        directory mask = 0775</span><br></pre></td></tr></table></figure>
-<h3 id="2-2-全局参数-global"><a href="#2-2-全局参数-global" class="headerlink" title="2.2. 全局参数 [global]"></a>2.2. 全局参数 [global]</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[global]</span></span><br><span class="line"></span><br><span class="line">config file = /usr/local/samba/lib/smb.conf.%m</span><br><span class="line">说明：config file可以让你使用另一个配置文件来覆盖缺省的配置文件。如果文件 不存在，则该项无效。这个参数很有用，可以使得samba配置更灵活，可以让一台samba服务器模拟多台不同配置的服务器。比如，你想让PC1（主机名）这台电脑在访问Samba Server时使用它自己的配置文件，那么先在/etc/samba/host/下为PC1配置一个名为smb.conf.pc1的文件，然后在smb.conf中加入：config file=/etc/samba/host/smb.conf.%m。这样当PC1请求连接Samba Server时，smb.conf.%m就被替换成smb.conf.pc1。这样，对于PC1来说，它所使用的Samba服务就是由smb.conf.pc1定义的，而其他机器访问Samba Server则还是应用smb.conf。</span><br><span class="line"></span><br><span class="line"><span class="attr">workgroup</span> = WORKGROUP</span><br><span class="line">说明：设定 Samba Server 所要加入的工作组或者域。</span><br><span class="line"></span><br><span class="line">server string = Samba Server Version %v</span><br><span class="line">说明：设定 Samba Server 的注释，可以是任何字符串，也可以不填。宏%v表示显示Samba的版本号。</span><br><span class="line"></span><br><span class="line">netbios name = smbserver</span><br><span class="line">说明：设置Samba Server的NetBIOS名称。如果不填，则默认会使用该服务器的DNS名称的第一部分。netbios name和workgroup名字不要设置成一样了。</span><br><span class="line"></span><br><span class="line"><span class="attr">interfaces</span> = lo eth0 <span class="number">192.168</span>.<span class="number">12.2</span>/<span class="number">24</span> <span class="number">192.168</span>.<span class="number">13.2</span>/<span class="number">24</span></span><br><span class="line">说明：设置Samba Server监听哪些网卡，可以写网卡名，也可以写该网卡的IP地址。</span><br><span class="line"></span><br><span class="line">hosts allow = 127.192.168.1 192.168.10.1</span><br><span class="line">说明：表示允许连接到Samba Server的客户端，多个参数以空格隔开。可以用一个IP表示，也可以用一个网段表示。hosts deny 与hosts allow 刚好相反。</span><br><span class="line">例如：</span><br><span class="line"><span class="comment"># 表示容许来自172.17.2.*.*的主机连接，但排除172.17.2.50</span></span><br><span class="line">hosts allow=172.17.2.EXCEPT172.17.2.50</span><br><span class="line"><span class="comment"># 表示容许来自172.17.2.0/255.255.0.0子网中的所有主机连接</span></span><br><span class="line">hosts allow=172.17.2.0/255.255.0.0</span><br><span class="line"><span class="comment"># 表示容许来自M1和M2两台计算机连接</span></span><br><span class="line">hosts allow=M1，M2</span><br><span class="line"><span class="comment"># 表示容许来自SC域的所有计算机连接</span></span><br><span class="line">hosts allow=@SC</span><br><span class="line">max connections = 0</span><br><span class="line">说明：max connections用来指定连接Samba Server的最大连接数目。如果超出连接数目，则新的连接请求将被拒绝。0表示不限制。</span><br><span class="line"></span><br><span class="line"><span class="attr">deadtime</span> = <span class="number">0</span></span><br><span class="line">说明：deadtime用来设置断掉一个没有打开任何文件的连接的时间。单位是分钟，0代表Samba Server不自动切断任何连接。</span><br><span class="line"></span><br><span class="line">time server = yes/no</span><br><span class="line">说明：time server用来设置让nmdb成为windows客户端的时间服务器。</span><br><span class="line"></span><br><span class="line">log file = /var/log/samba/log.%m</span><br><span class="line">说明：设置Samba Server日志文件的存储位置以及日志文件名称。在文件名后加个宏%m（主机名），表示对每台访问Samba Server的机器都单独记录一个日志文件。如果pc1、pc2访问过Samba Server，就会在/var/log/samba目录下留下log.pc1和log.pc2两个日志文件。</span><br><span class="line"></span><br><span class="line">max log size = 50</span><br><span class="line">说明：设置Samba Server日志文件的最大容量，单位为kB，0代表不限制。</span><br><span class="line"></span><br><span class="line"><span class="attr">security</span> = user</span><br><span class="line">说明：设置用户访问Samba Server的验证方式，一共有四种验证方式。</span><br><span class="line">1. share：用户访问Samba Server不需要提供用户名和口令, 安全性能较低。</span><br><span class="line">2. user：Samba Server共享目录只能被授权的用户访问,由Samba Server负责检查账号和密码的正确性。账号和密码要在本Samba Server中建立。</span><br><span class="line">3. server：依靠其他Windows NT/2000或Samba Server来验证用户的账号和密码,是一种代理验证。此种安全模式下,系统管理员可以把所有的Windows用户和口令集中到一个NT系统上,使用Windows NT进行Samba认证, 远程服务器可以自动认证全部用户和口令,如果认证失败,Samba将使用用户级安全模式作为替代的方式。</span><br><span class="line">4. domain：域安全级别,使用主域控制器(PDC)来完成认证。</span><br><span class="line"></span><br><span class="line">passdb backend = tdbsam</span><br><span class="line">说明：passdb backend就是用户后台的意思。目前有三种后台：smbpasswd、tdbsam和ldapsam。sam应该是security account manager（安全账户管理）的简写。</span><br><span class="line"></span><br><span class="line">smbpasswd：该方式是使用smb自己的工具smbpasswd来给系统用户（真实</span><br><span class="line">用户或者虚拟用户）设置一个Samba密码，客户端就用这个密码来访问Samba的资源。</span><br><span class="line">1. smbpasswd文件默认在/etc/samba目录下，不过有时候要手工建立该文件。</span><br><span class="line">2. tdbsam：该方式则是使用一个数据库文件来建立用户数据库。数据库文件叫passdb.tdb，默认在/etc/samba目录下。passdb.tdb用户数据库可以使用smbpasswd –a来建立Samba用户，不过要建立的Samba用户必须先是系统用户。我们也可以使用pdbedit命令来建立Samba账户。pdbedit命令的参数很多，我们列出几个主要的。</span><br><span class="line">  pdbedit –a username：新建Samba账户。</span><br><span class="line">  pdbedit –x username：删除Samba账户。</span><br><span class="line">  pdbedit –L：列出Samba用户列表，读取passdb.tdb数据库文件。</span><br><span class="line">  pdbedit –Lv：列出Samba用户列表的详细信息。</span><br><span class="line">  pdbedit –c “[D]” –u username：暂停该Samba用户的账号。</span><br><span class="line">  pdbedit –c “[]” –u username：恢复该Samba用户的账号。</span><br><span class="line">3. ldapsam：该方式则是基于LDAP的账户管理方式来验证用户。首先要建立LDAP服务，然后设置“passdb backend = ldapsam:ldap://LDAP Server”</span><br><span class="line"></span><br><span class="line">encrypt passwords = yes/no</span><br><span class="line">说明：是否将认证密码加密。因为现在windows操作系统都是使用加密密码，所以一般要开启此项。不过配置文件默认已开启。</span><br><span class="line"></span><br><span class="line">smb passwd file = /etc/samba/smbpasswd</span><br><span class="line">说明：用来定义samba用户的密码文件。smbpasswd文件如果没有那就要手工新建。</span><br><span class="line"></span><br><span class="line">username map = /etc/samba/smbusers</span><br><span class="line">说明：用来定义用户名映射，比如可以将root换成administrator、admin等。不过要事先在smbusers文件中定义好。比如：root = administrator admin，这样就可以用administrator或admin这两个用户来代替root登陆Samba Server，更贴近windows用户的习惯。</span><br><span class="line"></span><br><span class="line">guest account = nobody</span><br><span class="line">说明：用来设置guest用户名。</span><br><span class="line"></span><br><span class="line">socket options = TCP_NODELAY SO_RCVBUF=8192 SO_SNDBUF=8192</span><br><span class="line">说明：用来设置服务器和客户端之间会话的Socket选项，可以优化传输速度。</span><br><span class="line"></span><br><span class="line">domain master = yes/no</span><br><span class="line">说明：设置Samba服务器是否要成为网域主浏览器，网域主浏览器可以管理跨子网域的浏览服务。</span><br><span class="line"></span><br><span class="line">local master = yes/no</span><br><span class="line">说明：local master用来指定Samba Server是否试图成为本地网域主浏览器。如果设为no，则永远不会成为本地网域主浏览器。但是即使设置为yes，也不等于该Samba Server就能成为主浏览器，还需要参加选举。</span><br><span class="line"></span><br><span class="line">preferred master = yes/no</span><br><span class="line">说明：设置Samba Server一开机就强迫进行主浏览器选举，可以提高Samba Server成为本地网域主浏览器的机会。如果该参数指定为yes时，最好把domain master也指定为yes。使用该参数时要注意：如果在本Samba Server所在的子网有其他的机器（不论是windows NT还是其他Samba Server）也指定为首要主浏览器时，那么这些机器将会因为争夺主浏览器而在网络上大发广播，影响网络性能。如果同一个区域内有多台Samba Server，将上面三个参数设定在一台即可。</span><br><span class="line"></span><br><span class="line">os level = 200</span><br><span class="line">说明：设置samba服务器的os level。该参数决定Samba Server是否有机会成为本地网域的主浏览器。os level从0到255，winNT的os level是32，win95/98的os level是1。Windows 2000的os level是64。如果设置为0，则意味着Samba Server将失去浏览选择。如果想让Samba Server成为PDC，那么将它的os level值设大些。</span><br><span class="line"></span><br><span class="line">domain logons = yes/no</span><br><span class="line">说明：设置Samba Server是否要做为本地域控制器。主域控制器和备份域控制器都需要开启此项。</span><br><span class="line"></span><br><span class="line">logon . = %u.bat</span><br><span class="line">说明：当使用者用windows客户端登陆，那么Samba将提供一个登陆档。如果设置成%u.bat，那么就要为每个用户提供一个登陆档。如果人比较多，那就比较麻烦。可以设置成一个具体的文件名，比如start.bat，那么用户登陆后都会去执行start.bat，而不用为每个用户设定一个登陆档了。这个文件要放置在[netlogon]的path设置的目录路径下。</span><br><span class="line"></span><br><span class="line">wins support = yes/no</span><br><span class="line">说明：设置samba服务器是否提供wins服务。</span><br><span class="line"></span><br><span class="line">wins server = wins服务器IP地址</span><br><span class="line">说明：设置Samba Server是否使用别的wins服务器提供wins服务。</span><br><span class="line"></span><br><span class="line">wins proxy = yes/no</span><br><span class="line">说明：设置Samba Server是否开启wins代理服务。</span><br><span class="line"></span><br><span class="line">dns proxy = yes/no</span><br><span class="line">说明：设置Samba Server是否开启dns代理服务。</span><br><span class="line"></span><br><span class="line">load printers = yes/no</span><br><span class="line">说明：设置是否在启动Samba时就共享打印机。</span><br><span class="line"></span><br><span class="line">printcap name = cups</span><br><span class="line">说明：设置共享打印机的配置文件。</span><br><span class="line"></span><br><span class="line"><span class="attr">printing</span> = cups</span><br><span class="line">说明：设置Samba共享打印机的类型。现在支持的打印系统有：bsd, sysv, plp, lprng, aix, hpux, qnx</span><br></pre></td></tr></table></figure>
-<h3 id="2-3-共享参数-共享名"><a href="#2-3-共享参数-共享名" class="headerlink" title="2.3. 共享参数 [共享名]"></a>2.3. 共享参数 [共享名]</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[共享名]</span></span><br><span class="line"></span><br><span class="line"><span class="attr">comment</span> = 任意字符串</span><br><span class="line">说明：comment是对该共享的描述，可以是任意字符串。</span><br><span class="line"></span><br><span class="line"><span class="attr">path</span> = 共享目录路径</span><br><span class="line">说明：path用来指定共享目录的路径。可以用%u、%m这样的宏来代替路径里的unix用户和客户机的Netbios名，用宏表示主要用于[homes]共享域。例如：如果我们不打算用home段做为客户的共享，而是在/home/share/下为每个Linux用户以他的用户名建个目录，作为他的共享目录，这样path就可以写成：path = /home/share/%u; 。用户在连接到这共享时具体的路径会被他的用户名代替，要注意这个用户名路径一定要存在，否则，客户机在访问时会找不到网络路径。同样，如果我们不是以用户来划分目录，而是以客户机来划分目录，为网络上每台可以访问samba的机器都各自建个以它的netbios名的路径，作为不同机器的共享资源，就可以这样写：path = /home/share/%m 。</span><br><span class="line"></span><br><span class="line"><span class="attr">browseable</span> = <span class="literal">yes</span>/<span class="literal">no</span></span><br><span class="line">说明：browseable用来指定该共享是否可以浏览。</span><br><span class="line"></span><br><span class="line"><span class="attr">writable</span> = <span class="literal">yes</span>/<span class="literal">no</span></span><br><span class="line">说明：writable用来指定该共享路径是否可写。</span><br><span class="line"></span><br><span class="line"><span class="attr">available</span> = <span class="literal">yes</span>/<span class="literal">no</span></span><br><span class="line">说明：available用来指定该共享资源是否可用。</span><br><span class="line"></span><br><span class="line">admin users = 该共享的管理者</span><br><span class="line">说明：admin users用来指定该共享的管理员（对该共享具有完全控制权限）。在samba 3.0中，如果用户验证方式设置成“security=share”时，此项无效。</span><br><span class="line">例如：admin users =bobyuan，jane（多个用户中间用逗号隔开）。</span><br><span class="line"></span><br><span class="line">valid users = 允许访问该共享的用户</span><br><span class="line">说明：valid users用来指定允许访问该共享资源的用户。</span><br><span class="line">例如：valid users = bobyuan，@bob，@tech（多个用户或者组中间用逗号隔开，如果要加入一个组就用“@+组名”表示。）</span><br><span class="line"></span><br><span class="line">invalid users = 禁止访问该共享的用户</span><br><span class="line">说明：invalid users用来指定不允许访问该共享资源的用户。</span><br><span class="line">例如：invalid users = root，@bob（多个用户或者组中间用逗号隔开。）</span><br><span class="line"></span><br><span class="line">write list = 允许写入该共享的用户</span><br><span class="line">说明：write list用来指定可以在该共享下写入文件的用户。</span><br><span class="line">例如：write list = bobyuan，@bob</span><br><span class="line"></span><br><span class="line"><span class="attr">public</span> = <span class="literal">yes</span>/<span class="literal">no</span></span><br><span class="line">说明：public用来指定该共享是否允许guest账户访问。</span><br><span class="line"></span><br><span class="line">guest ok = yes/no</span><br><span class="line">说明：意义同“public”。</span><br><span class="line"></span><br><span class="line">几个特殊共享：</span><br><span class="line"><span class="section">[homes]</span></span><br><span class="line"><span class="attr">comment</span> = Home Directories</span><br><span class="line"><span class="attr">browseable</span> = <span class="literal">no</span></span><br><span class="line"><span class="attr">writable</span> = <span class="literal">yes</span></span><br><span class="line">valid users = %S</span><br><span class="line"><span class="comment">; valid users = MYDOMAIN\%S</span></span><br><span class="line"></span><br><span class="line"><span class="section">[printers]</span></span><br><span class="line"><span class="attr">comment</span> = All Printers</span><br><span class="line"><span class="attr">path</span> = /var/spool/samba</span><br><span class="line"><span class="attr">browseable</span> = <span class="literal">no</span></span><br><span class="line">guest ok = no</span><br><span class="line"><span class="attr">writable</span> = <span class="literal">no</span></span><br><span class="line"><span class="attr">printable</span> = <span class="literal">yes</span></span><br><span class="line"></span><br><span class="line"><span class="section">[netlogon]</span></span><br><span class="line"><span class="attr">comment</span> = Network Logon Service</span><br><span class="line"><span class="attr">path</span> = /var/lib/samba/netlogon</span><br><span class="line">guest ok = yes</span><br><span class="line"><span class="attr">writable</span> = <span class="literal">no</span></span><br><span class="line">share modes = no</span><br><span class="line"></span><br><span class="line"><span class="section">[Profiles]</span></span><br><span class="line"><span class="attr">path</span> = /var/lib/samba/profiles</span><br><span class="line"><span class="attr">browseable</span> = <span class="literal">no</span></span><br><span class="line">guest ok = yes</span><br></pre></td></tr></table></figure>
-<h2 id="3-常见问题"><a href="#3-常见问题" class="headerlink" title="3. 常见问题"></a>3. 常见问题</h2><h3 id="3-1-你可能没有权限访问网络资源"><a href="#3-1-你可能没有权限访问网络资源" class="headerlink" title="3.1. 你可能没有权限访问网络资源"></a>3.1. 你可能没有权限访问网络资源</h3><p>问题现象：</p>
-<ul>
-<li>出现 <strong>NT_STATUS_ACCESS_DENIED</strong> 错误</li>
-<li>Windows 下成功登陆 samba 后，点击共享目录仍然提示——你可能没有权限访问网络资源。</li>
-</ul>
-<p>解决步骤：</p>
-<ol>
-<li>检查是否配置了防火墙规则</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一种方法是强行关闭防火墙</span></span><br><span class="line">$ sudo service iptables stop</span><br><span class="line"></span><br><span class="line"><span class="comment"># 另一种方法是配置防火墙规则</span></span><br><span class="line">$ sudo firewall-cmd --permanent --zone=public --add-service=samba</span><br><span class="line">$ sudo firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>关闭 selinux</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将 /etc/selinux/config 文件中的 SELINUX 设为 disabled</span></span><br><span class="line">$ sed -i <span class="string">'s/SELINUX=enforcing/SELINUX=disabled/'</span> /etc/selinux/config</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启生效</span></span><br><span class="line">$ reboot</span><br></pre></td></tr></table></figure>
-<h3 id="3-2-window-下对-samba-的清理操作"><a href="#3-2-window-下对-samba-的清理操作" class="headerlink" title="3.2. window 下对 samba 的清理操作"></a>3.2. window 下对 samba 的清理操作</h3><ol>
-<li>windows 清除访问 samba 局域网密码缓存<ul>
-<li>在 dos 窗口中输入 <code>control userpasswords2</code> 或者 <code>control keymgr.dll</code>，然后【高级】/【密码管理】，删掉保存的该机器密码。</li>
-</ul>
-</li>
-<li>windows 清除连接的 linux 的 samba 服务缓存<ol>
-<li>打开 win 的命令行。</li>
-<li>输入 net use，就会打印出当前缓存的连接上列表。</li>
-<li>根据列表，一个个删除连接： net use 远程连接名称 /del；或者一次性全部删除：<code>net use * /del</code>。</li>
-</ol>
-</li>
-</ol>
-<h2 id="4-参考资料"><a href="#4-参考资料" class="headerlink" title="4. 参考资料"></a>4. 参考资料</h2><ul>
-<li><a href="http://blog.51cto.com/yuanbin/115761" target="_blank" rel="noopener">http://blog.51cto.com/yuanbin/115761</a></li>
-<li><a href="https://www.jianshu.com/p/750be209a6f0" target="_blank" rel="noopener">https://www.jianshu.com/p/750be209a6f0</a></li>
-<li><a href="https://github.com/judasn/Linux-Tutorial/blob/master/markdown-file/Samba.md" target="_blank" rel="noopener">https://github.com/judasn/Linux-Tutorial/blob/master/markdown-file/Samba.md</a></li>
-<li><a href="https://blog.csdn.net/lan120576664/article/details/50396511" target="_blank" rel="noopener">https://blog.csdn.net/lan120576664/article/details/50396511</a></li>
-</ul>
+            <p>
+              samba 使用详解
+samba 是在 Linux 和 UNIX 系统上实现 SMB 协议的一个免费软件。
+samba 提供了在不同计算机（即使操作系统不同）上共享服务的能力。
+关键词：samba, selinux
 
+
+
+1. 安装配置 samba
+1.1. 查看是否已经安装 samba
+1.2. 安装 samba 工具
+1.3. 配置 samba
+1.4. 创建 samba 用户
+1.5. 启动
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2018/09/28/os/linux/ops/samba使用详解/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -542,6 +596,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -568,11 +624,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/09/26/os/linux/cli/01.查看Linux命令帮助信息/" itemprop="url">查看 Linux 命令帮助信息</a></h1>
+                
+                <a href="/blog/2018/09/26/os/linux/cli/01.查看Linux命令帮助信息/" class="post-title-link" itemprop="url">查看 Linux 命令帮助信息</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -580,13 +645,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-26T00:00:00+08:00">
-                2018-09-26
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-26 00:00:00" itemprop="dateCreated datePublished" datetime="2018-09-26T00:00:00+08:00">2018-09-26</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 16:43:46" itemprop="dateModified" datetime="2019-03-06T16:43:46+08:00">2019-03-06</time>
+              
             
           </span>
 
@@ -602,11 +684,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
 
                 
                 
@@ -616,6 +694,7 @@
 
           
             
+            
           
 
           
@@ -623,6 +702,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
           
 
           
@@ -642,109 +749,57 @@
       
         
           
-            <h1 id="查看-Linux-命令帮助信息"><a href="#查看-Linux-命令帮助信息" class="headerlink" title="查看 Linux 命令帮助信息"></a>查看 Linux 命令帮助信息</h1><blockquote>
-<p>Linux 中有非常多的命令，想全部背下来是很困难的事。所以，我认为学习 Linux 的第一步，就是了解如何快速检索命令说明。</p>
-<p>关键词：<code>help</code>, <code>whatis</code>, <code>info</code>, <code>which</code>, <code>whereis</code>, <code>man</code></p>
-</blockquote>
-<!-- TOC depthFrom:2 depthTo:3 -->
-<ul>
-<li><a href="#查看-linux-命令帮助信息的要点">查看 Linux 命令帮助信息的要点</a></li>
-<li><a href="#命令常见用法">命令常见用法</a><ul>
-<li><a href="#help">help</a></li>
-<li><a href="#whatis">whatis</a></li>
-<li><a href="#info">info</a></li>
-<li><a href="#which">which</a></li>
-<li><a href="#whereis">whereis</a></li>
-<li><a href="#man">man</a></li>
-</ul>
-</li>
-<li><a href="#参考资料">参考资料</a></li>
-</ul>
-<!-- /TOC -->
-<h2 id="查看-Linux-命令帮助信息的要点"><a href="#查看-Linux-命令帮助信息的要点" class="headerlink" title="查看 Linux 命令帮助信息的要点"></a>查看 Linux 命令帮助信息的要点</h2><ul>
-<li>查看 Shell 内部命令的帮助信息 - 使用 <a href="#help">help</a></li>
-<li>查看命令的简要说明 - 使用 <a href="#whatis">whatis</a></li>
-<li>查看命令的详细说明 - 使用 <a href="#info">info</a></li>
-<li>查看命令的位置 - 使用 <a href="#which">which</a></li>
-<li>定位指令的二进制程序、源代码文件和 man 手册页等相关文件的路径 - 使用 <a href="#whereis">whereis</a></li>
-<li>查看命令的帮助手册（包含说明、用法等信息） - 使用 <a href="#man">man</a></li>
-<li>只记得部分命令关键字 - 使用 man -k</li>
-</ul>
-<blockquote>
-<p>注：推荐一些 Linux 命令中文手册：</p>
-<ul>
-<li><a href="http://man.linuxde.net/" target="_blank" rel="noopener">Linux 命令大全</a></li>
-<li><a href="https://github.com/jaywcjlove/linux-command" target="_blank" rel="noopener">linux-command</a></li>
-</ul>
-</blockquote>
-<h2 id="命令常见用法"><a href="#命令常见用法" class="headerlink" title="命令常见用法"></a>命令常见用法</h2><h3 id="help"><a href="#help" class="headerlink" title="help"></a>help</h3><blockquote>
-<p>help 命令用于查看 Shell 内部命令的帮助信息。而对于外部命令的帮助信息只能使用 man 或者 info 命令查看。</p>
-<p>参考：<a href="http://man.linuxde.net/help" target="_blank" rel="noopener">http://man.linuxde.net/help</a></p>
-</blockquote>
-<h3 id="whatis"><a href="#whatis" class="headerlink" title="whatis"></a>whatis</h3><blockquote>
-<p>whatis 用于查询一个命令执行什么功能。</p>
-<p>参考：<a href="http://man.linuxde.net/whatis" target="_blank" rel="noopener">http://man.linuxde.net/whatis</a></p>
-</blockquote>
-<p>示例：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看 man 命令的简要说明</span></span><br><span class="line">$ whatis man</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看以 loca 开拓的命令的简要说明</span></span><br><span class="line">$ whatis -w <span class="string">"loca*"</span></span><br></pre></td></tr></table></figure>
-<h3 id="info"><a href="#info" class="headerlink" title="info"></a>info</h3><blockquote>
-<p>info 是 Linux 下 info 格式的帮助指令。</p>
-<p>参考：<a href="http://man.linuxde.net/info" target="_blank" rel="noopener">http://man.linuxde.net/info</a></p>
-</blockquote>
-<p>示例：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看 man 命令的详细说明</span></span><br><span class="line">$ info man</span><br></pre></td></tr></table></figure>
-<h3 id="which"><a href="#which" class="headerlink" title="which"></a>which</h3><blockquote>
-<p>which 命令用于查找并显示给定命令的绝对路径，环境变量 PATH 中保存了查找命令时需要遍历的目录。which 指令会在环境变量$PATH 设置的目录里查找符合条件的文件。也就是说，使用 which 命令，就可以看到某个系统命令是否存在，以及执行的到底是哪一个位置的命令。</p>
-<p>参考：<a href="http://man.linuxde.net/which" target="_blank" rel="noopener">http://man.linuxde.net/which</a></p>
-</blockquote>
-<p>示例：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">which</span> <span class="built_in">pwd</span> <span class="comment"># 查找命令的路径</span></span><br></pre></td></tr></table></figure>
-<p>说明：which 是根据使用者所配置的 PATH 变量内的目录去搜寻可运行档的！所以，不同的 PATH 配置内容所找到的命令当然不一样的！</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># which cd</span></span><br><span class="line"><span class="built_in">cd</span>: shell built-in <span class="built_in">command</span></span><br></pre></td></tr></table></figure>
-<p>cd 这个常用的命令竟然找不到啊！为什么呢？这是因为 cd 是 bash 内建的命令！但是 which 默认是找 PATH 内所规范的目录，所以当然一定找不到的！</p>
-<h3 id="whereis"><a href="#whereis" class="headerlink" title="whereis"></a>whereis</h3><blockquote>
-<p>whereis 命令用来定位指令的二进制程序、源代码文件和 man 手册页等相关文件的路径。</p>
-<p>whereis 命令只能用于程序名的搜索，而且只搜索二进制文件（参数-b）、man 说明文件（参数-m）和源代码文件（参数-s）。如果省略参数，则返回所有信息。</p>
-<p>参考：<a href="http://man.linuxde.net/whereis" target="_blank" rel="noopener">http://man.linuxde.net/whereis</a></p>
-</blockquote>
-<p>示例：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whereis git <span class="comment"># 将相关的文件都查找出来</span></span><br></pre></td></tr></table></figure>
-<h3 id="man"><a href="#man" class="headerlink" title="man"></a>man</h3><blockquote>
-<p>man 命令是 Linux 下的帮助指令，通过 man 指令可以查看 Linux 中的指令帮助、配置文件帮助和编程帮助等信息。</p>
-<p>参考：<a href="http://man.linuxde.net/man" target="_blank" rel="noopener">http://man.linuxde.net/man</a></p>
-</blockquote>
-<p>示例：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ man date <span class="comment"># 查看 date 命令的帮助手册</span></span><br><span class="line">$ man 3 <span class="built_in">printf</span> <span class="comment"># 查看 printf 命令的帮助手册中的第 3 类</span></span><br><span class="line">$ man -k keyword <span class="comment"># 根据命令中部分关键字来查询命令</span></span><br></pre></td></tr></table></figure>
-<h4 id="man-要点"><a href="#man-要点" class="headerlink" title="man 要点"></a>man 要点</h4><p>在 man 的帮助手册中，可以使用 page up 和 page down 来上下翻页。</p>
-<p>man 的帮助手册中，将帮助文档分为了 9 个类别，对于有的关键字可能存在多个类别中， 我们就需要指定特定的类别来查看；（一般我们查询 bash 命令，归类在 1 类中）。</p>
-<p>man 页面的分类(常用的是分类 1 和分类 3)：</p>
-<ol>
-<li>可执行程序或 shell 命令</li>
-<li>系统调用(内核提供的函数)</li>
-<li>库调用(程序库中的函数)</li>
-<li>特殊文件(通常位于 /dev)</li>
-<li>文件格式和规范，如 /etc/passwd</li>
-<li>游戏</li>
-<li>杂项(包括宏包和规范，如 man(7)，groff(7))</li>
-<li>系统管理命令(通常只针对 root 用户)</li>
-<li>内核例程 [非标准]</li>
-</ol>
-<p>前面说到使用 whatis 会显示命令所在的具体的文档类别，我们学习如何使用它</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ whatis <span class="built_in">printf</span></span><br><span class="line"><span class="built_in">printf</span> (1) - format and <span class="built_in">print</span> data</span><br><span class="line"><span class="built_in">printf</span> (1p) - write formatted output</span><br><span class="line"><span class="built_in">printf</span> (3) - formatted output conversion</span><br><span class="line"><span class="built_in">printf</span> (3p) - <span class="built_in">print</span> formatted output</span><br><span class="line"><span class="built_in">printf</span> [builtins](1) - bash built-in commands, see bash(1)</span><br></pre></td></tr></table></figure>
-<p>我们看到 printf 在分类 1 和分类 3 中都有；分类 1 中的页面是命令操作及可执行文件的帮助；而 3 是常用函数库说明；如果我们想看的是 C 语言中 printf 的用法，可以指定查看分类 3 的帮助：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man 3 <span class="built_in">printf</span></span><br></pre></td></tr></table></figure>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://linuxtools-rst.readthedocs.io/zh_CN/latest/base/01_use_man.html" target="_blank" rel="noopener">https://linuxtools-rst.readthedocs.io/zh_CN/latest/base/01_use_man.html</a></p>
+            <p>
+              查看 Linux 命令帮助信息
+Linux 中有非常多的命令，想全部背下来是很困难的事。所以，我认为学习 Linux 的第一步，就是了解如何快速检索命令说明。
+关键词：help, whatis, info, which, whereis, man
 
+
+
+查看 Linux 命令帮助信息的要点
+命令常见用法
+help
+whatis
+info
+which
+whereis
+man
+
+
+参考资料
+
+
+查看 
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2018/09/26/os/linux/cli/01.查看Linux命令帮助信息/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -777,209 +832,6 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2018/09/04/bigdata/Sqoop/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Peng">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张鹏的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/09/04/bigdata/Sqoop/" itemprop="url">Sqoop</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-04T00:00:00+08:00">
-                2018-09-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/bigdata/" itemprop="url" rel="index">
-                    <span itemprop="name">bigdata</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Sqoop"><a href="#Sqoop" class="headerlink" title="Sqoop"></a>Sqoop</h1><blockquote>
-<p><strong>Sqoop 是一个主要在 Hadoop 和关系数据库之间进行批量数据迁移的工具。</strong></p>
-</blockquote>
-<!-- TOC depthFrom:2 depthTo:3 -->
-<ul>
-<li><a href="#sqoop-简介">Sqoop 简介</a><ul>
-<li><a href="#提供多种-sqoop-连接器">提供多种 Sqoop 连接器</a></li>
-<li><a href="#sqoop-版本">Sqoop 版本</a></li>
-</ul>
-</li>
-<li><a href="#sqoop-原理">Sqoop 原理</a><ul>
-<li><a href="#导入">导入</a></li>
-<li><a href="#导出">导出</a></li>
-</ul>
-</li>
-</ul>
-<!-- /TOC -->
-<h2 id="Sqoop-简介"><a href="#Sqoop-简介" class="headerlink" title="Sqoop 简介"></a>Sqoop 简介</h2><p><strong>Sqoop 是一个主要在 Hadoop 和关系数据库之间进行批量数据迁移的工具。</strong></p>
-<ul>
-<li>Hadoop：HDFS、Hive、HBase、Inceptor、Hyperbase</li>
-<li>面向大数据集的批量导入导出</li>
-<li>将输入数据集分为 N 个切片，然后启动 N 个 Map 任务并行传输</li>
-<li>支持全量、增量两种传输方式</li>
-</ul>
-<h3 id="提供多种-Sqoop-连接器"><a href="#提供多种-Sqoop-连接器" class="headerlink" title="提供多种 Sqoop 连接器"></a>提供多种 Sqoop 连接器</h3><h4 id="内置连接器"><a href="#内置连接器" class="headerlink" title="内置连接器"></a>内置连接器</h4><ul>
-<li>经过优化的专用 RDBMS 连接器：MySQL、PostgreSQL、Oracle、DB2、SQL Server、Netzza 等</li>
-<li>通用的 JDBC 连接器：支持 JDBC 协议的数据库</li>
-</ul>
-<h4 id="第三方连接器"><a href="#第三方连接器" class="headerlink" title="第三方连接器"></a>第三方连接器</h4><ul>
-<li>数据仓库：Teradata</li>
-<li>NoSQL 数据库：Couchbase</li>
-</ul>
-<h3 id="Sqoop-版本"><a href="#Sqoop-版本" class="headerlink" title="Sqoop 版本"></a>Sqoop 版本</h3><h4 id="Sqoop-1-优缺点"><a href="#Sqoop-1-优缺点" class="headerlink" title="Sqoop 1 优缺点"></a>Sqoop 1 优缺点</h4><p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/bigdata/Sqoop/sqoop-architecture.png"></div><br></p>
-<p>优点</p>
-<ul>
-<li>架构简单</li>
-<li>部署简单</li>
-<li>功能全面</li>
-<li>稳定性较高</li>
-<li>速度较快</li>
-</ul>
-<p>缺点</p>
-<ul>
-<li>访问方式单一</li>
-<li>命令行方式容易出错，格式紧耦合</li>
-<li>安全机制不够完善，存在密码泄露风险</li>
-</ul>
-<h4 id="Sqoop-2-优缺点"><a href="#Sqoop-2-优缺点" class="headerlink" title="Sqoop 2 优缺点"></a>Sqoop 2 优缺点</h4><p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/bigdata/Sqoop/sqoop-v2-architecture.png"></div><br></p>
-<p>优点</p>
-<ul>
-<li>访问方式多样</li>
-<li>集中管理连接器</li>
-<li>安全机制较完善</li>
-<li>支持多用户</li>
-</ul>
-<p>缺点</p>
-<ul>
-<li>架构较复杂</li>
-<li>部署较繁琐</li>
-<li>稳定性一般</li>
-<li>速度一般</li>
-</ul>
-<h2 id="Sqoop-原理"><a href="#Sqoop-原理" class="headerlink" title="Sqoop 原理"></a>Sqoop 原理</h2><h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/bigdata/Sqoop/sqoop-import.png"></div><br></p>
-<h3 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h3><p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/bigdata/Sqoop/sqoop-export.png"></div><br></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1006,11 +858,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/09/04/bigdata/Flume/" itemprop="url">Flume</a></h1>
+                
+                <a href="/blog/2018/09/04/bigdata/Flume/" class="post-title-link" itemprop="url">Flume</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1018,13 +879,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-04T00:00:00+08:00">
-                2018-09-04
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-04 00:00:00" itemprop="dateCreated datePublished" datetime="2018-09-04T00:00:00+08:00">2018-09-04</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 16:43:45" itemprop="dateModified" datetime="2019-03-06T16:43:45+08:00">2019-03-06</time>
+              
             
           </span>
 
@@ -1040,11 +918,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/bigdata/" itemprop="url" rel="index">
-                    <span itemprop="name">bigdata</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/bigdata/" itemprop="url" rel="index"><span itemprop="name">bigdata</span></a></span>
 
                 
                 
@@ -1054,6 +928,7 @@
 
           
             
+            
           
 
           
@@ -1061,6 +936,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -1080,73 +983,61 @@
       
         
           
-            <h1 id="Flume"><a href="#Flume" class="headerlink" title="Flume"></a>Flume</h1><blockquote>
-<p><strong>Sqoop 是一个主要在 Hadoop 和关系数据库之间进行批量数据迁移的工具。</strong></p>
-</blockquote>
-<!-- TOC depthFrom:2 depthTo:3 -->
-<ul>
-<li><a href="#flume-简介">Flume 简介</a><ul>
-<li><a href="#什么是-flume-">什么是 Flume ？</a></li>
-<li><a href="#应用场景">应用场景</a></li>
-</ul>
-</li>
-<li><a href="#flume-原理">Flume 原理</a><ul>
-<li><a href="#flume-基本概念">Flume 基本概念</a></li>
-<li><a href="#flume-基本组件">Flume 基本组件</a></li>
-<li><a href="#flume-数据流">Flume 数据流</a></li>
-</ul>
-</li>
-<li><a href="#资源">资源</a></li>
-</ul>
-<!-- /TOC -->
-<h2 id="Flume-简介"><a href="#Flume-简介" class="headerlink" title="Flume 简介"></a>Flume 简介</h2><h3 id="什么是-Flume-？"><a href="#什么是-Flume-？" class="headerlink" title="什么是 Flume ？"></a>什么是 Flume ？</h3><p>Flume 是一个分布式海量数据采集、聚合和传输系统。</p>
-<p>特点</p>
-<ul>
-<li>基于事件的海量数据采集</li>
-<li>数据流模型：Source -&gt; Channel -&gt; Sink</li>
-<li>事务机制：支持重读重写，保证消息传递的可靠性</li>
-<li>内置丰富插件：轻松与各种外部系统集成</li>
-<li>高可用：Agent 主备切换</li>
-<li>Java 实现：开源，优秀的系统设计</li>
-</ul>
-<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><h2 id="Flume-原理"><a href="#Flume-原理" class="headerlink" title="Flume 原理"></a>Flume 原理</h2><h3 id="Flume-基本概念"><a href="#Flume-基本概念" class="headerlink" title="Flume 基本概念"></a>Flume 基本概念</h3><ul>
-<li>Event：事件，最小数据传输单元，由 Header 和 Body 组成。</li>
-<li>Agent：代理，JVM 进程，最小运行单元，由 Source、Channel、Sink 三个基本组件构成，负责将外部数据源产生的数据以 Event 的形式传输到目的地<ul>
-<li>Source：负责对接各种外部数据源，将采集到的数据封装成 Event，然后写入 Channel</li>
-<li>Channel：Event 暂存容器，负责保存 Source 发送的 Event，直至被 Sink 成功读取</li>
-<li>Sink：负责从 Channel 读取 Event，然后将其写入外部存储，或传输给下一阶段的 Agent</li>
-<li>映射关系：1 个 Source -&gt; 多个 Channel，1 个 Channel -&gt; 多个 Sink，1 个 Sink -&gt; 1 个 Channel</li>
-</ul>
-</li>
-</ul>
-<h3 id="Flume-基本组件"><a href="#Flume-基本组件" class="headerlink" title="Flume 基本组件"></a>Flume 基本组件</h3><h4 id="Source-组件"><a href="#Source-组件" class="headerlink" title="Source 组件"></a>Source 组件</h4><ul>
-<li>对接各种外部数据源，将采集到的数据封装成 Event，然后写入 Channel</li>
-<li>一个 Source 可向多个 Channel 发送 Event</li>
-<li>Flume 内置类型丰富的 Source，同时用户可自定义 Source</li>
-</ul>
-<h4 id="Channel-组件"><a href="#Channel-组件" class="headerlink" title="Channel 组件"></a>Channel 组件</h4><ul>
-<li>Event 中转暂存区，存储 Source 采集但未被 Sink 读取的 Event</li>
-<li>为了平衡 Source 采集、Sink 读取的速度，可视为 Flume 内部的消息队列</li>
-<li>线程安全并具有事务性，支持 Source 写失败重写和 Sink 读失败重读</li>
-</ul>
-<h4 id="Sink-组件"><a href="#Sink-组件" class="headerlink" title="Sink 组件"></a>Sink 组件</h4><ul>
-<li>从 Channel 读取 Event，将其写入外部存储，或传输到下一阶段的 Agent</li>
-<li>一个 Sink 只能从一个 Channel 中读取 Event</li>
-<li>Sink 成功读取 Event 后，向 Channel 提交事务，Event 被删除，否则 Channel 会等待 Sink 重新读取</li>
-</ul>
-<h3 id="Flume-数据流"><a href="#Flume-数据流" class="headerlink" title="Flume 数据流"></a>Flume 数据流</h3><p>单层架构</p>
-<p>优点：架构简单，使用方便，占用资源较少<br>缺点<br>如果采集的数据源或Agent较多，将Event写入到HDFS会产生很多小文件<br>外部存储升级维护或发生故障，需对采集层的所有Agent做处理，人力成本较高，系统稳定性较差<br>系统安全性较差<br>数据源管理较混乱</p>
-<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2>
+            <p>
+              Flume
+Sqoop 是一个主要在 Hadoop 和关系数据库之间进行批量数据迁移的工具。
+
+
+
+Flume 简介
+什么是 Flume ？
+应用场景
+
+
+Flume 原理
+Flume 基本概念
+Flume 基本组件
+Flume 数据流
+
+
+资源
+
+
+Flume 简介什么是 Flume ？Flume 是一个分布式海量数据采集、聚合和传输系统。
+特点
+
+基于事件的海量数据采集
+数据流模型：Sourc
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2018/09/04/bigdata/Flume/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1179,12 +1070,14 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2018/09/03/bigdata/Spark/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2018/09/04/bigdata/Sqoop/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -1203,11 +1096,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/09/03/bigdata/Spark/" itemprop="url">Spark</a></h1>
+                
+                <a href="/blog/2018/09/04/bigdata/Sqoop/" class="post-title-link" itemprop="url">Sqoop</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1215,13 +1117,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-03T00:00:00+08:00">
-                2018-09-03
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-04 00:00:00" itemprop="dateCreated datePublished" datetime="2018-09-04T00:00:00+08:00">2018-09-04</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 16:43:45" itemprop="dateModified" datetime="2019-03-06T16:43:45+08:00">2019-03-06</time>
+              
             
           </span>
 
@@ -1237,11 +1156,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/bigdata/" itemprop="url" rel="index">
-                    <span itemprop="name">bigdata</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/bigdata/" itemprop="url" rel="index"><span itemprop="name">bigdata</span></a></span>
 
                 
                 
@@ -1251,6 +1166,7 @@
 
           
             
+            
           
 
           
@@ -1258,6 +1174,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">602</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -1277,114 +1221,58 @@
       
         
           
-            <h1 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h1><!-- TOC depthFrom:2 depthTo:3 -->
-<ul>
-<li><a href="#spark-简介">Spark 简介</a><ul>
-<li><a href="#spark-概念">Spark 概念</a></li>
-<li><a href="#spark-特点">Spark 特点</a></li>
-</ul>
-</li>
-<li><a href="#spark-原理">Spark 原理</a><ul>
-<li><a href="#编程模型">编程模型</a></li>
-</ul>
-</li>
-</ul>
-<!-- /TOC -->
-<h2 id="Spark-简介"><a href="#Spark-简介" class="headerlink" title="Spark 简介"></a>Spark 简介</h2><h3 id="Spark-概念"><a href="#Spark-概念" class="headerlink" title="Spark 概念"></a>Spark 概念</h3><ul>
-<li>大规模分布式通用计算引擎<ul>
-<li>Spark Core：核心计算框架</li>
-<li>Spark SQL：结构化数据查询</li>
-<li>Spark Streaming：实时流处理</li>
-<li>Spark MLib：机器学习</li>
-<li>Spark GraphX：图计算</li>
-</ul>
-</li>
-<li>具有高吞吐、低延时、通用易扩展、高容错等特点</li>
-<li>采用 Scala 语言开发</li>
-<li>提供多种运行模式</li>
-</ul>
-<h3 id="Spark-特点"><a href="#Spark-特点" class="headerlink" title="Spark 特点"></a>Spark 特点</h3><ul>
-<li>计算高效<ul>
-<li>利用内存计算、Cache 缓存机制，支持迭代计算和数据共享，减少数据读取的 IO 开销</li>
-<li>利用 DAG 引擎，减少中间计算结果写入 HDFS 的开销</li>
-<li>利用多线程池模型，减少任务启动开销，避免 Shuffle 中不必要的排序和磁盘 IO 操作</li>
-</ul>
-</li>
-<li>通用易用<ul>
-<li>适用于批处理、流处理、交互式计算、机器学习算法等场景</li>
-<li>提供了丰富的开发 API，支持 Scala、Java、Python、R 等</li>
-</ul>
-</li>
-<li>运行模式多样<ul>
-<li>Local 模式</li>
-<li>Standalone 模式</li>
-<li>YARN/Mesos 模式</li>
-</ul>
-</li>
-<li>计算高效<ul>
-<li>利用内存计算、Cache 缓存机制，支持迭代计算和数据共享，减少数据读取的 IO 开销</li>
-<li>利用 DAG 引擎，减少中间计算结果写入 HDFS 的开销</li>
-<li>利用多线程池模型，减少任务启动开销，避免 Shuffle 中不必要的排序和磁盘 IO 操作</li>
-</ul>
-</li>
-<li>通用易用<ul>
-<li>适用于批处理、流处理、交互式计算、机器学习等场景</li>
-<li>提供了丰富的开发 API，支持 Scala、Java、Python、R 等</li>
-</ul>
-</li>
-</ul>
-<h2 id="Spark-原理"><a href="#Spark-原理" class="headerlink" title="Spark 原理"></a>Spark 原理</h2><h3 id="编程模型"><a href="#编程模型" class="headerlink" title="编程模型"></a>编程模型</h3><h4 id="RDD"><a href="#RDD" class="headerlink" title="RDD"></a>RDD</h4><ul>
-<li>弹性分布式数据集（Resilient Distributed Datesets）<ul>
-<li>分布在集群中的只读对象集合</li>
-<li>由多个 Partition 组成</li>
-<li>通过转换操作构造</li>
-<li>失效后自动重构（弹性）</li>
-<li>存储在内存或磁盘中</li>
-</ul>
-</li>
-<li>Spark 基于 RDD 进行计算</li>
-</ul>
-<h4 id="RDD-操作（Operator）"><a href="#RDD-操作（Operator）" class="headerlink" title="RDD 操作（Operator）"></a>RDD 操作（Operator）</h4><ul>
-<li>Transformation（转换）<ul>
-<li>将 Scala 集合或 Hadoop 输入数据构造成一个新 RDD</li>
-<li>通过已有的 RDD 产生新 RDD</li>
-<li>惰性执行：只记录转换关系，不触发计算</li>
-<li>例如：map、filter、flatmap、union、distinct、sortbykey</li>
-</ul>
-</li>
-<li>Action（动作）<ul>
-<li>通过 RDD 计算得到一个值或一组值</li>
-<li>真正触发计算</li>
-<li>例如：first、count、collect、foreach、saveAsTextFile</li>
-</ul>
-</li>
-</ul>
-<h4 id="RDD-依赖（Dependency）"><a href="#RDD-依赖（Dependency）" class="headerlink" title="RDD 依赖（Dependency）"></a>RDD 依赖（Dependency）</h4><ul>
-<li>窄依赖（Narrow Dependency）<ul>
-<li>父 RDD 中的分区最多只能被一个子 RDD 的一个分区使用</li>
-<li>子 RDD 如果有部分分区数据丢失或损坏，只需从对应的父 RDD 重新计算恢复</li>
-<li>例如：map、filter、union</li>
-</ul>
-</li>
-<li>宽依赖（Shuffle/Wide Dependency ）<ul>
-<li>子 RDD 分区依赖父 RDD 的所有分区</li>
-<li>子 RDD 如果部分或全部分区数据丢失或损坏，必须从所有父 RDD 分区重新计算</li>
-<li>相对于窄依赖，宽依赖付出的代价要高很多，尽量避免使用</li>
-<li>例如：groupByKey、reduceByKey、sortByKey</li>
-</ul>
-</li>
-</ul>
+            <p>
+              Sqoop
+Sqoop 是一个主要在 Hadoop 和关系数据库之间进行批量数据迁移的工具。
 
+
+
+Sqoop 简介
+提供多种 Sqoop 连接器
+Sqoop 版本
+
+
+Sqoop 原理
+导入
+导出
+
+
+
+
+Sqoop 简介Sqoop 是一个主要在 Hadoop 和关系数据库之间进行批量数据迁移的工具。
+
+Hadoop：HDFS、Hive、HBase、Inceptor、Hyperbase
+面向大数
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2018/09/04/bigdata/Sqoop/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1417,263 +1305,6 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2018/09/03/bigdata/MapReduce/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Peng">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张鹏的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/09/03/bigdata/MapReduce/" itemprop="url">MapReduce</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-03T00:00:00+08:00">
-                2018-09-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/bigdata/" itemprop="url" rel="index">
-                    <span itemprop="name">bigdata</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h1><!-- TOC depthFrom:2 depthTo:3 -->
-<ul>
-<li><a href="#mapreduce-简介">MapReduce 简介</a><ul>
-<li><a href="#概念">概念</a></li>
-<li><a href="#思想">思想</a></li>
-<li><a href="#特点">特点</a></li>
-<li><a href="#适用场景">适用场景</a></li>
-<li><a href="#不适用场景">不适用场景</a></li>
-</ul>
-</li>
-<li><a href="#mapreduce-原理">MapReduce 原理</a><ul>
-<li><a href="#job--task作业与任务">Job &amp; Task（作业与任务）</a></li>
-<li><a href="#split切片">Split（切片）</a></li>
-<li><a href="#map-阶段映射">Map 阶段（映射）</a></li>
-<li><a href="#reduce-阶段化简">Reduce 阶段（化简）</a></li>
-<li><a href="#shuffle-阶段洗牌">Shuffle 阶段（洗牌）</a></li>
-</ul>
-</li>
-<li><a href="#shuffle-详解">Shuffle 详解</a><ul>
-<li><a href="#map-端">Map 端</a></li>
-<li><a href="#reduce-端">Reduce 端</a></li>
-</ul>
-</li>
-<li><a href="#作业运行模式">作业运行模式</a><ul>
-<li><a href="#jobtrackertasktracker-模式hadoop-1x">JobTracker/TaskTracker 模式（Hadoop 1.X）</a></li>
-<li><a href="#yarn-模式hadoop-2x">YARN 模式（Hadoop 2.X）</a></li>
-</ul>
-</li>
-</ul>
-<!-- /TOC -->
-<h2 id="MapReduce-简介"><a href="#MapReduce-简介" class="headerlink" title="MapReduce 简介"></a>MapReduce 简介</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>MapReduce 是一个面向批处理的分布式计算框架。</p>
-<p>编程模型：MapReduce 程序被分为 Map（映射）阶段和 Reduce（化简）阶段。</p>
-<h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><p>分而治之，并行计算<br>移动计算，而非移动数据</p>
-<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
-<li>计算跟着数据走</li>
-<li>良好的扩展性：计算能力随着节点数增加，近似线性递增</li>
-<li>高容错</li>
-<li>状态监控</li>
-<li>适合海量数据的离线批处理</li>
-<li>降低了分布式编程的门槛</li>
-</ul>
-<h3 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h3><ul>
-<li>数据统计，如：网站的 PV、UV 统计</li>
-<li>搜索引擎构建索引</li>
-<li>海量数据查询</li>
-</ul>
-<h3 id="不适用场景"><a href="#不适用场景" class="headerlink" title="不适用场景"></a>不适用场景</h3><ul>
-<li>OLAP<ul>
-<li>要求毫秒或秒级返回结果</li>
-</ul>
-</li>
-<li>流计算<ul>
-<li>流计算的输入数据集是动态的，而 MapReduce 是静态的</li>
-</ul>
-</li>
-<li>DAG 计算<ul>
-<li>多个作业存在依赖关系，后一个的输入是前一个的输出，构成有向无环图 DAG</li>
-<li>每个 MapReduce 作业的输出结果都会落盘，造成大量磁盘 IO，导致性能非常低下</li>
-</ul>
-</li>
-</ul>
-<h2 id="MapReduce-原理"><a href="#MapReduce-原理" class="headerlink" title="MapReduce 原理"></a>MapReduce 原理</h2><h3 id="Job-amp-Task（作业与任务）"><a href="#Job-amp-Task（作业与任务）" class="headerlink" title="Job &amp; Task（作业与任务）"></a>Job &amp; Task（作业与任务）</h3><ul>
-<li>作业是客户端请求执行的一个工作单元<ul>
-<li>包括输入数据、MapReduce 程序、配置信息</li>
-</ul>
-</li>
-<li>任务是将作业分解后得到的细分工作单元<ul>
-<li>分为 Map 任务和 Reduce 任务</li>
-</ul>
-</li>
-</ul>
-<h3 id="Split（切片）"><a href="#Split（切片）" class="headerlink" title="Split（切片）"></a>Split（切片）</h3><ul>
-<li>输入数据被划分成等长的小数据块，称为输入切片（Input Split），简称切片</li>
-<li>Split 是逻辑概念，仅包含元数据信息，如：数据的起始位置、长度、所在节点等</li>
-<li>每个 Split 交给一个 Map 任务处理，Split 的数量决定 Map 任务的数量</li>
-<li>Split 的划分方式由程序设定，Split 与 HDFS Block 没有严格的对应关系</li>
-<li>Split 的大小默认等于 Block 大小</li>
-<li>Split 越小，负载越均衡，但集群的开销越大</li>
-</ul>
-<h3 id="Map-阶段（映射）"><a href="#Map-阶段（映射）" class="headerlink" title="Map 阶段（映射）"></a>Map 阶段（映射）</h3><ul>
-<li>由若干 Map 任务组成，任务数量由 Split 数量决定</li>
-<li>输入：Split 切片（key-value），输出：中间计算结果（key-value）</li>
-</ul>
-<h3 id="Reduce-阶段（化简）"><a href="#Reduce-阶段（化简）" class="headerlink" title="Reduce 阶段（化简）"></a>Reduce 阶段（化简）</h3><ul>
-<li>由若干 Reduce 任务组成，任务数量由程序指定</li>
-<li>输入：Map 阶段输出的中间结果（key-value），输出：最终结果（key-value）</li>
-</ul>
-<h3 id="Shuffle-阶段（洗牌）"><a href="#Shuffle-阶段（洗牌）" class="headerlink" title="Shuffle 阶段（洗牌）"></a>Shuffle 阶段（洗牌）</h3><ul>
-<li>Map、Reduce 阶段的中间环节，负责执行 Partition（分区）、Sort（排序）、Spill（溢写）、Merge（合并）、抓取（Fetch）等工作</li>
-<li>Partition 决定了 Map 任务输出的每条数据放入哪个分区，交给哪个 Reduce 任务处理</li>
-<li>Reduce 任务的数量决定了 Partition 数量</li>
-<li>Partition 编号 = Reduce 任务编号 =“key hashcode % reduce task number”</li>
-<li>避免和减少 Shuffle 是 MapReduce 程序调优的重点</li>
-</ul>
-<h2 id="Shuffle-详解"><a href="#Shuffle-详解" class="headerlink" title="Shuffle 详解"></a>Shuffle 详解</h2><h3 id="Map-端"><a href="#Map-端" class="headerlink" title="Map 端"></a>Map 端</h3><p>Map 任务将中间结果写入专用内存缓冲区 Buffer（默认 100M），同时进行 Partition 和 Sort（先按“key hashcode % reduce task number”对数据进行分区，分区内再按 key 排序）<br>当 Buffer 的数据量达到阈值（默认 80%）时，将数据溢写（Spill）到磁盘的一个临时文件中，文件内数据先分区后排序<br>Map 任务结束前，将多个临时文件合并（Merge）为一个 Map 输出文件，文件内数据先分区后排序</p>
-<h3 id="Reduce-端"><a href="#Reduce-端" class="headerlink" title="Reduce 端"></a>Reduce 端</h3><p>Reduce 任务从多个 Map 输出文件中主动抓取（Fetch）属于自己的分区数据，先写入 Buffer，数据量达到阈值后，溢写到磁盘的一个临时文件中<br>数据抓取完成后，将多个临时文件合并为一个 Reduce 输入文件，文件内数据按 key 排序</p>
-<h2 id="作业运行模式"><a href="#作业运行模式" class="headerlink" title="作业运行模式"></a>作业运行模式</h2><h3 id="JobTracker-TaskTracker-模式（Hadoop-1-X）"><a href="#JobTracker-TaskTracker-模式（Hadoop-1-X）" class="headerlink" title="JobTracker/TaskTracker 模式（Hadoop 1.X）"></a>JobTracker/TaskTracker 模式（Hadoop 1.X）</h3><p><strong>JobTracker 节点（Master）</strong></p>
-<ul>
-<li>调度任务在 TaskTracker 上运行</li>
-<li>若任务失败，指定新 TaskTracker 重新运行</li>
-</ul>
-<p><strong>TaskTracker 节点（Slave）</strong></p>
-<ul>
-<li>执行任务，发送进度报告</li>
-</ul>
-<p><strong>存在的问题</strong></p>
-<ul>
-<li>JobTracker 存在单点故障</li>
-<li>JobTracker 负载太重（上限 4000 节点）</li>
-<li>JobTracker 缺少对资源的全面管理</li>
-<li>TaskTracker 对资源的描述过于简单</li>
-<li>源码很难理解</li>
-</ul>
-<h3 id="YARN-模式（Hadoop-2-X）"><a href="#YARN-模式（Hadoop-2-X）" class="headerlink" title="YARN 模式（Hadoop 2.X）"></a>YARN 模式（Hadoop 2.X）</h3><ul>
-<li>提交作业</li>
-<li>查看作业</li>
-<li>终止作业</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1700,11 +1331,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/09/03/bigdata/YARN/" itemprop="url">YARN</a></h1>
+                
+                <a href="/blog/2018/09/03/bigdata/YARN/" class="post-title-link" itemprop="url">YARN</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1712,13 +1352,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-03T00:00:00+08:00">
-                2018-09-03
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-03 00:00:00" itemprop="dateCreated datePublished" datetime="2018-09-03T00:00:00+08:00">2018-09-03</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 16:43:45" itemprop="dateModified" datetime="2019-03-06T16:43:45+08:00">2019-03-06</time>
+              
             
           </span>
 
@@ -1734,11 +1391,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/bigdata/" itemprop="url" rel="index">
-                    <span itemprop="name">bigdata</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/bigdata/" itemprop="url" rel="index"><span itemprop="name">bigdata</span></a></span>
 
                 
                 
@@ -1748,6 +1401,7 @@
 
           
             
+            
           
 
           
@@ -1755,6 +1409,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.2k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
           
 
           
@@ -1774,166 +1456,55 @@
       
         
           
-            <h1 id="YARN"><a href="#YARN" class="headerlink" title="YARN"></a>YARN</h1><blockquote>
-<p>YARN 的目标是解决 MapReduce 的缺陷。</p>
-</blockquote>
-<!-- TOC depthFrom:2 depthTo:3 -->
-<ul>
-<li><a href="#mapreduce-的缺陷hadoop-1x">MapReduce 的缺陷（Hadoop 1.x）</a></li>
-<li><a href="#yarn-简介">YARN 简介</a></li>
-<li><a href="#yarn-系统架构">YARN 系统架构</a><ul>
-<li><a href="#resourcemanagerrm">ResourceManager（RM）</a></li>
-<li><a href="#nodemanagernm">NodeManager（NM）</a></li>
-<li><a href="#applicationmasteram">ApplicationMaster（AM）</a></li>
-<li><a href="#container">Container</a></li>
-</ul>
-</li>
-<li><a href="#yarn-高可用">YARN 高可用</a></li>
-<li><a href="#yarn-资源调度策略">YARN 资源调度策略</a><ul>
-<li><a href="#fifo-scheduler先进先出调度器">FIFO Scheduler（先进先出调度器）</a></li>
-<li><a href="#capacity-scheduler容量调度器">Capacity Scheduler（容量调度器）</a></li>
-<li><a href="#fair-scheduler公平调度器">Fair Scheduler（公平调度器）</a></li>
-</ul>
-</li>
-<li><a href="#资源">资源</a></li>
-</ul>
-<!-- /TOC -->
-<h2 id="MapReduce-的缺陷（Hadoop-1-x）"><a href="#MapReduce-的缺陷（Hadoop-1-x）" class="headerlink" title="MapReduce 的缺陷（Hadoop 1.x）"></a>MapReduce 的缺陷（Hadoop 1.x）</h2><ul>
-<li>身兼两职：计算框架 + 资源管理框架</li>
-<li>JobTracker<ul>
-<li>既做资源管理，又做任务调度</li>
-<li>任务太重，开销过大</li>
-<li>存在单点故障</li>
-</ul>
-</li>
-<li>资源描述模型过于简单，资源利用率较低<ul>
-<li>仅把 Task 数量看作资源，没有考虑 CPU 和内存</li>
-<li>强制把资源分成 Map Task Slot 和 Reduce Task Slot</li>
-</ul>
-</li>
-<li>扩展性较差，集群规模上限 4K</li>
-<li>源码难于理解，升级维护困难</li>
-</ul>
-<h2 id="YARN-简介"><a href="#YARN-简介" class="headerlink" title="YARN 简介"></a>YARN 简介</h2><p>YARN(Yet Another Resource Negotiator，另一种资源管理器)是一个<strong>分布式通用资源管理系统</strong>。</p>
-<p>设计目标：聚焦资源管理、通用（适用各种计算框架）、高可用、高扩展。</p>
-<h2 id="YARN-系统架构"><a href="#YARN-系统架构" class="headerlink" title="YARN 系统架构"></a>YARN 系统架构</h2><ul>
-<li>主从结构（master/slave）</li>
-<li>将 JobTracker 的资源管理、任务调度功能分离</li>
-<li>三种角色：<ul>
-<li>ResourceManager（Master） - 集群资源的统一管理和分配</li>
-<li>NodeManager（Slave） - 管理节点资源，以及容器的生命周期</li>
-<li>ApplicationMaster（新角色） - 管理应用程序实例，包括任务调度和资源申请</li>
-</ul>
-</li>
-</ul>
-<h3 id="ResourceManager（RM）"><a href="#ResourceManager（RM）" class="headerlink" title="ResourceManager（RM）"></a>ResourceManager（RM）</h3><p><strong>主要功能</strong></p>
-<ul>
-<li>统一管理集群的所有资源</li>
-<li>将资源按照一定策略分配给各个应用（ApplicationMaster）</li>
-<li>接收 NodeManager 的资源上报信息</li>
-</ul>
-<p><strong>核心组件</strong></p>
-<ul>
-<li>用户交互服务（User Service）</li>
-<li>NodeManager 管理</li>
-<li>ApplicationMaster 管理</li>
-<li>Application 管理</li>
-<li>安全管理</li>
-<li>资源管理</li>
-</ul>
-<h3 id="NodeManager（NM）"><a href="#NodeManager（NM）" class="headerlink" title="NodeManager（NM）"></a>NodeManager（NM）</h3><p><strong>主要功能</strong></p>
-<ul>
-<li>管理单个节点的资源</li>
-<li>向 ResourceManager 汇报节点资源使用情况</li>
-<li>管理 Container 的生命周期</li>
-</ul>
-<p><strong>核心组件</strong></p>
-<ul>
-<li>NodeStatusUpdater</li>
-<li>ContainerManager</li>
-<li>ContainerExecutor</li>
-<li>NodeHealthCheckerService</li>
-<li>Security</li>
-<li>WebServer</li>
-</ul>
-<h3 id="ApplicationMaster（AM）"><a href="#ApplicationMaster（AM）" class="headerlink" title="ApplicationMaster（AM）"></a>ApplicationMaster（AM）</h3><p><strong>主要功能</strong></p>
-<ul>
-<li>管理应用程序实例</li>
-<li>向 ResourceManager 申请任务执行所需的资源</li>
-<li>任务调度和监管</li>
-</ul>
-<p><strong>实现方式</strong></p>
-<ul>
-<li>需要为每个应用开发一个 AM 组件</li>
-<li>YARN 提供 MapReduce 的 ApplicationMaster 实现</li>
-<li>采用基于事件驱动的异步编程模型，由中央事件调度器统一管理所有事件</li>
-<li>每种组件都是一种事件处理器，在中央事件调度器中注册</li>
-</ul>
-<h3 id="Container"><a href="#Container" class="headerlink" title="Container"></a>Container</h3><ul>
-<li>概念：Container 封装了节点上进程的相关资源，是 YARN 中资源的抽象</li>
-<li>分类：运行 ApplicationMaster 的 Container 、运行应用任务的 Container</li>
-</ul>
-<h2 id="YARN-高可用"><a href="#YARN-高可用" class="headerlink" title="YARN 高可用"></a>YARN 高可用</h2><p>ResourceManager 高可用</p>
-<ul>
-<li>1 个 Active RM、多个 Standby RM</li>
-<li>宕机后自动实现主备切换</li>
-<li>ZooKeeper 的核心作用<ul>
-<li>Active 节点选举</li>
-<li>恢复 Active RM 的原有状态信息</li>
-</ul>
-</li>
-<li>重启 AM，杀死所有运行中的 Container</li>
-<li>切换方式：手动、自动</li>
-</ul>
-<h2 id="YARN-资源调度策略"><a href="#YARN-资源调度策略" class="headerlink" title="YARN 资源调度策略"></a>YARN 资源调度策略</h2><h3 id="FIFO-Scheduler（先进先出调度器）"><a href="#FIFO-Scheduler（先进先出调度器）" class="headerlink" title="FIFO Scheduler（先进先出调度器）"></a>FIFO Scheduler（先进先出调度器）</h3><p><strong>调度策略</strong></p>
-<p>将所有任务放入一个队列，先进队列的先获得资源，排在后面的任务只有等待</p>
-<p><strong>缺点</strong></p>
-<ul>
-<li>资源利用率低，无法交叉运行任务</li>
-<li>灵活性差，如：紧急任务无法插队，耗时长的任务拖慢耗时短的任务</li>
-</ul>
-<h3 id="Capacity-Scheduler（容量调度器）"><a href="#Capacity-Scheduler（容量调度器）" class="headerlink" title="Capacity Scheduler（容量调度器）"></a>Capacity Scheduler（容量调度器）</h3><p><strong>核心思想</strong> - 提前<strong>做预算</strong>，在预算指导下分享集群资源。</p>
-<p><strong>调度策略</strong></p>
-<ul>
-<li>集群资源由多个队列分享</li>
-<li>每个队列都要预设资源分配的比例（提前做预算）</li>
-<li>空闲资源优先分配给“实际资源/预算资源”比值最低的队列</li>
-<li>队列内部采用 FIFO 调度策略</li>
-</ul>
-<p><strong>特点</strong></p>
-<ul>
-<li>层次化的队列设计：子队列可使用父队列资源</li>
-<li>容量保证：每个队列都要预设资源占比，防止资源独占</li>
-<li>弹性分配：空闲资源可以分配给任何队列，当多个队列争用时，会按比例进行平衡</li>
-<li>支持动态管理：可以动态调整队列的容量、权限等参数，也可动态增加、暂停队列</li>
-<li>访问控制：用户只能向自己的队列中提交任务，不能访问其他队列</li>
-<li>多租户：多用户共享集群资源</li>
-</ul>
-<h3 id="Fair-Scheduler（公平调度器）"><a href="#Fair-Scheduler（公平调度器）" class="headerlink" title="Fair Scheduler（公平调度器）"></a>Fair Scheduler（公平调度器）</h3><p><strong>调度策略</strong></p>
-<ul>
-<li>多队列公平共享集群资源</li>
-<li>通过平分的方式，动态分配资源，无需预先设定资源分配比例</li>
-<li>队列内部可配置调度策略：FIFO、Fair（默认）</li>
-</ul>
-<p><strong>资源抢占</strong></p>
-<ul>
-<li>终止其他队列的任务，使其让出所占资源，然后将资源分配给占用资源量少于最小资源量限制的队列</li>
-</ul>
-<p><strong>队列权重</strong></p>
-<ul>
-<li>当队列中有任务等待，并且集群中有空闲资源时，每个队列可以根据权重获得不同比例的空闲资源</li>
-</ul>
-<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2>
+            <p>
+              YARN
+YARN 的目标是解决 MapReduce 的缺陷。
+
+
+
+MapReduce 的缺陷（Hadoop 1.x）
+YARN 简介
+YARN 系统架构
+ResourceManager（RM）
+NodeManager（NM）
+ApplicationMaster（AM）
+Container
+
+
+YARN 高可用
+YARN 资源调度策略
+FIFO Scheduler（先进先出调度器）
+Capaci
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2018/09/03/bigdata/YARN/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -1966,12 +1537,14 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2018/09/03/bigdata/overview/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2018/09/03/bigdata/Spark/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -1990,11 +1563,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/09/03/bigdata/overview/" itemprop="url">大数据简介</a></h1>
+                
+                <a href="/blog/2018/09/03/bigdata/Spark/" class="post-title-link" itemprop="url">Spark</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -2002,13 +1584,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-03T00:00:00+08:00">
-                2018-09-03
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-03 00:00:00" itemprop="dateCreated datePublished" datetime="2018-09-03T00:00:00+08:00">2018-09-03</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 16:43:45" itemprop="dateModified" datetime="2019-03-06T16:43:45+08:00">2019-03-06</time>
+              
             
           </span>
 
@@ -2024,11 +1623,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/bigdata/" itemprop="url" rel="index">
-                    <span itemprop="name">bigdata</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/bigdata/" itemprop="url" rel="index"><span itemprop="name">bigdata</span></a></span>
 
                 
                 
@@ -2038,6 +1633,7 @@
 
           
             
+            
           
 
           
@@ -2045,6 +1641,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -2064,201 +1688,61 @@
       
         
           
-            <h1 id="大数据简介"><a href="#大数据简介" class="headerlink" title="大数据简介"></a>大数据简介</h1><!-- TOC depthFrom:2 depthTo:3 -->
-<ul>
-<li><a href="#简介">简介</a><ul>
-<li><a href="#什么是大数据">什么是大数据</a></li>
-<li><a href="#应用场景">应用场景</a></li>
-<li><a href="#hadoop-编年史">Hadoop 编年史</a></li>
-</ul>
-</li>
-<li><a href="#技术体系">技术体系</a><ul>
-<li><a href="#hdfs">HDFS</a></li>
-<li><a href="#mapreduce">MapReduce</a></li>
-<li><a href="#spark">Spark</a></li>
-<li><a href="#yarn">YARN</a></li>
-<li><a href="#hive">Hive</a></li>
-<li><a href="#hbase">HBase</a></li>
-<li><a href="#elasticsearch">ElasticSearch</a></li>
-</ul>
-</li>
-<li><a href="#术语">术语</a></li>
-<li><a href="#资源">资源</a></li>
-</ul>
-<!-- /TOC -->
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="什么是大数据"><a href="#什么是大数据" class="headerlink" title="什么是大数据"></a>什么是大数据</h3><p>大数据是指超出传统数据库工具收集、存储、管理和分析能力的数据集。与此同时，及时采集、存储、聚合、管理数据，以及对数据深度分析的新技术和新能力，正在快速增长，就像预测计算芯片增长速度的摩尔定律一样。</p>
-<ul>
-<li><strong>Volume</strong> - 数据规模巨大</li>
-<li><strong>Velocity</strong> - 生成和处理速度极快</li>
-<li><strong>Variety</strong> - 数据规模巨大</li>
-<li><strong>Value</strong> - 生成和处理速度极快</li>
-</ul>
-<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>基于大数据的数据仓库</p>
-<p>基于大数据的实时流处理</p>
-<h3 id="Hadoop-编年史"><a href="#Hadoop-编年史" class="headerlink" title="Hadoop 编年史"></a>Hadoop 编年史</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">时间</th>
-<th style="text-align:left">事件</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">2003.01</td>
-<td style="text-align:left">Google发表了Google File System论文</td>
-</tr>
-<tr>
-<td style="text-align:left">2004.01</td>
-<td style="text-align:left">Google发表了MapReduce论文</td>
-</tr>
-<tr>
-<td style="text-align:left">2006.02</td>
-<td style="text-align:left">Apache Hadoop项目正式启动，并支持MapReduce和HDFS独立发展</td>
-</tr>
-<tr>
-<td style="text-align:left">2006.11</td>
-<td style="text-align:left">Google发表了Bigtable论文</td>
-</tr>
-<tr>
-<td style="text-align:left">2008.01</td>
-<td style="text-align:left">Hadoop成为Apache顶级项目</td>
-</tr>
-<tr>
-<td style="text-align:left">2009.03</td>
-<td style="text-align:left">Cloudera推出世界上首个Hadoop发行版——CDH，并完全开放源码</td>
-</tr>
-<tr>
-<td style="text-align:left">2012.03</td>
-<td style="text-align:left">HDFS NameNode HA加入Hadoop主版本</td>
-</tr>
-<tr>
-<td style="text-align:left">2014.02</td>
-<td style="text-align:left">Spark代替MapReduce成为Hadoop的缺省计算引擎，并成为Apache顶级项目</td>
-</tr>
-</tbody>
-</table>
-<h2 id="技术体系"><a href="#技术体系" class="headerlink" title="技术体系"></a>技术体系</h2><h3 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h3><p><strong>概念</strong></p>
-<ul>
-<li>Hadoop 分布式文件系统（Hadoop Distributed File System）</li>
-<li>在开源大数据技术体系中，地位无可替代</li>
-</ul>
-<p><strong>特点</strong></p>
-<ul>
-<li>高容错：数据多副本，副本丢失后自动恢复</li>
-<li>高可用：NameNode HA，安全模式</li>
-<li>高扩展：10K 节点规模</li>
-<li>简单一致性模型：一次写入多次读取，支持追加，不允许修改</li>
-<li>流式数据访问：批量读而非随机读，关注吞吐量而非时间</li>
-<li>大规模数据集：典型文件大小 GB~TB 级，百万以上文件数量， PB 以上数据规模</li>
-<li>构建成本低且安全可靠：运行在大量的廉价商用机器上，硬件错误是常态，提供容错机制</li>
-</ul>
-<h3 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h3><p><strong>概念</strong></p>
-<ul>
-<li>面向批处理的分布式计算框架</li>
-<li>编程模型：将 MapReduce 程序分为 Map、Reduce 两个阶段</li>
-</ul>
-<p><strong>核心思想</strong></p>
-<ul>
-<li>分而治之，分布式计算</li>
-<li>移动计算，而非移动数据</li>
-</ul>
-<p><strong>特点</strong></p>
-<ul>
-<li>高容错：任务失败，自动调度到其他节点重新执行</li>
-<li>高扩展：计算能力随着节点数增加，近似线性递增</li>
-<li>适用于海量数据的离线批处理</li>
-<li>降低了分布式编程的门槛</li>
-</ul>
-<h3 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h3><p>高性能分布式通用计算引擎</p>
-<ul>
-<li>Spark Core - 基础计算框架（批处理、交互式分析）</li>
-<li>Spark SQL - SQL 引擎（海量结构化数据的高性能查询）</li>
-<li>Spark Streaming - 实时流处理（微批）</li>
-<li>Spark MLlib - 机器学习</li>
-<li>Spark GraphX - 图计算</li>
-</ul>
-<p>采用 Scala 语言开发</p>
-<p><strong>特点</strong></p>
-<ul>
-<li>计算高效 - 内存计算、Cache 缓存机制、DAG 引擎、多线程池模型</li>
-<li>通用易用 - 适用于批处理、交互式计算、流处理、机器学习、图计算等多种场景</li>
-<li>运行模式多样 - Local、Standalone、YARN/Mesos</li>
-</ul>
-<h3 id="YARN"><a href="#YARN" class="headerlink" title="YARN"></a>YARN</h3><p><strong>概念</strong></p>
-<ul>
-<li>Yet Another Resource Negotiator，另一种资源管理器</li>
-<li>为了解决 Hadoop 1.x 中 MapReduce 的先天缺陷</li>
-<li>分布式通用资源管理系统</li>
-<li>负责集群资源的统一管理</li>
-<li>从 Hadoop 2.x 开始，YARN 成为 Hadoop 的核心组件</li>
-</ul>
-<p><strong>特点</strong></p>
-<ul>
-<li>专注于资源管理和作业调度</li>
-<li>通用 - 适用各种计算框架，如 - MapReduce、Spark</li>
-<li>高可用 - ResourceManager 高可用、HDFS 高可用</li>
-<li>高扩展</li>
-</ul>
-<h3 id="Hive"><a href="#Hive" class="headerlink" title="Hive"></a>Hive</h3><p><strong>概念</strong></p>
-<ul>
-<li>Hadoop 数据仓库 - 企业决策支持</li>
-<li>SQL 引擎 - 对海量结构化数据进行高性能的 SQL 查询</li>
-<li>采用 HDFS 或 HBase 为数据存储</li>
-<li>采用 MapReduce 或 Spark 为计算框架</li>
-</ul>
-<p><strong>特点</strong></p>
-<ul>
-<li>提供类 SQL 查询语言</li>
-<li>支持命令行或 JDBC/ODBC</li>
-<li>提供灵活的扩展性</li>
-<li>提供复杂数据类型、扩展函数、脚本等</li>
-</ul>
-<h3 id="HBase"><a href="#HBase" class="headerlink" title="HBase"></a>HBase</h3><p><strong>概念</strong></p>
-<ul>
-<li>Hadoop Database</li>
-<li>Google BigTable 的开源实现</li>
-<li>分布式 NoSQL 数据库</li>
-<li>列式存储 - 主要用于半结构化、非结构化数据</li>
-<li>采用 HDFS 为文件存储系统</li>
-</ul>
-<p><strong>特点</strong></p>
-<ul>
-<li>高性能 - 支持高并发写入和查询</li>
-<li>高可用 - HDFS 高可用、Region 高可用</li>
-<li>高扩展 - 数据自动切分和分布，可动态扩容，无需停机</li>
-<li>海量存储 - 单表可容纳数十亿行，上百万列</li>
-</ul>
-<h3 id="ElasticSearch"><a href="#ElasticSearch" class="headerlink" title="ElasticSearch"></a>ElasticSearch</h3><ul>
-<li>开源的分布式全文检索引擎</li>
-<li>基于 Lucene 实现全文数据的快速存储、搜索和分析</li>
-<li>处理大规模数据 - PB 级以上</li>
-<li>具有较强的扩展性，集群规模可达上百台</li>
-<li>首选的分布式搜索引擎</li>
-</ul>
-<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><p><strong>数据仓库（Data Warehouse）</strong> - 数据仓库，是为企业所有级别的决策制定过程，提供所有类型数据支持的战略集合。它是单个数据存储，出于分析性报告和决策支持目的而创建。 为需要业务智能的企业，提供指导业务流程改进、监视时间、成本、质量以及控制。</p>
-<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><ul>
-<li><a href="https://github.com/onurakpolat/awesome-bigdata" target="_blank" rel="noopener">awesome-bigdata</a></li>
-<li><a href="http://hadoop.apache.org/" target="_blank" rel="noopener">Hadoop</a></li>
-<li><a href="http://hbase.apache.org/" target="_blank" rel="noopener">HBase</a></li>
-<li><a href="http://hive.apache.org/" target="_blank" rel="noopener">Hive</a></li>
-<li><a href="http://impala.apache.org/" target="_blank" rel="noopener">Impala</a></li>
-<li><a href="http://flume.apache.org/" target="_blank" rel="noopener">Flume</a></li>
-<li><a href="http://kafka.apache.org/" target="_blank" rel="noopener">Kafka</a></li>
-<li><a href="http://spark.apache.org/" target="_blank" rel="noopener">Spark</a></li>
-<li><a href="http://sqoop.apache.org/" target="_blank" rel="noopener">Sqoop</a></li>
-<li><a href="https://www.elastic.co/guide/index.html" target="_blank" rel="noopener">ElasticSearch</a></li>
-</ul>
+            <p>
+              Spark
 
+Spark 简介
+Spark 概念
+Spark 特点
+
+
+Spark 原理
+编程模型
+
+
+
+
+Spark 简介Spark 概念
+大规模分布式通用计算引擎
+Spark Core：核心计算框架
+Spark SQL：结构化数据查询
+Spark Streaming：实时流处理
+Spark MLib：机器学习
+Spark GraphX：图计算
+
+
+具有高吞吐、低延时、通用易扩展、高容错等特点
+
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2018/09/03/bigdata/Spark/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -2289,6 +1773,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -2315,11 +1801,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/09/03/bigdata/HDFS/" itemprop="url">HDFS</a></h1>
+                
+                <a href="/blog/2018/09/03/bigdata/HDFS/" class="post-title-link" itemprop="url">HDFS</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -2327,13 +1822,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-03T00:00:00+08:00">
-                2018-09-03
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-03 00:00:00" itemprop="dateCreated datePublished" datetime="2018-09-03T00:00:00+08:00">2018-09-03</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 16:43:45" itemprop="dateModified" datetime="2019-03-06T16:43:45+08:00">2019-03-06</time>
+              
             
           </span>
 
@@ -2349,11 +1861,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/bigdata/" itemprop="url" rel="index">
-                    <span itemprop="name">bigdata</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/bigdata/" itemprop="url" rel="index"><span itemprop="name">bigdata</span></a></span>
 
                 
                 
@@ -2363,6 +1871,7 @@
 
           
             
+            
           
 
           
@@ -2370,6 +1879,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">4.6k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">4 分钟</span>
+              
+            </div>
           
 
           
@@ -2389,198 +1926,69 @@
       
         
           
-            <h1 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h1><blockquote>
-<p><strong>HDFS 是 Hadoop 分布式文件系统。</strong></p>
-<p>关键词：分布式、文件系统</p>
-</blockquote>
-<!-- TOC depthFrom:2 depthTo:3 -->
-<ul>
-<li><a href="#概述">概述</a><ul>
-<li><a href="#hdfs-的特点">HDFS 的特点</a></li>
-</ul>
-</li>
-<li><a href="#hdfs-的概念">HDFS 的概念</a><ul>
-<li><a href="#namenode">NameNode</a></li>
-<li><a href="#datanode">DataNode</a></li>
-<li><a href="#block-数据块">Block 数据块</a></li>
-<li><a href="#client">Client</a></li>
-</ul>
-</li>
-<li><a href="#block-副本策略">Block 副本策略</a></li>
-<li><a href="#数据流">数据流</a><ul>
-<li><a href="#hdfs-读文件">HDFS 读文件</a></li>
-<li><a href="#hdfs-写文件">HDFS 写文件</a></li>
-</ul>
-</li>
-<li><a href="#hdfs-安全模式">HDFS 安全模式</a><ul>
-<li><a href="#什么是安全模式">什么是安全模式？</a></li>
-<li><a href="#何时正常离开安全模式">何时正常离开安全模式</a></li>
-<li><a href="#触发安全模式的原因">触发安全模式的原因</a></li>
-<li><a href="#故障排查">故障排查</a></li>
-</ul>
-</li>
-<li><a href="#hdfs-高可用">HDFS 高可用</a><ul>
-<li><a href="#namenode-的-ha-机制">NameNode 的 HA 机制</a></li>
-<li><a href="#利用-qjm-实现元数据高可用">利用 QJM 实现元数据高可用</a></li>
-</ul>
-</li>
-<li><a href="#资源">资源</a></li>
-</ul>
-<!-- /TOC -->
-<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><blockquote>
-<p>HDFS 是 Hadoop 的核心子项目。</p>
-<p><strong>HDFS</strong> 是 <strong>Hadoop Distributed File System</strong> 的缩写，即 Hadoop 分布式文件系统。</p>
-<p>HDFS 是一种用于存储具有流数据访问模式的超大文件的文件系统，它运行在廉价的机器集群上。</p>
-</blockquote>
-<h3 id="HDFS-的特点"><a href="#HDFS-的特点" class="headerlink" title="HDFS 的特点"></a>HDFS 的特点</h3><p><strong>优点</strong></p>
-<ul>
-<li><strong>高容错</strong> - 数据冗余多副本，副本丢失后自动恢复</li>
-<li><strong>高可用</strong> - NameNode HA、安全模式</li>
-<li><strong>高扩展</strong> - 能够处理 10K 节点的规模；处理数据达到 GB、TB、甚至 PB 级别的数据；能够处理百万规模以上的文件数量，数量相当之大。</li>
-<li><strong>批处理</strong> - 流式数据访问；数据位置暴露给计算框架</li>
-<li><strong>构建在廉价商用机器上</strong> - 提供了容错和恢复机制</li>
-</ul>
-<p><strong>缺点</strong></p>
-<ul>
-<li><strong>不适合低延迟数据访问</strong> - 适合高吞吐率的场景，就是在某一时间内写入大量的数据。但是它在低延时的情况下是不行的，比如毫秒级以内读取数据，它是很难做到的。</li>
-<li><strong>不适合大量小文件存储</strong><ul>
-<li>存储大量小文件(这里的小文件是指小于 HDFS 系统的 Block 大小的文件（默认 64M）)的话，它会占用 NameNode 大量的内存来存储文件、目录和块信息。这样是不可取的，因为 NameNode 的内存总是有限的。</li>
-<li>磁盘寻道时间超过读取时间</li>
-</ul>
-</li>
-<li><strong>不支持并发写入</strong> - 一个文件同时只能有一个写入者</li>
-<li><strong>不支持文件随机修改</strong> - 仅支持追加写入</li>
-</ul>
-<h2 id="HDFS-的概念"><a href="#HDFS-的概念" class="headerlink" title="HDFS 的概念"></a>HDFS 的概念</h2><p>HDFS 采用 Master/Slave 架构。</p>
-<p>一个 HDFS 集群是由一个 Namenode 和一定数目的 Datanodes 组成。Namenode 是一个中心服务器，负责管理文件系统的名字空间(namespace)以及客户端对文件的访问。集群中的 Datanode 一般是一个节点一个，负责管理它所在节点上的存储。HDFS 暴露了文件系统的名字空间，用户能够以文件的形式在上面存储数据。从内部看，一个文件其实被分成一个或多个数据块，这些块存储在一组 Datanode 上。Namenode 执行文件系统的名字空间操作，比如打开、关闭、重命名文件或目录。它也负责确定数据块到具体 Datanode 节点的映射。Datanode 负责处理文件系统客户端的读写请求。在 Namenode 的统一调度下进行数据块的创建、删除和复制。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/bigdata/hdfs/hdfs-architecture.png"></div><br></p>
-<h3 id="NameNode"><a href="#NameNode" class="headerlink" title="NameNode"></a>NameNode</h3><p><strong>NameNode 就是 master 工作节点。</strong></p>
-<ul>
-<li>管理命名空间</li>
-<li>管理元数据：文件的位置、所有者、权限、数据块等</li>
-<li>管理 Block 副本策略：默认 3 个副本</li>
-<li>处理客户端读写请求，为 DataNode 分配任务</li>
-</ul>
-<h4 id="Active-NameNode-和-Standby-NameNode"><a href="#Active-NameNode-和-Standby-NameNode" class="headerlink" title="Active NameNode 和 Standby NameNode"></a>Active NameNode 和 Standby NameNode</h4><p>NameNode 通过 HA 机制来容错。</p>
-<ul>
-<li><strong>Active NameNode</strong> - 是正在工作的 NameNode；</li>
-<li><strong>Standby NameNode</strong> - 是备份的 NameNode。</li>
-</ul>
-<p>Active NameNode 宕机后，Standby NameNode 快速升级为新的 Active NameNode。</p>
-<p>Standby NameNode 周期性同步 edits 编辑日志，定期合并 fsimage 与 edits 到本地磁盘。</p>
-<p>Hadoop 3.0 允许配置多个 Standby NameNode。</p>
-<h4 id="元数据文件"><a href="#元数据文件" class="headerlink" title="元数据文件"></a>元数据文件</h4><ul>
-<li><strong>edits（编辑日志文件）</strong> - 保存了自最新检查点（Checkpoint）之后的所有文件更新操作。</li>
-<li><strong>fsimage（元数据检查点镜像文件）</strong> - 保存了文件系统中所有的目录和文件信息，如：某个目录下有哪些子目录和文件，以及文件名、文件副本数、文件由哪些 Block 组成等。</li>
-</ul>
-<p>Active NameNode 内存中有一份最新的元数据（= fsimage + edits）。</p>
-<p>Standby NameNode 在检查点定期将内存中的元数据保存到 fsimage 文件中。</p>
-<h3 id="DataNode"><a href="#DataNode" class="headerlink" title="DataNode"></a>DataNode</h3><p><strong>DataNode 就是 slave 工作节点。</strong>NameNode 下达命令，DataNode 执行实际的操作。</p>
-<ul>
-<li>存储 Block 和数据校验和</li>
-<li>执行客户端发送的读写操作</li>
-<li>通过心跳机制定期（默认 3 秒）向 NameNode 汇报运行状态和 Block 列表信息</li>
-<li>集群启动时，DataNode 向 NameNode 提供 Block 列表信息</li>
-</ul>
-<h3 id="Block-数据块"><a href="#Block-数据块" class="headerlink" title="Block 数据块"></a>Block 数据块</h3><ul>
-<li>HDFS 最小存储单元</li>
-<li>文件写入 HDFS 会被切分成若干个 Block</li>
-<li>Block 大小固定，默认为 128MB，可自定义</li>
-<li>若一个 Block 的大小小于设定值，不会占用整个块空间</li>
-<li>默认情况下每个 Block 有 3 个副本</li>
-</ul>
-<h3 id="Client"><a href="#Client" class="headerlink" title="Client"></a>Client</h3><ul>
-<li>将文件切分为 Block 数据块</li>
-<li>与 NameNode 交互，获取文件元数据</li>
-<li>与 DataNode 交互，读取或写入数据</li>
-<li>管理 HDFS</li>
-</ul>
-<h2 id="Block-副本策略"><a href="#Block-副本策略" class="headerlink" title="Block 副本策略"></a>Block 副本策略</h2><p>HDFS 被设计成能够在一个大集群中跨机器可靠地存储超大文件。它将每个文件存储成一系列的数据块，除了最后一个，所有的数据块都是同样大小的。为了容错，文件的所有数据块都会有副本。每个文件的数据块大小和副本系数都是可配置的。应用程序可以指定某个文件的副本数目。副本系数可以在文件创建的时候指定，也可以在之后改变。HDFS 中的文件都是一次性写入的，并且严格要求在任何时候只能有一个写入者。</p>
-<p><strong>Namenode 全权管理数据块的复制</strong>，它周期性地从集群中的每个 Datanode 接收心跳信号和块状态报告(Blockreport)。接收到心跳信号意味着该 Datanode 节点工作正常。块状态报告包含了一个该 Datanode 上所有数据块的列表。</p>
-<p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/bigdata/hdfs/hdfs-replica.png"></div><br></p>
-<ul>
-<li>副本 1：放在 Client 所在节点<ul>
-<li>对于远程 Client，系统会随机选择节点</li>
-</ul>
-</li>
-<li>副本 2：放在不同的机架节点上</li>
-<li>副本 3：放在与第二个副本同一机架的不同节点上</li>
-<li>副本 N：随机选择</li>
-<li>节点选择：同等条件下优先选择空闲节点</li>
-</ul>
-<h2 id="数据流"><a href="#数据流" class="headerlink" title="数据流"></a>数据流</h2><h3 id="HDFS-读文件"><a href="#HDFS-读文件" class="headerlink" title="HDFS 读文件"></a>HDFS 读文件</h3><p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/bigdata/hdfs/hdfs-read.png"></div><br></p>
-<ol>
-<li>客户端调用 FileSyste 对象的 open() 方法在分布式文件系统中<strong>打开要读取的文件</strong>。</li>
-<li>分布式文件系统通过使用 RPC（远程过程调用）来调用 namenode，<strong>确定文件起始块的位置</strong>。</li>
-<li>分布式文件系统的 DistributedFileSystem 类返回一个支持文件定位的输入流 FSDataInputStream 对象，FSDataInputStream 对象接着封装 DFSInputStream 对象（<strong>存储着文件起始几个块的 datanode 地址</strong>），客户端对这个输入流调用 read()方法。</li>
-<li>DFSInputStream 连接距离最近的 datanode，通过反复调用 read 方法，<strong>将数据从 datanode 传输到客户端</strong>。</li>
-<li>到达块的末端时，DFSInputStream 关闭与该 datanode 的连接，<strong>寻找下一个块的最佳 datanode</strong>。</li>
-<li>客户端完成读取，对 FSDataInputStream 调用 close()方法<strong>关闭连接</strong>。</li>
-</ol>
-<h3 id="HDFS-写文件"><a href="#HDFS-写文件" class="headerlink" title="HDFS 写文件"></a>HDFS 写文件</h3><p><br><div align="center"><img src="https://raw.githubusercontent.com/dunwu/images/master/images/bigdata/hdfs/hdfs-write.png"></div><br></p>
-<ol>
-<li>客户端通过对 DistributedFileSystem 对象调用 create() 函数来<strong>新建文件</strong>。</li>
-<li>分布式文件系统对 namenod 创建一个 RPC 调用，在文件系统的<strong>命名空间中新建一个文件</strong>。</li>
-<li>Namenode 对新建文件进行检查无误后，分布式文件系统返回给客户端一个 FSDataOutputStream 对象，FSDataOutputStream 对象封装一个 DFSoutPutstream 对象，负责处理 namenode 和 datanode 之间的通信，<strong>客户端开始写入数据</strong>。</li>
-<li>FSDataOutputStream 将<strong>数据分成一个一个的数据包，写入内部队列“数据队列”</strong>，DataStreamer 负责将数据包依次流式传输到由一组 namenode 构成的管线中。</li>
-<li>DFSOutputStream 维护着确认队列来等待 datanode 收到确认回执，<strong>收到管道中所有 datanode 确认后，数据包从确认队列删</strong>除。</li>
-<li><strong>客户端完成数据的写入</strong>，对数据流调用 close() 方法。</li>
-<li>namenode <strong>确认完成</strong>。</li>
-</ol>
-<h2 id="HDFS-安全模式"><a href="#HDFS-安全模式" class="headerlink" title="HDFS 安全模式"></a>HDFS 安全模式</h2><h3 id="什么是安全模式？"><a href="#什么是安全模式？" class="headerlink" title="什么是安全模式？"></a>什么是安全模式？</h3><ul>
-<li>安全模式是 HDFS 的一种特殊状态，在这种状态下，HDFS 只接收读数据请求，而不接收写入、删除、修改等变更请求。</li>
-<li>安全模式是 HDFS 确保 Block 数据安全的一种保护机制。</li>
-<li>Active NameNode 启动时，HDFS 会进入安全模式，DataNode 主动向 NameNode 汇报可用 Block 列表等信息，在系统达到安全标准前，HDFS 一直处于“只读”状态。</li>
-</ul>
-<h3 id="何时正常离开安全模式"><a href="#何时正常离开安全模式" class="headerlink" title="何时正常离开安全模式"></a>何时正常离开安全模式</h3><ul>
-<li>Block 上报率：DataNode 上报的可用 Block 个数 / NameNode 元数据记录的 Block 个数</li>
-<li>当 Block 上报率 &gt;= 阈值时，HDFS 才能离开安全模式，默认阈值为 0.999</li>
-<li>不建议手动强制退出安全模式</li>
-</ul>
-<h3 id="触发安全模式的原因"><a href="#触发安全模式的原因" class="headerlink" title="触发安全模式的原因"></a>触发安全模式的原因</h3><ul>
-<li>NameNode 重启</li>
-<li>NameNode 磁盘空间不足</li>
-<li>Block 上报率低于阈值</li>
-<li>DataNode 无法正常启动</li>
-<li>日志中出现严重异常</li>
-<li>用户操作不当，如：<strong>强制关机（特别注意！）</strong></li>
-</ul>
-<h3 id="故障排查"><a href="#故障排查" class="headerlink" title="故障排查"></a>故障排查</h3><ul>
-<li>找到 DataNode 不能正常启动的原因，重启 DataNode</li>
-<li>清理 NameNode 磁盘</li>
-<li>谨慎操作，有问题找星环，以免丢失数据</li>
-</ul>
-<h2 id="HDFS-高可用"><a href="#HDFS-高可用" class="headerlink" title="HDFS 高可用"></a>HDFS 高可用</h2><h3 id="NameNode-的-HA-机制"><a href="#NameNode-的-HA-机制" class="headerlink" title="NameNode 的 HA 机制"></a>NameNode 的 HA 机制</h3><p>Active NameNode 和 Standby NameNode 实现主备。</p>
-<h3 id="利用-QJM-实现元数据高可用"><a href="#利用-QJM-实现元数据高可用" class="headerlink" title="利用 QJM 实现元数据高可用"></a>利用 QJM 实现元数据高可用</h3><blockquote>
-<p>基于 Paxos 算法</p>
-</blockquote>
-<p>QJM 机制（Quorum Journal Manager）</p>
-<p>只要保证 Quorum（法定人数）数量的操作成功，就认为这是一次最终成功的操作</p>
-<p>QJM 共享存储系统</p>
-<ul>
-<li>部署奇数（2N+1）个 JournalNode</li>
-<li>JournalNode 负责存储 edits 编辑日志</li>
-<li>写 edits 的时候，只要超过半数（N+1）的 JournalNode 返回成功，就代表本次写入成功</li>
-<li>最多可容忍 N 个 JournalNode 宕机</li>
-</ul>
-<p>利用 ZooKeeper 实现 Active 节点选举。</p>
-<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><ul>
-<li><a href="http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html" target="_blank" rel="noopener">HDFS 官方文档</a></li>
-<li><a href="https://www.cnblogs.com/caiyisen/p/7395843.html" target="_blank" rel="noopener">HDFS 知识点总结</a></li>
-<li><a href="http://shop.oreilly.com/product/0636920033448.do" target="_blank" rel="noopener">《Hadoop: The Definitive Guide, Fourth Edition》</a> by Tom White</li>
-<li><a href="http://hadoop.apache.org/docs/r1.0.4/cn/hdfs_design.html" target="_blank" rel="noopener">http://hadoop.apache.org/docs/r1.0.4/cn/hdfs_design.html</a></li>
-</ul>
+            <p>
+              HDFS
+HDFS 是 Hadoop 分布式文件系统。
+关键词：分布式、文件系统
 
+
+
+概述
+HDFS 的特点
+
+
+HDFS 的概念
+NameNode
+DataNode
+Block 数据块
+Client
+
+
+Block 副本策略
+数据流
+HDFS 读文件
+HDFS 写文件
+
+
+HDFS 安全模式
+什么是安全模式？
+何时正常离开安全模式
+触发安全模式的原因
+故障排查
+
+
+HDFS 高可用
+NameN
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2018/09/03/bigdata/HDFS/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -2613,12 +2021,14 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2018/08/29/programming/java/javacore/basic/1-Java简介/">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2018/09/03/bigdata/MapReduce/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Peng">
@@ -2637,11 +2047,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/08/29/programming/java/javacore/basic/1-Java简介/" itemprop="url">Java 简介</a></h1>
+                
+                <a href="/blog/2018/09/03/bigdata/MapReduce/" class="post-title-link" itemprop="url">MapReduce</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -2649,13 +2068,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-29T00:00:00+08:00">
-                2018-08-29
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-03 00:00:00" itemprop="dateCreated datePublished" datetime="2018-09-03T00:00:00+08:00">2018-09-03</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 16:43:45" itemprop="dateModified" datetime="2019-03-06T16:43:45+08:00">2019-03-06</time>
+              
             
           </span>
 
@@ -2671,11 +2107,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/javacore/" itemprop="url" rel="index">
-                    <span itemprop="name">javacore</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/bigdata/" itemprop="url" rel="index"><span itemprop="name">bigdata</span></a></span>
 
                 
                 
@@ -2685,6 +2117,7 @@
 
           
             
+            
           
 
           
@@ -2692,6 +2125,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
           
 
           
@@ -2711,176 +2172,530 @@
       
         
           
-            <blockquote>
-<p>:pushpin: <strong>关键词：</strong> JDK、JRE、JSR、JVM、Java SE、Java EE、Java ME</p>
-</blockquote>
-<h1 id="Java-简介"><a href="#Java-简介" class="headerlink" title="Java 简介"></a>Java 简介</h1><!-- TOC depthFrom:2 depthTo:3 -->
-<ul>
-<li><a href="#java-历史">Java 历史</a></li>
-<li><a href="#java-术语">Java 术语</a><ul>
-<li><a href="#jdk">JDK</a></li>
-<li><a href="#jre">JRE</a></li>
-<li><a href="#jcp">JCP</a></li>
-<li><a href="#jsr">JSR</a></li>
-<li><a href="#java-se">Java SE</a></li>
-<li><a href="#java-ee">Java EE</a></li>
-<li><a href="#java-me">Java ME</a></li>
-<li><a href="#jvm">JVM</a></li>
-</ul>
-</li>
-</ul>
-<!-- /TOC -->
-<p>Java 是一门面向对象编程语言。</p>
-<p>Java 具有简单性、面向对象、分布式、健壮性、安全性、平台独立与可移植性、多线程、动态性等特点。Java 可以编写桌面应用程序、Web 应用程序、分布式系统和嵌入式系统应用程序等。</p>
-<h2 id="Java-历史"><a href="#Java-历史" class="headerlink" title="Java 历史"></a>Java 历史</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">版本</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1991/1/1</td>
-<td style="text-align:left">Sun 公司成立了 Green 项目小组,专攻智能家电的嵌入式控制系统</td>
-</tr>
-<tr>
-<td style="text-align:left">1991/2/1</td>
-<td style="text-align:left">放弃 C++,开发新语言，命名为“Oak”</td>
-</tr>
-<tr>
-<td style="text-align:left">1991/6/1</td>
-<td style="text-align:left">JamesGosling 开发了 Oak 的解释器</td>
-</tr>
-<tr>
-<td style="text-align:left">1992/1/1</td>
-<td style="text-align:left">Green 完成了 Green 操作系统、Oak 语言、类库等开发</td>
-</tr>
-<tr>
-<td style="text-align:left">1992/11/1</td>
-<td style="text-align:left">Green 计划转化成“FirstPerson”，一个 Sun 公司的全资母公司</td>
-</tr>
-<tr>
-<td style="text-align:left">1993/2/1</td>
-<td style="text-align:left">获得时代华纳的电视机顶盒交互系统的订单，于是开发的重心从家庭消费电子产品转到了电视盒机顶盒的相关平台上。</td>
-</tr>
-<tr>
-<td style="text-align:left">1994/6/1</td>
-<td style="text-align:left">FirstPerson 公司倒闭，员工都合并到 Sun 公司。Liveoak 计划启动了，目标是使用 Oak   语言设计出一个操作系统。</td>
-</tr>
-<tr>
-<td style="text-align:left">1994/7/1</td>
-<td style="text-align:left">第一个 Java 语言的 Web 浏览器 WebRunner（后来改名为 HotJava），Oak 更名为 Java。</td>
-</tr>
-<tr>
-<td style="text-align:left">1994/10/1</td>
-<td style="text-align:left">VanHoff 编写的 Java 编译器用于 Java 语言</td>
-</tr>
-<tr>
-<td style="text-align:left">1995/3/1</td>
-<td style="text-align:left">在 SunWorld 大会，Sun 公司正式介绍了 Java 和 HotJava。</td>
-</tr>
-<tr>
-<td style="text-align:left">1996/1/1</td>
-<td style="text-align:left">JDK1.0 发布</td>
-</tr>
-<tr>
-<td style="text-align:left">1997/2/1</td>
-<td style="text-align:left">J2SE1.1 发布</td>
-</tr>
-<tr>
-<td style="text-align:left">1998/12/1</td>
-<td style="text-align:left">J2SE1.2 发布</td>
-</tr>
-<tr>
-<td style="text-align:left">1999/6/1</td>
-<td style="text-align:left">发布 Java 的三个版本：J2SE、J2EE、J2ME</td>
-</tr>
-<tr>
-<td style="text-align:left">2000/5/1</td>
-<td style="text-align:left">J2SE1.3 发布</td>
-</tr>
-<tr>
-<td style="text-align:left">2001/9/1</td>
-<td style="text-align:left">J2EE1.3 发布</td>
-</tr>
-<tr>
-<td style="text-align:left">2002/2/1</td>
-<td style="text-align:left">J2SE1.4 发布</td>
-</tr>
-<tr>
-<td style="text-align:left">2004/9/1</td>
-<td style="text-align:left">J2SE1.5 发布，将 J2SE1.5 改名 JavaSE5.0</td>
-</tr>
-<tr>
-<td style="text-align:left">2005/6/1</td>
-<td style="text-align:left">JavaSE6.0 发布,J2EE 更名为 JavaEE，J2SE 更名为 JavaSE，J2ME 更名为 JavaME</td>
-</tr>
-<tr>
-<td style="text-align:left">2006/12/1</td>
-<td style="text-align:left">JRE6.0 发布</td>
-</tr>
-<tr>
-<td style="text-align:left">2006/12/1</td>
-<td style="text-align:left">JavaSE6 发布</td>
-</tr>
-<tr>
-<td style="text-align:left">2009/12/1</td>
-<td style="text-align:left">JavaEE6 发布</td>
-</tr>
-<tr>
-<td style="text-align:left">2009/4/1</td>
-<td style="text-align:left">Oracle 收购 Sun</td>
-</tr>
-<tr>
-<td style="text-align:left">2011/7/1</td>
-<td style="text-align:left">JavaSE7 发布</td>
-</tr>
-<tr>
-<td style="text-align:left">2014/3/1</td>
-<td style="text-align:left">JavaSE8 发布</td>
-</tr>
-<tr>
-<td style="text-align:left">2017/9/23</td>
-<td style="text-align:left">JavaSE9 发布</td>
-</tr>
-<tr>
-<td style="text-align:left">2018/3/21</td>
-<td style="text-align:left">JavaSE10 发布</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Java-术语"><a href="#Java-术语" class="headerlink" title="Java 术语"></a>Java 术语</h2><p>初学 Java，常常会看到一些术语，却不知是何意义。这里，我们来了解一下：</p>
-<h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p>JDK（Java Development Kit）称为 Java 开发包或 Java 开发工具，是一个编写 Java 的 Applet 小程序和应用程序的程序开发环境。JDK 是整个 Java 的核心，包括了 Java 运行环境（Java Runtime Envirnment），一些 Java 工具和 Java 的核心类库（Java API）。不论什么 Java 应用服务器实质都是内置了某个版本的 JDK。主流的 JDK 是 Sun 公司发布的 JDK，除了 Sun 之外，还有很多公司和组织都开发了自己的 JDK，例如，IBM 公司开发的 JDK，BEA 公司的 Jrocket，还有 GNU 组织开发的 JDK。</p>
-<h3 id="JRE"><a href="#JRE" class="headerlink" title="JRE"></a>JRE</h3><p>另外，可以把 Java API 类库中的 Java SE API 子集和 Java 虚拟机这两部分统称为 JRE（JAVA Runtime Environment），JRE 是支持 Java 程序运行的标准环境。</p>
-<p>JRE 是个运行环境，JDK 是个开发环境。因此写 Java 程序的时候需要 JDK，而运行 Java 程序的时候就需要 JRE。而 JDK 里面已经包含了 JRE，因此只要安装了 JDK，就可以编辑 Java 程序，也可以正常运行 Java 程序。但由于 JDK 包含了许多与运行无关的内容，占用的空间较大，因此运行普通的 Java 程序无须安装 JDK，而只需要安装 JRE 即可。</p>
-<h3 id="JCP"><a href="#JCP" class="headerlink" title="JCP"></a>JCP</h3><p>JCP（Java Community Process）是一个开放的国际组织，主要由 Java 开发者以及被授权者组成，职能是发展和更新 Java 技术规范、参考实现（RI）、技术兼容包（TCK）。<br>JCP 维护的规范包括 Java ME、Java SE、Java EE、XML、OSS、JAIN 等。组织成员可以提交 JSR（Java Specification Requests），通过特定程序以后，进入到下一版本的规范里面。</p>
-<h3 id="JSR"><a href="#JSR" class="headerlink" title="JSR"></a>JSR</h3><p>JSR 是早期提议和最终发布的 Java 平台规范的具体描述。通常，一个新的 JSR 的提出是为了增加或者规范 Java 平台的功能。某个具体的 JSR 由专家组共同来制定，工作由组长协调。例如，CLDC1.0（Connected Limited Device Configuration，JSR30）</p>
-<p>JSR 完成后，相关的规范及 JavaAPI 会在 JCP 的官方网站发布。设备制造商可以在自己的产品中实现某个 JSR，如 MIDP2.0（JSRll8）。但是这些都必须要通过 TCK（Technology Compatibility Kit）测试以确保技术兼容性。 [32]<br>按照技术类别可以分成以下几类：</p>
-<ul>
-<li>J2EE 平台规范</li>
-<li>J2SE 平台规范</li>
-<li>J2ME 平台规范</li>
-<li>运营支持系统规范（OSS）</li>
-<li>综合网络的 Java 应用（JAIN）</li>
-<li>XML 操作规范</li>
-</ul>
-<h3 id="Java-SE"><a href="#Java-SE" class="headerlink" title="Java SE"></a>Java SE</h3><p>Java SE 是 Java 平台标准版（Java Platform Standard Edition）的简称 。Java SE 用于开发和部署桌面、服务器以及嵌入设备和实时环境中的 Java 应用程序。Java SE 包括用于开发 Java Web 服务的类库，同时，Java SE 为 Java EE 和 Java ME 提供了基础。</p>
-<h3 id="Java-EE"><a href="#Java-EE" class="headerlink" title="Java EE"></a>Java EE</h3><p>Java EE 是 Java 平台企业版（Java Platform Enterprise Edition）的简称。Java EE 是一种简化企业解决方案的开发、部署和管理相关的复杂问题的体系结构。Java EE 技术的基础就是 Java SE，Java EE 不仅巩固了标准版中的许多优点，例如“编写一次、随处运行”的特性、方便存取数据库的 JDBC API、CORBA 技术以及能够在 Internet 应用中保护数据的安全模式等等，同时还提供了对 EJB（Enterprise JavaBeans）、Java Servlets API、JSP（Java Server Pages）以及 XML 技术的全面支持。其最终目的就是成为一个能够使企业开发者大幅缩短投放市场时间的体系结构。</p>
-<h3 id="Java-ME"><a href="#Java-ME" class="headerlink" title="Java ME"></a>Java ME</h3><p>Java ME 是 Java 微版（Java Platform Micro Edition）的简称，是一个技术和规范的集合，它为移动设备（包括消费类产品、嵌入式设备、高级移动设备等）提供了基于 Java 环境的开发与应用平台。Java ME 目前分为两类配置，一类是面向小型移动设备的 CLDC（Connected Limited Device Profile），一类是面向功能更强大的移动设备如智能手机和机顶盒，称为 CDC（Connected Device Profile CDC）。</p>
-<h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><p>JVM 是 Java Virtual Machine（Java 虚拟机）的缩写，JVM 是一种用于计算设备的规范，它是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。</p>
-<p>Java 语言的一个非常重要的特点就是与平台的无关性。而使用 Java 虚拟机是实现这一特点的关键。一般的高级语言如果要在不同的平台上运行，至少需要编译成不同的目标代码。而引入 Java 语言虚拟机后，Java 语言在不同平台上运行时不需要重新编译。Java 语言使用 Java 虚拟机屏蔽了与具体平台相关的信息，使得 Java 语言编译程序只需生成在 Java 虚拟机上运行的目标代码（字节码），就可以在多种平台上不加修改地运行。Java 虚拟机在执行字节码时，把字节码解释成具体平台上的机器指令执行。这就是 Java 的能够“一次编译，到处运行”的原因。</p>
+            <p>
+              MapReduce
 
+MapReduce 简介
+概念
+思想
+特点
+适用场景
+不适用场景
+
+
+MapReduce 原理
+Job &amp; Task（作业与任务）
+Split（切片）
+Map 阶段（映射）
+Reduce 阶段（化简）
+Shuffle 阶段（洗牌）
+
+
+Shuffle 详解
+Map 端
+Reduce 端
+
+
+作业运行模式
+JobTracker/TaskTracker 模式（Hadoop
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2018/09/03/bigdata/MapReduce/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2018/09/03/bigdata/overview/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Peng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张鹏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/blog/2018/09/03/bigdata/overview/" class="post-title-link" itemprop="url">大数据简介</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-03 00:00:00" itemprop="dateCreated datePublished" datetime="2018-09-03T00:00:00+08:00">2018-09-03</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 16:43:45" itemprop="dateModified" datetime="2019-03-06T16:43:45+08:00">2019-03-06</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/bigdata/" itemprop="url" rel="index"><span itemprop="name">bigdata</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              大数据简介
+
+简介
+什么是大数据
+应用场景
+Hadoop 编年史
+
+
+技术体系
+HDFS
+MapReduce
+Spark
+YARN
+Hive
+HBase
+ElasticSearch
+
+
+术语
+资源
+
+
+简介什么是大数据大数据是指超出传统数据库工具收集、存储、管理和分析能力的数据集。与此同时，及时采集、存储、聚合、管理数据，以及对数据深度分析的新技术和新能力，正在快速增长，就像预测计算芯片增长速度的
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2018/09/03/bigdata/overview/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dunwu.github.io/blog/2018/08/29/programming/java/javacore/basic/3-Java基础语法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Peng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张鹏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/blog/2018/08/29/programming/java/javacore/basic/3-Java基础语法/" class="post-title-link" itemprop="url">Java 基础语法</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-29 00:00:00" itemprop="dateCreated datePublished" datetime="2018-08-29T00:00:00+08:00">2018-08-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 16:43:46" itemprop="dateModified" datetime="2019-03-06T16:43:46+08:00">2019-03-06</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/javacore/" itemprop="url" rel="index"><span itemprop="name">javacore</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              Java 基础语法
+:pushpin: 关键词：
+
+
+
+变量
+Java 局部变量
+实例变量
+类变量（静态变量）
+
+
+注释
+
+
+变量在 Java 语言中，所有的变量在使用前必须声明。声明变量的基本格式如下：
+type identifier [ = value][, identifier [= value] ...] ;
+格式说明：type 为 Java 数据类型。identifier 是变量名。可以
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/blog/2018/08/29/programming/java/javacore/basic/3-Java基础语法/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
     
 
     
@@ -2909,15 +2724,12 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/page/24/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/24/">24</a><span class="page-number current">25</span><a class="page-number" href="/blog/page/26/">26</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/39/">39</a><a class="extend next" rel="next" href="/blog/page/26/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/blog/page/24/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/24/">24</a><span class="page-number current">25</span><a class="page-number" href="/blog/page/26/">26</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/39/">39</a><a class="extend next" rel="next" href="/blog/page/26/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -2933,14 +2745,13 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -2950,42 +2761,226 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/blog/archives/">
+                
+                    <span class="site-state-item-count">381</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/blog/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/blog/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">381</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/blog/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">76</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">76</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -2998,32 +2993,44 @@
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/dunwu" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:forbreak@163.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/dunwu" title="GitHub &rarr; https://github.com/dunwu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:forbreak@163.com" title="E-Mail &rarr; mailto:forbreak@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
             </div>
           
 
           
-          
 
           
           
 
+          
+            
+          
           
 
         </div>
-      </section>
+      </div>
 
       
 
@@ -3031,6 +3038,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -3039,12 +3047,28 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-paper-plane"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Zhang Peng</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">2.1m</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">31:18</span>
   
 </div>
 
@@ -3064,6 +3088,7 @@
 
 
 
+
         
       </div>
     </footer>
@@ -3072,16 +3097,21 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -3095,100 +3125,16 @@
 
 
 
-  
-
-
-  
-
-
-
-
-
-
 
 
 
 
 
   
+    
+    
   
-    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
@@ -3202,341 +3148,157 @@
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/blog/" + search_path;
-    // monitor main search box;
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
+
+  
+  <script src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/blog/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/blog/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/blog/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/blog/js/src/bootstrap.js?v=7.0.1"></script>
+
+
+  
+  
+
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+      
+      user-select: none;
+      outline: 0;
     }
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      
+        right: 4px;
+        top: 8px;
+      
     }
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === '') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1;
     }
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; // Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.readOnly = true;
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, code.length);
+        ta.readOnly = false;
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); // For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
   </script>
 
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

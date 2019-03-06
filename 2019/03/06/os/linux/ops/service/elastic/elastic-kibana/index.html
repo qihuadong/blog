@@ -2,14 +2,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +29,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -36,58 +43,66 @@
 
 
 
+
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Muse',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
 
 
   
-  
-  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
 
-
-
-
-<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
-
-
-
-
-
-
-<meta name="description" content="Elastic 技术栈之 KibanaDiscover单击侧面导航栏中的 Discover ，可以显示 Kibana 的数据查询功能功能。  在搜索栏中，您可以输入Elasticsearch查询条件来搜索您的数据。您可以在 Discover 页面中浏览结果并在 Visualize 页面中创建已保存搜索条件的可视化。 当前索引模式显示在查询栏下方。索引模式确定提交查询时搜索哪些索引。要搜索一组不同的">
+  <meta name="description" content="Elastic 技术栈之 KibanaDiscover单击侧面导航栏中的 Discover ，可以显示 Kibana 的数据查询功能功能。  在搜索栏中，您可以输入Elasticsearch查询条件来搜索您的数据。您可以在 Discover 页面中浏览结果并在 Visualize 页面中创建已保存搜索条件的可视化。 当前索引模式显示在查询栏下方。索引模式确定提交查询时搜索哪些索引。要搜索一组不同的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Elastic 技术栈之 Kibana">
 <meta property="og:url" content="https://dunwu.github.io/2019/03/06/os/linux/ops/service/elastic/elastic-kibana/index.html">
 <meta property="og:site_name" content="张鹏的博客">
 <meta property="og:description" content="Elastic 技术栈之 KibanaDiscover单击侧面导航栏中的 Discover ，可以显示 Kibana 的数据查询功能功能。  在搜索栏中，您可以输入Elasticsearch查询条件来搜索您的数据。您可以在 Discover 页面中浏览结果并在 Visualize 页面中创建已保存搜索条件的可视化。 当前索引模式显示在查询栏下方。索引模式确定提交查询时搜索哪些索引。要搜索一组不同的">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.elastic.co/guide/en/kibana/current/images/tutorial-discover.png">
 <meta property="og:image" content="https://www.elastic.co/guide/en/kibana/6.1/images/tutorial-discover-3.png">
 <meta property="og:image" content="https://www.elastic.co/guide/en/kibana/6.1/images/tutorial-visualize-landing.png">
@@ -105,29 +120,8 @@
 
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/blog/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
+  <link rel="alternate" href="/blog/atom.xml" title="张鹏的博客" type="application/atom+xml">
+
 
 
 
@@ -135,7 +129,11 @@
 
 
 
-
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>Elastic 技术栈之 Kibana | 张鹏的博客</title>
   
@@ -147,9 +145,38 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -161,7 +188,7 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -171,13 +198,16 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">大道至简，知易行难</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -185,110 +215,163 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/blog/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/blog/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/blog/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/blog/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/blog/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/blog/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+            
+            
+            
+              
+              
+
+  
+  
+    
+  
+  <li class="menu-item menu-item-docs">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/blog/docs/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>docs</a>
+
+  </li>
+
+
+            
+          
+            
+            
+            
+          
+        
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -299,6 +382,10 @@
 
   
   
+  
+
+  
+    <div class="reading-progress-bar"></div>
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -323,11 +410,20 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Elastic 技术栈之 Kibana</h1>
+          <h1 class="post-title" itemprop="name headline">Elastic 技术栈之 Kibana<a href="https://github.com/dunwu/blog/blob/master/source/_posts/os/linux/ops/service/elastic/elastic-kibana.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil"></i></a>
+
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -335,13 +431,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">
-                2019-03-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-06 00:00:00 / 修改时间：16:43:46" itemprop="dateCreated datePublished" datetime="2019-03-06T00:00:00+08:00">2019-03-06</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -349,6 +450,7 @@
 
           
             
+            
           
 
           
@@ -356,6 +458,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">4.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">4 分钟</span>
+              
+            </div>
           
 
           
@@ -389,49 +519,49 @@
 <ul>
 <li>查询 <code>status</code> 字段中包含 <code>active</code> 关键字</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">status:active</span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">status:</span>active</span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>title</code> 字段包含 <code>quick</code> 或 <code>brown</code> 关键字。如果您省略 <code>OR</code> 运算符，则将使用默认运算符</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title:(quick OR brown)</span><br><span class="line">title:(quick brown)</span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">title:</span>(quick <span class="keyword">OR</span> brown)</span><br><span class="line"><span class="symbol">title:</span>(quick brown)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>author 字段查找精确的短语 “john smith”，即精确查找。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">author:&quot;John Smith&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">author:</span><span class="string">"John Smith"</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>任意字段 <code>book.title</code>，<code>book.content</code> 或 <code>book.date</code> 都包含 <code>quick</code> 或 <code>brown</code>（注意我们需要如何使用 <code>\*</code> 表示通配符）</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">book.\*:(quick brown)</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">book.\*:(quick </span><span class="keyword">brown)</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>title 字段包含任意非 null 值</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_exists_:title</span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">_exists_:</span>title</span><br></pre></td></tr></table></figure>
 <h4 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h4><p>ELK 提供了 ? 和 * 两个通配符。</p>
 <ul>
 <li><code>?</code> 表示任意单个字符；</li>
 <li><code>*</code> 表示任意零个或多个字符。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qu?ck bro*</span><br></pre></td></tr></table></figure>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="keyword">qu</span>?ck <span class="keyword">bro</span>*</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p><strong>注意：通配符查询会使用大量的内存并且执行性能较为糟糕，所以请慎用。</strong><br><strong>提示</strong>：纯通配符 * 被写入 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-exists-query.html" target="_blank" rel="noopener">exsits</a> 查询，从而提高了查询效率。因此，通配符 <code>field：*</code> 将匹配包含空值的文档，如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; **提示**：在一个单词的开头（例如：`*ing`）使用通配符这种方式的查询量特别大，因为索引中的所有术语都需要检查，以防万一匹配。通过将 `allow_leading_wildcard` 设置为 `false`，可以禁用。</span><br><span class="line"></span><br><span class="line">#### 正则表达式</span><br><span class="line"></span><br><span class="line">可以通过 `/` 将正则表达式包裹在查询字符串中进行查询</span><br><span class="line"></span><br><span class="line">例：</span><br></pre></td></tr></table></figure></p>
+<p><strong>注意：通配符查询会使用大量的内存并且执行性能较为糟糕，所以请慎用。</strong><br><strong>提示</strong>：纯通配符 * 被写入 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-exists-query.html" target="_blank" rel="noopener">exsits</a> 查询，从而提高了查询效率。因此，通配符 <code>field：*</code> 将匹配包含空值的文档，如：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; **提示**：在一个单词的开头（例如：`*ing`）使用通配符这种方式的查询量特别大，因为索引中的所有术语都需要检查，以防万一匹配。通过将 `allow_leading_wildcard` 设置为 `false`，可以禁用。</span><br><span class="line"></span><br><span class="line">#### 正则表达式</span><br><span class="line"></span><br><span class="line">可以通过 `/` 将正则表达式包裹在查询字符串中进行查询</span><br><span class="line"></span><br><span class="line">例：</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p>name:/joh?n(ath[oa]n)/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">支持的正则表达式语义可以参考：[Regular expression syntax](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-regexp-query.html#regexp-syntax)</span><br><span class="line"></span><br><span class="line">#### 模糊查询</span><br><span class="line"></span><br><span class="line">我们可以使用 `~` 运算符来进行模糊查询。</span><br><span class="line"></span><br><span class="line">例：</span><br><span class="line"></span><br><span class="line">假设我们实际想查询</span><br></pre></td></tr></table></figure></p>
-<p>quick brown forks<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">但是，由于拼写错误，我们的查询关键字变成如下情况，依然可以查到想要的结果。</span><br></pre></td></tr></table></figure></p>
-<p>quikc~ brwn~ foks~<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这种模糊查询使用 Damerau-Levenshtein 距离来查找所有匹配最多两个更改的项。所谓的更改是指单个字符的插入，删除或替换，或者两个相邻字符的换位。</span><br><span class="line"></span><br><span class="line">默认编辑距离为 `2`，但编辑距离为 `1` 应足以捕捉所有人类拼写错误的80％。它可以被指定为：</span><br></pre></td></tr></table></figure></p>
-<p>quikc~1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 近似检索</span><br><span class="line"></span><br><span class="line">尽管短语查询（例如，`john smith`）期望所有的词条都是完全相同的顺序，但是近似查询允许指定的单词进一步分开或以不同的顺序排列。与模糊查询可以为单词中的字符指定最大编辑距离一样，近似搜索也允许我们指定短语中单词的最大编辑距离：</span><br><span class="line"></span><br><span class="line">例</span><br></pre></td></tr></table></figure></p>
-<p>“fox quick”~5<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">字段中的文本越接近查询字符串中指定的原始顺序，该文档就越被认为是相关的。当与上面的示例查询相比时，短语 `&quot;quick fox&quot;` 将被认为比 `&quot;quick brown fox&quot;` 更近似查询条件。</span><br><span class="line"></span><br><span class="line">#### 范围</span><br><span class="line"></span><br><span class="line">可以为日期，数字或字符串字段指定范围。闭区间范围用方括号 `[min TO max]` 和开区间范围用花括号 `&#123;min TO max&#125;` 来指定。</span><br><span class="line"></span><br><span class="line">我们不妨来看一些示例。</span><br><span class="line"></span><br><span class="line">* 2012 年的所有日子</span><br></pre></td></tr></table></figure></p>
-<p>date:[2012-01-01 TO 2012-12-31]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 数字 1 到 5</span><br></pre></td></tr></table></figure></p>
-<p>count:[1 TO 5]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 在 `alpha` 和 `omega` 之间的标签，不包括 `alpha` 和 `omega`</span><br></pre></td></tr></table></figure></p>
-<p>tag:{alpha TO omega}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 10 以上的数字</span><br></pre></td></tr></table></figure></p>
-<p>count:[10 TO *]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 2012 年以前的所有日期</span><br></pre></td></tr></table></figure></p>
-<p>date:{* TO 2012-01-01}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">此外，开区间和闭区间也可以组合使用</span><br><span class="line"></span><br><span class="line">* 数组 1 到 5，但不包括 5</span><br></pre></td></tr></table></figure></p>
-<p>count:[1 TO 5}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">一边无界的范围也可以使用以下语法：</span><br></pre></td></tr></table></figure></p>
-<p>age:&gt;10<br>age:&gt;=10<br>age:&lt;10<br>age:&lt;=10<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">当然，你也可以使用 AND 运算符来得到连个查询结果的交集</span><br></pre></td></tr></table></figure></p>
-<p>age:(&gt;=10 AND &lt;20)<br>age:(+&gt;=10 +&lt;20)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### Boosting</span><br><span class="line"></span><br><span class="line">使用操作符 `^` 使一个术语比另一个术语更相关。例如，如果我们想查找所有有关狐狸的文档，但我们对狐狸特别感兴趣：</span><br></pre></td></tr></table></figure></p>
-<p>quick^2 fox<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">默认提升值是1，但可以是任何正浮点数。 0到1之间的提升减少了相关性。</span><br><span class="line"></span><br><span class="line">增强也可以应用于短语或组：</span><br></pre></td></tr></table></figure></p>
-<p>“john smith”^2   (foo bar)^4<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 布尔操作</span><br><span class="line"></span><br><span class="line">默认情况下，只要一个词匹配，所有词都是可选的。搜索 `foo bar baz` 将查找包含 `foo` 或 `bar` 或 `baz` 中的一个或多个的任何文档。我们已经讨论了上面的`default_operator`，它允许你强制要求所有的项，但也有布尔运算符可以在查询字符串本身中使用，以提供更多的控制。</span><br><span class="line"></span><br><span class="line">首选的操作符是 `+`（此术语必须存在）和 `-` （此术语不得存在）。所有其他条款是可选的。例如，这个查询：</span><br></pre></td></tr></table></figure></p>
-<p>quick brown +fox -news<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这条查询意味着：</span><br><span class="line"></span><br><span class="line">* fox 必须存在</span><br><span class="line">* news 必须不存在</span><br><span class="line">* quick 和 brown 是可有可无的</span><br><span class="line"></span><br><span class="line">熟悉的运算符 `AND`，`OR` 和 `NOT`（也写成 `&amp;&amp;`，`||` 和 `!`）也被支持。然而，这些操作符有一定的优先级：`NOT` 优先于 `AND`，`AND` 优先于 `OR`。虽然 `+` 和 `-` 仅影响运算符右侧的术语，但 `AND` 和 `OR` 会影响左侧和右侧的术语。</span><br><span class="line"></span><br><span class="line">#### 分组</span><br><span class="line"></span><br><span class="line">多个术语或子句可以用圆括号组合在一起，形成子查询</span><br></pre></td></tr></table></figure></p>
-<p>(quick OR brown) AND fox<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">可以使用组来定位特定的字段，或者增强子查询的结果：</span><br></pre></td></tr></table></figure></p>
+<p>name:/joh?n(ath[oa]n)/<br><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">支持的正则表达式语义可以参考：[<span class="string">Regular expression syntax</span>](<span class="link">https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-regexp-query.html#regexp-syntax</span>)</span><br><span class="line"></span><br><span class="line"><span class="section">#### 模糊查询</span></span><br><span class="line"></span><br><span class="line">我们可以使用 <span class="code">`~`</span> 运算符来进行模糊查询。</span><br><span class="line"></span><br><span class="line">例：</span><br><span class="line"></span><br><span class="line">假设我们实际想查询</span><br></pre></td></tr></table></figure></p>
+<p>quick brown forks<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">但是，由于拼写错误，我们的查询关键字变成如下情况，依然可以查到想要的结果。</span><br></pre></td></tr></table></figure></p>
+<p>quikc~ brwn~ foks~<br><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">这种模糊查询使用 Damerau-Levenshtein 距离来查找所有匹配最多两个更改的项。所谓的更改是指单个字符的插入，删除或替换，或者两个相邻字符的换位。</span><br><span class="line"></span><br><span class="line">默认编辑距离为 `2`，但编辑距离为 `1` 应足以捕捉所有人类拼写错误的<span class="number">80</span>％。它可以被指定为：</span><br></pre></td></tr></table></figure></p>
+<p>quikc~1<br><figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### 近似检索</span><br><span class="line"></span><br><span class="line">尽管短语查询（例如，`john smith`）期望所有的词条都是完全相同的顺序，但是近似查询允许指定的单词进一步分开或以不同的顺序排列。与模糊查询可以为单词中的字符指定最大编辑距离一样，近似搜索也允许我们指定短语中单词的最大编辑距离：</span><br><span class="line"></span><br><span class="line">例</span><br></pre></td></tr></table></figure></p>
+<p>“fox quick”~5<br><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">字段中的文本越接近查询字符串中指定的原始顺序，该文档就越被认为是相关的。当与上面的示例查询相比时，短语 `"quick fox<span class="string">"` 将被认为比 `"quick brown fox"</span>` 更近似查询条件。</span><br><span class="line"></span><br><span class="line">#### 范围</span><br><span class="line"></span><br><span class="line">可以为日期，数字或字符串字段指定范围。闭区间范围用方括号 `[min TO max]` 和开区间范围用花括号 `&#123;min TO max&#125;` 来指定。</span><br><span class="line"></span><br><span class="line">我们不妨来看一些示例。</span><br><span class="line"></span><br><span class="line">* <span class="number">2012</span> 年的所有日子</span><br></pre></td></tr></table></figure></p>
+<p>date:[2012-01-01 TO 2012-12-31]<br><figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 数字 <span class="number">1</span> 到 <span class="number">5</span></span><br></pre></td></tr></table></figure></p>
+<p>count:[1 TO 5]<br><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 在 `alpha` 和 `omega` 之间的标签，不包括 `alpha` 和 `omega`</span><br></pre></td></tr></table></figure></p>
+<p>tag:{alpha TO omega}<br><figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">* </span>10 以上的数字</span><br></pre></td></tr></table></figure></p>
+<p>count:[10 TO *]<br><figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">* </span>2012 年以前的所有日期</span><br></pre></td></tr></table></figure></p>
+<p>date:{* TO 2012-01-01}<br><figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">此外，开区间和闭区间也可以组合使用</span><br><span class="line"></span><br><span class="line">* 数组 <span class="number">1</span> 到 <span class="number">5</span>，但不包括 <span class="number">5</span></span><br></pre></td></tr></table></figure></p>
+<p>count:[1 TO 5}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">一边无界的范围也可以使用以下语法：</span><br></pre></td></tr></table></figure></p>
+<p>age:&gt;10<br>age:&gt;=10<br>age:&lt;10<br>age:&lt;=10<br><figure class="highlight ada"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">当然，你也可以使用 <span class="keyword">AND</span> 运算符来得到连个查询结果的交集</span><br></pre></td></tr></table></figure></p>
+<p>age:(&gt;=10 AND &lt;20)<br>age:(+&gt;=10 +&lt;20)<br><figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### Boosting</span><br><span class="line"></span><br><span class="line">使用操作符 `^` 使一个术语比另一个术语更相关。例如，如果我们想查找所有有关狐狸的文档，但我们对狐狸特别感兴趣：</span><br></pre></td></tr></table></figure></p>
+<p>quick^2 fox<br><figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">默认提升值是<span class="number">1</span>，但可以是任何正浮点数。 <span class="number">0</span>到<span class="number">1</span>之间的提升减少了相关性。</span><br><span class="line"></span><br><span class="line">增强也可以应用于短语或组：</span><br></pre></td></tr></table></figure></p>
+<p>“john smith”^2   (foo bar)^4<br><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### 布尔操作</span><br><span class="line"></span><br><span class="line">默认情况下，只要一个词匹配，所有词都是可选的。搜索 `foo bar baz` 将查找包含 `foo` 或 `bar` 或 `baz` 中的一个或多个的任何文档。我们已经讨论了上面的`default_operator`，它允许你强制要求所有的项，但也有布尔运算符可以在查询字符串本身中使用，以提供更多的控制。</span><br><span class="line"></span><br><span class="line">首选的操作符是 `+`（此术语必须存在）和 `-` （此术语不得存在）。所有其他条款是可选的。例如，这个查询：</span><br></pre></td></tr></table></figure></p>
+<p>quick brown +fox -news<br><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">这条查询意味着：</span><br><span class="line"></span><br><span class="line">* fox 必须存在</span><br><span class="line">* news 必须不存在</span><br><span class="line">* quick 和 brown 是可有可无的</span><br><span class="line"></span><br><span class="line">熟悉的运算符 `AND`，`OR` 和 `NOT`（也写成 `&amp;&amp;`，`||` 和 `!`）也被支持。然而，这些操作符有一定的优先级：`NOT` 优先于 `AND`，`AND` 优先于 `OR`。虽然 `+` 和 `-` 仅影响运算符右侧的术语，但 `AND` 和 `OR` 会影响左侧和右侧的术语。</span><br><span class="line"></span><br><span class="line">#### 分组</span><br><span class="line"></span><br><span class="line">多个术语或子句可以用圆括号组合在一起，形成子查询</span><br></pre></td></tr></table></figure></p>
+<p>(quick OR brown) AND fox<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">可以使用组来定位特定的字段，或者增强子查询的结果：</span><br></pre></td></tr></table></figure></p>
 <p>status:(active OR pending) title:(full text search)^2<br><code>`</code></p>
 <h4 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h4><p>如果你需要使用任何在你的查询本身中作为操作符的字符（而不是作为操作符），那么你应该用一个反斜杠来转义它们。例如，要搜索（1 + 1）= 2，您需要将查询写为 <code>\(1\+1\)\=2</code></p>
 <p>保留字符是：<code>+ - = &amp;&amp; || &gt; &lt; ! ( ) { } [ ] ^ &quot; ~ * ? : \ /</code></p>
@@ -476,12 +606,22 @@
 
       
     </div>
+
+    
+      
+
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -497,8 +637,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2019/03/06/algorithm/README/" rel="next" title="算法和数据结构">
-                <i class="fa fa-chevron-left"></i> 算法和数据结构
+              <a href="/blog/2019/03/06/os/linux/tool/git/basics/git-configuration/" rel="next" title="Git 配置">
+                <i class="fa fa-chevron-left"></i> Git 配置
               </a>
             
           </div>
@@ -507,8 +647,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2019/03/06/programming/java/javastack/javalib/freemark/" rel="prev" title="Freemark">
-                Freemark <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2019/03/06/database/nosql/mongodb/install-mongodb/" rel="prev" title="Mongodb 安装">
+                Mongodb 安装 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -525,17 +665,10 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -555,7 +688,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -571,7 +703,7 @@
         </ul>
       
 
-      <section class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -581,42 +713,226 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/blog/archives/">
+                
+                    <span class="site-state-item-count">381</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/blog/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/blog/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">381</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/blog/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">76</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">76</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -629,48 +945,61 @@
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/dunwu" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:forbreak@163.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/dunwu" title="GitHub &rarr; https://github.com/dunwu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:forbreak@163.com" title="E-Mail &rarr; mailto:forbreak@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
             </div>
           
 
           
-          
 
           
           
 
+          
+            
+          
           
 
         </div>
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Elastic-技术栈之-Kibana"><span class="nav-number">1.</span> <span class="nav-text">Elastic 技术栈之 Kibana</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Discover"><span class="nav-number">1.1.</span> <span class="nav-text">Discover</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查询语义"><span class="nav-number">1.1.1.</span> <span class="nav-text">查询语义</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字段名称"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">字段名称</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通配符"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">通配符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#保留字"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">保留字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#空查询"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">空查询</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Visualize"><span class="nav-number">1.2.</span> <span class="nav-text">Visualize</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pie"><span class="nav-number">1.2.1.</span> <span class="nav-text">Pie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vertical-Bar"><span class="nav-number">1.2.2.</span> <span class="nav-text">Vertical Bar</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dashboard"><span class="nav-number">1.3.</span> <span class="nav-text">Dashboard</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Elastic-技术栈之-Kibana"><span class="nav-text">Elastic 技术栈之 Kibana</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Discover"><span class="nav-text">Discover</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查询语义"><span class="nav-text">查询语义</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字段名称"><span class="nav-text">字段名称</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通配符"><span class="nav-text">通配符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#保留字"><span class="nav-text">保留字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#空查询"><span class="nav-text">空查询</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Visualize"><span class="nav-text">Visualize</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pie"><span class="nav-text">Pie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vertical-Bar"><span class="nav-text">Vertical Bar</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dashboard"><span class="nav-text">Dashboard</span></a></li></ol></li></ol></div>
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -678,6 +1007,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -686,12 +1016,28 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-paper-plane"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Zhang Peng</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">2.1m</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">31:18</span>
   
 </div>
 
@@ -711,6 +1057,7 @@
 
 
 
+
         
       </div>
     </footer>
@@ -719,16 +1066,21 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -742,104 +1094,16 @@
 
 
 
-  
-
-
-  
-
-
-
-
-
-
 
 
 
 
 
   
+    
+    
   
-    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
@@ -853,341 +1117,163 @@
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/blog/" + search_path;
-    // monitor main search box;
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
+
+  
+  <script src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/blog/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/blog/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/blog/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/blog/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/blog/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/blog/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/blog/js/src/bootstrap.js?v=7.0.1"></script>
+
+
+  
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+      
+      user-select: none;
+      outline: 0;
     }
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      
+        right: 4px;
+        top: 8px;
+      
     }
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === '') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1;
     }
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; // Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.readOnly = true;
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, code.length);
+        ta.readOnly = false;
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); // For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
   </script>
 
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>
